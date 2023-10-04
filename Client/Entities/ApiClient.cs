@@ -21,6 +21,7 @@ namespace Client.Entities
             {
                 var content = response.Content;
                 return JsonConvert.DeserializeObject<ApiResponse<T>>(content);
+
             }
             else
             {

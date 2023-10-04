@@ -1,39 +1,45 @@
-﻿
-ALTER  PROCEDURE sp_GetOrderUser
-    @TargetDate DATE,
-    @UserName NVARCHAR(256),
-    @ProductTile NVARCHAR(MAX) 
+﻿-- UserOrderAll
+
+ALTER PROCEDURE sp_GetOrderUser
+    @TargetDate NVARCHAR(20) = NULL,
+    @UserName NVARCHAR(256) = NULL,
+    @ProductTile NVARCHAR(MAX) = NULL 
 AS
 BEGIN
-  
-    SELECT 
-        U.UserName,
-        C.ProductId,
-        C.OrderId,
-        COALESCE(P.Title, 'N/A') AS Title,
-        SUM(ISNULL((C.Count * P.Price), 0)) AS TotalPrice,
-        SUM(ISNULL(C.Count, 0)) AS TotalQuantity
-    FROM 
-        [dbo].[AspNetUsers] U
-    LEFT JOIN 
-        [dbo].[Carts] C ON U.Id = C.UserId AND CAST(C.CreateDate AS DATE) = @TargetDate
-    LEFT JOIN 
-        [dbo].[Products] P ON C.ProductId = P.Id
-    WHERE 
-        U.UserName LIKE '%' + @UserName + '%' 
-        OR P.Title LIKE '%' + @ProductTile + '%'
-    GROUP BY 
-        U.UserName, C.ProductId, C.OrderId, P.Title
+    DECLARE @SQL NVARCHAR(MAX)
+
+    SET @SQL = '
+        SELECT 
+            U.UserName,
+            ISNULL(C.ProductId, 0) AS ProductId,
+            ISNULL(C.OrderId, 0) AS OrderId,
+            COALESCE(P.Title, ''N/A'') AS Title,
+            SUM(ISNULL((C.Count * P.Price), 0)) AS TotalPrice,
+            SUM(ISNULL(C.Count, 0)) AS TotalQuantity
+        FROM 
+            [dbo].[AspNetUsers] U
+        LEFT JOIN 
+            [dbo].[Carts] C ON U.Id = C.UserId '
+    + CASE WHEN @TargetDate IS NOT NULL THEN 'AND CAST(C.CreateDate AS DATE) = @Date ' ELSE ' ' END +
+    'LEFT JOIN 
+            [dbo].[Products] P ON C.ProductId = P.Id
+        WHERE 
+            1=1 '
+    + CASE WHEN @UserName IS NOT NULL THEN 'AND U.UserName LIKE ''%'' + @User + ''%'' ' ELSE ' ' END +
+    + CASE WHEN @ProductTile IS NOT NULL THEN 'AND P.Title LIKE ''%'' + @Product + ''%'' ' ELSE ' ' END +
+    'GROUP BY 
+            U.UserName, C.ProductId, C.OrderId, P.Title'
+
+    EXEC sp_executesql @SQL, N'@Date DATE, @User NVARCHAR(256), @Product NVARCHAR(MAX)', @Date = @TargetDate, @User = @UserName, @Product = @ProductTile
 END
 
 
-EXEC sp_GetOrderUser'2023-10-04','',''
 
-
+EXEC sp_GetOrderUser @TargetDate = '2023-10-04',@UserName= null,@ProductTile = null
 
 -- thông tin người dùng mua hàng theo useid
 Go
-CREATE PROCEDURE sp_GetUserCartDetailsByDateAndUserId
+ALTER PROCEDURE sp_GetUserCartDetails
     @UserId nvarchar(450),
     @Date date
 AS
@@ -58,4 +64,4 @@ BEGIN
 END
 
 
-EXEC sp_GetUserCartDetailsByDateAndUserId 2,'2023-10-04'
+EXEC sp_GetUserCartDetails 2,'2023-10-4'

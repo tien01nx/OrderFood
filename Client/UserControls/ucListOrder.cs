@@ -30,12 +30,12 @@ namespace Client.UserControls
         {
             DateTime date = dtOrderDate.DateTime;
             string dateString = date.ToString("yyyy/MM/dd");
-            string UserName = string.IsNullOrEmpty(txtUserName.Text) ? "johndoe" : txtUserName.Text;
+            string UserName = string.IsNullOrEmpty(txtUserName.Text) ? "" : txtUserName.Text;
             string Title = string.IsNullOrEmpty(txtTile.Text) ? "" : txtTile.Text;
 
             try
             {
-                var userOrder = _apiClient.GetData<UserInfoDTO>($"UserAllOrders?date={dateString}&UserName={UserName}&Title={Title}").Data;
+                var userOrder = _apiClient.GetData<UserInfoDTO>($"Order/UserAllOrders?date={dateString}&UserName={UserName}&Title={Title}").Data;
                 //var userOrder = _apiClient.GetData<UserInfoDTO>($"Order/UserAllOrders?date={dateString}&UserName={UserName}&Title={Title}").Data;
                 Console.WriteLine(JsonConvert.SerializeObject(userOrder));
                 gridData.DataSource = userOrder;
@@ -93,6 +93,21 @@ namespace Client.UserControls
         private void gridData_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtOrderDate_EditValueChanged_1(object sender, EventArgs e)
+        {
+            GetOrderByUserAll();
+        }
+
+        private void txtUserName_EditValueChanged(object sender, EventArgs e)
+        {
+            GetOrderByUserAll();
+        }
+
+        private void txtTile_EditValueChanged(object sender, EventArgs e)
+        {
+            GetOrderByUserAll();
         }
     }
 }

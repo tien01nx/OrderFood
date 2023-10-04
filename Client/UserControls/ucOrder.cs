@@ -12,6 +12,11 @@ namespace Client.UserControls
         private readonly frmMain _frmMain;
 
         private readonly ApiClient _apiClient;
+
+        private List<UserInfoDTO> userOrderList;
+
+        private int OrderId;
+
         public ucOrder(frmMain frmMain)
         {
             InitializeComponent();
@@ -38,13 +43,7 @@ namespace Client.UserControls
                 foreach (var product in categoriesResponse.Data)
                 {
                     ucProductItem ucProductItem = new ucProductItem();
-                    //productControl.ItemClicked += (s, args) =>
-                    //{
-                    //    // Xử lý sự kiện khi UserControl được ấn
-                    //    // Hiển thị thông báo với tiêu đề của mục đó
-                    //    // sau sửa thành UserId
-                    //    //UserSendOrder(_orderId, product.Id, 1, 5);
-                    //};
+
 
                     if (!string.IsNullOrEmpty(product.ImageUrl))
                     {
@@ -53,7 +52,7 @@ namespace Client.UserControls
                         try
                         {
                             Image productImage = LoadImageFromUrl(absoluteImageUrl);
-                            ucProductItem.SetProduct(product.Title, product.Price, productImage);
+                            ucProductItem.SetProduct(product.Id, product.Title, product.Price, productImage);
                         }
                         catch (Exception ex)
                         {
@@ -66,11 +65,10 @@ namespace Client.UserControls
                         // Sử dụng hình ảnh mặc định từ đường dẫn cố định.
                         string defaultImagePath = @".\Images\quan-com-tam-o-ha-noi-.jpg";
                         Image defaultImage = Image.FromFile(defaultImagePath);
-                        ucProductItem.SetProduct(product.Title, product.Price, defaultImage);
+                        ucProductItem.SetProduct(product.Id, product.Title, product.Price, defaultImage);
                     }
-
-
-
+                    var matchedProductInfo = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
+                    ucProductItem.UpdateProductInfo(matchedProductInfo);
                     flowLayout.Controls.Add(ucProductItem);
                 }
             }
@@ -83,20 +81,28 @@ namespace Client.UserControls
 
             try
             {
-                //var userOrder = _apiClient.GetData<UserInfoDTO>("Order/UserOrders?date=" + dateString).Data;
-                var userOrder = _apiClient.GetData<UserInfoDTO>($"Order/UserOrders?userId={userId}&date={dateString}").Data;
+                var userOrderResponse = _apiClient.GetData<UserInfoDTO>($"Order/UserOrders?userId={userId}&date={dateString}");
 
-                Console.WriteLine(JsonConvert.SerializeObject(userOrder));
-                gridDataUser.DataSource = userOrder;
-                // Lấy GridView từ gridData's MainView
-                //GridView view = gridData.MainView as GridView;
+                if (userOrderResponse != null && userOrderResponse.Data != null)
+                {
+                    userOrderList = userOrderResponse.Data;
 
-                //if (view != null)
-                //{
-                //    // Ẩn các cột bạn không muốn hiển thị
-                //    view.Columns["OrderId"].Visible = false;
-                //    view.Columns["ProductId"].Visible = false;
-                //}
+                    Console.WriteLine(JsonConvert.SerializeObject(userOrderList));
+                    gridDataUser.DataSource = userOrderList;
+
+                    //GridView view = gridData.MainView as GridView;
+
+                    //if (view != null)
+                    //{
+                    //    // Ẩn các cột bạn không muốn hiển thị
+                    //    view.Columns["OrderId"].Visible = false;
+                    //    view.Columns["ProductId"].Visible = false;
+                    //}
+                }
+                else
+                {
+                    Console.WriteLine("No data or data could not be fetched.");
+                }
             }
             catch (Exception ex)
             {
@@ -125,5 +131,14 @@ namespace Client.UserControls
                 }
             }
         }
+
+        private void dtOrderDate_EditValueChanged(object sender, EventArgs e)
+        {
+            GetOrderByUser();
+        }
+
+       
+
+      
     }
 }

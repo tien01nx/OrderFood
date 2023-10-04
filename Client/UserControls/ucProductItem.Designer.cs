@@ -63,7 +63,7 @@
             lblPrice.Size = new Size(32, 12);
             lblPrice.TabIndex = 1;
             lblPrice.Text = "Price: ";
-            lblPrice.Click += labelControl2_Click;
+        
             // 
             // labelControl6
             // 
@@ -82,12 +82,15 @@
             btnOrder.Size = new Size(61, 19);
             btnOrder.TabIndex = 9;
             btnOrder.Text = "Order";
+            btnOrder.Click += btnOrder_Click;
             // 
             // chkIsChoose
             // 
             chkIsChoose.Location = new Point(218, 27);
             chkIsChoose.Margin = new Padding(3, 2, 3, 2);
             chkIsChoose.Name = "chkIsChoose";
+            chkIsChoose.Properties.Appearance.BackColor = Color.Transparent;
+            chkIsChoose.Properties.Appearance.Options.UseBackColor = true;
             chkIsChoose.Properties.Caption = "";
             chkIsChoose.Size = new Size(21, 20);
             chkIsChoose.TabIndex = 10;

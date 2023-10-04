@@ -44,7 +44,7 @@ namespace API.Controllers
 
         }
         [HttpGet("UserAllOrders")]
-        public async Task<ApiResponse<List<UserInfoDTO>>> UserAllOrders(string date,string UserName,string Title)
+        public async Task<ApiResponse<List<UserInfoDTO>>> UserAllOrders(string date, string UserName, string Title)
         {
 
             var details = _context.GetUserCartDetails(date, UserName, Title).ToList();
@@ -54,13 +54,30 @@ namespace API.Controllers
         }
 
         [HttpGet("UserOrders")]
-        public async Task<ApiResponse<List<UserInfoDTO>>> UserOrders(string userId,string date)
+        public async Task<ApiResponse<List<UserInfoDTO>>> UserOrders(string userId, string date)
         {
 
-            var details = _context.GetUserCartDetailsByDateAndUserId(userId,date).ToList();
+            var details = _context.GetUserCartDetailsByDateAndUserId(userId, date).ToList();
 
             return new ApiResponse<List<UserInfoDTO>>(System.Net.HttpStatusCode.OK, "", details);
 
+        }
+
+        // lấy ra Order theo CreatedDate của ngày hiện ttai
+        [HttpGet("GetOrderByCreatedDate")]
+        public async Task<ApiResponse<List<OrderDto>>> GetOrderByCreatedDate()
+        {           
+            DateTime currentDate = DateTime.Now;
+
+            DateTime createDate = new DateTime(currentDate.Year, currentDate.Month, currentDate.Day);
+
+            var orders = _unitOfWork.Order.GetAll(u => u.CreateDate.Date == createDate, includeProperties: "Restaurant").ToList();
+            var orderDtos = _mapper.Map<List<OrderDto>>(orders);
+            if (orderDtos != null)
+            {
+                return new ApiResponse<List<OrderDto>>(System.Net.HttpStatusCode.OK, "lay thanh cong", orderDtos);
+            }
+            return new ApiResponse<List<OrderDto>>(System.Net.HttpStatusCode.NoContent, "Khong co du lieu", null);
         }
 
 

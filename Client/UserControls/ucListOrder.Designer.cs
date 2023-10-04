@@ -56,8 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl4).BeginInit();
             groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties.CalendarTimeProperties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties.CalendarTimeProperties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
             groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)txtTile.Properties).BeginInit();
@@ -73,9 +73,9 @@
             groupControl1.Controls.Add(toolStrip1);
             groupControl1.Dock = DockStyle.Fill;
             groupControl1.Location = new Point(0, 0);
-            groupControl1.Margin = new Padding(4, 2, 4, 2);
+            groupControl1.Margin = new Padding(3, 2, 3, 2);
             groupControl1.Name = "groupControl1";
-            groupControl1.Size = new Size(1168, 722);
+            groupControl1.Size = new Size(1001, 587);
             groupControl1.TabIndex = 0;
             groupControl1.Text = "DANH SÁCH ĐƠN HÀNG";
             // 
@@ -84,28 +84,32 @@
             groupControl3.Controls.Add(gridData);
             groupControl3.Controls.Add(groupControl4);
             groupControl3.Dock = DockStyle.Fill;
-            groupControl3.Location = new Point(367, 55);
-            groupControl3.Margin = new Padding(4, 2, 4, 2);
+            groupControl3.Location = new Point(315, 50);
+            groupControl3.Margin = new Padding(3, 2, 3, 2);
             groupControl3.Name = "groupControl3";
-            groupControl3.Size = new Size(799, 665);
+            groupControl3.Size = new Size(684, 535);
             groupControl3.TabIndex = 2;
             groupControl3.Text = "Danh sách đơn hàng";
             // 
             // gridData
             // 
             gridData.Dock = DockStyle.Fill;
-            gridData.Location = new Point(2, 86);
+            gridData.EmbeddedNavigator.Margin = new Padding(3, 2, 3, 2);
+            gridData.Location = new Point(2, 70);
             gridData.MainView = gridView1;
+            gridData.Margin = new Padding(3, 2, 3, 2);
             gridData.Name = "gridData";
-            gridData.Size = new Size(795, 577);
+            gridData.Size = new Size(680, 463);
             gridData.TabIndex = 1;
             gridData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
             // 
             // gridView1
             // 
+            gridView1.DetailHeight = 284;
             gridView1.GridControl = gridData;
             gridView1.Name = "gridView1";
             gridView1.OptionsBehavior.Editable = false;
+            gridView1.OptionsEditForm.PopupEditFormWidth = 686;
             gridView1.OptionsView.ShowGroupPanel = false;
             gridView1.OptionsView.ShowIndicator = false;
             // 
@@ -114,30 +118,34 @@
             groupControl4.Controls.Add(dtOrderDate);
             groupControl4.Controls.Add(labelControl1);
             groupControl4.Dock = DockStyle.Top;
-            groupControl4.Location = new Point(2, 28);
+            groupControl4.Location = new Point(2, 23);
+            groupControl4.Margin = new Padding(3, 2, 3, 2);
             groupControl4.Name = "groupControl4";
             groupControl4.ShowCaption = false;
-            groupControl4.Size = new Size(795, 58);
+            groupControl4.Size = new Size(680, 47);
             groupControl4.TabIndex = 0;
             groupControl4.Text = "groupControl4";
             // 
             // dtOrderDate
             // 
             dtOrderDate.EditValue = null;
-            dtOrderDate.Location = new Point(72, 13);
+            dtOrderDate.Location = new Point(62, 11);
+            dtOrderDate.Margin = new Padding(3, 2, 3, 2);
             dtOrderDate.Name = "dtOrderDate";
             dtOrderDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             dtOrderDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            dtOrderDate.Size = new Size(156, 22);
+            dtOrderDate.Size = new Size(134, 20);
             dtOrderDate.TabIndex = 1;
+            dtOrderDate.EditValueChanged += dtOrderDate_EditValueChanged_1;
             // 
             // labelControl1
             // 
             labelControl1.Appearance.Font = new Font("Tahoma", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
             labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new Point(9, 16);
+            labelControl1.Location = new Point(8, 13);
+            labelControl1.Margin = new Padding(3, 2, 3, 2);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new Size(57, 16);
+            labelControl1.Size = new Size(51, 13);
             labelControl1.TabIndex = 0;
             labelControl1.Text = "Thời gian";
             // 
@@ -150,63 +158,64 @@
             groupControl2.Controls.Add(cboRestaurant);
             groupControl2.Controls.Add(label1);
             groupControl2.Dock = DockStyle.Left;
-            groupControl2.Location = new Point(2, 55);
-            groupControl2.Margin = new Padding(4, 2, 4, 2);
+            groupControl2.Location = new Point(2, 50);
+            groupControl2.Margin = new Padding(3, 2, 3, 2);
             groupControl2.Name = "groupControl2";
-            groupControl2.Size = new Size(365, 665);
+            groupControl2.Size = new Size(313, 535);
             groupControl2.TabIndex = 1;
             groupControl2.Text = "Danh sách sản phẩm";
             // 
             // txtTile
             // 
-            txtTile.Location = new Point(79, 108);
+            txtTile.Location = new Point(68, 88);
+            txtTile.Margin = new Padding(3, 2, 3, 2);
             txtTile.Name = "txtTile";
-            txtTile.Size = new Size(279, 22);
+            txtTile.Size = new Size(239, 20);
             txtTile.TabIndex = 5;
+            txtTile.EditValueChanged += txtTile_EditValueChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(6, 111);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(5, 90);
             label4.Name = "label4";
-            label4.Size = new Size(65, 16);
+            label4.Size = new Size(54, 13);
             label4.TabIndex = 4;
             label4.Text = "Sản phẩm";
             // 
             // txtUserName
             // 
-            txtUserName.Location = new Point(79, 76);
+            txtUserName.Location = new Point(68, 62);
+            txtUserName.Margin = new Padding(3, 2, 3, 2);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(279, 22);
+            txtUserName.Size = new Size(239, 20);
             txtUserName.TabIndex = 3;
+            txtUserName.EditValueChanged += txtUserName_EditValueChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(6, 79);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(5, 64);
             label3.Name = "label3";
-            label3.Size = new Size(66, 16);
+            label3.Size = new Size(56, 13);
             label3.TabIndex = 2;
             label3.Text = "UserName";
             // 
             // cboRestaurant
             // 
-            cboRestaurant.Location = new Point(79, 41);
-            cboRestaurant.Margin = new Padding(4, 2, 4, 2);
+            cboRestaurant.Location = new Point(68, 33);
+            cboRestaurant.Margin = new Padding(3, 2, 3, 2);
             cboRestaurant.Name = "cboRestaurant";
             cboRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            cboRestaurant.Size = new Size(279, 22);
+            cboRestaurant.Size = new Size(239, 20);
             cboRestaurant.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(5, 44);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(4, 36);
             label1.Name = "label1";
-            label1.Size = new Size(61, 16);
+            label1.Size = new Size(53, 13);
             label1.TabIndex = 0;
             label1.Text = "Nhà hàng";
             // 
@@ -214,9 +223,9 @@
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { SubBtnOrder, toolStripButton1, toolStripButton2, closeUcListOrder });
-            toolStrip1.Location = new Point(2, 28);
+            toolStrip1.Location = new Point(2, 23);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1164, 27);
+            toolStrip1.Size = new Size(997, 27);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -225,7 +234,7 @@
             SubBtnOrder.Image = (Image)resources.GetObject("SubBtnOrder.Image");
             SubBtnOrder.ImageTransparentColor = Color.Magenta;
             SubBtnOrder.Name = "SubBtnOrder";
-            SubBtnOrder.Size = new Size(97, 24);
+            SubBtnOrder.Size = new Size(81, 24);
             SubBtnOrder.Text = "Đặt Hàng";
             SubBtnOrder.Click += SubBtnOrder_Click;
             // 
@@ -234,7 +243,7 @@
             toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
             toolStripButton1.ImageTransparentColor = Color.Magenta;
             toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(125, 24);
+            toolStripButton1.Size = new Size(104, 24);
             toolStripButton1.Text = "Sửa đơn hàng";
             // 
             // toolStripButton2
@@ -242,7 +251,7 @@
             toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
             toolStripButton2.ImageTransparentColor = Color.Magenta;
             toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(161, 24);
+            toolStripButton2.Size = new Size(134, 24);
             toolStripButton2.Text = "Tìm kiếm đơn hàng";
             // 
             // closeUcListOrder
@@ -252,18 +261,18 @@
             closeUcListOrder.Image = (Image)resources.GetObject("closeUcListOrder.Image");
             closeUcListOrder.ImageTransparentColor = Color.Magenta;
             closeUcListOrder.Name = "closeUcListOrder";
-            closeUcListOrder.Size = new Size(29, 24);
+            closeUcListOrder.Size = new Size(24, 24);
             closeUcListOrder.Text = "Đơn hàng của tôi";
             closeUcListOrder.Click += closeUcListOrder_Click;
             // 
             // ucListOrder
             // 
-            AutoScaleDimensions = new SizeF(7F, 16F);
+            AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(groupControl1);
-            Margin = new Padding(4, 2, 4, 2);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "ucListOrder";
-            Size = new Size(1168, 722);
+            Size = new Size(1001, 587);
             Load += ucListOrder_Load;
             ((System.ComponentModel.ISupportInitialize)groupControl1).EndInit();
             groupControl1.ResumeLayout(false);

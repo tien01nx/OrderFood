@@ -36,17 +36,28 @@ namespace API.Entities
 
         // Sử dụng PROC
 
-        // Lấy danh sách sản người dùng đã đặt đồ ăn hay chưa, theo ngày truyền vào
-        public List<UserInfoDTO> GetUserCartDetails(string date,string userName,string title)
+        //// Lấy danh sách sản người dùng đã đặt đồ ăn hay chưa, theo ngày truyền vào
+        //public List<UserInfoDTO> GetUserCartDetails(string date,string userName,string title)
+        //{
+        //    return UserCartDetails.FromSqlRaw("EXEC sp_GetOrderUser {0},{1},{2}", date, userName, title).ToList();
+        //}
+
+        public List<UserInfoDTO> GetUserCartDetails(string date, string userName, string title)
         {
-            return UserCartDetails.FromSqlRaw("EXEC sp_GetOrderUser {0},{1},{2}", date, userName, title).ToList();
+            date = string.IsNullOrEmpty(date) ? null : date;
+            userName = string.IsNullOrEmpty(userName) ? null : userName;
+            title = string.IsNullOrEmpty(title) ? null : title;
+
+            return UserCartDetails.FromSqlRaw("EXEC sp_GetOrderUser @p0, @p1, @p2", date, userName, title).ToList();
         }
-       
+
+
+
 
         // Lấy danh sách sản người dùng đã đặt đồ ăn hay chưa, theo ngày truyền vào và id người dùng
-        public List<UserInfoDTO> GetUserCartDetailsByDateAndUserId(string userId,string date)
+        public List<UserInfoDTO> GetUserCartDetailsByDateAndUserId(string userId, string date)
         {
-            return UserCartDetails.FromSqlRaw("EXEC sp_GetUserCartDetailsByDateAndUserId {0} {1}", userId, date).ToList();
+            return UserCartDetails.FromSqlRaw("EXEC sp_GetUserCartDetails {0}, {1}", userId, date).ToList();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
