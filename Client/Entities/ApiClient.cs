@@ -70,6 +70,26 @@ namespace Client.Entities
                 return null;
             }
         }
+        
+        public ApiResponse<List<T>> SendListToApi<T>( string resource, List<T> entities)
+        {
+          
+            var request = new RestRequest(resource, Method.Post);
+            request.AddJsonBody(entities);
+
+            var response = _client.Execute(request);
+
+            if (response.IsSuccessful)
+            {
+                return JsonConvert.DeserializeObject<ApiResponse<List<T>>>(response.Content);
+            }
+            else
+            {
+                Console.WriteLine($"Error: {response.ErrorMessage}");
+                return null;
+            }
+        }
+
 
 
 

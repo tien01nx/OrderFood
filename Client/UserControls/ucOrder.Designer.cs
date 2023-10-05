@@ -37,8 +37,7 @@
             groupControl4 = new DevExpress.XtraEditors.GroupControl();
             groupControl6 = new DevExpress.XtraEditors.GroupControl();
             gridDataProduct = new DevExpress.XtraGrid.GridControl();
-            layoutView1 = new DevExpress.XtraGrid.Views.Layout.LayoutView();
-            layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
+            layoutView = new DevExpress.XtraGrid.Views.Layout.LayoutView();
             groupControl5 = new DevExpress.XtraEditors.GroupControl();
             lblRestaurant = new DevExpress.XtraEditors.LabelControl();
             dtOrderDate = new DevExpress.XtraEditors.DateEdit();
@@ -48,6 +47,7 @@
             gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             toolStrip1 = new ToolStrip();
             SubBtnDelete = new ToolStripButton();
+            layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
             groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
@@ -57,8 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)groupControl6).BeginInit();
             groupControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridDataProduct).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)layoutView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)layoutViewCard1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl5).BeginInit();
             groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties).BeginInit();
@@ -68,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)gridDataUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridView2).BeginInit();
             toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)layoutViewCard1).BeginInit();
             SuspendLayout();
             // 
             // closeUcOrder
@@ -97,6 +97,7 @@
             SubBtnOrder.Name = "SubBtnOrder";
             SubBtnOrder.Size = new Size(81, 24);
             SubBtnOrder.Text = "Đặt Hàng";
+            SubBtnOrder.Click += SubBtnOrder_Click;
             // 
             // groupControl1
             // 
@@ -147,23 +148,20 @@
             // 
             gridDataProduct.Dock = DockStyle.Fill;
             gridDataProduct.Location = new Point(2, 23);
-            gridDataProduct.MainView = layoutView1;
+            gridDataProduct.MainView = layoutView;
             gridDataProduct.Name = "gridDataProduct";
             gridDataProduct.Size = new Size(985, 275);
             gridDataProduct.TabIndex = 0;
-            gridDataProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { layoutView1 });
-            gridDataProduct.Click += gridDataProduct_Click;
+            gridDataProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { layoutView });
             // 
-            // layoutView1
+            // layoutView
             // 
-            layoutView1.GridControl = gridDataProduct;
-            layoutView1.Name = "layoutView1";
-            layoutView1.TemplateCard = layoutViewCard1;
-            // 
-            // layoutViewCard1
-            // 
-            layoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
-            layoutViewCard1.Name = "layoutViewCard1";
+            layoutView.CardMinSize = new Size(200, 200);
+            layoutView.GridControl = gridDataProduct;
+            layoutView.Name = "layoutView";
+            layoutView.OptionsView.ViewMode = DevExpress.XtraGrid.Views.Layout.LayoutViewMode.MultiRow;
+            layoutView.TemplateCard = layoutViewCard1;
+            layoutView.CellValueChanged += layoutView_CellValueChanged;
             // 
             // groupControl5
             // 
@@ -255,6 +253,14 @@
             SubBtnDelete.Text = "Xóa đơn hàng";
             SubBtnDelete.Click += SubBtnDelete_Click;
             // 
+            // layoutViewCard1
+            // 
+            layoutViewCard1.CustomizationFormText = "TemplateCard";
+            layoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
+            layoutViewCard1.Name = "layoutViewCard1";
+            layoutViewCard1.OptionsItemText.TextToControlDistance = 5;
+            layoutViewCard1.Text = "TemplateCard";
+            // 
             // ucOrder
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -274,8 +280,7 @@
             ((System.ComponentModel.ISupportInitialize)groupControl6).EndInit();
             groupControl6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)gridDataProduct).EndInit();
-            ((System.ComponentModel.ISupportInitialize)layoutView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)layoutViewCard1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutView).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl5).EndInit();
             groupControl5.ResumeLayout(false);
             groupControl5.PerformLayout();
@@ -287,6 +292,7 @@
             ((System.ComponentModel.ISupportInitialize)gridView2).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)layoutViewCard1).EndInit();
             ResumeLayout(false);
         }
 
@@ -308,7 +314,7 @@
         private DevExpress.XtraEditors.DateEdit dtOrderDate;
         private DevExpress.XtraEditors.LabelControl lblRestaurant;
         private DevExpress.XtraGrid.GridControl gridDataProduct;
-        private DevExpress.XtraGrid.Views.Layout.LayoutView layoutView1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutView layoutView;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
     }
 }

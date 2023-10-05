@@ -133,14 +133,51 @@ namespace API.Controllers
             }
         }
 
+        //[HttpPost("CreateList")]
+        //public async Task<ActionResult<ApiResponse<List<T>>>> Create(List<T> entities)
+        //{
+        //    try
+        //    {
+        //        _context.Set<T>().AddRange(entities);
+        //        await _context.SaveChangesAsync();
+        //        return new ApiResponse<List<T>>(HttpStatusCode.Created, "Tạo thành công", entities);
+        //    }
+        //    catch (DbUpdateException ex)
+        //    {
+        //        _logger.LogError(ex, "Error occurred in Create method.");
+        //        return new ApiResponse<List<T>>(HttpStatusCode.BadRequest, "Lỗi khi tạo" + ex, null);
+        //    }
+        //}
+
         [HttpPost("CreateList")]
         public async Task<ActionResult<ApiResponse<List<T>>>> Create(List<T> entities)
         {
             try
             {
-                _context.Set<T>().AddRange(entities);
+                if (typeof(T) == typeof(Cart))
+                {
+                  
+                    var cartEntities = entities as List<Cart>;
+
+                    foreach (var entity in cartEntities)
+                    {
+                        if (entity.Id == 0) // Accessing Id on the entity
+                        {
+                            _context.Set<T>().Add(entity as T);
+                        }
+                        else
+                        {
+                            _context.Set<T>().Update(entity as T);
+                        }
+                    }
+                }
+                else
+                {
+                    _context.Set<T>().AddRange(entities);
+                }
+
                 await _context.SaveChangesAsync();
-                return new ApiResponse<List<T>>(HttpStatusCode.Created, "Tạo thành công", entities);
+                return new ApiResponse<List<T>>(HttpStatusCode.OK, "Tạo thành công", entities);
             }
             catch (DbUpdateException ex)
             {
