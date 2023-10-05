@@ -1,5 +1,8 @@
 ﻿using Client.Entities;
 using Client.Model;
+using DevExpress.XtraBars.Alerter;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Layout;
 using Newtonsoft.Json;
 using System.IO;
 using System.Net;
@@ -29,50 +32,154 @@ namespace Client.UserControls
         private void ucOrder_Load(object sender, EventArgs e)
         {
             GetOrderByUser();
-            getProduct();
+            GetProduct();
+            OrderCreateDate();
+        }
+
+        // lấy ra id của order vừa tạo của ngày hôm nay 
+        private void OrderCreateDate()
+        {
+            var order = _apiClient.GetSingleData<Order>($"Order/GetOrderByCreatedDate").Data;
+            OrderId = order.Id;
+            lblRestaurant.Text = order.RestaurantName;
+
         }
 
 
+        //public void GetProduct()
+        //{
+        //    var productResponse = _apiClient.GetData<Product>("Product/Restaurant/3");
 
-        public void getProduct()
+        //    foreach (var product in productResponse.Data)
+        //    {
+        //        if (product.ImageUrl != null)
+        //        {
+        //            string absoluteImageUrl = $"http://localhost:5000{product.ImageUrl.Replace("\\", "/")}";
+        //            using (WebClient webClient = new WebClient())
+        //            {
+        //                byte[] data = webClient.DownloadData(absoluteImageUrl);
+        //                using (MemoryStream memStream = new MemoryStream(data))
+        //                {
+        //                    System.Drawing.Image img = System.Drawing.Image.FromStream(memStream);
+        //                    product.Image = img;
+        //                }
+        //            }
+        //        }
+        //    }
+
+
+
+        //    gridDataProduct.DataSource = productResponse.Data;
+        //}
+        public void GetProduct()
         {
-            var categoriesResponse = _apiClient.GetData<Product>("Product/Restaurant/3");
+            var productResponse = _apiClient.GetData<Product>("Product/Restaurant/3");
 
-            if (categoriesResponse != null && categoriesResponse.Data != null)
+            foreach (var product in productResponse.Data)
             {
-                foreach (var product in categoriesResponse.Data)
+                if (product.ImageUrl != null)
                 {
-                    ucProductItem ucProductItem = new ucProductItem();
+                    string absoluteImageUrl = $"http://localhost:5000{product.ImageUrl.Replace("\\", "/")}";
+
+                    product.Image = LoadImageFromUrl(absoluteImageUrl);
+                }
+            }
 
 
-                    if (!string.IsNullOrEmpty(product.ImageUrl))
-                    {
-                        string absoluteImageUrl = $"http://localhost:5000{product.ImageUrl.Replace("\\", "/")}";
 
-                        try
-                        {
-                            Image productImage = LoadImageFromUrl(absoluteImageUrl);
-                            ucProductItem.SetProduct(product.Id, product.Title, product.Price, productImage);
-                        }
-                        catch (Exception ex)
-                        {
+            gridDataProduct.DataSource = productResponse.Data;
+            var layoutView = gridDataProduct.MainView as LayoutView; // Đảm bảo rằng MainView là một instance của LayoutView.
+            if (layoutView != null)
+            {
+                layoutView.Columns["Id"].Visible = false;
+                layoutView.Columns["ImageUrl"].Visible = false;
+                layoutView.Columns["Description"].Visible = false;
+                layoutView.Columns["RestaurantName"].Visible = false;
+                layoutView.Columns["CreateBy"].Visible = false;
+                layoutView.Columns["UpdateBy"].Visible = false;
+                layoutView.Columns["CreateDate"].Visible = false;
+                layoutView.Columns["UpdateDate"].Visible = false;
+            }
 
-                            Console.Error.WriteLine($"Lỗi khi tải hình ảnh: {ex.Message}");
-                        }
-                    }
-                    else
-                    {
-                        // Sử dụng hình ảnh mặc định từ đường dẫn cố định.
-                        string defaultImagePath = @".\Images\quan-com-tam-o-ha-noi-.jpg";
-                        Image defaultImage = Image.FromFile(defaultImagePath);
-                        ucProductItem.SetProduct(product.Id, product.Title, product.Price, defaultImage);
-                    }
-                    var matchedProductInfo = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
-                    ucProductItem.UpdateProductInfo(matchedProductInfo);
-                    flowLayout.Controls.Add(ucProductItem);
+        }
+
+        private Image LoadImageFromUrl(string url)
+        {
+            using (WebClient webClient = new WebClient())
+            {
+                byte[] data = webClient.DownloadData(url);
+                using (MemoryStream memStream = new MemoryStream(data))
+                {
+                    System.Drawing.Image img = System.Drawing.Image.FromStream(memStream);
+                    return img;
                 }
             }
         }
+
+
+
+
+        //public void getProduct()
+        //{
+        //    var categoriesResponse = _apiClient.GetData<Product>("Product/Restaurant/3");
+
+        //    if (categoriesResponse != null && categoriesResponse.Data != null)
+        //    {
+        //        foreach (var product in categoriesResponse.Data)
+        //        {
+        //            ucProductItem ucProductItem = new ucProductItem();
+        //            ucProductItem.ItemClicked += (s, args) =>
+        //            {
+
+        //                bool isUpdateMode = ucProductItem.GetIsUpdateMode();
+        //                int id = ucProductItem.GetId();
+
+        //                decimal spinQuantityValue = ucProductItem.SpinQuantityValue;
+        //                if (isUpdateMode)
+        //                {
+        //                    UserSendOrder(id, OrderId, product.Id, spinQuantityValue, 3);
+        //                }
+        //                else
+        //                {
+        //                    UserSendOrder(0, OrderId, product.Id, spinQuantityValue, 2);
+        //                }
+
+        //                //UserSendOrder(OrderId, product.Id, spinQuantityValue, 2);
+        //                GetOrderByUser();
+        //                //MessageBox.Show($"Bạn đã chọn sản phẩm: {product.Id} ,{OrderId} ,{spinQuantityValue}");
+
+
+        //            };
+
+
+        //            if (!string.IsNullOrEmpty(product.ImageUrl))
+        //            {
+        //                string absoluteImageUrl = $"http://localhost:5000{product.ImageUrl.Replace("\\", "/")}";
+
+        //                try
+        //                {
+        //                    Image productImage = LoadImageFromUrl(absoluteImageUrl);
+        //                    ucProductItem.SetProduct(product.Id, product.Title, product.Price, productImage);
+        //                }
+        //                catch (Exception ex)
+        //                {
+
+        //                    Console.Error.WriteLine($"Lỗi khi tải hình ảnh: {ex.Message}");
+        //                }
+        //            }
+        //            else
+        //            {
+        //                // Sử dụng hình ảnh mặc định từ đường dẫn cố định.
+        //                string defaultImagePath = @".\Images\quan-com-tam-o-ha-noi-.jpg";
+        //                Image defaultImage = Image.FromFile(defaultImagePath);
+        //                ucProductItem.SetProduct(product.Id, product.Title, product.Price, defaultImage);
+        //            }
+        //            var matchedProductInfo = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
+        //            ucProductItem.UpdateProductInfo(matchedProductInfo);
+        //            flowLayout.Controls.Add(ucProductItem);
+        //        }
+        //    }
+        //}
         private void GetOrderByUser()
         {
             DateTime date = dtOrderDate.DateTime;
@@ -90,14 +197,14 @@ namespace Client.UserControls
                     Console.WriteLine(JsonConvert.SerializeObject(userOrderList));
                     gridDataUser.DataSource = userOrderList;
 
-                    //GridView view = gridData.MainView as GridView;
+                    GridView view = gridDataUser.MainView as GridView;
 
-                    //if (view != null)
-                    //{
-                    //    // Ẩn các cột bạn không muốn hiển thị
-                    //    view.Columns["OrderId"].Visible = false;
-                    //    view.Columns["ProductId"].Visible = false;
-                    //}
+                    if (view != null)
+                    {
+                     
+
+                        view.Columns["ProductId"].Visible = false;
+                    }
                 }
                 else
                 {
@@ -120,15 +227,35 @@ namespace Client.UserControls
         }
 
 
-        private Image LoadImageFromUrl(string url)
+
+
+        public void UserSendOrder(int id, int orderId, int productId, decimal count, int userId)
         {
-            using (WebClient webClient = new WebClient())
+
+            var orderDetail = new OrderDetail { Id = id, OrderId = orderId, ProductId = productId, Count = count, UserId = userId };
+            var resource = "Cart/Create";
+
+            var response = _apiClient.SendPostRequest<Cart>(resource, orderDetail);
+
+            if (response != null)
             {
-                byte[] data = webClient.DownloadData(url);
-                using (MemoryStream memStream = new MemoryStream(data))
+                if (response.Code == HttpStatusCode.OK)
                 {
-                    return Image.FromStream(memStream);
+
+                    MessageBox.Show($"Thêm thành công:");
+                    //GetUserProduct();
                 }
+                else
+                {
+                    // Đăng nhập thất bại
+                    string errorMessage = response.Message;
+                    MessageBox.Show($"Thêm thất bại: {errorMessage}");
+                }
+            }
+            else
+            {
+                // Kết nối đến server thất bại hoặc lỗi khác
+                MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối và thử lại.");
             }
         }
 
@@ -137,8 +264,20 @@ namespace Client.UserControls
             GetOrderByUser();
         }
 
-       
 
-      
+        private void SubBtnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubBtnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridDataProduct_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

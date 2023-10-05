@@ -28,35 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucOrder));
             closeUcOrder = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
-            toolStripButton1 = new ToolStripButton();
+            SubBtnSearch = new ToolStripButton();
             SubBtnOrder = new ToolStripButton();
+            groupControl1 = new DevExpress.XtraEditors.GroupControl();
             groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            flowLayout = new FlowLayoutPanel();
-            jsonDataSource1 = new DevExpress.DataAccess.Json.JsonDataSource(components);
+            groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            groupControl6 = new DevExpress.XtraEditors.GroupControl();
+            gridDataProduct = new DevExpress.XtraGrid.GridControl();
+            layoutView1 = new DevExpress.XtraGrid.Views.Layout.LayoutView();
+            layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
+            groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            lblRestaurant = new DevExpress.XtraEditors.LabelControl();
+            dtOrderDate = new DevExpress.XtraEditors.DateEdit();
+            labelControl1 = new DevExpress.XtraEditors.LabelControl();
             groupControl3 = new DevExpress.XtraEditors.GroupControl();
             gridDataUser = new DevExpress.XtraGrid.GridControl();
-            gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            dtOrderDate = new DevExpress.XtraEditors.DateEdit();
-            groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             toolStrip1 = new ToolStrip();
+            SubBtnDelete = new ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
+            groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
             groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)groupControl4).BeginInit();
+            groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)groupControl6).BeginInit();
+            groupControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gridDataProduct).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutViewCard1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)groupControl5).BeginInit();
+            groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties.CalendarTimeProperties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl3).BeginInit();
             groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridDataUser).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)groupControl4).BeginInit();
-            groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties.CalendarTimeProperties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
-            groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gridView2).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -71,21 +81,14 @@
             closeUcOrder.Text = "Đơn hàng của tôi";
             closeUcOrder.Click += closeUcOrder_Click;
             // 
-            // toolStripButton2
+            // SubBtnSearch
             // 
-            toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(134, 24);
-            toolStripButton2.Text = "Tìm kiếm đơn hàng";
-            // 
-            // toolStripButton1
-            // 
-            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(104, 24);
-            toolStripButton1.Text = "Sửa đơn hàng";
+            SubBtnSearch.Image = (Image)resources.GetObject("SubBtnSearch.Image");
+            SubBtnSearch.ImageTransparentColor = Color.Magenta;
+            SubBtnSearch.Name = "SubBtnSearch";
+            SubBtnSearch.Size = new Size(134, 24);
+            SubBtnSearch.Text = "Tìm kiếm đơn hàng";
+            SubBtnSearch.Click += SubBtnSearch_Click;
             // 
             // SubBtnOrder
             // 
@@ -95,104 +98,8 @@
             SubBtnOrder.Size = new Size(81, 24);
             SubBtnOrder.Text = "Đặt Hàng";
             // 
-            // groupControl2
-            // 
-            groupControl2.Controls.Add(flowLayout);
-            groupControl2.Dock = DockStyle.Left;
-            groupControl2.Location = new Point(2, 50);
-            groupControl2.Margin = new Padding(3, 2, 3, 2);
-            groupControl2.Name = "groupControl2";
-            groupControl2.Size = new Size(313, 535);
-            groupControl2.TabIndex = 1;
-            groupControl2.Text = "Danh sách sản phẩm";
-            // 
-            // flowLayout
-            // 
-            flowLayout.AutoScroll = true;
-            flowLayout.Dock = DockStyle.Fill;
-            flowLayout.Location = new Point(2, 23);
-            flowLayout.Margin = new Padding(3, 2, 3, 2);
-            flowLayout.Name = "flowLayout";
-            flowLayout.Size = new Size(309, 510);
-            flowLayout.TabIndex = 0;
-            // 
-            // jsonDataSource1
-            // 
-            jsonDataSource1.Name = "jsonDataSource1";
-            // 
-            // groupControl3
-            // 
-            groupControl3.Controls.Add(gridDataUser);
-            groupControl3.Controls.Add(groupControl4);
-            groupControl3.Dock = DockStyle.Fill;
-            groupControl3.Location = new Point(315, 50);
-            groupControl3.Margin = new Padding(3, 2, 3, 2);
-            groupControl3.Name = "groupControl3";
-            groupControl3.Size = new Size(684, 535);
-            groupControl3.TabIndex = 2;
-            groupControl3.Text = "Danh sách đơn hàng";
-            // 
-            // gridDataUser
-            // 
-            gridDataUser.Dock = DockStyle.Fill;
-            gridDataUser.EmbeddedNavigator.Margin = new Padding(3, 2, 3, 2);
-            gridDataUser.Location = new Point(2, 56);
-            gridDataUser.MainView = gridView1;
-            gridDataUser.Margin = new Padding(3, 2, 3, 2);
-            gridDataUser.Name = "gridDataUser";
-            gridDataUser.Size = new Size(680, 477);
-            gridDataUser.TabIndex = 1;
-            gridDataUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
-            // 
-            // gridView1
-            // 
-            gridView1.DetailHeight = 284;
-            gridView1.GridControl = gridDataUser;
-            gridView1.Name = "gridView1";
-            gridView1.OptionsBehavior.CacheValuesOnRowUpdating = DevExpress.Data.CacheRowValuesMode.Disabled;
-            gridView1.OptionsBehavior.Editable = false;
-            gridView1.OptionsEditForm.PopupEditFormWidth = 686;
-            gridView1.OptionsView.ShowGroupPanel = false;
-            gridView1.OptionsView.ShowIndicator = false;
-            // 
-            // groupControl4
-            // 
-            groupControl4.Controls.Add(labelControl1);
-            groupControl4.Controls.Add(dtOrderDate);
-            groupControl4.Dock = DockStyle.Top;
-            groupControl4.Location = new Point(2, 23);
-            groupControl4.Margin = new Padding(3, 2, 3, 2);
-            groupControl4.Name = "groupControl4";
-            groupControl4.ShowCaption = false;
-            groupControl4.Size = new Size(680, 33);
-            groupControl4.TabIndex = 0;
-            // 
-            // labelControl1
-            // 
-            labelControl1.Appearance.Font = new Font("Tahoma", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
-            labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new Point(6, 12);
-            labelControl1.Margin = new Padding(3, 2, 3, 2);
-            labelControl1.Name = "labelControl1";
-            labelControl1.Size = new Size(51, 13);
-            labelControl1.TabIndex = 1;
-            labelControl1.Text = "Thời gian";
-            // 
-            // dtOrderDate
-            // 
-            dtOrderDate.EditValue = null;
-            dtOrderDate.Location = new Point(68, 7);
-            dtOrderDate.Margin = new Padding(3, 2, 3, 2);
-            dtOrderDate.Name = "dtOrderDate";
-            dtOrderDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            dtOrderDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            dtOrderDate.Size = new Size(125, 20);
-            dtOrderDate.TabIndex = 0;
-            dtOrderDate.EditValueChanged += dtOrderDate_EditValueChanged;
-            // 
             // groupControl1
             // 
-            groupControl1.Controls.Add(groupControl3);
             groupControl1.Controls.Add(groupControl2);
             groupControl1.Controls.Add(toolStrip1);
             groupControl1.Dock = DockStyle.Fill;
@@ -201,17 +108,152 @@
             groupControl1.Name = "groupControl1";
             groupControl1.Size = new Size(1001, 587);
             groupControl1.TabIndex = 1;
-            groupControl1.Text = "DANH SÁCH ĐƠN HÀNG";
+            groupControl1.Text = "DANH SÁCH ĐẶT HÀNG";
+            // 
+            // groupControl2
+            // 
+            groupControl2.Controls.Add(groupControl4);
+            groupControl2.Controls.Add(groupControl3);
+            groupControl2.Dock = DockStyle.Fill;
+            groupControl2.Location = new Point(2, 50);
+            groupControl2.Name = "groupControl2";
+            groupControl2.ShowCaption = false;
+            groupControl2.Size = new Size(997, 535);
+            groupControl2.TabIndex = 1;
+            groupControl2.Text = "groupControl2";
+            // 
+            // groupControl4
+            // 
+            groupControl4.Controls.Add(groupControl6);
+            groupControl4.Controls.Add(groupControl5);
+            groupControl4.Dock = DockStyle.Fill;
+            groupControl4.Location = new Point(2, 2);
+            groupControl4.Name = "groupControl4";
+            groupControl4.Size = new Size(993, 355);
+            groupControl4.TabIndex = 1;
+            groupControl4.Text = "DANH SÁCH SẢN PHẨM";
+            // 
+            // groupControl6
+            // 
+            groupControl6.Controls.Add(gridDataProduct);
+            groupControl6.Dock = DockStyle.Fill;
+            groupControl6.Location = new Point(2, 53);
+            groupControl6.Name = "groupControl6";
+            groupControl6.Size = new Size(989, 300);
+            groupControl6.TabIndex = 1;
+            groupControl6.Text = "DANH SÁCH SẢN PHẨM";
+            // 
+            // gridDataProduct
+            // 
+            gridDataProduct.Dock = DockStyle.Fill;
+            gridDataProduct.Location = new Point(2, 23);
+            gridDataProduct.MainView = layoutView1;
+            gridDataProduct.Name = "gridDataProduct";
+            gridDataProduct.Size = new Size(985, 275);
+            gridDataProduct.TabIndex = 0;
+            gridDataProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { layoutView1 });
+            gridDataProduct.Click += gridDataProduct_Click;
+            // 
+            // layoutView1
+            // 
+            layoutView1.GridControl = gridDataProduct;
+            layoutView1.Name = "layoutView1";
+            layoutView1.TemplateCard = layoutViewCard1;
+            // 
+            // layoutViewCard1
+            // 
+            layoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
+            layoutViewCard1.Name = "layoutViewCard1";
+            // 
+            // groupControl5
+            // 
+            groupControl5.Controls.Add(lblRestaurant);
+            groupControl5.Controls.Add(dtOrderDate);
+            groupControl5.Controls.Add(labelControl1);
+            groupControl5.Dock = DockStyle.Top;
+            groupControl5.Location = new Point(2, 23);
+            groupControl5.Name = "groupControl5";
+            groupControl5.ShowCaption = false;
+            groupControl5.Size = new Size(989, 30);
+            groupControl5.TabIndex = 0;
+            groupControl5.Text = "groupControl5";
+            // 
+            // lblRestaurant
+            // 
+            lblRestaurant.Appearance.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblRestaurant.Appearance.Options.UseFont = true;
+            lblRestaurant.Location = new Point(243, 6);
+            lblRestaurant.Name = "lblRestaurant";
+            lblRestaurant.Size = new Size(52, 13);
+            lblRestaurant.TabIndex = 2;
+            lblRestaurant.Text = "Nhà hàng";
+            // 
+            // dtOrderDate
+            // 
+            dtOrderDate.EditValue = null;
+            dtOrderDate.Location = new Point(72, 3);
+            dtOrderDate.Name = "dtOrderDate";
+            dtOrderDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            dtOrderDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            dtOrderDate.Size = new Size(128, 20);
+            dtOrderDate.TabIndex = 1;
+            // 
+            // labelControl1
+            // 
+            labelControl1.Appearance.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelControl1.Appearance.Options.UseFont = true;
+            labelControl1.Location = new Point(15, 7);
+            labelControl1.Name = "labelControl1";
+            labelControl1.Size = new Size(51, 13);
+            labelControl1.TabIndex = 0;
+            labelControl1.Text = "Thời gian";
+            // 
+            // groupControl3
+            // 
+            groupControl3.Controls.Add(gridDataUser);
+            groupControl3.Dock = DockStyle.Bottom;
+            groupControl3.Location = new Point(2, 357);
+            groupControl3.Name = "groupControl3";
+            groupControl3.Size = new Size(993, 176);
+            groupControl3.TabIndex = 0;
+            groupControl3.Text = "DANH SÁCH ĐÃ ĐẶT";
+            // 
+            // gridDataUser
+            // 
+            gridDataUser.Dock = DockStyle.Fill;
+            gridDataUser.Location = new Point(2, 23);
+            gridDataUser.MainView = gridView2;
+            gridDataUser.Name = "gridDataUser";
+            gridDataUser.Size = new Size(989, 151);
+            gridDataUser.TabIndex = 0;
+            gridDataUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView2 });
+            // 
+            // gridView2
+            // 
+            gridView2.GridControl = gridDataUser;
+            gridView2.Name = "gridView2";
+            gridView2.OptionsBehavior.Editable = false;
+            gridView2.OptionsView.ShowGroupPanel = false;
+            gridView2.OptionsView.ShowIndicator = false;
             // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { SubBtnOrder, toolStripButton1, toolStripButton2, closeUcOrder });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { SubBtnOrder, SubBtnSearch, closeUcOrder, SubBtnDelete });
             toolStrip1.Location = new Point(2, 23);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(997, 27);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
+            // 
+            // SubBtnDelete
+            // 
+            SubBtnDelete.Image = (Image)resources.GetObject("SubBtnDelete.Image");
+            SubBtnDelete.ImageTransparentColor = Color.Magenta;
+            SubBtnDelete.Name = "SubBtnDelete";
+            SubBtnDelete.Size = new Size(105, 24);
+            SubBtnDelete.Text = "Xóa đơn hàng";
+            SubBtnDelete.Click += SubBtnDelete_Click;
             // 
             // ucOrder
             // 
@@ -222,20 +264,27 @@
             Name = "ucOrder";
             Size = new Size(1001, 587);
             Load += ucOrder_Load;
-            ((System.ComponentModel.ISupportInitialize)groupControl2).EndInit();
-            groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)groupControl3).EndInit();
-            groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)gridDataUser).EndInit();
-            ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)groupControl4).EndInit();
-            groupControl4.ResumeLayout(false);
-            groupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties.CalendarTimeProperties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl1).EndInit();
             groupControl1.ResumeLayout(false);
             groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)groupControl2).EndInit();
+            groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)groupControl4).EndInit();
+            groupControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)groupControl6).EndInit();
+            groupControl6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)gridDataProduct).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutViewCard1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)groupControl5).EndInit();
+            groupControl5.ResumeLayout(false);
+            groupControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties.CalendarTimeProperties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)groupControl3).EndInit();
+            groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)gridDataUser).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridView2).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ResumeLayout(false);
@@ -243,19 +292,23 @@
 
         #endregion
         private ToolStripButton closeUcOrder;
-        private ToolStripButton toolStripButton2;
-        private ToolStripButton toolStripButton1;
+        private ToolStripButton SubBtnSearch;
         private ToolStripButton SubBtnOrder;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private ToolStrip toolStrip1;
-        private DevExpress.DataAccess.Json.JsonDataSource jsonDataSource1;
-        private FlowLayoutPanel flowLayout;
+        private ToolStripButton SubBtnDelete;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.XtraEditors.DateEdit dtOrderDate;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraGrid.GridControl gridDataUser;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraEditors.GroupControl groupControl6;
+        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.DateEdit dtOrderDate;
+        private DevExpress.XtraEditors.LabelControl lblRestaurant;
+        private DevExpress.XtraGrid.GridControl gridDataProduct;
+        private DevExpress.XtraGrid.Views.Layout.LayoutView layoutView1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
     }
 }

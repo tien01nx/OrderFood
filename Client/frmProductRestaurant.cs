@@ -32,7 +32,7 @@ namespace Client
         {
             var userOrder = _apiClient.GetData<UserInfoDTO>("Order/UserOrders");
             var firstUserOrder = userOrder?.Data?.FirstOrDefault();
-            _orderId = firstUserOrder.OrderId;
+           
 
 
             grilUserOrder.DataSource = userOrder?.Data;

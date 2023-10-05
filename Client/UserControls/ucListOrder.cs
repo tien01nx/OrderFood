@@ -1,5 +1,6 @@
 ﻿using Client.Entities;
 using Client.Model;
+using DevExpress.XtraGrid.Views.Grid;
 using Newtonsoft.Json;
 using System.IO;
 using System.Net;
@@ -22,9 +23,7 @@ namespace Client.UserControls
         private void ucListOrder_Load(object sender, EventArgs e)
         {
             GetOrderByUserAll();
-            //getProduct();
         }
-
 
         private void GetOrderByUserAll()
         {
@@ -36,18 +35,16 @@ namespace Client.UserControls
             try
             {
                 var userOrder = _apiClient.GetData<UserInfoDTO>($"Order/UserAllOrders?date={dateString}&UserName={UserName}&Title={Title}").Data;
-                //var userOrder = _apiClient.GetData<UserInfoDTO>($"Order/UserAllOrders?date={dateString}&UserName={UserName}&Title={Title}").Data;
                 Console.WriteLine(JsonConvert.SerializeObject(userOrder));
                 gridData.DataSource = userOrder;
-                // Lấy GridView từ gridData's MainView
-                //GridView view = gridData.MainView as GridView;
+                GridView view = gridData.MainView as GridView;
+                if (view != null)
+                {
+                    // Ẩn các cột  không muốn hiển thị`
+                    view.Columns["Id"].Visible = false;
 
-                //if (view != null)
-                //{
-                //    // Ẩn các cột bạn không muốn hiển thị
-                //    view.Columns["OrderId"].Visible = false;
-                //    view.Columns["ProductId"].Visible = false;
-                //}
+                    view.Columns["ProductId"].Visible = false;
+                }
             }
             catch (Exception ex)
             {
@@ -61,51 +58,18 @@ namespace Client.UserControls
             _mainForm.AddUC(uc);
         }
 
-
-
-        private Image LoadImageFromUrl(string url)
-        {
-            using (WebClient webClient = new WebClient())
-            {
-                byte[] data = webClient.DownloadData(url);
-                using (MemoryStream memStream = new MemoryStream(data))
-                {
-                    return Image.FromStream(memStream);
-                }
-            }
-        }
-
-        private void toolStripButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void closeUcListOrder_Click(object sender, EventArgs e)
         {
             _mainForm.RemoveUC();
         }
 
+
+        private void SubBtnSearch_Click(object sender, EventArgs e)
+        {
+            GetOrderByUserAll();
+        }
+
         private void dtOrderDate_EditValueChanged(object sender, EventArgs e)
-        {
-            GetOrderByUserAll();
-        }
-
-        private void gridData_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtOrderDate_EditValueChanged_1(object sender, EventArgs e)
-        {
-            GetOrderByUserAll();
-        }
-
-        private void txtUserName_EditValueChanged(object sender, EventArgs e)
-        {
-            GetOrderByUserAll();
-        }
-
-        private void txtTile_EditValueChanged(object sender, EventArgs e)
         {
             GetOrderByUserAll();
         }

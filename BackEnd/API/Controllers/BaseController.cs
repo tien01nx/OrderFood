@@ -28,41 +28,6 @@ namespace API.Controllers
         {
 
             ApiResponse<List<T>> result;
-
-            //var currentDate = DateTime.Now.Date;
-
-            //// Truy vấn cho những người dùng có đơn hàng
-            //var usersWithOrders = (
-            //    from user in _context.Users
-            //    join order in _context.Orders on user.Id equals order.UserId
-            //    join orderDetail in _context.OrderDetails on order.Id equals orderDetail.OrderId
-            //    where orderDetail.CreateDate.Date == currentDate
-            //    join product in _context.Products on orderDetail.ProductId equals product.Id
-            //    group new { orderDetail, product } by new { user.UserName, product.Title, product.Description } into g
-            //    select new
-            //    {
-            //        UserName = g.Key.UserName,
-            //        Title = g.Key.Title,
-            //        Description = g.Key.Description,
-            //        TotalQuantity = (int?)g.Sum(x => x.orderDetail.Count) ?? 0,
-            //        TotalPrice = (decimal?)g.Sum(x => x.orderDetail.Count * x.product.Price) ?? 0m
-            //    }).ToList();
-
-            //// Truy vấn cho những người dùng không có đơn hàng
-            //var usersWithoutOrders = (
-            //    from user in _context.Users
-            //    where !_context.Orders.Any(o => o.UserId == user.Id && _context.OrderDetails.Any(od => od.OrderId == o.Id && od.CreateDate.Date == currentDate))
-            //    select new
-            //    {
-            //        UserName = user.UserName,
-            //        Title = "",
-            //        Description = "",
-            //        TotalQuantity = 0, // Đã đổi sang int
-            //        TotalPrice = 0m // Giả sử giá tiền là kiểu decimal
-            //    }).ToList();
-
-            //// Kết hợp hai danh sách
-            //var combinedResults = usersWithOrders.Concat(usersWithoutOrders).ToList();
             try
 
 
@@ -145,6 +110,17 @@ namespace API.Controllers
 
                     return new ApiResponse<T>(HttpStatusCode.OK, "Tạo thành công", entity);
                 }
+                // kiểm tra productId và userId đã tồn tại trong bảng Cart hay chưa nếu tồn tại thì cập nhật số lượng
+                if(typeof(T) == typeof(Cart)){
+                    var cartEntity = entity as Cart;
+                    if (_context.Set<Cart>().Any(x => x.Id==cartEntity.Id))
+                    {
+                        _context.Set<Cart>().Update(cartEntity);
+                        await _context.SaveChangesAsync();
+                        return new ApiResponse<T>(HttpStatusCode.OK, "Cập nhật thành công", entity);
+                    }
+                }
+
 
                 _context.Set<T>().Add(entity);
                 await _context.SaveChangesAsync();

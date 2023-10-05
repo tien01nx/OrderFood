@@ -1,4 +1,6 @@
-﻿namespace Client.Model
+﻿using DevExpress.XtraEditors.Repository;
+
+namespace Client.Model
 {
 
     public class Product : BaseModel
@@ -10,7 +12,10 @@
         public double Price { get; set; }
         public string RestaurantName { get; set; }
         public string ImageUrl { get; set; }
+        public bool IsSelected { get; set; }
 
-      
+        public System.Drawing.Image Image { get; set; }
+
+
     }
 }

@@ -10,25 +10,25 @@ BEGIN
 
     SET @SQL = '
         SELECT 
+		 ISNULL(C.Id, 0) AS Id,
             U.UserName,
             ISNULL(C.ProductId, 0) AS ProductId,
-            ISNULL(C.OrderId, 0) AS OrderId,
             COALESCE(P.Title, ''N/A'') AS Title,
             SUM(ISNULL((C.Count * P.Price), 0)) AS TotalPrice,
             SUM(ISNULL(C.Count, 0)) AS TotalQuantity
         FROM 
-            [dbo].[AspNetUsers] U
+            AspNetUsers U
         LEFT JOIN 
-            [dbo].[Carts] C ON U.Id = C.UserId '
+            Carts C ON U.Id = C.UserId '
     + CASE WHEN @TargetDate IS NOT NULL THEN 'AND CAST(C.CreateDate AS DATE) = @Date ' ELSE ' ' END +
     'LEFT JOIN 
-            [dbo].[Products] P ON C.ProductId = P.Id
+            Products P ON C.ProductId = P.Id
         WHERE 
             1=1 '
     + CASE WHEN @UserName IS NOT NULL THEN 'AND U.UserName LIKE ''%'' + @User + ''%'' ' ELSE ' ' END +
     + CASE WHEN @ProductTile IS NOT NULL THEN 'AND P.Title LIKE ''%'' + @Product + ''%'' ' ELSE ' ' END +
     'GROUP BY 
-            U.UserName, C.ProductId, C.OrderId, P.Title'
+            U.UserName, C.ProductId, P.Title'
 
     EXEC sp_executesql @SQL, N'@Date DATE, @User NVARCHAR(256), @Product NVARCHAR(MAX)', @Date = @TargetDate, @User = @UserName, @Product = @ProductTile
 END
@@ -45,6 +45,7 @@ ALTER PROCEDURE sp_GetUserCartDetails
 AS
 BEGIN
     SELECT 
+		C.Id,
         U.UserName,
         C.ProductId,
         C.OrderId,
@@ -60,7 +61,7 @@ BEGIN
     WHERE 
         CAST(C.CreateDate AS DATE) = @Date AND C.UserId = @UserId
     GROUP BY 
-        U.UserName, C.ProductId, C.OrderId, P.Title
+       C.Id, U.UserName, C.ProductId, C.OrderId, P.Title
 END
 
 

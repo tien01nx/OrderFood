@@ -10,20 +10,28 @@ namespace Client
     {
         private int ProductId;
 
-        private readonly ApiClient _apiClient;
-        private int OrderId;
+        public int CartId;
+        public event EventHandler ItemClicked;
+
+        public bool IsUpdateMode { get; private set; }
+
 
         public ucProductItem()
         {
             InitializeComponent();
-            _apiClient = new ApiClient();
-            OrderCreateDate();  
+            IsUpdateMode = false;
+
+        }
+
+        private void OnItemClicked()
+        {
+            ItemClicked?.Invoke(this, EventArgs.Empty);
         }
 
 
-        public void SetProduct(int id, string name, double price, Image image)
+        public void SetProduct(int productId, string name, double price, Image image)
         {
-            this.ProductId = id;
+            this.ProductId = productId;
             lblProductName.Text = name;
             lblPrice.Text = price.ToString();
             pcProductImg.Image = image;
@@ -35,58 +43,30 @@ namespace Client
             {
                 this.spinQuantity.Value = userInfo.TotalQuantity;
                 this.chkIsChoose.Checked = true;
+                CartId = userInfo.Id;
+                IsUpdateMode = true;
+
             }
             else
             {
                 this.spinQuantity.Value = 1;
                 this.chkIsChoose.Checked = false;
+                IsUpdateMode = false;
             }
         }
-
-        private void btnOrder_Click(object sender, EventArgs e)
+        public decimal SpinQuantityValue
         {
-            MessageBox.Show($"Bạn đã chọn sản phẩm: {ProductId} ,{OrderId} ");
-            UserSendOrder(OrderId, ProductId, spinQuantity.Value, 2);
+            get { return spinQuantity.Value; }
+            set { spinQuantity.Value = value; }
+        }
+        public int GetId()
+        {
+            return CartId;
         }
 
-        private void OrderCreateDate()
+        public bool GetIsUpdateMode()
         {
-            var order = _apiClient.GetSingleData<Order>($"Order/GetOrderByCreatedDate").Data;
-
-            OrderId = order.Id;
-
-        }
-
-
-
-        public void UserSendOrder(int orderId, int productId, decimal count, int userId)
-        {
-
-            var orderDetail = new OrderDetail { OrderId = orderId, ProductId = productId, Count = count, UserId = userId };
-            var resource = "Cart/Create";
-
-            var response = _apiClient.SendPostRequest<Cart>(resource, orderDetail);
-
-            if (response != null)
-            {
-                if (response.Code == System.Net.HttpStatusCode.OK)
-                {
-
-                    MessageBox.Show($"Thêm thành công:");
-                    //GetUserProduct();
-                }
-                else
-                {
-                    // Đăng nhập thất bại
-                    string errorMessage = response.Message;
-                    MessageBox.Show($"Thêm thất bại: {errorMessage}");
-                }
-            }
-            else
-            {
-                // Kết nối đến server thất bại hoặc lỗi khác
-                MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối và thử lại.");
-            }
+            return IsUpdateMode;
         }
     }
 }
