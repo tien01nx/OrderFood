@@ -73,5 +73,16 @@ namespace Client.UserControls
         {
             GetOrderByUserAll();
         }
+
+        private void txtUserName_EditValueChanged(object sender, EventArgs e)
+        {
+            GetOrderByUserAll();
+
+        }
+
+        private void txtTile_EditValueChanged(object sender, EventArgs e)
+        {
+            GetOrderByUserAll();
+        }
     }
 }

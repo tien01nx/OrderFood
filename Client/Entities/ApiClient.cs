@@ -47,11 +47,6 @@ namespace Client.Entities
             }
         }
 
-
-
-
-
-
         public ApiResponse<T> SendPostRequest<T>(string resource, object body)
         {
             var request = new RestRequest(resource, Method.Post);
@@ -86,6 +81,26 @@ namespace Client.Entities
             else
             {
                 Console.WriteLine($"Error: {response.ErrorMessage}");
+                return null;
+            }
+        }
+
+
+        public ApiResponse<T> SendDeleteRequest<T>(string resource, object body)
+        {
+            var request = new RestRequest(resource, Method.Delete);
+            request.AddJsonBody(body);
+
+            var response = _client.Execute(request);
+            //var response = _client.Execute<ApiResponse<T>>(request);
+            if (response.IsSuccessful)
+            {
+                var content = response.Content;
+                return JsonConvert.DeserializeObject<ApiResponse<T>>(content);
+            }
+            else
+            {
+                Console.WriteLine(response.ErrorMessage);
                 return null;
             }
         }

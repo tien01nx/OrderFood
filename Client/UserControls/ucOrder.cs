@@ -1,13 +1,16 @@
 ﻿using Client.Entities;
 using Client.Model;
+using DevExpress.DataAccess.Native.Web;
 using DevExpress.XtraBars.Alerter;
 using DevExpress.XtraGrid.Views.Grid;
+using System.Drawing;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraGrid.Views.Layout;
 using DevExpress.XtraGrid.Views.Layout.ViewInfo;
 using Newtonsoft.Json;
 using System.IO;
 using System.Net;
+using DevExpress.XtraEditors;
 
 namespace Client.UserControls
 {
@@ -52,52 +55,67 @@ namespace Client.UserControls
         public void GetProduct()
         {
             var productResponse = _apiClient.GetData<Product>("Product/Restaurant/3");
-
-            foreach (var product in productResponse.Data)
+            if (productResponse != null && productResponse.Data != null)
             {
-
-                var userOrder = userOrderList.FirstOrDefault(u => u.ProductId == product.Id);
-                if (userOrder != null)
+                // Sắp xếp sản phẩm dựa trên sự hiện diện trong userOrderList
+                productResponse.Data.Sort((p1, p2) =>
                 {
-                    product.Quantity = userOrder.TotalQuantity;
-                    product.IsSelected = true;
+                    var p1InOrderList = userOrderList.Any(u => u.ProductId == p1.Id);
+                    var p2InOrderList = userOrderList.Any(u => u.ProductId == p2.Id);
+
+                    if (p1InOrderList && !p2InOrderList)
+                    {
+                        return -1;
+                    }
+                    else if (!p1InOrderList && p2InOrderList)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                });
+
+                foreach (var product in productResponse.Data)
+                {
+                    var userOrder = userOrderList.FirstOrDefault(u => u.ProductId == product.Id);
+                    if (userOrder != null)
+                    {
+                        product.Quantity = userOrder.TotalQuantity;
+                        product.IsSelected = true;
+                    }
+
+                    if (product.ImageUrl != null)
+                    {
+                        string absoluteImageUrl = $"http://localhost:5000{product.ImageUrl.Replace("\\", "/")}";
+                        product.Image = LoadImageFromUrl(absoluteImageUrl);
+                    }
+                    else
+                    {
+                        string defaultImageUrl = @"D:\ThucTap\OrderFood\Client\Images\quan-com-tam-o-ha-noi-.jpg";
+                        product.Image = LoadImageFromUrl(defaultImageUrl);
+                    }
+
+                    // Tìm vị trí thích hợp để thêm sản phẩm vào danh sách
+                    int index = productList.FindIndex(p => p.Id == product.Id);
+                    if (index >= 0)
+                    {
+                        // Sản phẩm đã tồn tại, cập nhật nó
+                        productList[index] = product;
+                    }
+                    else
+                    {
+                        // Sản phẩm chưa tồn tại, thêm nó vào danh sách
+                        productList.Insert(0, product); // Thêm vào đầu danh sách để hiển thị đầu tiên
+                    }
                 }
 
-                if (product.ImageUrl != null)
-                {
-                    string absoluteImageUrl = $"http://localhost:5000{product.ImageUrl.Replace("\\", "/")}";
-
-                    product.Image = LoadImageFromUrl(absoluteImageUrl);
-                }
-                else
-                {
-                    string defaultImageUrl = @"D:\ThucTap\OrderFood\Client\Images\quan-com-tam-o-ha-noi-.jpg";
-                    product.Image = LoadImageFromUrl(defaultImageUrl);
-                }
-                productList.Add(product);
+                gridDataProduct.DataSource = productList;
             }
-
-            gridDataProduct.DataSource = productResponse.Data;
-            var layoutView = gridDataProduct.MainView as LayoutView;
-            if (layoutView != null)
-            {
-                layoutView.Columns["Id"].Visible = false;
-                layoutView.Columns["ImageUrl"].Visible = false;
-                layoutView.Columns["Description"].Visible = false;
-                layoutView.Columns["RestaurantName"].Visible = false;
-                layoutView.Columns["CreateBy"].Visible = false;
-                layoutView.Columns["UpdateBy"].Visible = false;
-                layoutView.Columns["CreateDate"].Visible = false;
-                layoutView.Columns["UpdateDate"].Visible = false;
-
-                // không cho phep sua
-
-                layoutView.Columns["Price"].OptionsColumn.ReadOnly = true;
-                layoutView.Columns["Title"].OptionsColumn.ReadOnly = true;
-            }
-
-
         }
+
+
 
         private Image LoadImageFromUrl(string url)
         {
@@ -106,7 +124,7 @@ namespace Client.UserControls
                 byte[] data = webClient.DownloadData(url);
                 using (MemoryStream memStream = new MemoryStream(data))
                 {
-                    Image img = Image.FromStream(memStream);
+                    Image img = System.Drawing.Image.FromStream(memStream);
                     return img;
                 }
             }
@@ -131,10 +149,7 @@ namespace Client.UserControls
 
                     GridView view = gridDataUser.MainView as GridView;
 
-                    if (view != null)
-                    {
-                        view.Columns["ProductId"].Visible = false;
-                    }
+
                 }
                 else
                 {
@@ -189,7 +204,6 @@ namespace Client.UserControls
         }
 
 
-
         private void layoutView_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             if (e.Column.FieldName == "IsSelected" && (bool)e.Value)
@@ -222,6 +236,20 @@ namespace Client.UserControls
                     UpdateGridData();
                 }
             }
+            else
+            {
+                Product product = layoutView.GetRow(e.RowHandle) as Product;
+                if (product != null)
+                {
+                    var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
+                    userOrderList.Remove(existingUserProduct);
+                    MessageBox.Show("Xoa");
+
+
+                    UpdateGridData();
+                }
+
+            }
         }
 
         public void UpdateGridData()
@@ -229,7 +257,6 @@ namespace Client.UserControls
 
             gridDataUser.DataSource = userOrderList;
             gridDataUser.RefreshDataSource();
-            //ConvertToListOrderDetail(userOrderList, OrderId, 2);
 
         }
 
@@ -240,6 +267,37 @@ namespace Client.UserControls
 
         private void SubBtnDelete_Click(object sender, EventArgs e)
         {
+            Cart cart = new Cart()
+            {
+                OrderId = OrderId,
+                UserId = 2,
+                Count = 1
+            };
+            var resource = "Cart/DeleteCart";
+            var sendDeleteOrder = _apiClient.SendDeleteRequest<Cart>(resource, cart);
+
+            if (sendDeleteOrder != null)
+            {
+                if (sendDeleteOrder.Code == HttpStatusCode.OK)
+                {
+
+                    MessageBox.Show($"xoa thành công:");
+                    GetOrderByUser();
+                    GetProduct();
+                    gridDataProduct.RefreshDataSource();
+                }
+                else
+                {
+                    // Đăng nhập thất bại
+                    string errorMessage = sendDeleteOrder.Message;
+                    MessageBox.Show($"xoa thất bại: {errorMessage}");
+                }
+            }
+            else
+            {
+                // Kết nối đến server thất bại hoặc lỗi khác
+                MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối và thử lại.");
+            }
 
         }
 
@@ -270,7 +328,90 @@ namespace Client.UserControls
 
         private void SubBtnOrder_Click(object sender, EventArgs e)
         {
-            UserSendOrder();
+
+            DialogResult dg = MessageBox.Show("Bạn muốn đặt cơm không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dg == DialogResult.Yes)
+            {
+                SubBtnDelete_Click(sender, e);
+                UserSendOrder();
+                // đóng uc hiện tại
+                _frmMain.RemoveUC();
+                // mở ucOrder 
+                ucListOrder ucOrder = new ucListOrder(_frmMain);
+                _frmMain.AddUC(ucOrder);
+
+            }
+
         }
+
+
+        private void checkOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("click111");
+        }
+
+   
+
+        private void lblRestaurant_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("click111");
+        }
+
+        private void checkOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            var checkbox = sender as CheckEdit;
+            var product = layoutView.GetFocusedRow() as Product;
+            var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
+
+            if (checkbox != null && product != null)
+            {
+                product.IsSelected = checkbox.Checked;
+                if (checkbox.Checked)
+                {
+                    if (existingUserProduct != null)
+                    {
+                        existingUserProduct.TotalQuantity = product.Quantity;
+                        existingUserProduct.TotalPrice = (decimal)product.Price * product.Quantity;
+                        MessageBox.Show("Quantity: " + product.Quantity);
+
+                    }
+                    else
+                    {
+                        UserInfoDTO user = new UserInfoDTO()
+                        {
+                            UserName = "Nguyen Van A",
+                            ProductId = product.Id,
+                            Title = product.Title,
+                            TotalQuantity = product.Quantity,
+                            TotalPrice = (decimal)product.Price * product.Quantity
+                        };
+                        userOrderList.Add(user);
+                        MessageBox.Show("Thêm thành công");
+
+                    }
+                }
+                else
+                {
+                    userOrderList.Remove(existingUserProduct);
+                    MessageBox.Show("Xoa nos di");
+                   
+                }
+                UpdateGridData();
+            }
+        }
+
+    
     }
 }
+
+

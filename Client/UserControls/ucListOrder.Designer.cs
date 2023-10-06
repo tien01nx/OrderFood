@@ -169,6 +169,7 @@
             txtTile.Name = "txtTile";
             txtTile.Size = new Size(279, 22);
             txtTile.TabIndex = 5;
+            txtTile.EditValueChanged += txtTile_EditValueChanged;
             // 
             // label4
             // 
@@ -187,6 +188,7 @@
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(279, 22);
             txtUserName.TabIndex = 3;
+            txtUserName.EditValueChanged += txtUserName_EditValueChanged;
             // 
             // label3
             // 

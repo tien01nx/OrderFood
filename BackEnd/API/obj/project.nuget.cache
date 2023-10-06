@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "91Rhp+S7e2EBh98Mu0XNegyx3fxm0UBwUAUU3MaesgbaMp4XKrHLDre/f4uEAvisINEjXGYdkEA6IhbpFbyDkw==",
+  "dgSpecHash": "Pl6xHlUbTrMhyCyuL+ARcMmfVq7cCGExONXjbTv74eAIpKQUd6xuI8I2wGDrShrXTN56Te3ezFBzodU3fak5cA==",
   "success": true,
-  "projectFilePath": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\API.csproj",
+  "projectFilePath": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tien\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Tien\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
