@@ -10,7 +10,7 @@ namespace Repository.IRepository
         IRestaurantRepository Restaurant { get; }
         IBankRepository Bank { get; }
         IProductRepository Product { get; }
-        IProductImageRepository ProductImage { get; }
+        //IProductImageRepository ProductImage { get; }
 
         IOrderDetailRepository OrderDetail { get; }
 

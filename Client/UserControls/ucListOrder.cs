@@ -2,8 +2,6 @@
 using Client.Model;
 using DevExpress.XtraGrid.Views.Grid;
 using Newtonsoft.Json;
-using System.IO;
-using System.Net;
 
 namespace Client.UserControls
 {
@@ -23,6 +21,7 @@ namespace Client.UserControls
         private void ucListOrder_Load(object sender, EventArgs e)
         {
             GetOrderByUserAll();
+
         }
 
         private void GetOrderByUserAll()

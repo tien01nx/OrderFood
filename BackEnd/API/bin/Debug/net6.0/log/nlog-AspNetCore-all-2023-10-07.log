@@ -1,0 +1,372 @@
+2023-10-07 07:58:48.4614|12|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider              
+2023-10-07 07:58:48.9050|10401|             DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.              
+2023-10-07 07:58:49.4474|10601|             DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'UserRole' as the properties are already covered by the index {'UserId', 'RoleId'}.              
+2023-10-07 07:58:49.4474|10601|             DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserToken<int>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.              
+2023-10-07 07:58:49.8030|10403|             INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.22 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.22' with options: None              
+2023-10-07 07:58:50.3149|20400|             DEBUG|Microsoft.EntityFrameworkCore.Migrations|Migrating using database 'orderfood' on server '.'.              
+2023-10-07 07:58:50.3294|20000|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.0944|20001|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.0944|20103|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'.              
+2023-10-07 07:58:51.1033|20104|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (2ms).              
+2023-10-07 07:58:51.1033|20100|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1              
+2023-10-07 07:58:51.1308|20101|             INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1              
+2023-10-07 07:58:51.1336|20002|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1336|20003|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1336|20103|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteScalar'.              
+2023-10-07 07:58:51.1336|20104|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteScalar' (0ms).              
+2023-10-07 07:58:51.1336|20000|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1336|20001|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1336|20100|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');              
+2023-10-07 07:58:51.1691|20101|             INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');              
+2023-10-07 07:58:51.1691|20002|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1691|20003|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1691|20000|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1691|20001|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1691|20103|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'.              
+2023-10-07 07:58:51.1691|20104|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms).              
+2023-10-07 07:58:51.1691|20100|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1              
+2023-10-07 07:58:51.1691|20101|             INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1              
+2023-10-07 07:58:51.1691|20002|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1691|20003|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1691|20103|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteScalar'.              
+2023-10-07 07:58:51.1691|20104|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteScalar' (0ms).              
+2023-10-07 07:58:51.1691|20000|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1691|20001|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1691|20100|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');              
+2023-10-07 07:58:51.1691|20101|             INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');              
+2023-10-07 07:58:51.1691|20002|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1691|20003|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1857|20103|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.              
+2023-10-07 07:58:51.1857|20104|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).              
+2023-10-07 07:58:51.1857|20000|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1857|20001|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1857|20100|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];              
+2023-10-07 07:58:51.1857|20101|             INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];              
+2023-10-07 07:58:51.1968|20300|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.              
+2023-10-07 07:58:51.1968|20002|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1968|20003|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.1968|20402|             INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20230929033822_tableCart'.              
+2023-10-07 07:58:51.2603|20000|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.2603|20001|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.2603|20209|             DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'.              
+2023-10-07 07:58:51.2603|20200|             DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'.              
+2023-10-07 07:58:51.2603|20103|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'.              
+2023-10-07 07:58:51.2603|20104|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms).              
+2023-10-07 07:58:51.2603|20100|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] int NOT NULL IDENTITY,
+    [ProductId] int NOT NULL,
+    [Count] int NOT NULL,
+    [UserId] int NOT NULL,
+    [OrderId] int NOT NULL,
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Carts_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Carts_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE
+);              
+2023-10-07 07:58:51.2786|20102|             ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] int NOT NULL IDENTITY,
+    [ProductId] int NOT NULL,
+    [Count] int NOT NULL,
+    [UserId] int NOT NULL,
+    [OrderId] int NOT NULL,
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Carts_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Carts_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE
+);              
+2023-10-07 07:58:51.2903|20204|             DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction.              
+2023-10-07 07:58:51.2903|20002|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.2903|20003|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'orderfood' on server '.'.              
+2023-10-07 07:58:51.2903|0|             ERROR|Program|An error occured during migration              Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'Carts' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in D:\ThucTap\OrderFood\BackEnd\api\Program.cs:line 49
+ClientConnectionId:8fd77a5b-3bdb-405c-bcc8-4dd42a5ac6a8
+Error Number:2714,State:6,Class:16
+2023-10-07 07:58:51.3127|1|             DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting              
+2023-10-07 07:58:51.3216|63|             INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\tien0\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.              
+2023-10-07 07:58:51.3216|37|             DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\tien0\AppData\Local\ASP.NET\DataProtection-Keys\key-3cad6893-7ec2-4798-a1fd-6fe2ef7dc0bd.xml'.              
+2023-10-07 07:58:51.3359|18|             DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {3cad6893-7ec2-4798-a1fd-6fe2ef7dc0bd}.              
+2023-10-07 07:58:51.3359|13|             DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {3cad6893-7ec2-4798-a1fd-6fe2ef7dc0bd} with expiration date 2023-12-28 02:08:48Z as default key.              
+2023-10-07 07:58:51.3359|0|             DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60              
+2023-10-07 07:58:51.3359|51|             DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI.              
+2023-10-07 07:58:51.3359|0|             DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60              
+2023-10-07 07:58:51.3359|4|             DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.              
+2023-10-07 07:58:51.3359|3|             DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.              
+2023-10-07 07:58:51.3359|2|             DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {3cad6893-7ec2-4798-a1fd-6fe2ef7dc0bd} as the default key.              
+2023-10-07 07:58:51.3359|65|             DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {3cad6893-7ec2-4798-a1fd-6fe2ef7dc0bd} was loaded during application startup.              
+2023-10-07 07:58:51.3880|0|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 68D6AF84BF384E33F447BB662F2D80F6C92E9E5F)              
+2023-10-07 07:58:51.4061|14|             INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000              
+2023-10-07 07:58:51.4061|14|             INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001              
+2023-10-07 07:58:51.4061|13|             DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly API              
+2023-10-07 07:58:51.4061|13|             DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh              
+2023-10-07 07:58:51.4061|0|             INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.              
+2023-10-07 07:58:51.4061|0|             INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development              
+2023-10-07 07:58:51.4061|0|             INFO|Microsoft.Hosting.Lifetime|Content root path: D:\ThucTap\OrderFood\BackEnd\api\              
+2023-10-07 07:58:51.4061|2|             DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started              
+2023-10-07 07:59:07.5895|39|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6Q2E02BTT" accepted.              
+2023-10-07 07:59:07.5895|1|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6Q2E02BTT" started.              
+2023-10-07 07:59:07.6250|1|             INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5000/api/Order/UserAllOrders?date=2023/10/07&UserName=&Title= - -              
+2023-10-07 07:59:07.6343|0|             DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.              
+2023-10-07 07:59:07.6343|2|             TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.              
+2023-10-07 07:59:07.6709|1001|             DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|2 candidate(s) found for the request path '/api/Order/UserAllOrders'              
+2023-10-07 07:59:07.6709|1005|             DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'API.Controllers.OrderController.UserAllOrders (API)' with route pattern 'api/Order/UserAllOrders' is valid for the request path '/api/Order/UserAllOrders'              
+2023-10-07 07:59:07.6709|1005|             DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'API.Controllers.OrderController.GetById (API)' with route pattern 'api/Order/{id}' is valid for the request path '/api/Order/UserAllOrders'              
+2023-10-07 07:59:07.6709|1|             DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'API.Controllers.OrderController.UserAllOrders (API)'              
+2023-10-07 07:59:07.6709|15|             DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.              
+2023-10-07 07:59:07.6709|5|             DEBUG|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Https port '5001' discovered from server endpoints.              
+2023-10-07 07:59:07.6709|1|             DEBUG|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Redirecting to 'https://localhost:5001/api/Order/UserAllOrders?date=2023/10/07&UserName=&Title='.              
+2023-10-07 07:59:07.6815|9|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6Q2E02BTT" completed keep alive response.              
+2023-10-07 07:59:07.6815|2|             INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5000/api/Order/UserAllOrders?date=2023/10/07&UserName=&Title= - - - 307 0 - 59.0210ms              
+2023-10-07 07:59:07.6948|39|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6Q2E02BTU" accepted.              
+2023-10-07 07:59:07.6948|1|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6Q2E02BTU" started.              
+2023-10-07 07:59:07.7468|3|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HMU6Q2E02BTU established using the following protocol: Tls13              
+2023-10-07 07:59:07.7814|1|             INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:5001/api/Order/UserAllOrders?date=2023/10/07&UserName=&Title= - -              
+2023-10-07 07:59:07.7814|2|             TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.              
+2023-10-07 07:59:07.7814|1001|             DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|2 candidate(s) found for the request path '/api/Order/UserAllOrders'              
+2023-10-07 07:59:07.7814|1005|             DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'API.Controllers.OrderController.UserAllOrders (API)' with route pattern 'api/Order/UserAllOrders' is valid for the request path '/api/Order/UserAllOrders'              
+2023-10-07 07:59:07.7814|1005|             DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'API.Controllers.OrderController.GetById (API)' with route pattern 'api/Order/{id}' is valid for the request path '/api/Order/UserAllOrders'              
+2023-10-07 07:59:07.7814|1|             DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'API.Controllers.OrderController.UserAllOrders (API)'              
+2023-10-07 07:59:07.7814|15|             DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.              
+2023-10-07 07:59:07.7814|0|             INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'API.Controllers.OrderController.UserAllOrders (API)'              
+2023-10-07 07:59:07.8092|3|             INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "UserAllOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[API.Entities.ApiResponse`1[System.Collections.Generic.List`1[API.DTO.UserInfoDTO]]] UserAllOrders(System.String, System.String, System.String) on controller API.Controllers.OrderController (API).              
+2023-10-07 07:59:07.8092|1|             DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None              
+2023-10-07 07:59:07.8092|1|             DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None              
+2023-10-07 07:59:07.8092|1|             DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)              
+2023-10-07 07:59:07.8092|1|             DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None              
+2023-10-07 07:59:07.8092|1|             DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)              
+2023-10-07 07:59:07.8092|1|             DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller API.Controllers.OrderController (API)              
+2023-10-07 07:59:07.8092|10403|             INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.22 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.22' with options: None              
+2023-10-07 07:59:07.8936|2|             DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller API.Controllers.OrderController (API)              
+2023-10-07 07:59:07.9013|22|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'date' of type 'System.String' ...              
+2023-10-07 07:59:07.9013|44|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'date' of type 'System.String' using the name 'date' in request data ...              
+2023-10-07 07:59:07.9013|45|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'date' of type 'System.String'.              
+2023-10-07 07:59:07.9013|23|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'date' of type 'System.String'.              
+2023-10-07 07:59:07.9013|26|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'date' of type 'System.String' ...              
+2023-10-07 07:59:07.9013|27|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'date' of type 'System.String'.              
+2023-10-07 07:59:07.9013|22|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'UserName' of type 'System.String' ...              
+2023-10-07 07:59:07.9013|44|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'UserName' of type 'System.String' using the name 'UserName' in request data ...              
+2023-10-07 07:59:07.9013|45|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'UserName' of type 'System.String'.              
+2023-10-07 07:59:07.9013|23|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'UserName' of type 'System.String'.              
+2023-10-07 07:59:07.9013|26|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'UserName' of type 'System.String' ...              
+2023-10-07 07:59:07.9013|27|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'UserName' of type 'System.String'.              
+2023-10-07 07:59:07.9013|22|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'Title' of type 'System.String' ...              
+2023-10-07 07:59:07.9013|44|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'Title' of type 'System.String' using the name 'Title' in request data ...              
+2023-10-07 07:59:07.9013|45|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'Title' of type 'System.String'.              
+2023-10-07 07:59:07.9013|23|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'Title' of type 'System.String'.              
+2023-10-07 07:59:07.9013|26|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'Title' of type 'System.String' ...              
+2023-10-07 07:59:07.9013|27|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'Title' of type 'System.String'.              
+2023-10-07 07:59:07.9013|2|             TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter.              
+2023-10-07 07:59:07.9013|2|             TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.              
+2023-10-07 07:59:07.9013|3|             TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.              
+2023-10-07 07:59:07.9013|2|             TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.              
+2023-10-07 07:59:07.9013|3|             TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.              
+2023-10-07 07:59:07.9013|1|             INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method API.Controllers.OrderController.UserAllOrders (API) - Validation state: Valid              
+2023-10-07 07:59:07.9013|1|             TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method API.Controllers.OrderController.UserAllOrders (API) with arguments (2023/10/07, , )              
+2023-10-07 07:59:07.9593|10111|             DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<UserInfoDTO>().FromSql(EXEC sp_GetOrderUser @p0, @p1, @p2, __p_0)
+'              
+2023-10-07 07:59:08.0679|10107|             DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new FromSqlQueryingEnumerable<UserInfoDTO>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: UserInfoDTO.Id (int) Required, 0], [Property: UserInfoDTO.ProductId (int) Required, 1], [Property: UserInfoDTO.Title (string), 2], [Property: UserInfoDTO.TotalPrice (double) Required, 3], [Property: UserInfoDTO.TotalQuantity (int) Required, 4], [Property: UserInfoDTO.UserName (string), 5] }
+        SELECT a.Id, a.ProductId, a.Title, a.TotalPrice, a.TotalQuantity, a.UserName
+        FROM EXEC sp_GetOrderUser @p0, @p1, @p2), 
+    List<string> { "Id", "ProductId", "Title", "TotalPrice", "TotalQuantity", "UserName" }, 
+    Func<QueryContext, DbDataReader, int[], UserInfoDTO>, 
+    API.Entities.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)'              
+2023-10-07 07:59:08.0875|20103|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.              
+2023-10-07 07:59:08.0875|20104|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).              
+2023-10-07 07:59:08.0875|20000|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'orderfood' on server '.'.              
+2023-10-07 07:59:08.0875|20001|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'orderfood' on server '.'.              
+2023-10-07 07:59:08.0875|20100|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[p0='?' (Size = 4000), p1='?', p2='?'], CommandType='Text', CommandTimeout='30']
+EXEC sp_GetOrderUser @p0, @p1, @p2              
+2023-10-07 07:59:08.1240|20101|             INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (32ms) [Parameters=[p0='?' (Size = 4000), p1='?', p2='?'], CommandType='Text', CommandTimeout='30']
+EXEC sp_GetOrderUser @p0, @p1, @p2              
+2023-10-07 07:59:08.1240|10100|             ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'API.Entities.ApplicationDbContext'.
+System.InvalidOperationException: The required column 'Id' was not present in the results of a 'FromSql' operation.
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.BuildIndexMap(IReadOnlyList`1 columnNames, DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.MoveNext()              System.InvalidOperationException: The required column 'Id' was not present in the results of a 'FromSql' operation.
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.BuildIndexMap(IReadOnlyList`1 columnNames, DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.MoveNext()
+2023-10-07 07:59:08.1449|20300|             DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.              
+2023-10-07 07:59:08.1449|20002|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'orderfood' on server '.'.              
+2023-10-07 07:59:08.1449|20003|             DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'orderfood' on server '.'.              
+2023-10-07 07:59:08.1449|2|             TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.              
+2023-10-07 07:59:08.1449|3|             TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.              
+2023-10-07 07:59:08.1449|2|             TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.              
+2023-10-07 07:59:08.1449|3|             TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.              
+2023-10-07 07:59:08.1449|3|             TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter.              
+2023-10-07 07:59:08.1502|2|             INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action API.Controllers.OrderController.UserAllOrders (API) in 337.1834ms              
+2023-10-07 07:59:08.1502|1|             INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'API.Controllers.OrderController.UserAllOrders (API)'              
+2023-10-07 07:59:08.1502|1|             ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.              System.InvalidOperationException: The required column 'Id' was not present in the results of a 'FromSql' operation.
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.BuildIndexMap(IReadOnlyList`1 columnNames, DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at API.Entities.ApplicationDbContext.GetUserCartDetails(String date, String userName, String title) in D:\ThucTap\OrderFood\BackEnd\api\Entities\ApplicationDbContext.cs:line 51
+   at API.Controllers.OrderController.UserAllOrders(String date, String UserName, String Title) in D:\ThucTap\OrderFood\BackEnd\api\Controllers\OrderController.cs:line 50
+   at lambda_method22(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-10-07 07:59:08.1502|9|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6Q2E02BTU" completed keep alive response.              
+2023-10-07 07:59:08.1502|10407|             DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed.              
+2023-10-07 07:59:08.1502|2|             INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:5001/api/Order/UserAllOrders?date=2023/10/07&UserName=&Title= - - - 500 - text/plain;+charset=utf-8 379.6748ms              
+2023-10-07 08:01:18.5391|10|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6Q2E02BTT" disconnecting.              
+2023-10-07 08:01:18.5391|2|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6Q2E02BTT" stopped.              
+2023-10-07 08:01:18.5391|10|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6Q2E02BTU" disconnecting.              
+2023-10-07 08:01:18.5391|7|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6Q2E02BTT" sending FIN because: "The Socket transport's send loop completed gracefully."              
+2023-10-07 08:01:18.5391|2|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6Q2E02BTU" stopped.              
+2023-10-07 08:01:18.5391|7|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6Q2E02BTU" sending FIN because: "The Socket transport's send loop completed gracefully."              
+2023-10-07 09:50:27.0625|12|             DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider              
+2023-10-07 09:50:27.4028|10401|             DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.              
+2023-10-07 09:50:28.2858|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.2947|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.2947|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.2947|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.2947|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.2947|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.2947|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.2947|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.2947|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3152|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3152|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3152|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3152|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3152|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3152|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3152|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3197|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3197|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3197|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3197|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.3197|10602|             DEBUG|Microsoft.EntityFrameworkCore.Model|For the relationship between dependent 'Product.Category' and principal 'Category', the foreign key properties haven't been configured by convention because the best match {'CategoryId' : string} are incompatible with the current principal key {'Id' : int}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'.              
+2023-10-07 09:50:28.8343|10601|             DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'UserRole' as the properties are already covered by the index {'UserId', 'RoleId'}.              
+2023-10-07 09:50:28.8391|10601|             DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserToken<int>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.              
+2023-10-07 09:50:29.4263|0|             ERROR|Program|An error occured during migration              System.InvalidOperationException: The relationship from 'Product.Category' to 'Category' with foreign key properties {'CategoryId' : string} cannot target the primary key {'Id' : int} because it is not compatible. Configure a principal key or a set of foreign key properties with compatible types for this relationship.
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidateNoShadowKeys(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal.SqlServerModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<System.IServiceProvider>.get_Instance()
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at Program.<Main>$(String[] args) in D:\ThucTap\OrderFood\BackEnd\API\Program.cs:line 49
+2023-10-07 09:50:29.6470|1|             DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting              
+2023-10-07 09:50:29.7339|63|             INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\tien0\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.              
+2023-10-07 09:50:29.7451|37|             DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\tien0\AppData\Local\ASP.NET\DataProtection-Keys\key-3cad6893-7ec2-4798-a1fd-6fe2ef7dc0bd.xml'.              
+2023-10-07 09:50:29.7654|18|             DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {3cad6893-7ec2-4798-a1fd-6fe2ef7dc0bd}.              
+2023-10-07 09:50:29.7953|13|             DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {3cad6893-7ec2-4798-a1fd-6fe2ef7dc0bd} with expiration date 2023-12-28 02:08:48Z as default key.              
+2023-10-07 09:50:29.7953|0|             DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60              
+2023-10-07 09:50:29.7953|51|             DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI.              
+2023-10-07 09:50:29.7953|0|             DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60              
+2023-10-07 09:50:29.8072|4|             DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.              
+2023-10-07 09:50:29.8072|3|             DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.              
+2023-10-07 09:50:29.8072|2|             DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {3cad6893-7ec2-4798-a1fd-6fe2ef7dc0bd} as the default key.              
+2023-10-07 09:50:29.8072|65|             DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {3cad6893-7ec2-4798-a1fd-6fe2ef7dc0bd} was loaded during application startup.              
+2023-10-07 09:50:30.0417|0|             DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 68D6AF84BF384E33F447BB662F2D80F6C92E9E5F)              
+2023-10-07 09:50:30.0872|14|             INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000              
+2023-10-07 09:50:30.1138|14|             INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001              
+2023-10-07 09:50:30.1138|13|             DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly API              
+2023-10-07 09:50:30.1138|0|             INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.              
+2023-10-07 09:50:30.1138|0|             INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development              
+2023-10-07 09:50:30.1138|0|             INFO|Microsoft.Hosting.Lifetime|Content root path: D:\ThucTap\OrderFood\BackEnd\API\              
+2023-10-07 09:50:30.1138|2|             DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started              

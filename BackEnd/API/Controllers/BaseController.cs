@@ -111,15 +111,15 @@ namespace API.Controllers
                     return new ApiResponse<T>(HttpStatusCode.OK, "Tạo thành công", entity);
                 }
                 // kiểm tra productId và userId đã tồn tại trong bảng Cart hay chưa nếu tồn tại thì cập nhật số lượng
-                if(typeof(T) == typeof(Cart)){
-                    var cartEntity = entity as Cart;
-                    if (_context.Set<Cart>().Any(x => x.Id==cartEntity.Id))
-                    {
-                        _context.Set<Cart>().Update(cartEntity);
-                        await _context.SaveChangesAsync();
-                        return new ApiResponse<T>(HttpStatusCode.OK, "Cập nhật thành công", entity);
-                    }
-                }
+                //if(typeof(T) == typeof(Cart)){
+                //    var cartEntity = entity as Cart;
+                //    if (_context.Set<Cart>().Any(x => x.Id==cartEntity.Id))
+                //    {
+                //        _context.Set<Cart>().Update(cartEntity);
+                //        await _context.SaveChangesAsync();
+                //        return new ApiResponse<T>(HttpStatusCode.OK, "Cập nhật thành công", entity);
+                //    }
+                //}
 
 
                 _context.Set<T>().Add(entity);
@@ -154,28 +154,28 @@ namespace API.Controllers
         {
             try
             {
-                if (typeof(T) == typeof(Cart))
-                {
-                  
-                    var cartEntities = entities as List<Cart>;
+                //if (typeof(T) == typeof(Cart))
+                //{
 
-                    foreach (var entity in cartEntities)
-                    {
-                        if (entity.Id == 0) // Accessing Id on the entity
-                        {
-                            _context.Set<T>().Add(entity as T);
-                        }
-                        else
-                        {
-                            _context.Set<T>().Update(entity as T);
-                        }
-                    }
-                }
-                else
-                {
-                    _context.Set<T>().AddRange(entities);
-                }
+                //    var cartEntities = entities as List<Cart>;
 
+                //    foreach (var entity in cartEntities)
+                //    {
+                //        if (entity.Id == 0) // Accessing Id on the entity
+                //        {
+                //            _context.Set<T>().Add(entity as T);
+                //        }
+                //        else
+                //        {
+                //            _context.Set<T>().Update(entity as T);
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                //    _context.Set<T>().AddRange(entities);
+                //}
+                _context.Set<T>().AddRange(entities);
                 await _context.SaveChangesAsync();
                 return new ApiResponse<List<T>>(HttpStatusCode.OK, "Tạo thành công", entities);
             }
@@ -209,7 +209,7 @@ namespace API.Controllers
 
                     var existingBank = existingEntity as Bank;
                     // Kiểm tra xem BankName đã tồn tại trong bảng Bank (loại trừ bản ghi hiện tại)
-                    if (_context.Set<Bank>().Any(x => x.Id != id && x.BankName == bankEntity.BankName))
+                    if (_context.Set<Bank>().Any(x => x.Id.Equals(bankEntity.Id) && x.BankName == bankEntity.BankName))
                     {
                         return new ApiResponse<T>(HttpStatusCode.BadRequest, "BankName đã tồn tại", null);
                     }

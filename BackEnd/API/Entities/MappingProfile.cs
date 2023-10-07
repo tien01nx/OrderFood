@@ -1,6 +1,4 @@
-﻿using API.DTO;
-using AutoMapper;
-using DataAccess.Model;
+﻿using AutoMapper;
 
 namespace API.Entities
 {
@@ -8,13 +6,13 @@ namespace API.Entities
     {
         public MappingProfile()
         {
-            CreateMap<Order, OrderDto>()
-                .ForMember(dest => dest.RestaurantName, opt => opt.MapFrom(src => src.Restaurant.RestaurantName))
-                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Restaurant.Description));
+            //CreateMap<Order, OrderDto>()
+            //    .ForMember(dest => dest.RestaurantName, opt => opt.MapFrom(src => src.Restaurant.RestaurantName))
+            //    .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Restaurant.Description));
 
-            CreateMap<Product, ProductDto>()
-              .ForMember(dest => dest.RestaurantName, opt => opt.MapFrom(src => src.Restaurant.RestaurantName))
-              .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ProductImages.FirstOrDefault().ImageUrl));
+            //CreateMap<Product, ProductDto>()
+            //  .ForMember(dest => dest.RestaurantName, opt => opt.MapFrom(src => src.Restaurant.RestaurantName))
+            //  .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ProductImages.FirstOrDefault().ImageUrl));
         }
     }
 }

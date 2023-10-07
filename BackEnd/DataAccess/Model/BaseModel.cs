@@ -2,7 +2,7 @@
 {
     public class BaseModel 
     {
-
+        
         public string CreateBy { get; set; } = string.Empty;
         public string UpdateBy { get; set; } = string.Empty;
         public DateTime CreateDate { get; set; } = DateTime.Now;

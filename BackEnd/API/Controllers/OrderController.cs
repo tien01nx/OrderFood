@@ -20,23 +20,23 @@ namespace API.Controllers
         }
 
         [HttpGet("GetAllRestaurant")]
-        public async Task<ApiResponse<List<OrderDto>>> GetAll()
+        public async Task<ApiResponse<List<Order>>> GetAll()
         {
 
             try
             {
                 //var order = _unitOfWork.Order.GetAll(includeProperties: "Restaurant").ToList();
                 var orders = _unitOfWork.Order.GetAll(includeProperties: "Restaurant").ToList();
-                var orderDtos = _mapper.Map<List<OrderDto>>(orders);
-                if (orderDtos != null)
+                //var orderDtos = _mapper.Map<List<OrderDto>>(orders);
+                if (orders != null)
                 {
-                    return new ApiResponse<List<OrderDto>>(System.Net.HttpStatusCode.OK, "lay thanh cong", orderDtos);
+                    return new ApiResponse<List<Order>>(System.Net.HttpStatusCode.OK, "lay thanh cong", orders);
                 }
-                return new ApiResponse<List<OrderDto>>(System.Net.HttpStatusCode.NoContent, "Khong co du lieu", null);
+                return new ApiResponse<List<Order>>(System.Net.HttpStatusCode.NoContent, "Khong co du lieu", null);
             }
             catch (Exception ex)
             {
-                return new ApiResponse<List<OrderDto>>(System.Net.HttpStatusCode.NoContent, ex.Message, null);
+                return new ApiResponse<List<Order>>(System.Net.HttpStatusCode.NoContent, ex.Message, null);
 
             }
 

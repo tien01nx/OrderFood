@@ -1,14 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using API.DTO;
 using API.Entities;
 using AutoMapper;
 using DataAccess.Model;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Repository.IRepository;
 
 namespace API.Controllers
@@ -31,10 +25,10 @@ namespace API.Controllers
 
         [HttpGet("Restaurant/{restaurantId}")]
 
-        public async Task<ApiResponse<List<ProductDto>>> GetProductRestaurant(int restaurantId)
+        public async Task<ApiResponse<List<ProductDto>>> GetProductRestaurant(string restaurantId)
         {
 
-            List<Product> products = _unitOfWork.Product.GetAll(u => u.RestaurantId == restaurantId, includeProperties: "Restaurant,ProductImages").ToList();
+            List<Product> products = _unitOfWork.Product.GetAll(u => u.RestaurantId.Equals(restaurantId), includeProperties: "Restaurant,ProductImages").ToList();
 
             // Sử dụng AutoMapper để map dữ liệu
             List<ProductDto> productDtos = _mapper.Map<List<ProductDto>>(products);
@@ -50,7 +44,7 @@ namespace API.Controllers
 
             List<User> products = _unitOfWork.User.GetAll().ToList();
 
-            
+
             return new ApiResponse<List<User>>(System.Net.HttpStatusCode.OK, "Lấy dữ dữ liệu", products);
 
         }

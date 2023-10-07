@@ -1,49 +1,52 @@
 ﻿
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Model
 {
     public class Product : BaseModel
     {
-        [Key] public int Id { get; set; }
+        [StringLength(10, ErrorMessage = "Id tối đa {1} ký tự")]
+        [Key] public string Id { get; set; }
 
-        [Display(Name = "Title")]
+        [Required(ErrorMessage = "ProductName không được để trống.")]
+        [MaxLength(300)]
+        [MinLength(3, ErrorMessage = "ProductName phải có ít nhất 3 ký tự")]
+        public string ProductName { get; set; }
 
-        [Required] public string Title { get; set; }
 
-
-        [Display(Name = "Description")]
-        [Required]
+        [Required(ErrorMessage = "Description không được để trống.")]
+        [MaxLength(500)]
+        [MinLength(3, ErrorMessage = "Description phải có ít nhất 3 ký tự")]
         public string Description { get; set; }
 
 
-        [Required]
-        [Display(Name = "Quantity")]
-        [Range(1, 1000)]
-        public int Quantity { get; set; }
 
-    
+        [MaxLength(300)]
+        public string Images { get; set; }
 
-        [Required]
-        [Display(Name = "Price")]
-        [Range(1, 1000000)]
-        public double Price { get; set; }
 
-    
 
-        public int CategoryId { get; set; }
+        [Required(ErrorMessage = "Vui lòng chọn Giá tiền")]
+        [Range(1000, 500000, ErrorMessage = "Giá sản phẩm nằm trong khoảng 1000 đến 500000")]
+        public decimal Price { get; set; }
+
+
+        [StringLength(10, ErrorMessage = "Id tối đa {1} ký tự")]
+        [Required(ErrorMessage = "không được để trống  danh mục sản phẩm.")]
+        public string CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]
         [ValidateNever]
         public Category Category { get; set; }
 
 
-        [ValidateNever]
-        public List<ProductImage> ProductImages { get; set; }
 
-        public int RestaurantId { get; set; }
+
+        [StringLength(10, ErrorMessage = "Id tối đa {1} ký tự")]
+        [Required(ErrorMessage = "không được để trống  tên cửa hàng.")]
+        public string RestaurantId { get; set; }
         [ForeignKey("RestaurantId")]
         [ValidateNever]
         public Restaurant Restaurant { get; set; }

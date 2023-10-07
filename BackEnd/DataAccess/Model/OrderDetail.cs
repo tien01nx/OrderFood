@@ -7,20 +7,26 @@ namespace DataAccess.Model
 {
     public class OrderDetail : BaseModel
     {
-        public int Id { get; set; }
+        [StringLength(10, ErrorMessage = "Id tối đa {1} ký tự")]
 
-        [Required]
-        public int OrderId { get; set; }
+        public string Id { get; set; }
+
+        [Required(ErrorMessage = "OrderId chưa có giá trị.")]
+
+        public string OrderId { get; set; }
         [ForeignKey("OrderId")]
         [ValidateNever]
         public Order Order { get; set; }
 
-        [Required]
-        public int? ProductId { get; set; }
+        [Required(ErrorMessage = "Product chưa có giá trị.")]
+        public string ProductId { get; set; }
         [ForeignKey("ProductId")]
         [ValidateNever]
         public Product Product { get; set; }
-        public int? Count { get; set; }
-        public double? Price { get; set; }
+
+        [Range(1, 100, ErrorMessage = "số lượng trong khoảng từ 1 đến 100.")]
+        public int Count { get; set; }
+
+        public decimal Price { get; set; }
     }
 }

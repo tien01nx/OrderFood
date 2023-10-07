@@ -43,10 +43,10 @@
     <Compile Update="UserControls\ucOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\ucProductItem.cs">
+    <Compile Update="UserControls\ucProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\ucProduct.cs">
+    <Compile Update="UserControls\ucProductItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\ucRestaurant.cs">
