@@ -37,13 +37,14 @@ namespace Client.UserControls
             string startDate = date.ToString("yyyy/MM/dd");
             string endDate = null;
             string userName = string.IsNullOrEmpty(txtUserName.Text) ? "" : txtUserName.Text;
+            string userId = null;
             selectedRestaurantId = string.IsNullOrEmpty(selectedRestaurantId) ? "" : selectedRestaurantId;
             string productName = string.IsNullOrEmpty(txtTile.Text) ? "" : txtTile.Text;
 
 
             try
             {
-                var userOrder = _apiClient.GetData<UserInfoDTO>($"Order/UserAllOrders?startDate={startDate}&endDate={endDate}&UserName={userName}&restaurants={selectedRestaurantId}&productName={productName}").Data;
+                var userOrder = _apiClient.GetData<UserInfoDTO>($"Order/UserAllOrders?startDate={startDate}&endDate={endDate}&UserName={userName}&userId={userId}&restaurants={selectedRestaurantId}&productName={productName}").Data;
                 Console.WriteLine(JsonConvert.SerializeObject(userOrder));
                 gridData.DataSource = userOrder;
                 GridView view = gridData.MainView as GridView;

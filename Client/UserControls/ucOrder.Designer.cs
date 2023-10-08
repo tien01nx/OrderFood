@@ -42,14 +42,14 @@
             IsSelected = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             checkOrder = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             layoutViewField_IsSelected = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            Title = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            ProductName = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             layoutViewField_Title = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             Price = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             layoutViewField_Price = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             Quantity = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            spdtPrice = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            spdtQuantity = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             layoutViewField_Quantity = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            Image = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            Images = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             svgImage = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             layoutViewField_Image = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
@@ -82,7 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)layoutViewField_IsSelected).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Title).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Price).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)spdtPrice).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)spdtQuantity).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Quantity).BeginInit();
             ((System.ComponentModel.ISupportInitialize)svgImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Image).BeginInit();
@@ -107,7 +107,7 @@
             closeUcOrder.Image = (Image)resources.GetObject("closeUcOrder.Image");
             closeUcOrder.ImageTransparentColor = Color.Magenta;
             closeUcOrder.Name = "closeUcOrder";
-            closeUcOrder.Size = new Size(29, 24);
+            closeUcOrder.Size = new Size(24, 24);
             closeUcOrder.Text = "Đơn hàng của tôi";
             closeUcOrder.Click += closeUcOrder_Click;
             // 
@@ -116,7 +116,7 @@
             SubBtnOrder.Image = (Image)resources.GetObject("SubBtnOrder.Image");
             SubBtnOrder.ImageTransparentColor = Color.Magenta;
             SubBtnOrder.Name = "SubBtnOrder";
-            SubBtnOrder.Size = new Size(97, 24);
+            SubBtnOrder.Size = new Size(81, 24);
             SubBtnOrder.Text = "Đặt Hàng";
             SubBtnOrder.Click += SubBtnOrder_Click;
             // 
@@ -126,9 +126,9 @@
             groupControl1.Controls.Add(toolStrip1);
             groupControl1.Dock = DockStyle.Fill;
             groupControl1.Location = new Point(0, 0);
-            groupControl1.Margin = new Padding(4, 2, 4, 2);
+            groupControl1.Margin = new Padding(3, 2, 3, 2);
             groupControl1.Name = "groupControl1";
-            groupControl1.Size = new Size(1168, 722);
+            groupControl1.Size = new Size(1001, 587);
             groupControl1.TabIndex = 1;
             groupControl1.Text = "ĐƠN ĐẶT HÀNG";
             // 
@@ -137,11 +137,10 @@
             groupControl2.Controls.Add(groupControl4);
             groupControl2.Controls.Add(groupControl3);
             groupControl2.Dock = DockStyle.Fill;
-            groupControl2.Location = new Point(2, 55);
-            groupControl2.Margin = new Padding(4);
+            groupControl2.Location = new Point(2, 50);
             groupControl2.Name = "groupControl2";
             groupControl2.ShowCaption = false;
-            groupControl2.Size = new Size(1164, 665);
+            groupControl2.Size = new Size(997, 535);
             groupControl2.TabIndex = 1;
             groupControl2.Text = "groupControl2";
             // 
@@ -151,9 +150,8 @@
             groupControl4.Controls.Add(groupControl5);
             groupControl4.Dock = DockStyle.Fill;
             groupControl4.Location = new Point(2, 2);
-            groupControl4.Margin = new Padding(4);
             groupControl4.Name = "groupControl4";
-            groupControl4.Size = new Size(1160, 425);
+            groupControl4.Size = new Size(993, 339);
             groupControl4.TabIndex = 1;
             groupControl4.Text = "THÔNG TIN ĐƠN HÀNG";
             // 
@@ -163,21 +161,21 @@
             groupControl6.Controls.Add(lblRestaurant);
             groupControl6.Controls.Add(gridDataProduct);
             groupControl6.Dock = DockStyle.Fill;
-            groupControl6.Location = new Point(2, 65);
-            groupControl6.Margin = new Padding(4);
+            groupControl6.Location = new Point(2, 53);
             groupControl6.Name = "groupControl6";
-            groupControl6.Size = new Size(1156, 358);
+            groupControl6.Size = new Size(989, 284);
             groupControl6.TabIndex = 1;
             groupControl6.Text = "DANH SÁCH CÁC MÓN ĂN";
             // 
             // ludRestaurant
             // 
-            ludRestaurant.Location = new Point(660, 42);
+            ludRestaurant.Location = new Point(566, 34);
+            ludRestaurant.Margin = new Padding(3, 2, 3, 2);
             ludRestaurant.Name = "ludRestaurant";
             ludRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             ludRestaurant.Properties.NullText = "Chọn nhà hàng";
             ludRestaurant.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            ludRestaurant.Size = new Size(204, 22);
+            ludRestaurant.Size = new Size(175, 20);
             ludRestaurant.TabIndex = 3;
             ludRestaurant.EditValueChanged += ludRestaurant_EditValueChanged;
             // 
@@ -185,10 +183,9 @@
             // 
             lblRestaurant.Appearance.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblRestaurant.Appearance.Options.UseFont = true;
-            lblRestaurant.Location = new Point(574, 45);
-            lblRestaurant.Margin = new Padding(4);
+            lblRestaurant.Location = new Point(492, 37);
             lblRestaurant.Name = "lblRestaurant";
-            lblRestaurant.Size = new Size(67, 17);
+            lblRestaurant.Size = new Size(52, 13);
             lblRestaurant.TabIndex = 2;
             lblRestaurant.Text = "Nhà hàng";
             lblRestaurant.Click += lblRestaurant_Click;
@@ -196,28 +193,25 @@
             // gridDataProduct
             // 
             gridDataProduct.Dock = DockStyle.Fill;
-            gridDataProduct.EmbeddedNavigator.Margin = new Padding(4);
             gridDataProduct.Font = new Font("Tahoma", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
-            gridDataProduct.Location = new Point(2, 28);
+            gridDataProduct.Location = new Point(2, 23);
             gridDataProduct.MainView = layoutView;
-            gridDataProduct.Margin = new Padding(4);
             gridDataProduct.Name = "gridDataProduct";
-            gridDataProduct.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { spdtPrice, svgImage, checkOrder });
-            gridDataProduct.Size = new Size(1152, 328);
+            gridDataProduct.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { spdtQuantity, svgImage, checkOrder });
+            gridDataProduct.Size = new Size(985, 259);
             gridDataProduct.TabIndex = 0;
             gridDataProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { layoutView });
             // 
             // layoutView
             // 
-            layoutView.CardMinSize = new Size(229, 264);
-            layoutView.Columns.AddRange(new DevExpress.XtraGrid.Columns.LayoutViewColumn[] { IsSelected, Title, Price, Quantity, Image });
-            layoutView.DetailHeight = 431;
+            layoutView.CardMinSize = new Size(196, 214);
+            layoutView.Columns.AddRange(new DevExpress.XtraGrid.Columns.LayoutViewColumn[] { IsSelected, ProductName, Price, Quantity, Images });
             layoutView.GridControl = gridDataProduct;
             layoutView.Name = "layoutView";
             layoutView.OptionsFind.AlwaysVisible = true;
             layoutView.OptionsView.ShowHeaderPanel = false;
             layoutView.OptionsView.ViewMode = DevExpress.XtraGrid.Views.Layout.LayoutViewMode.MultiRow;
-            layoutView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(Quantity, DevExpress.Data.ColumnSortOrder.Descending) });
+            layoutView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(ProductName, DevExpress.Data.ColumnSortOrder.Ascending) });
             layoutView.TemplateCard = layoutViewCard1;
             // 
             // IsSelected
@@ -226,9 +220,9 @@
             IsSelected.ColumnEdit = checkOrder;
             IsSelected.FieldName = "IsSelected";
             IsSelected.LayoutViewField = layoutViewField_IsSelected;
-            IsSelected.MinWidth = 25;
+            IsSelected.MinWidth = 21;
             IsSelected.Name = "IsSelected";
-            IsSelected.Width = 94;
+            IsSelected.Width = 81;
             // 
             // checkOrder
             // 
@@ -239,30 +233,30 @@
             // 
             // layoutViewField_IsSelected
             // 
-            layoutViewField_IsSelected.EditorPreferredWidth = 136;
+            layoutViewField_IsSelected.EditorPreferredWidth = 117;
             layoutViewField_IsSelected.Location = new Point(0, 0);
             layoutViewField_IsSelected.Name = "layoutViewField_IsSelected";
-            layoutViewField_IsSelected.Size = new Size(209, 28);
-            layoutViewField_IsSelected.TextSize = new Size(64, 16);
+            layoutViewField_IsSelected.Size = new Size(216, 24);
+            layoutViewField_IsSelected.TextSize = new Size(71, 13);
             // 
-            // Title
+            // ProductName
             // 
-            Title.AppearanceCell.Font = new Font("Tahoma", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
-            Title.AppearanceCell.Options.UseFont = true;
-            Title.Caption = "Title";
-            Title.FieldName = "Title";
-            Title.LayoutViewField = layoutViewField_Title;
-            Title.MinWidth = 25;
-            Title.Name = "Title";
-            Title.Width = 94;
+            ProductName.AppearanceCell.Font = new Font("Tahoma", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            ProductName.AppearanceCell.Options.UseFont = true;
+            ProductName.Caption = "Tên sản phẩm";
+            ProductName.FieldName = "ProductName";
+            ProductName.LayoutViewField = layoutViewField_Title;
+            ProductName.MinWidth = 21;
+            ProductName.Name = "ProductName";
+            ProductName.Width = 81;
             // 
             // layoutViewField_Title
             // 
-            layoutViewField_Title.EditorPreferredWidth = 136;
-            layoutViewField_Title.Location = new Point(0, 28);
+            layoutViewField_Title.EditorPreferredWidth = 117;
+            layoutViewField_Title.Location = new Point(0, 24);
             layoutViewField_Title.Name = "layoutViewField_Title";
-            layoutViewField_Title.Size = new Size(209, 26);
-            layoutViewField_Title.TextSize = new Size(64, 16);
+            layoutViewField_Title.Size = new Size(216, 24);
+            layoutViewField_Title.TextSize = new Size(71, 13);
             // 
             // Price
             // 
@@ -271,20 +265,20 @@
             Price.AppearanceCell.Options.UseFont = true;
             Price.AppearanceCell.Options.UseForeColor = true;
             Price.Caption = "Price";
-            Price.FieldName = "TotalPrice";
+            Price.FieldName = "Price";
             Price.LayoutViewField = layoutViewField_Price;
-            Price.MinWidth = 25;
+            Price.MinWidth = 21;
             Price.Name = "Price";
             Price.OptionsColumn.AllowEdit = false;
-            Price.Width = 94;
+            Price.Width = 81;
             // 
             // layoutViewField_Price
             // 
-            layoutViewField_Price.EditorPreferredWidth = 136;
-            layoutViewField_Price.Location = new Point(0, 54);
+            layoutViewField_Price.EditorPreferredWidth = 117;
+            layoutViewField_Price.Location = new Point(0, 48);
             layoutViewField_Price.Name = "layoutViewField_Price";
-            layoutViewField_Price.Size = new Size(209, 26);
-            layoutViewField_Price.TextSize = new Size(64, 16);
+            layoutViewField_Price.Size = new Size(216, 24);
+            layoutViewField_Price.TextSize = new Size(71, 13);
             // 
             // Quantity
             // 
@@ -294,40 +288,44 @@
             Quantity.AppearanceCell.Options.UseBackColor = true;
             Quantity.AppearanceCell.Options.UseFont = true;
             Quantity.AppearanceCell.Options.UseForeColor = true;
-            Quantity.Caption = "Quantity";
-            Quantity.ColumnEdit = spdtPrice;
+            Quantity.Caption = "Số lượng";
+            Quantity.ColumnEdit = spdtQuantity;
             Quantity.FieldName = "Quantity";
             Quantity.LayoutViewField = layoutViewField_Quantity;
-            Quantity.MinWidth = 25;
+            Quantity.MinWidth = 21;
             Quantity.Name = "Quantity";
-            Quantity.Width = 94;
+            Quantity.Width = 81;
             // 
-            // spdtPrice
+            // spdtQuantity
             // 
-            spdtPrice.AutoHeight = false;
-            spdtPrice.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            spdtPrice.MaxValue = new decimal(new int[] { 100, 0, 0, 0 });
-            spdtPrice.MinValue = new decimal(new int[] { 1, 0, 0, 0 });
-            spdtPrice.Name = "spdtPrice";
+            spdtQuantity.AutoHeight = false;
+            spdtQuantity.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            spdtQuantity.EditValueChangedDelay = 1;
+            spdtQuantity.MaxValue = new decimal(new int[] { 100, 0, 0, 0 });
+            spdtQuantity.MinValue = new decimal(new int[] { 1, 0, 0, 0 });
+            spdtQuantity.Name = "spdtQuantity";
+            spdtQuantity.NullText = "1";
+            spdtQuantity.NullValuePrompt = "1";
+            spdtQuantity.EditValueChanged += spdtPrice_EditValueChanged;
             // 
             // layoutViewField_Quantity
             // 
-            layoutViewField_Quantity.EditorPreferredWidth = 136;
-            layoutViewField_Quantity.Location = new Point(0, 80);
+            layoutViewField_Quantity.EditorPreferredWidth = 117;
+            layoutViewField_Quantity.Location = new Point(0, 72);
             layoutViewField_Quantity.Name = "layoutViewField_Quantity";
-            layoutViewField_Quantity.Size = new Size(209, 28);
-            layoutViewField_Quantity.TextSize = new Size(64, 16);
+            layoutViewField_Quantity.Size = new Size(216, 24);
+            layoutViewField_Quantity.TextSize = new Size(71, 13);
             // 
-            // Image
+            // Images
             // 
-            Image.Caption = "Image";
-            Image.ColumnEdit = svgImage;
-            Image.FieldName = "Image";
-            Image.LayoutViewField = layoutViewField_Image;
-            Image.MinWidth = 25;
-            Image.Name = "Image";
-            Image.OptionsColumn.FixedWidth = true;
-            Image.Width = 94;
+            Images.Caption = "Hình ảnh";
+            Images.ColumnEdit = svgImage;
+            Images.FieldName = "Image";
+            Images.LayoutViewField = layoutViewField_Image;
+            Images.MinWidth = 21;
+            Images.Name = "Images";
+            Images.OptionsColumn.FixedWidth = true;
+            Images.Width = 81;
             // 
             // svgImage
             // 
@@ -339,12 +337,12 @@
             // 
             // layoutViewField_Image
             // 
-            layoutViewField_Image.EditorPreferredWidth = 136;
-            layoutViewField_Image.Location = new Point(0, 108);
+            layoutViewField_Image.EditorPreferredWidth = 117;
+            layoutViewField_Image.Location = new Point(0, 96);
             layoutViewField_Image.Name = "layoutViewField_Image";
-            layoutViewField_Image.Size = new Size(209, 110);
+            layoutViewField_Image.Size = new Size(216, 110);
             layoutViewField_Image.StartNewLine = true;
-            layoutViewField_Image.TextSize = new Size(64, 16);
+            layoutViewField_Image.TextSize = new Size(71, 13);
             // 
             // layoutViewCard1
             // 
@@ -360,23 +358,21 @@
             groupControl5.Controls.Add(dtOrderDate);
             groupControl5.Controls.Add(labelControl1);
             groupControl5.Dock = DockStyle.Top;
-            groupControl5.Location = new Point(2, 28);
-            groupControl5.Margin = new Padding(4);
+            groupControl5.Location = new Point(2, 23);
             groupControl5.Name = "groupControl5";
             groupControl5.ShowCaption = false;
-            groupControl5.Size = new Size(1156, 37);
+            groupControl5.Size = new Size(989, 30);
             groupControl5.TabIndex = 0;
             groupControl5.Text = "groupControl5";
             // 
             // dtOrderDate
             // 
             dtOrderDate.EditValue = null;
-            dtOrderDate.Location = new Point(84, 4);
-            dtOrderDate.Margin = new Padding(4);
+            dtOrderDate.Location = new Point(72, 3);
             dtOrderDate.Name = "dtOrderDate";
             dtOrderDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             dtOrderDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            dtOrderDate.Size = new Size(149, 22);
+            dtOrderDate.Size = new Size(128, 20);
             dtOrderDate.TabIndex = 1;
             dtOrderDate.EditValueChanged += dtOrderDate_EditValueChanged;
             // 
@@ -384,10 +380,9 @@
             // 
             labelControl1.Appearance.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new Point(18, 9);
-            labelControl1.Margin = new Padding(4);
+            labelControl1.Location = new Point(15, 7);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new Size(63, 17);
+            labelControl1.Size = new Size(50, 13);
             labelControl1.TabIndex = 0;
             labelControl1.Text = "Ngày đặt";
             // 
@@ -395,34 +390,29 @@
             // 
             groupControl3.Controls.Add(gridDataUser);
             groupControl3.Dock = DockStyle.Bottom;
-            groupControl3.Location = new Point(2, 427);
-            groupControl3.Margin = new Padding(4);
+            groupControl3.Location = new Point(2, 341);
             groupControl3.Name = "groupControl3";
-            groupControl3.Size = new Size(1160, 236);
+            groupControl3.Size = new Size(993, 192);
             groupControl3.TabIndex = 0;
             groupControl3.Text = "CÁC MÓN ĂN ĐÃ ĐẶT";
             // 
             // gridDataUser
             // 
             gridDataUser.Dock = DockStyle.Fill;
-            gridDataUser.EmbeddedNavigator.Margin = new Padding(4);
-            gridDataUser.Location = new Point(2, 28);
+            gridDataUser.Location = new Point(2, 23);
             gridDataUser.MainView = gridView2;
-            gridDataUser.Margin = new Padding(4);
             gridDataUser.Name = "gridDataUser";
             gridDataUser.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { btnDelete, repositoryItemButtonEdit1 });
-            gridDataUser.Size = new Size(1156, 206);
+            gridDataUser.Size = new Size(989, 167);
             gridDataUser.TabIndex = 0;
             gridDataUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView2 });
             // 
             // gridView2
             // 
             gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { TitleProduct, TotalQuantity, PriceProduct, Delete });
-            gridView2.DetailHeight = 431;
             gridView2.GridControl = gridDataUser;
             gridView2.Name = "gridView2";
             gridView2.OptionsBehavior.Editable = false;
-            gridView2.OptionsEditForm.PopupEditFormWidth = 933;
             gridView2.OptionsFind.AlwaysVisible = true;
             gridView2.OptionsView.ShowFooter = true;
             gridView2.OptionsView.ShowGroupPanel = false;
@@ -431,44 +421,44 @@
             // TitleProduct
             // 
             TitleProduct.Caption = "Sản phẩm";
-            TitleProduct.FieldName = "Title";
-            TitleProduct.MinWidth = 25;
+            TitleProduct.FieldName = "ProductName";
+            TitleProduct.MinWidth = 21;
             TitleProduct.Name = "TitleProduct";
             TitleProduct.Visible = true;
             TitleProduct.VisibleIndex = 0;
-            TitleProduct.Width = 94;
+            TitleProduct.Width = 81;
             // 
             // TotalQuantity
             // 
             TotalQuantity.Caption = "Số lượng";
             TotalQuantity.FieldName = "TotalQuantity";
-            TotalQuantity.MinWidth = 25;
+            TotalQuantity.MinWidth = 21;
             TotalQuantity.Name = "TotalQuantity";
             TotalQuantity.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalQuantity", "SUM={0:0.##}") });
             TotalQuantity.Visible = true;
             TotalQuantity.VisibleIndex = 2;
-            TotalQuantity.Width = 94;
+            TotalQuantity.Width = 81;
             // 
             // PriceProduct
             // 
-            PriceProduct.Caption = "Giá tiền";
+            PriceProduct.Caption = "Thành tiền";
             PriceProduct.FieldName = "TotalPrice";
-            PriceProduct.MinWidth = 25;
+            PriceProduct.MinWidth = 21;
             PriceProduct.Name = "PriceProduct";
             PriceProduct.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalPrice", "SUM={0:0.##}") });
             PriceProduct.Visible = true;
             PriceProduct.VisibleIndex = 1;
-            PriceProduct.Width = 94;
+            PriceProduct.Width = 81;
             // 
             // Delete
             // 
             Delete.Caption = "Delete";
             Delete.ColumnEdit = btnDelete;
-            Delete.MinWidth = 25;
+            Delete.MinWidth = 21;
             Delete.Name = "Delete";
             Delete.Visible = true;
             Delete.VisibleIndex = 3;
-            Delete.Width = 94;
+            Delete.Width = 81;
             // 
             // btnDelete
             // 
@@ -490,9 +480,9 @@
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { SubBtnOrder, closeUcOrder, SubBtnDelete });
-            toolStrip1.Location = new Point(2, 28);
+            toolStrip1.Location = new Point(2, 23);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1164, 27);
+            toolStrip1.Size = new Size(997, 27);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -501,18 +491,18 @@
             SubBtnDelete.Image = (Image)resources.GetObject("SubBtnDelete.Image");
             SubBtnDelete.ImageTransparentColor = Color.Magenta;
             SubBtnDelete.Name = "SubBtnDelete";
-            SubBtnDelete.Size = new Size(126, 24);
+            SubBtnDelete.Size = new Size(105, 24);
             SubBtnDelete.Text = "Xóa đơn hàng";
             SubBtnDelete.Click += SubBtnDelete_Click;
             // 
             // ucOrder
             // 
-            AutoScaleDimensions = new SizeF(7F, 16F);
+            AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(groupControl1);
-            Margin = new Padding(4, 2, 4, 2);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "ucOrder";
-            Size = new Size(1168, 722);
+            Size = new Size(1001, 587);
             Load += ucOrder_Load;
             ((System.ComponentModel.ISupportInitialize)groupControl1).EndInit();
             groupControl1.ResumeLayout(false);
@@ -531,7 +521,7 @@
             ((System.ComponentModel.ISupportInitialize)layoutViewField_IsSelected).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Title).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Price).EndInit();
-            ((System.ComponentModel.ISupportInitialize)spdtPrice).EndInit();
+            ((System.ComponentModel.ISupportInitialize)spdtQuantity).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Quantity).EndInit();
             ((System.ComponentModel.ISupportInitialize)svgImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Image).EndInit();
@@ -569,7 +559,7 @@
         private DevExpress.XtraEditors.DateEdit dtOrderDate;
         private DevExpress.XtraEditors.LabelControl lblRestaurant;
         private DevExpress.XtraGrid.GridControl gridDataProduct;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit spdtPrice;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit spdtQuantity;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit svgImage;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit checkOrder;
         private DevExpress.XtraGrid.Columns.GridColumn TitleProduct;
@@ -577,10 +567,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn TotalQuantity;
         private DevExpress.XtraGrid.Views.Layout.LayoutView layoutView;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn IsSelected;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn Title;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn ProductName;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn Price;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn Quantity;
-        private DevExpress.XtraGrid.Columns.LayoutViewColumn Image;
+        private DevExpress.XtraGrid.Columns.LayoutViewColumn Images;
         private DevExpress.XtraGrid.Columns.GridColumn Delete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_IsSelected;

@@ -25,15 +25,12 @@ namespace API.Controllers
 
         [HttpGet("Restaurant/{restaurantId}")]
 
-        public async Task<ApiResponse<List<ProductDto>>> GetProductRestaurant(string restaurantId)
+        public async Task<ApiResponse<List<Product>>> GetProductRestaurant(string restaurantId)
         {
 
-            List<Product> products = _unitOfWork.Product.GetAll(u => u.RestaurantId.Equals(restaurantId), includeProperties: "Restaurant,ProductImages").ToList();
+            List<Product> products = _unitOfWork.Product.GetAll(u => u.RestaurantId.Equals(restaurantId)).ToList();
 
-            // Sử dụng AutoMapper để map dữ liệu
-            List<ProductDto> productDtos = _mapper.Map<List<ProductDto>>(products);
-
-            return new ApiResponse<List<ProductDto>>(System.Net.HttpStatusCode.OK, "Lấy dữ dữ liệu", productDtos);
+            return new ApiResponse<List<Product>>(System.Net.HttpStatusCode.OK, "Lấy dữ dữ liệu", products);
 
         }
 

@@ -12,6 +12,7 @@ using System.IO;
 using System.Net;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraEditors.Repository;
 
 namespace Client.UserControls
 {
@@ -24,8 +25,9 @@ namespace Client.UserControls
 
         private List<UserInfoDTO> userOrderList;
 
-        private string  OrderId;
+        private string OrderId;
         private string selectedRestaurantId;
+        private string dateString;
         private List<Product> productList = new List<Product>();
 
 
@@ -40,12 +42,11 @@ namespace Client.UserControls
 
         private void ucOrder_Load(object sender, EventArgs e)
         {
-            GetOrderByUser();
-            GetProduct();
-            OrderCreateDate();
 
+            OrderCreateDate();
             dtOrderDate.DateTime = DateTime.Now;
             GetRestaurant();
+            GetOrderByUserAll();
         }
 
         // lấy ra thông tin các cửa hàng
@@ -76,91 +77,110 @@ namespace Client.UserControls
                 Console.WriteLine(ex.ToString());
             }
         }
-
-
-        // lấy ra id của order vừa tạo của ngày hôm nay 
         private void OrderCreateDate()
         {
             DateTime date = dtOrderDate.DateTime;
-            string dateString = date.ToString("yyyy/MM/dd");
-            var order = _apiClient.GetData<Product>($"Order/GetProductsByOrderDate?date={dateString}").Data;
-            if ( order != null )
+            string datetime = date.ToString("yyyy/MM/dd");
+            var products = _apiClient.GetData<Product>($"Order/GetProductsByOrderDate?date={datetime}").Data;
+
+            if (products != null && products.Any())
             {
-                OrderId = order[0].Id;
-                // làm tiếp check order đãcó và chưa có
+                OrderId = products[0].Id;
+                SortProducts(products);
+                gridDataProduct.DataSource = products;
+
+                // hiện thị thông tin người đã dặt hàng hay chưa
+                GetOrderByUserAll();
+            }
+            else
+            {
+                gridDataProduct.DataSource = null;
+                gridDataProduct.RefreshDataSource();
 
             }
-
 
         }
 
         // lấy thông tin sản phẩm theo cửa hàng được chọn
         public void GetProduct()
         {
-            var productResponse = _apiClient.GetData<Product>($"Product/Restaurant/{selectedRestaurantId}");
-            if (productResponse != null && productResponse.Data != null)
+            var products = _apiClient.GetData<Product>($"Product/Restaurant/{selectedRestaurantId}")?.Data;
+
+            if (products != null && products.Any())
             {
-                // Sắp xếp sản phẩm dựa trên sự hiện diện trong userOrderList
-                productResponse.Data.Sort((p1, p2) =>
-                {
-                    var p1InOrderList = userOrderList.Any(u => u.ProductId.Equals(p1.Id));
-                    var p2InOrderList = userOrderList.Any(u => u.ProductId.Equals(p2.Id));
+                SortProducts(products);
+                gridDataProduct.DataSource = products;
+                gridDataProduct.RefreshDataSource();
+            }
+            else
+            {
+                gridDataProduct.DataSource = null;
 
-                    if (p1InOrderList && !p2InOrderList)
-                    {
-                        return -1;
-                    }
-                    else if (!p1InOrderList && p2InOrderList)
-                    {
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
+            }
+            GetOrderByUserAll();
+
+        }
+
+
+        // sắp xếp product theo người dùng đã mua và chưa mua
+        private void SortProducts(List<Product> products)
+        {
+            if (userOrderList != null)
+            {
+                products.Sort((p1, p2) =>
+                {
+                    bool p1InOrderList = userOrderList.Any(u => u.ProductId.Equals(p1.Id));
+                    bool p2InOrderList = userOrderList.Any(u => u.ProductId.Equals(p2.Id));
+
+                    return p1InOrderList.CompareTo(p2InOrderList);
                 });
+            }
 
-                foreach (var product in productResponse.Data)
-                {
-                    var userOrder = userOrderList.FirstOrDefault(u => u.ProductId.Equals(product.Id));
-                    if (userOrder != null)
-                    {
-                        product.Quantity = userOrder.TotalQuantity;
-                        product.IsSelected = true;
-                    }
-
-                    if (product.Images != null)
-                    {
-                        string absoluteImageUrl = $"http://localhost:5000{product.Images.Replace("\\", "/")}";
-                        product.Image = LoadImageFromUrl(absoluteImageUrl);
-                    }
-                    else
-                    {
-                        string defaultImageUrl = @"D:\ThucTap\OrderFood\Client\Images\quan-com-tam-o-ha-noi-.jpg";
-                        product.Image = LoadImageFromUrl(defaultImageUrl);
-                    }
-
-                    // Tìm vị trí thích hợp để thêm sản phẩm vào danh sách
-                    int index = productList.FindIndex(p => p.Id == product.Id);
-                    if (index >= 0)
-                    {
-                        // Sản phẩm đã tồn tại, cập nhật nó
-                        productList[index] = product;
-                    }
-                    else
-                    {
-                        // Sản phẩm chưa tồn tại, thêm nó vào danh sách
-                        productList.Insert(0, product); // Thêm vào đầu danh sách để hiển thị đầu tiên
-                    }
-                }
-
-                gridDataProduct.DataSource = productList;
+            foreach (var product in products)
+            {
+                ProcessProduct(product);
             }
         }
 
 
+        // hiện thị thông tin sản phẩm product sang layoutview và cập nhật lại thông tin sản phẩm
+        private void ProcessProduct(Product product)
+        {
+            if (userOrderList != null)
+            {
+                var userOrder = userOrderList.FirstOrDefault(u => u.ProductId.Equals(product.Id));
+                product.Quantity = userOrder?.TotalQuantity ?? 1;
+                product.IsSelected = userOrder != null;
+            }
+            else
+            {
+                product.Quantity = 1;
+            }
 
-        
+            product.Image = LoadProductImage(product.Images);
+
+            int index = productList.FindIndex(p => p.Id == product.Id);
+            if (index >= 0)
+            {
+                productList[index] = product;
+            }
+            else
+            {
+                productList.Insert(0, product);
+            }
+        }
+
+        private Image LoadProductImage(string imagePath)
+        {
+            if (imagePath != null)
+            {
+                return LoadImageFromUrl($"http://localhost:5000{imagePath.Replace("\\", "/")}");
+            }
+
+            return LoadImageFromUrl(@"D:\ThucTap\OrderFood\Client\Images\quan-com-tam-o-ha-noi-.jpg");
+        }
+
+
         private Image LoadImageFromUrl(string url)
         {
             using (WebClient webClient = new WebClient())
@@ -174,30 +194,34 @@ namespace Client.UserControls
             }
         }
 
-        private void GetOrderByUser()
+
+
+        private void GetOrderByUserAll()
         {
             DateTime date = dtOrderDate.DateTime;
+            string startDate = date.ToString("yyyy/MM/dd");
+            string endDate = null;
+            string userName = null;
             string userId = "2";
-            string dateString = date.ToString("yyyy/MM/dd");
+            //selectedRestaurantId = string.IsNullOrEmpty(selectedRestaurantId) ? "" : selectedRestaurantId;
+            string restaurants = null;
+            string productName = null;
+
 
             try
             {
-                var userOrderResponse = _apiClient.GetData<UserInfoDTO>($"Order/UserOrders?userId={userId}&date={dateString}");
+                var userOrder = _apiClient.GetData<UserInfoDTO>($"Order/UserAllOrders?startDate={startDate}&endDate={endDate}&UserName={userName}&userId={userId}&restaurants={selectedRestaurantId}&productName={productName}").Data;
 
-                if (userOrderResponse != null && userOrderResponse.Data != null)
+                Console.WriteLine(JsonConvert.SerializeObject(userOrder));
+                userOrderList = userOrder;
+                gridDataUser.DataSource = userOrder;
+                GridView view = gridDataUser.MainView as GridView;
+                if (view != null)
                 {
-                    userOrderList = userOrderResponse.Data;
+                    // Ẩn các cột  không muốn hiển thị`
+                    //view.Columns["OrderDetailID"].Visible = false;
 
-                    Console.WriteLine(JsonConvert.SerializeObject(userOrderList));
-                    gridDataUser.DataSource = userOrderList;
-
-                    GridView view = gridDataUser.MainView as GridView;
-
-
-                }
-                else
-                {
-                    Console.WriteLine("No data or data could not be fetched.");
+                    //view.Columns["ProductId"].Visible = false;
                 }
             }
             catch (Exception ex)
@@ -214,87 +238,39 @@ namespace Client.UserControls
         public void UserSendOrder()
         {
 
-            var orderDetail = ConvertToListOrderDetail(userOrderList, OrderId, "2");
-            var resource = "Cart/CreateList";
+            //var orderDetail = ConvertToListOrderDetail(userOrderList, OrderId, "2");
+            //var resource = "OrderDetail/Create";
 
-            var response = _apiClient.SendListToApi<Cart>(resource, orderDetail);
+            //var response = _apiClient.SendListToApi<OrderDetail>(resource, orderDetail);
 
-            if (response != null)
-            {
-                if (response.Code == HttpStatusCode.OK)
-                {
+            //if (response != null)
+            //{
+            //    if (response.Code == HttpStatusCode.OK)
+            //    {
 
-                    MessageBox.Show($"Thêm thành công:");
-                    //GetUserProduct();
-                }
-                else
-                {
-                    // Đăng nhập thất bại
-                    string errorMessage = response.Message;
-                    MessageBox.Show($"Thêm thất bại: {errorMessage}");
-                }
-            }
-            else
-            {
-                // Kết nối đến server thất bại hoặc lỗi khác
-                MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối và thử lại.");
-            }
+            //        MessageBox.Show($"Thêm thành công:");
+            //        //GetUserProduct();
+            //    }
+            //    else
+            //    {
+            //        // Đăng nhập thất bại
+            //        string errorMessage = response.Message;
+            //        MessageBox.Show($"Thêm thất bại: {errorMessage}");
+            //    }
+            //}
+            //else
+            //{
+            //    // Kết nối đến server thất bại hoặc lỗi khác
+            //    MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối và thử lại.");
+            //}
         }
 
 
         private void dtOrderDate_EditValueChanged(object sender, EventArgs e)
         {
-            GetOrderByUser();
+            OrderCreateDate();
+            GetOrderByUserAll();
         }
-
-
-        //private void layoutView_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
-        //{
-        //    if (e.Column.FieldName == "IsSelected" && (bool)e.Value)
-        //    {
-        //        Product product = layoutView.GetRow(e.RowHandle) as Product;
-        //        if (product != null)
-        //        {
-        //            var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
-        //            if (existingUserProduct != null)
-        //            {
-        //                existingUserProduct.TotalQuantity = product.Quantity;
-        //                existingUserProduct.TotalPrice = (decimal)product.Price * product.Quantity;
-        //                MessageBox.Show("Quantity: " + product.Quantity);
-
-        //            }
-        //            else
-        //            {
-        //                UserInfoDTO user = new UserInfoDTO()
-        //                {
-        //                    UserName = "Nguyen Van A",
-        //                    ProductId = product.Id,
-        //                    Title = product.Title,
-        //                    TotalQuantity = product.Quantity,
-        //                    TotalPrice = (decimal)product.Price * product.Quantity
-        //                };
-        //                userOrderList.Add(user);
-        //                MessageBox.Show("Thêm thành công");
-
-        //            }
-        //            UpdateGridData();
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Product product = layoutView.GetRow(e.RowHandle) as Product;
-        //        if (product != null)
-        //        {
-        //            var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
-        //            userOrderList.Remove(existingUserProduct);
-        //            MessageBox.Show("Xoa");
-
-
-        //            UpdateGridData();
-        //        }
-
-        //    }
-        //}
 
         public void UpdateGridData()
         {
@@ -303,6 +279,7 @@ namespace Client.UserControls
             gridDataUser.RefreshDataSource();
 
         }
+
 
         private void SubBtnSearch_Click(object sender, EventArgs e)
         {
@@ -413,52 +390,76 @@ namespace Client.UserControls
 
         private void checkOrder_CheckedChanged(object sender, EventArgs e)
         {
-            //var checkbox = sender as CheckEdit;
-            //var product = layoutView.GetFocusedRow() as Product;
-            //var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
+            var checkbox = sender as CheckEdit;
+            var product = layoutView.GetFocusedRow() as Product;
+            var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
 
-            //if (checkbox != null && product != null)
-            //{
-            //    product.IsSelected = checkbox.Checked;
-            //    if (checkbox.Checked)
-            //    {
-            //        if (existingUserProduct != null)
-            //        {
-            //            existingUserProduct.TotalQuantity = product.Quantity;
-            //            existingUserProduct.TotalPrice = (decimal)product.Price * product.Quantity;
-            //            MessageBox.Show("Quantity: " + product.Quantity);
+            if (checkbox != null && product != null)
+            {
+                product.IsSelected = checkbox.Checked;
+                if (checkbox.Checked)
+                {
 
-            //        }
-            //        else
-            //        {
-            //            UserInfoDTO user = new UserInfoDTO()
-            //            {
-            //                UserName = "Nguyen Van A",
-            //                ProductId = product.Id,
-            //                Title = product.Title,
-            //                TotalQuantity = product.Quantity,
-            //                TotalPrice = (decimal)product.Price * product.Quantity
-            //            };
-            //            userOrderList.Add(user);
-            //            MessageBox.Show("Thêm thành công");
+                    UserInfoDTO user = new UserInfoDTO()
+                    {
 
-            //        }
-            //    }
-            //    else
-            //    {
-            //        userOrderList.Remove(existingUserProduct);
-            //        MessageBox.Show("Xoa nos di");
+                        ProductId = product.Id,
+                        ProductName = product.ProductName,
+                        TotalQuantity = product.Quantity,
+                        TotalPrice = (decimal)product.Price * product.Quantity
+                    };
+                    userOrderList.Add(user);
+                }
+                else
+                {
+                    userOrderList.Remove(existingUserProduct);
+                   
 
-            //    }
-            //    UpdateGridData();
-            //}
+                }
+            }
+           
+            UpdateGridData();
         }
+
 
         private void ludRestaurant_EditValueChanged(object sender, EventArgs e)
         {
             selectedRestaurantId = ludRestaurant.EditValue.ToString();
-            GetRestaurant();
+            GetProduct();
         }
+
+        private void spdtPrice_EditValueChanged(object sender, EventArgs e)
+        {
+            var spinEdit = sender as SpinEdit;
+            if (spinEdit != null)
+            {
+                // Lấy giá trị từ SpinEdit
+                int quantity = (int)spinEdit.Value;
+
+                // Lấy dòng dữ liệu hiện tại trong LayoutView
+                int rowHandle = layoutView.FocusedRowHandle;
+                if (rowHandle >= 0)
+                {
+                    var product = layoutView.GetRow(rowHandle) as Product;
+                    if (product != null)
+                    {
+                        var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId.Equals(product.Id));
+                        if (existingUserProduct != null)
+                        {
+                            //product.Quantity = quantity;
+                            //product.Price = quantity * product.Price;
+                            existingUserProduct.TotalQuantity = quantity;
+                            existingUserProduct.TotalPrice = (decimal)product.Price * quantity;
+
+                            UpdateGridData();
+                        }
+
+
+                    }
+                }
+            }
+        }
+
     }
 }
 

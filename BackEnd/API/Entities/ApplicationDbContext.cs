@@ -9,7 +9,7 @@ namespace API.Entities
     public class ApplicationDbContext : IdentityDbContext<User, Role, int,
        IdentityUserClaim<int>, UserRole, IdentityUserLogin<int>,
        IdentityRoleClaim<int>, IdentityUserToken<int>>
-    {
+    {   
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
 
@@ -41,14 +41,15 @@ namespace API.Entities
             return Products.FromSqlRaw("EXEC sp_GetProductsByOrderDate {0}", date).ToList();
         }
 
-        public List<UserInfoDTO> GetUserCartDetails(string startDate,string endDate, string userName,string restaurants, string productName)
+        public List<UserInfoDTO> GetUserCartDetails(string startDate,string endDate, string userName,string userId,string restaurants, string productName)
         {
             startDate = string.IsNullOrEmpty(startDate) ? null : startDate;
             endDate = string.IsNullOrEmpty(endDate) ? null : endDate;
             userName = string.IsNullOrEmpty(userName) ? null : userName;
+            userId = string.IsNullOrEmpty(userId) ? null : userId;
             restaurants = string.IsNullOrEmpty(restaurants) ? null : restaurants;
             productName = string.IsNullOrEmpty(productName) ? null : productName;
-            return UserCartDetails.FromSqlRaw("EXEC sp_GetUserOrderDetails @p0, @p1, @p2, @p3, @p4", startDate,endDate, userName, restaurants, productName).ToList();
+            return UserCartDetails.FromSqlRaw("EXEC sp_GetUserOrderDetails @p0, @p1, @p2, @p3, @p4, @p5", startDate,endDate, userName,userId, restaurants, productName).ToList();
         }
 
 

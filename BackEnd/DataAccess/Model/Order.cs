@@ -13,12 +13,13 @@ namespace DataAccess.Model
         public string Id { get; set; }
 
         [Required(ErrorMessage = "Chưa có id người dùng.")]
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
         [ForeignKey("UserId")]
         [ValidateNever]
 
         public User? User { get; set; }
 
+        [Column(TypeName = "Datetime")]
         public DateTime OrderDate { get; set; }
 
 

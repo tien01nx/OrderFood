@@ -83,4 +83,51 @@ select * from Orders  join OrderDetails on Orders.Id = OrderDetails.OrderId
 
 
 
+SELECT 
+    U.UserName AS UserName,
+    ISNULL(P.ProductName, '0') AS ProductName,
+	ISNULL(P.Id, '0') AS ProductId,
+    ISNULL(OD.Count, 0) AS Count,
+    ISNULL(OD.Price, 0) AS Price
+
+FROM 
+    dbo.AspNetUsers AS U
+LEFT JOIN 
+    dbo.OrderDetails AS OD ON U.Id = OD.UserId
+	And  
+      OD.CreateDate = '2023-10-07'
+Left join Orders on Orders.Id  = OD.OrderId
+	And Orders.CreateDate    = '2023-10-07'
+LEFT JOIN 
+    dbo.Products AS P ON OD.ProductId = P.Id
+Left join Restaurants on Orders.RestaurantId = Restaurants.Id
+	and Orders.RestaurantId=3
+
+
+
+SELECT 
+    U.UserName AS UserName,
+    ISNULL(P.ProductName, '0') AS ProductName,
+    ISNULL(P.Id, '0') AS ProductId,
+    SUM(ISNULL(OD.Count, 0)) AS 'Số lương',
+    SUM(ISNULL(OD.Price,0)) AS 'Thành tiền'
+FROM 
+    dbo.AspNetUsers AS U
+LEFT JOIN 
+    dbo.OrderDetails AS OD ON U.Id = OD.UserId
+    AND OD.CreateDate = '2023-10-07'
+LEFT JOIN Orders ON Orders.Id = OD.OrderId
+    AND Orders.CreateDate = '2023-10-07'
+LEFT JOIN 
+    dbo.Products AS P ON OD.ProductId = P.Id
+Left  JOIN Restaurants ON Orders.RestaurantId = Restaurants.Id
+    WHERE
+    (Restaurants.Id = 3 OR Restaurants.Id IS NULL)
+GROUP BY
+    U.UserName,
+    ISNULL(P.ProductName, '0'),
+    ISNULL(P.Id, '0');
+
+
+
 

@@ -2,6 +2,7 @@
 using DataAccess.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System.Net;
 
 namespace API.Controllers
@@ -13,6 +14,7 @@ namespace API.Controllers
         protected readonly ApplicationDbContext _context;
         private readonly ILogger<BaseController<T>> _logger;
         internal DbSet<T> dbSet;
+      
 
 
         public BaseController(ApplicationDbContext context, ILogger<BaseController<T>> logger)
@@ -20,8 +22,7 @@ namespace API.Controllers
             _context = context;
             _logger = logger;
             this.dbSet = _context.Set<T>();
-
-
+            
         }
         [HttpGet("GetAll")]
         public async Task<ApiResponse<List<T>>> GetAll()
@@ -110,18 +111,51 @@ namespace API.Controllers
 
                     return new ApiResponse<T>(HttpStatusCode.OK, "Tạo thành công", entity);
                 }
-                // kiểm tra productId và userId đã tồn tại trong bảng Cart hay chưa nếu tồn tại thì cập nhật số lượng
-                //if(typeof(T) == typeof(Cart)){
-                //    var cartEntity = entity as Cart;
-                //    if (_context.Set<Cart>().Any(x => x.Id==cartEntity.Id))
-                //    {
-                //        _context.Set<Cart>().Update(cartEntity);
-                //        await _context.SaveChangesAsync();
-                //        return new ApiResponse<T>(HttpStatusCode.OK, "Cập nhật thành công", entity);
-                //    }
-                //}
 
 
+                if(typeof(T) == typeof(OrderDetail))
+                {
+
+                    // Tìm số tự động tăng cuối cùng bằng cách thực hiện truy vấn LINQ trên danh sách đã lấy
+                    var lastOrderNumber = _context.Set<Order>()
+                        .Where(o => o.Id.StartsWith("OD"))
+                        .AsEnumerable() // Chuyển sang client evaluation
+                        .Select(o => int.Parse(o.Id.Substring(2)))
+                        .DefaultIfEmpty(0)
+                        .Max();
+
+                    string newOrderId = $"OD{(lastOrderNumber + 1).ToString("D4")}";
+
+                    var orderDetail = entity as OrderDetail;
+                    // kiểm tra Order theo ngày hiện tại đã có chưa, và theo điều kiện RestauranId
+                    // nêu chưa có order và RestaurantId thì tạo mới order và orderDetail
+                    var order = _context.Set<Order>().Where(x => x.CreateDate == DateTime.Now.Date && x.RestaurantId == orderDetail.RestaurantId).FirstOrDefault();
+                    if(order==null)
+                    {
+                        Order newOrder = new Order()
+                        {
+                            RestaurantId = orderDetail.RestaurantId,
+                            CreateDate = DateTime.Now.Date,
+                            UserId = orderDetail.UserId,
+                            OrderDate = DateTime.Now,
+                            OrderTotal = 0,
+                            OrderStatus = "Đang chờ xử lý",
+                            PaymentStatus = "Chưa thanh toán",
+                            Id = newOrderId
+                        };
+                        _context.Set<Order>().Add(newOrder);
+                        await _context.SaveChangesAsync();
+                        orderDetail.OrderId = newOrder.Id;
+                        _context.Set<OrderDetail>().Add(orderDetail);
+                        await _context.SaveChangesAsync();
+                        return new ApiResponse<T>(HttpStatusCode.OK, "Tạo thành công", entity);
+                    }
+                    else
+                    {
+                        return new ApiResponse<T>(HttpStatusCode.OK, "Đã có", entity);
+                    }
+                    
+                }
                 _context.Set<T>().Add(entity);
                 await _context.SaveChangesAsync();
                 return new ApiResponse<T>(HttpStatusCode.OK, "Tạo thành công", entity);
@@ -150,41 +184,60 @@ namespace API.Controllers
         //}
 
         [HttpPost("CreateList")]
-        public async Task<ActionResult<ApiResponse<List<T>>>> Create(List<T> entities)
+        public async Task<ActionResult<ApiResponse<List<T>>>> CreateList(List<T> entities)
         {
             try
             {
-                //if (typeof(T) == typeof(Cart))
-                //{
+                if (typeof(T) == typeof(OrderDetail))
+                {
+                    var orderDetails = entities.Cast<OrderDetail>().ToList();
 
-                //    var cartEntities = entities as List<Cart>;
+                    foreach (var orderDetail in orderDetails)
+                    {
+                        // Kiểm tra xem có một đơn đặt hàng nào thỏa mãn điều kiện hay không
+                        var order = _context.Set<Order>()
+                            .FirstOrDefault(x => x.CreateDate == DateTime.Now.Date && x.RestaurantId == orderDetail.RestaurantId);
 
-                //    foreach (var entity in cartEntities)
-                //    {
-                //        if (entity.Id == 0) // Accessing Id on the entity
-                //        {
-                //            _context.Set<T>().Add(entity as T);
-                //        }
-                //        else
-                //        {
-                //            _context.Set<T>().Update(entity as T);
-                //        }
-                //    }
-                //}
-                //else
-                //{
-                //    _context.Set<T>().AddRange(entities);
-                //}
+                        if (order == null)
+                        {
+                            // Nếu không có đơn đặt hàng nào, tạo đơn đặt hàng mới
+                            order = new Order()
+                            {
+                                RestaurantId = orderDetail.RestaurantId,
+                                CreateDate = DateTime.Now.Date,
+                                UserId = orderDetail.UserId,
+                                OrderDate = DateTime.Now,
+                                OrderTotal = 0,
+                                OrderStatus = "Đang chờ xử lý",
+                                PaymentStatus = "Chưa thanh toán"
+                            };
+
+                            _context.Set<Order>().Add(order);
+                        }
+
+                        orderDetail.OrderId = order.Id;
+
+                        // Tiếp theo, bạn có thể thêm đối tượng OrderDetail vào DbContext
+                        _context.Set<OrderDetail>().Add(orderDetail);
+                    }
+                }
+
+                // Thêm các thực thể vào DbContext hiện tại
                 _context.Set<T>().AddRange(entities);
                 await _context.SaveChangesAsync();
+
                 return new ApiResponse<List<T>>(HttpStatusCode.OK, "Tạo thành công", entities);
             }
             catch (DbUpdateException ex)
             {
-                _logger.LogError(ex, "Error occurred in Create method.");
-                return new ApiResponse<List<T>>(HttpStatusCode.BadRequest, "Lỗi khi tạo" + ex, null);
+                _logger.LogError(ex, "Error occurred in CreateList method.");
+                return new ApiResponse<List<T>>(HttpStatusCode.BadRequest, "Lỗi khi tạo: " + ex.Message, null);
             }
         }
+
+
+
+
 
 
         [HttpPut("{id}")]

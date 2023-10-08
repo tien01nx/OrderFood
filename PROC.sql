@@ -8,6 +8,7 @@ AS
 BEGIN
     SELECT 
         U.UserName AS UserName,
+		 ISNULL(OD.Id, '0') AS 'OrderDetailID',
         ISNULL(P.ProductName, '0') AS ProductName,
         ISNULL(P.Id, '0') AS ProductId,
         SUM(ISNULL(OD.Count, 0)) AS 'TotalQuantity',
@@ -31,19 +32,41 @@ BEGIN
         ( 
             ( Restaurants.Id = ISNULL(@Restaurants, Restaurants.Id) ) OR 
             Restaurants.Id IS NULL 
+		
         )
         AND ( @UserName IS NULL OR U.UserName LIKE '%' + @UserName + '%' )
         AND ( @ProductName IS NULL OR P.ProductName LIKE '%' + @ProductName + '%' )
+
+		
     GROUP BY
         U.UserName,
+		ISNULL(OD.Id, '0'),
         ISNULL(P.ProductName, '0'),
         ISNULL(P.Id, '0');
 END
 
 
 EXEC sp_GetUserOrderDetails 
-@StartDate = '2023-10-07',
+@StartDate = '2023-10-08',
 @EndDate = null,
 @UserName = null,
 @Restaurants = null,
 @ProductName = null;
+
+
+-- lấy ra đơn hàng của hàng hiện tại và prodct
+ALTER PROCEDURE sp_GetProductsByOrderDate 
+    @OrderDate NVARCHAR(50) 
+AS
+BEGIN
+    SELECT DISTINCT Products.*
+    FROM Orders 
+    JOIN Restaurants ON Orders.RestaurantId = Restaurants.Id
+    JOIN Products ON Restaurants.Id = Products.RestaurantID
+   
+    WHERE Orders.CreateDate = CAST(@OrderDate AS DATE)
+END
+
+
+
+EXEC sp_GetProductsByOrderDate @OrderDate = '2023-10-08'

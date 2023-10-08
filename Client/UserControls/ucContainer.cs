@@ -20,7 +20,7 @@ namespace Client
         private void ucContaine_Load(object sender, EventArgs e)
         {
             dateEdit.EditValue = DateTime.Now;
-            GetOrderByUser();
+            //GetOrderByUser();
             //getProduct();
         }
 
