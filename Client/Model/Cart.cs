@@ -12,20 +12,20 @@ namespace Client.Model
     {
 
         // bao gồm thông tin sản phẩm, người dùng và số lượng sản phẩm người dùng mua 
-        public int Id { get; set; }
-        public int ProductId { get; set; }
+        public string Id { get; set; }
+        public string ProductId { get; set; }
        
         public int Count { get; set; }
 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
       
 
         [NotMapped]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
 
 
 
-        public int OrderId { get; set; }
+        public string OrderId { get; set; }
 
 
     }

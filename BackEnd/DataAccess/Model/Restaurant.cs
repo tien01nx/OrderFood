@@ -43,7 +43,7 @@ namespace DataAccess.Model
 
 
         [Required(ErrorMessage = "Vui lòng nhập cấp độ yêu thích")]
-        public int FavoriteLevel { get; set; }
+        public byte FavoriteLevel { get; set; }
 
 
         [StringLength(100, ErrorMessage = "Notes tối đa {1} ký tự")]

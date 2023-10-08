@@ -37,6 +37,13 @@ END
 
 EXEC sp_GetOrderUser @TargetDate = '2023-10-04',@UserName= null,@ProductTile = null
 
+
+select * from AspNetUsers 
+Left join OrderDetails  on AspNetUsers.Id = OrderDetails.UserId
+Left join Products on Products.Id = OrderDetails.ProductId
+where OrderDetails.CreateDate ='2023-10-7'
+
+
 -- thông tin người dùng mua hàng theo useid
 Go
 ALTER PROCEDURE sp_GetUserCartDetails
@@ -66,3 +73,14 @@ END
 
 
 EXEC sp_GetUserCartDetails 2,'2023-10-4'
+
+
+use orderfood EXEC sp_changedbowner 'sa'
+
+
+
+select * from Orders  join OrderDetails on Orders.Id = OrderDetails.OrderId
+
+
+
+

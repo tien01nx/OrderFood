@@ -35,6 +35,7 @@
             groupControl2 = new DevExpress.XtraEditors.GroupControl();
             groupControl4 = new DevExpress.XtraEditors.GroupControl();
             groupControl6 = new DevExpress.XtraEditors.GroupControl();
+            ludRestaurant = new DevExpress.XtraEditors.LookUpEdit();
             lblRestaurant = new DevExpress.XtraEditors.LabelControl();
             gridDataProduct = new DevExpress.XtraGrid.GridControl();
             layoutView = new DevExpress.XtraGrid.Views.Layout.LayoutView();
@@ -74,6 +75,7 @@
             groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl6).BeginInit();
             groupControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ludRestaurant.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridDataProduct).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)checkOrder).BeginInit();
@@ -157,6 +159,7 @@
             // 
             // groupControl6
             // 
+            groupControl6.Controls.Add(ludRestaurant);
             groupControl6.Controls.Add(lblRestaurant);
             groupControl6.Controls.Add(gridDataProduct);
             groupControl6.Dock = DockStyle.Fill;
@@ -166,6 +169,17 @@
             groupControl6.Size = new Size(1156, 358);
             groupControl6.TabIndex = 1;
             groupControl6.Text = "DANH SÁCH CÁC MÓN ĂN";
+            // 
+            // ludRestaurant
+            // 
+            ludRestaurant.Location = new Point(660, 42);
+            ludRestaurant.Name = "ludRestaurant";
+            ludRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            ludRestaurant.Properties.NullText = "Chọn nhà hàng";
+            ludRestaurant.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            ludRestaurant.Size = new Size(204, 22);
+            ludRestaurant.TabIndex = 3;
+            ludRestaurant.EditValueChanged += ludRestaurant_EditValueChanged;
             // 
             // lblRestaurant
             // 
@@ -205,7 +219,6 @@
             layoutView.OptionsView.ViewMode = DevExpress.XtraGrid.Views.Layout.LayoutViewMode.MultiRow;
             layoutView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(Quantity, DevExpress.Data.ColumnSortOrder.Descending) });
             layoutView.TemplateCard = layoutViewCard1;
-        
             // 
             // IsSelected
             // 
@@ -511,6 +524,7 @@
             ((System.ComponentModel.ISupportInitialize)groupControl6).EndInit();
             groupControl6.ResumeLayout(false);
             groupControl6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ludRestaurant.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridDataProduct).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutView).EndInit();
             ((System.ComponentModel.ISupportInitialize)checkOrder).EndInit();
@@ -577,5 +591,6 @@
         private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
         private DevExpress.XtraGrid.Columns.GridColumn Editbutton;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private DevExpress.XtraEditors.LookUpEdit ludRestaurant;
     }
 }

@@ -10,23 +10,23 @@
         "projectUniqueName": "D:\\ThucTap\\OrderFood\\BackEnd\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
         "projectPath": "D:\\ThucTap\\OrderFood\\BackEnd\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\tien0\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Tien\\.nuget\\packages\\",
         "outputPath": "D:\\ThucTap\\OrderFood\\BackEnd\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
+          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tien0\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Users\\Tien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

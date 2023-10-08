@@ -35,29 +35,30 @@ namespace API.Entities
 
         // Sử dụng PROC
 
-        //// Lấy danh sách sản người dùng đã đặt đồ ăn hay chưa, theo ngày truyền vào
-        //public List<UserInfoDTO> GetUserCartDetails(string date,string userName,string title)
-        //{
-        //    return UserCartDetails.FromSqlRaw("EXEC sp_GetOrderUser {0},{1},{2}", date, userName, title).ToList();
-        //}
-
-        public List<UserInfoDTO> GetUserCartDetails(string date, string userName, string title)
+        //// Lấy danh sách sản phẩm theo ngày hiện tại
+        public List<Product> GetProductsByOrderDate(string date)
         {
-            date = string.IsNullOrEmpty(date) ? null : date;
+            return Products.FromSqlRaw("EXEC sp_GetProductsByOrderDate {0}", date).ToList();
+        }
+
+        public List<UserInfoDTO> GetUserCartDetails(string startDate,string endDate, string userName,string restaurants, string productName)
+        {
+            startDate = string.IsNullOrEmpty(startDate) ? null : startDate;
+            endDate = string.IsNullOrEmpty(endDate) ? null : endDate;
             userName = string.IsNullOrEmpty(userName) ? null : userName;
-            title = string.IsNullOrEmpty(title) ? null : title;
-
-            return UserCartDetails.FromSqlRaw("EXEC sp_GetOrderUser @p0, @p1, @p2", date, userName, title).ToList();
+            restaurants = string.IsNullOrEmpty(restaurants) ? null : restaurants;
+            productName = string.IsNullOrEmpty(productName) ? null : productName;
+            return UserCartDetails.FromSqlRaw("EXEC sp_GetUserOrderDetails @p0, @p1, @p2, @p3, @p4", startDate,endDate, userName, restaurants, productName).ToList();
         }
 
 
 
 
-        // Lấy danh sách sản người dùng đã đặt đồ ăn hay chưa, theo ngày truyền vào và id người dùng
-        public List<UserInfoDTO> GetUserCartDetailsByDateAndUserId(string userId, string date)
-        {
-            return UserCartDetails.FromSqlRaw("EXEC sp_GetUserCartDetails {0}, {1}", userId, date).ToList();
-        }
+        //// Lấy danh sách sản người dùng đã đặt đồ ăn hay chưa, theo ngày truyền vào và id người dùng
+        //public List<UserInfoDTO> GetUserCartDetailsByDateAndUserId(string userId, string date)
+        //{
+        //    return UserCartDetails.FromSqlRaw("EXEC sp_GetUserCartDetails {0}, {1}", userId, date).ToList();
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

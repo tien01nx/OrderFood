@@ -3,14 +3,14 @@
     public class UserInfoDTO
     {
 
-        public int Id { get; set; }
-        public int ProductId { get; set; }
+        public string OrderDetailID { get; set; }
+        public string ProductId { get; set; }
 
         public string UserName { get; set; }
-        public string Title { get; set; }
+        public string ProductName { get; set; }
 
         public int TotalQuantity { get; set; }
-        public double TotalPrice { get; set; }
+        public decimal TotalPrice { get; set; }
 
 
     }

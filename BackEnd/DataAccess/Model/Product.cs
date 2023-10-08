@@ -52,5 +52,8 @@ namespace DataAccess.Model
         public Restaurant Restaurant { get; set; }
 
 
+        //[NotMapped]
+
+
     }
 }

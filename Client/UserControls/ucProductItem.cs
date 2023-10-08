@@ -39,20 +39,20 @@ namespace Client
 
         public void UpdateProductInfo(UserInfoDTO userInfo)
         {
-            if (userInfo != null && this.ProductId == userInfo.ProductId)
-            {
-                this.spinQuantity.Value = userInfo.TotalQuantity;
-                this.chkIsChoose.Checked = true;
-                CartId = userInfo.Id;
-                IsUpdateMode = true;
+            //if (userInfo != null && this.ProductId == userInfo.ProductId)
+            //{
+            //    this.spinQuantity.Value = userInfo.TotalQuantity;
+            //    this.chkIsChoose.Checked = true;
+            //    CartId = userInfo.Id;
+            //    IsUpdateMode = true;
 
-            }
-            else
-            {
-                this.spinQuantity.Value = 1;
-                this.chkIsChoose.Checked = false;
-                IsUpdateMode = false;
-            }
+            //}
+            //else
+            //{
+            //    this.spinQuantity.Value = 1;
+            //    this.chkIsChoose.Checked = false;
+            //    IsUpdateMode = false;
+            //}
         }
         public decimal SpinQuantityValue
         {

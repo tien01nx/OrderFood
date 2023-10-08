@@ -37,11 +37,11 @@
             dtOrderDate = new DevExpress.XtraEditors.DateEdit();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            ludRestaurant = new DevExpress.XtraEditors.LookUpEdit();
             txtTile = new DevExpress.XtraEditors.TextEdit();
             label4 = new Label();
             txtUserName = new DevExpress.XtraEditors.TextEdit();
             label3 = new Label();
-            cboRestaurant = new DevExpress.XtraEditors.ComboBoxEdit();
             label1 = new Label();
             toolStrip1 = new ToolStrip();
             SubBtnOrder = new ToolStripButton();
@@ -59,9 +59,9 @@
             ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties.CalendarTimeProperties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
             groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ludRestaurant.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtTile.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtUserName.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -148,11 +148,11 @@
             // 
             // groupControl2
             // 
+            groupControl2.Controls.Add(ludRestaurant);
             groupControl2.Controls.Add(txtTile);
             groupControl2.Controls.Add(label4);
             groupControl2.Controls.Add(txtUserName);
             groupControl2.Controls.Add(label3);
-            groupControl2.Controls.Add(cboRestaurant);
             groupControl2.Controls.Add(label1);
             groupControl2.Dock = DockStyle.Left;
             groupControl2.Location = new Point(2, 55);
@@ -161,6 +161,17 @@
             groupControl2.Size = new Size(365, 665);
             groupControl2.TabIndex = 1;
             groupControl2.Text = "Danh sách sản phẩm";
+            // 
+            // ludRestaurant
+            // 
+            ludRestaurant.Location = new Point(79, 38);
+            ludRestaurant.Name = "ludRestaurant";
+            ludRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            ludRestaurant.Properties.NullText = "";
+            ludRestaurant.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            ludRestaurant.Size = new Size(279, 22);
+            ludRestaurant.TabIndex = 6;
+            ludRestaurant.EditValueChanged += lookUpEdit_EditValueChanged;
             // 
             // txtTile
             // 
@@ -199,15 +210,6 @@
             label3.Size = new Size(66, 16);
             label3.TabIndex = 2;
             label3.Text = "UserName";
-            // 
-            // cboRestaurant
-            // 
-            cboRestaurant.Location = new Point(79, 41);
-            cboRestaurant.Margin = new Padding(4, 2, 4, 2);
-            cboRestaurant.Name = "cboRestaurant";
-            cboRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            cboRestaurant.Size = new Size(279, 22);
-            cboRestaurant.TabIndex = 1;
             // 
             // label1
             // 
@@ -282,9 +284,9 @@
             ((System.ComponentModel.ISupportInitialize)groupControl2).EndInit();
             groupControl2.ResumeLayout(false);
             groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ludRestaurant.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtTile.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtUserName.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ResumeLayout(false);
@@ -298,7 +300,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private Label label1;
-        private DevExpress.XtraEditors.ComboBoxEdit cboRestaurant;
         private ToolStripButton SubBtnSearch;
         private ToolStripButton closeUcListOrder;
         private Label label3;
@@ -310,5 +311,6 @@
         private DevExpress.XtraEditors.DateEdit dtOrderDate;
         private DevExpress.XtraGrid.GridControl gridData;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.LookUpEdit ludRestaurant;
     }
 }
