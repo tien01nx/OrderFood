@@ -29,16 +29,22 @@
         private void InitializeComponent()
         {
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucOrder));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             gridDataUser = new DevExpress.XtraGrid.GridControl();
             gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             TitleProduct = new DevExpress.XtraGrid.Columns.GridColumn();
             TotalQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
             PriceProduct = new DevExpress.XtraGrid.Columns.GridColumn();
-            Delete = new DevExpress.XtraGrid.Columns.GridColumn();
-            btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             RestaurantName = new DevExpress.XtraGrid.Columns.GridColumn();
+            Xoa = new DevExpress.XtraGrid.Columns.GridColumn();
+            btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             closeUcOrder = new ToolStripButton();
             SubBtnOrder = new ToolStripButton();
@@ -73,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridDataUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnXoa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnDelete).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repositoryItemButtonEdit1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
@@ -120,14 +127,14 @@
             gridDataUser.Location = new Point(2, 23);
             gridDataUser.MainView = gridView2;
             gridDataUser.Name = "gridDataUser";
-            gridDataUser.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { btnDelete, repositoryItemButtonEdit1 });
+            gridDataUser.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { btnDelete, repositoryItemButtonEdit1, btnXoa });
             gridDataUser.Size = new Size(989, 212);
             gridDataUser.TabIndex = 0;
             gridDataUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView2, gridView1 });
             // 
             // gridView2
             // 
-            gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { TitleProduct, TotalQuantity, PriceProduct, Delete, RestaurantName });
+            gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { TitleProduct, TotalQuantity, PriceProduct, RestaurantName, Xoa });
             gridView2.GridControl = gridDataUser;
             gridView2.Name = "gridView2";
             gridView2.OptionsBehavior.Editable = false;
@@ -135,6 +142,7 @@
             gridView2.OptionsView.ShowFooter = true;
             gridView2.OptionsView.ShowGroupPanel = false;
             gridView2.OptionsView.ShowIndicator = false;
+            gridView2.ShowingEditor += gridView2_ShowingEditor;
             // 
             // TitleProduct
             // 
@@ -168,24 +176,6 @@
             PriceProduct.VisibleIndex = 1;
             PriceProduct.Width = 81;
             // 
-            // Delete
-            // 
-            Delete.Caption = "Delete";
-            Delete.ColumnEdit = btnDelete;
-            Delete.MinWidth = 21;
-            Delete.Name = "Delete";
-            Delete.Visible = true;
-            Delete.VisibleIndex = 3;
-            Delete.Width = 81;
-            // 
-            // btnDelete
-            // 
-            btnDelete.AutoHeight = false;
-            btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete) });
-            btnDelete.Name = "btnDelete";
-            btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            btnDelete.Click += btnDelete_Click;
-            // 
             // RestaurantName
             // 
             RestaurantName.Caption = "Nhà hàng";
@@ -193,7 +183,36 @@
             RestaurantName.MinWidth = 21;
             RestaurantName.Name = "RestaurantName";
             RestaurantName.Visible = true;
-            RestaurantName.VisibleIndex = 4;
+            RestaurantName.VisibleIndex = 3;
+            // 
+            // Xoa
+            // 
+            Xoa.Caption = "Xoa";
+            Xoa.ColumnEdit = btnXoa;
+            Xoa.FieldName = "Xoa";
+            Xoa.MaxWidth = 25;
+            Xoa.MinWidth = 25;
+            Xoa.Name = "Xoa";
+            Xoa.Visible = true;
+            Xoa.VisibleIndex = 4;
+            Xoa.Width = 25;
+            // 
+            // btnXoa
+            // 
+            btnXoa.AutoHeight = false;
+            editorButtonImageOptions1.Image = (Image)resources.GetObject("editorButtonImageOptions1.Image");
+            btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
+            btnXoa.Name = "btnXoa";
+            btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            btnXoa.ButtonClick += btnXoa_ButtonClick;
+            btnXoa.Click += btnXoa_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.AutoHeight = false;
+            btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete) });
+            btnDelete.Name = "btnDelete";
+            btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // repositoryItemButtonEdit1
             // 
@@ -201,7 +220,6 @@
             repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete) });
             repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            repositoryItemButtonEdit1.Click += repositoryItemButtonEdit1_Click;
             // 
             // closeUcOrder
             // 
@@ -291,7 +309,6 @@
             lblRestaurant.Size = new Size(52, 13);
             lblRestaurant.TabIndex = 2;
             lblRestaurant.Text = "Nhà hàng";
-            lblRestaurant.Click += lblRestaurant_Click;
             // 
             // gridDataProduct
             // 
@@ -332,7 +349,6 @@
             checkOrder.AutoHeight = false;
             checkOrder.Name = "checkOrder";
             checkOrder.CheckedChanged += checkOrder_CheckedChanged;
-            checkOrder.Click += checkOrder_Click;
             // 
             // layoutViewField_IsSelected
             // 
@@ -516,7 +532,6 @@
             SubBtnDelete.Name = "SubBtnDelete";
             SubBtnDelete.Size = new Size(105, 24);
             SubBtnDelete.Text = "Xóa đơn hàng";
-            SubBtnDelete.Click += SubBtnDelete_Click;
             // 
             // ucOrder
             // 
@@ -530,6 +545,7 @@
             ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridDataUser).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnXoa).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnDelete).EndInit();
             ((System.ComponentModel.ISupportInitialize)repositoryItemButtonEdit1).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl1).EndInit();
@@ -595,7 +611,6 @@
         private DevExpress.XtraGrid.Columns.LayoutViewColumn Price;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn Quantity;
         private DevExpress.XtraGrid.Columns.LayoutViewColumn Images;
-        private DevExpress.XtraGrid.Columns.GridColumn Delete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_IsSelected;
         private DevExpress.XtraGrid.Views.Layout.LayoutViewField layoutViewField_Title;
@@ -608,5 +623,7 @@
         private DevExpress.XtraEditors.LookUpEdit ludRestaurant;
         private DevExpress.XtraGrid.Columns.GridColumn RestaurantName;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn Xoa;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
     }
 }

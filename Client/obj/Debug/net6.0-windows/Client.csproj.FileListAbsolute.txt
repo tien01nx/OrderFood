@@ -809,3 +809,4 @@ D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.pdb
 D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.genruntimeconfig.cache
 D:\ThucTap\OrderFood\Client\bin\Debug\net6.0-windows\Client.pdb
 D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\ref\Client.dll
+D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.UserControls.ucListRestaurants.resources

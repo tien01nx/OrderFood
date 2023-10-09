@@ -18,7 +18,7 @@ namespace Client
         public void AddUC(XtraUserControl uc)
         {
 
-           
+
 
             // Ẩn UserControl hiện tại (nếu có)
             if (userControlStack.Count > 0)
@@ -63,7 +63,7 @@ namespace Client
             AddUC(uc);
 
         }
-        
+
         // thêm ucListProduct vào frmMain
 
         private void danhSáchSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,6 +76,12 @@ namespace Client
         private void danhSáchThẻToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ucListBank uc = new ucListBank(this);
+            AddUC(uc);
+        }
+
+        private void restaurantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ucListRestaurants uc = new ucListRestaurants(this);
             AddUC(uc);
         }
     }

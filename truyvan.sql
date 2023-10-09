@@ -168,3 +168,80 @@ EXEC sp_GetUserOrderDetails
 @IdUser =2,
 @Restaurants = null,
 @ProductName = null
+
+
+
+
+ALTER PROCEDURE SearchRestaurants
+    @SearchText NVARCHAR(255),
+    @FavoriteLevel INT,
+    @CurrentTimeAsString NVARCHAR(5)  -- Chuỗi thời gian, ví dụ: "HH:mm"
+AS
+BEGIN
+    -- Kiểm tra xem lệnh gọi đệ quy hay không
+    IF (@@NESTLEVEL > 1)
+    BEGIN
+        RETURN;
+    END
+
+    DECLARE @CurrentTime TIME;
+
+    -- Chuyển đổi chuỗi thời gian thành kiểu dữ liệu TIME
+    SET @CurrentTime = NULL;
+    IF (@CurrentTimeAsString IS NOT NULL)
+    BEGIN
+        SET @CurrentTime = CONVERT(TIME, @CurrentTimeAsString);
+    END
+
+    SELECT [Id]
+        ,[RestaurantName]
+        ,[PhoneNumber]
+        ,[ImageUrl]
+        ,[OpenTime]
+        ,[CloseTime]
+        ,[BankAccount]
+        ,[BankNumber]
+        ,[BankName]
+        ,[FavoriteLevel]
+        ,[Notes]
+        ,[CreateBy]
+        ,[UpdateBy]
+        ,[CreateDate]
+        ,[UpdateDate]
+    FROM [orderfood].[dbo].[Restaurants]
+    WHERE
+        (
+            -- Tìm kiếm theo RestaurantName
+            @SearchText IS NULL OR [RestaurantName] LIKE '%' + @SearchText + '%'
+        )
+        AND
+        (
+            -- Tìm kiếm theo FavoriteLevel
+            (@FavoriteLevel IS NULL OR [FavoriteLevel] IS NULL OR [FavoriteLevel] = @FavoriteLevel)
+        )
+        AND
+        (
+            -- Kiểm tra thời gian mở cửa
+            (
+                -- Trường hợp đặc biệt: Nếu OpenTime > CloseTime (qua ngày)
+                (
+                    ([OpenTime] > [CloseTime]) AND (ISNULL(@CurrentTime, '00:00') >= CONVERT(TIME, [OpenTime]) OR ISNULL(@CurrentTime, '00:00') <= CONVERT(TIME, [CloseTime]))
+                )
+                OR
+                (
+                    ([OpenTime] <= [CloseTime]) AND (ISNULL(@CurrentTime, '00:00') >= CONVERT(TIME, [OpenTime]) AND ISNULL(@CurrentTime, '00:00') <= CONVERT(TIME, [CloseTime]))
+                )
+                OR
+                (
+                    -- Nếu không có thông tin thời gian mở cửa hoặc đóng cửa, hiển thị tất cả
+                    ([OpenTime] IS NULL AND [CloseTime] IS NULL)
+                )
+            )
+        );
+END;
+
+
+EXEC SearchRestaurants
+    @SearchText = null,
+    @FavoriteLevel = '2',
+    @CurrentTimeAsString = null;
