@@ -38,18 +38,20 @@ namespace Client.UserControls
             InitializeComponent();
             _frmMain = frmMain;
             _apiClient = new ApiClient();
-            dtOrderDate.EditValue = DateTime.Now;
-
         }
 
         private void ucOrder_Load(object sender, EventArgs e)
         {
 
-            OrderCreateDate();
+
             dtOrderDate.DateTime = DateTime.Now;
-            GetRestaurant();
-            GetOrderByUserAll();
+
+            OrderCreate();
+            //GetOrderByUserAll();
+            //GetRestaurant();
+            
         }
+
 
         // lấy ra thông tin các cửa hàng
 
@@ -79,17 +81,60 @@ namespace Client.UserControls
                 Console.WriteLine(ex.ToString());
             }
         }
+
+
+        // lây ra order của ngày hiện tại khi chayj sẽ lấy ngày hiện tại
+        public void OrderCreate()
+        {
+            DateTime date = dtOrderDate.DateTime;
+            string datetime = date.ToString("yyyy/MM/dd");
+            var order = _apiClient.GetData<Order>($"Restaurant/GetAllRestaurant?date={datetime}").Data;
+            if(order.Count>0)
+            {
+                OrderId = order[0].Id;
+                selectedRestaurantId = order[0].Restaurant.Id;
+                GetOrderByUserAll();
+                ShowProduct(datetime);
+
+
+            }
+            else
+            {
+                gridDataProduct.DataSource = null;
+                gridDataProduct.RefreshDataSource();
+                gridDataUser.DataSource = null;
+                gridDataUser.RefreshDataSource();
+            }
+
+            GetRestaurant();
+
+        }
+
+        public void ShowProduct(string date)
+        {
+            var products = _apiClient.GetData<Product>($"Order/GetProductsByOrderDate?date={date}").Data;
+            SortProducts(products);
+
+
+            gridDataProduct.DataSource = products;
+            //gridDataProduct.RefreshDataSource();
+          
+
+
+        }
+
+
         private void OrderCreateDate()
         {
             DateTime date = dtOrderDate.DateTime;
             string datetime = date.ToString("yyyy/MM/dd");
             var products = _apiClient.GetData<Product>($"Order/GetProductsByOrderDate?date={datetime}").Data;
-
+            var order = _apiClient.GetData<Order>($"Restaurant/GetAllRestaurant?date={datetime}").Data;
             if (products != null && products.Any())
             {
-                OrderId = products[0].OrderId;
+                OrderId = order[0].Id;
                 SortProducts(products);
-                selectedRestaurantId = products[0].RestaurantId;
+                selectedRestaurantId = order[0].Restaurant.Id;
                 gridDataProduct.DataSource = products;
 
                 // hiện thị thông tin người đã dặt hàng hay chưa
@@ -313,8 +358,7 @@ namespace Client.UserControls
 
         private void dtOrderDate_EditValueChanged(object sender, EventArgs e)
         {
-            OrderCreateDate();
-            GetOrderByUserAll();
+            OrderCreate();
         }
 
         public void UpdateGridData()

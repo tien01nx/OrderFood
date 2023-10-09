@@ -53,8 +53,8 @@ namespace DataAccess.Model
 
 
         // các biến tạo thêm để lấy dự liệu từ sql
-
-        public string  OrderId { get; set; }
+        //[NotMapped]
+        //public string  OrderId { get; set; }
 
 
         //[NotMapped]
