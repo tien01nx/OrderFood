@@ -11,6 +11,10 @@
 
         public string ProductId { get; set; }
 
+        public string RestaurantName { get; set; }
+
+        public string  RestaurantId { get; set; }
+
 
     }
 }

@@ -18,15 +18,7 @@ namespace Client
         public void AddUC(XtraUserControl uc)
         {
 
-            //if (userControlStack.Contains(uc))
-            //{
-            //    // If it is, bring it to the top of the stack and show it
-            //    userControlStack = new Stack<XtraUserControl>(userControlStack.Where(x => x != uc));
-            //    userControlStack.Push(uc);
-            //    uc.Show();
-            //    return;
-            //}
-
+           
 
             // Ẩn UserControl hiện tại (nếu có)
             if (userControlStack.Count > 0)
@@ -71,13 +63,7 @@ namespace Client
             AddUC(uc);
 
         }
-        // thêm ucListProduct vào frmMain
-        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ucContainer uc = new ucContainer();
-            AddUC(uc);
-        }
-
+        
         // thêm ucListProduct vào frmMain
 
         private void danhSáchSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)

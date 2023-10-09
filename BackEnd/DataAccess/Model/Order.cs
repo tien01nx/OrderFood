@@ -8,7 +8,7 @@ namespace DataAccess.Model
     public class Order : BaseModel
     {
 
-        [StringLength(10, ErrorMessage = "Id tối đa {1} ký tự")]
+        //[StringLength(10, ErrorMessage = "Id tối đa {1} ký tự")]
 
         public string Id { get; set; }
 

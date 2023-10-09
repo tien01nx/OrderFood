@@ -28,11 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucListOrder));
-            groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            UserName = new DevExpress.XtraGrid.Columns.GridColumn();
+            ProductName = new DevExpress.XtraGrid.Columns.GridColumn();
+            TotalQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            TotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             gridData = new DevExpress.XtraGrid.GridControl();
             gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            RestaurantName = new DevExpress.XtraGrid.Columns.GridColumn();
+            gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            groupControl3 = new DevExpress.XtraEditors.GroupControl();
             groupControl4 = new DevExpress.XtraEditors.GroupControl();
             dtOrderDate = new DevExpress.XtraEditors.DateEdit();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -47,12 +56,15 @@
             SubBtnOrder = new ToolStripButton();
             SubBtnSearch = new ToolStripButton();
             closeUcListOrder = new ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)gridView4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridData).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridView3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
             groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl3).BeginInit();
             groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)gridData).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl4).BeginInit();
             groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties).BeginInit();
@@ -64,6 +76,112 @@
             ((System.ComponentModel.ISupportInitialize)txtUserName.Properties).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
+            // 
+            // gridView4
+            // 
+            gridView4.Appearance.Row.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gridView4.Appearance.Row.Options.UseFont = true;
+            gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { UserName, ProductName, TotalQuantity, TotalPrice });
+            gridView4.GridControl = gridData;
+            gridView4.Name = "gridView4";
+            gridView4.OptionsBehavior.Editable = false;
+            gridView4.OptionsFind.AlwaysVisible = true;
+            gridView4.OptionsView.ShowGroupPanel = false;
+            gridView4.RowHeight = 25;
+            gridView4.CustomDrawRowIndicator += gridView4_CustomDrawRowIndicator;
+            // 
+            // UserName
+            // 
+            UserName.Caption = "UserName";
+            UserName.FieldName = "UserName";
+            UserName.MinWidth = 25;
+            UserName.Name = "UserName";
+            UserName.Visible = true;
+            UserName.VisibleIndex = 0;
+            UserName.Width = 94;
+            // 
+            // ProductName
+            // 
+            ProductName.Caption = "Sản phẩm";
+            ProductName.FieldName = "ProductName";
+            ProductName.MinWidth = 25;
+            ProductName.Name = "ProductName";
+            ProductName.Visible = true;
+            ProductName.VisibleIndex = 1;
+            ProductName.Width = 94;
+            // 
+            // TotalQuantity
+            // 
+            TotalQuantity.Caption = "Số lượng";
+            TotalQuantity.FieldName = "TotalQuantity";
+            TotalQuantity.MinWidth = 25;
+            TotalQuantity.Name = "TotalQuantity";
+            TotalQuantity.Visible = true;
+            TotalQuantity.VisibleIndex = 2;
+            TotalQuantity.Width = 94;
+            // 
+            // TotalPrice
+            // 
+            TotalPrice.Caption = "Thành tiền";
+            TotalPrice.FieldName = "TotalPrice";
+            TotalPrice.MinWidth = 25;
+            TotalPrice.Name = "TotalPrice";
+            TotalPrice.Visible = true;
+            TotalPrice.VisibleIndex = 3;
+            TotalPrice.Width = 94;
+            // 
+            // gridData
+            // 
+            gridData.Dock = DockStyle.Fill;
+            gridData.EmbeddedNavigator.Margin = new Padding(4, 2, 4, 2);
+            gridLevelNode1.LevelTemplate = gridView4;
+            gridLevelNode1.RelationName = "Danh sách người dùng";
+            gridData.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] { gridLevelNode1 });
+            gridData.Location = new Point(2, 86);
+            gridData.MainView = gridView1;
+            gridData.Margin = new Padding(4, 2, 4, 2);
+            gridData.Name = "gridData";
+            gridData.Size = new Size(795, 577);
+            gridData.TabIndex = 1;
+            gridData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1, gridView2, gridView3, gridView4 });
+            // 
+            // gridView1
+            // 
+            gridView1.Appearance.Row.Font = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            gridView1.Appearance.Row.Options.UseFont = true;
+            gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { RestaurantName });
+            gridView1.GridControl = gridData;
+            gridView1.Name = "gridView1";
+            gridView1.OptionsBehavior.Editable = false;
+            gridView1.OptionsFind.AlwaysVisible = true;
+            gridView1.OptionsView.ShowGroupPanel = false;
+            gridView1.RowHeight = 28;
+            gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(RestaurantName, DevExpress.Data.ColumnSortOrder.Ascending) });
+            gridView1.CustomDrawRowIndicator += gridView1_CustomDrawRowIndicator;
+            gridView1.MasterRowEmpty += gridView1_MasterRowEmpty;
+            gridView1.MasterRowGetChildList += gridView1_MasterRowGetChildList;
+            gridView1.MasterRowGetRelationName += gridView1_MasterRowGetRelationName;
+            gridView1.MasterRowGetRelationCount += gridView1_MasterRowGetRelationCount;
+            // 
+            // RestaurantName
+            // 
+            RestaurantName.Caption = "Nhà hàng";
+            RestaurantName.FieldName = "Restaurant.RestaurantName";
+            RestaurantName.MinWidth = 25;
+            RestaurantName.Name = "RestaurantName";
+            RestaurantName.Visible = true;
+            RestaurantName.VisibleIndex = 0;
+            RestaurantName.Width = 94;
+            // 
+            // gridView2
+            // 
+            gridView2.GridControl = gridData;
+            gridView2.Name = "gridView2";
+            // 
+            // gridView3
+            // 
+            gridView3.GridControl = gridData;
+            gridView3.Name = "gridView3";
             // 
             // groupControl1
             // 
@@ -89,26 +207,6 @@
             groupControl3.Size = new Size(799, 665);
             groupControl3.TabIndex = 2;
             groupControl3.Text = "Danh sách đơn hàng";
-            // 
-            // gridData
-            // 
-            gridData.Dock = DockStyle.Fill;
-            gridData.EmbeddedNavigator.Margin = new Padding(4, 2, 4, 2);
-            gridData.Location = new Point(2, 86);
-            gridData.MainView = gridView1;
-            gridData.Margin = new Padding(4, 2, 4, 2);
-            gridData.Name = "gridData";
-            gridData.Size = new Size(795, 577);
-            gridData.TabIndex = 1;
-            gridData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
-            // 
-            // gridView1
-            // 
-            gridView1.GridControl = gridData;
-            gridView1.Name = "gridView1";
-            gridView1.OptionsBehavior.Editable = false;
-            gridView1.OptionsView.ShowGroupPanel = false;
-            gridView1.OptionsView.ShowIndicator = false;
             // 
             // groupControl4
             // 
@@ -269,13 +367,16 @@
             Name = "ucListOrder";
             Size = new Size(1168, 722);
             Load += ucListOrder_Load;
+            ((System.ComponentModel.ISupportInitialize)gridView4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridData).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridView3).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl1).EndInit();
             groupControl1.ResumeLayout(false);
             groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl3).EndInit();
             groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)gridData).EndInit();
-            ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl4).EndInit();
             groupControl4.ResumeLayout(false);
             groupControl4.PerformLayout();
@@ -312,5 +413,13 @@
         private DevExpress.XtraGrid.GridControl gridData;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.LookUpEdit ludRestaurant;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraGrid.Columns.GridColumn UserName;
+        private DevExpress.XtraGrid.Columns.GridColumn ProductName;
+        private DevExpress.XtraGrid.Columns.GridColumn TotalQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn TotalPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn RestaurantName;
     }
 }

@@ -85,18 +85,36 @@ namespace Client.Entities
             }
         }
 
-
-        public ApiResponse<T> SendDeleteRequest<T>(string resource, object body)
+        public ApiResponse<T> SendDeteleRequest<T>(string resource, object body)
         {
             var request = new RestRequest(resource, Method.Delete);
             request.AddJsonBody(body);
+
+            var response = _client.Execute(request);
+            if (response.IsSuccessful)
+            {
+                var content = response.Content;
+                return JsonConvert.DeserializeObject<ApiResponse<T>>(content);
+            }
+            else
+            {
+                Console.WriteLine(response.ErrorMessage);
+                return null;
+            }
+        }
+
+
+        public ApiResponse<List<T>> SendDeleteListRequest<T>(string resource, List<T> entities)
+        {
+            var request = new RestRequest(resource, Method.Delete);
+            request.AddJsonBody(entities);
 
             var response = _client.Execute(request);
             //var response = _client.Execute<ApiResponse<T>>(request);
             if (response.IsSuccessful)
             {
                 var content = response.Content;
-                return JsonConvert.DeserializeObject<ApiResponse<T>>(content);
+                return JsonConvert.DeserializeObject<ApiResponse<List<T>>>(content);
             }
             else
             {

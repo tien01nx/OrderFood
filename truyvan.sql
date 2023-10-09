@@ -44,37 +44,11 @@ Left join Products on Products.Id = OrderDetails.ProductId
 where OrderDetails.CreateDate ='2023-10-7'
 
 
--- thông tin người dùng mua hàng theo useid
-Go
-ALTER PROCEDURE sp_GetUserCartDetails
-    @UserId nvarchar(450),
-    @Date date
-AS
-BEGIN
-    SELECT 
-		C.Id,
-        U.UserName,
-        C.ProductId,
-        C.OrderId,
-        COALESCE(P.Title, 'N/A') AS Title,
-        SUM(ISNULL((C.Count * P.Price), 0)) AS TotalPrice,
-        SUM(ISNULL(C.Count, 0)) AS TotalQuantity
-    FROM 
-        [dbo].[AspNetUsers] U
-    INNER JOIN 
-        [dbo].[Carts] C ON U.Id = C.UserId
-    INNER JOIN 
-        [dbo].[Products] P ON C.ProductId = P.Id
-    WHERE 
-        CAST(C.CreateDate AS DATE) = @Date AND C.UserId = @UserId
-    GROUP BY 
-       C.Id, U.UserName, C.ProductId, C.OrderId, P.Title
-END
 
 
 EXEC sp_GetUserCartDetails 2,'2023-10-4'
 
-
+Go
 use orderfood EXEC sp_changedbowner 'sa'
 
 
@@ -130,4 +104,67 @@ GROUP BY
 
 
 
+	Go
+	ALTER PROCEDURE sp_GetUserOrderDetails 
+    @StartDate NVARCHAR(20) = NULL,
+    @EndDate NVARCHAR(20) = NULL,
+    @UserName NVARCHAR(255) = NULL,
+	@IdUser NVARCHAR(255) = NULL,
+    @Restaurants INT = NULL,
+    @ProductName NVARCHAR(255) = NULL
+AS
+BEGIN
+    SELECT 
+        U.UserName AS UserName,
+		ISNULL(Restaurants.RestaurantName, 'N/A') AS 'RestaurantName',
+        ISNULL(P.ProductName, '0') AS ProductName,
+		SUM(ISNULL(OD.Count, 0)) AS 'TotalQuantity',
+        SUM(ISNULL(OD.Price, 0)) AS 'TotalPrice',
+		ISNULL(OD.Id, '0') AS 'OrderDetailID',
+        ISNULL(P.Id, '0') AS ProductId,
+		ISNULL(Orders.Id, '0') AS OrderId,
+		ISNULL(Restaurants.Id, '0') AS 'RestaurantId'
+        
+    FROM 
+        dbo.AspNetUsers AS U
+    LEFT JOIN 
+        dbo.OrderDetails AS OD ON U.Id = OD.UserId
+        AND ( 
+            ( @StartDate IS NOT NULL AND @EndDate IS NULL AND CAST(OD.CreateDate AS DATE) = @StartDate ) OR 
+            ( @StartDate IS NOT NULL AND @EndDate IS NOT NULL AND CAST(OD.CreateDate AS DATE) BETWEEN @StartDate AND @EndDate ) OR
+            ( @StartDate IS NULL AND @EndDate IS NULL )
+        )
+    LEFT JOIN 
+        Orders ON Orders.Id = OD.OrderId
+    LEFT JOIN 
+        dbo.Products AS P ON OD.ProductId = P.Id
+    LEFT JOIN 
+        Restaurants ON Orders.RestaurantId = Restaurants.Id
+    WHERE
+        ( 
+            ( Restaurants.Id = ISNULL(@Restaurants, Restaurants.Id) ) OR 
+            Restaurants.Id IS NULL 
+        )
+        AND ( @UserName IS NULL OR U.UserName LIKE '%' + @UserName + '%' )
+        AND ( @ProductName IS NULL OR P.ProductName LIKE '%' + @ProductName + '%' )
+        AND ( @IdUser IS NULL OR U.Id = @IdUser ) 
+    GROUP BY
+        U.UserName,
+        ISNULL(OD.Id, '0'),
+        ISNULL(P.ProductName, '0'),
+		ISNULL(Orders.Id, '0'),
+		ISNULL(Restaurants.RestaurantName, 'N/A'),
+        ISNULL(P.Id, '0'),
+		ISNULL(Restaurants.Id, '0');
+END
 
+
+
+
+EXEC sp_GetUserOrderDetails 
+@StartDate = '2023-10-09',
+@EndDate = null,
+@UserName = null,
+@IdUser =2,
+@Restaurants = null,
+@ProductName = null

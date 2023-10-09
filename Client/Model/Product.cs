@@ -24,5 +24,7 @@ namespace Client.Model
         public int Quantity { get; set; }
 
 
+        public string OrderId { get; set; }
+
     }
 }

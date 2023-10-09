@@ -4,7 +4,7 @@
     {
 
 
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string RestaurantName { get; set; }
         public string Description { get; set; }
 
@@ -14,6 +14,9 @@
         public string OrderStatus { get; set; }
         public string PaymentStatus { get; set; }
 
+
+
+        public Restaurant Restaurant { get; set; }
 
 
 

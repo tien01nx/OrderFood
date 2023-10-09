@@ -33,6 +33,11 @@ namespace API.Controllers
 
 
             {
+
+                // kiểm tra T có phải là order hay không
+                // nếu phải thì lấy ra danh sách order theo ngày hiện tại
+            
+
                 var entities = await _context.Set<T>().ToListAsync();
                 if (entities != null && entities.Count > 0)
                 {
@@ -41,6 +46,8 @@ namespace API.Controllers
                 else
                     result = new ApiResponse<List<T>>(System.Net.HttpStatusCode.NotFound, "", null);
             }
+
+           
             catch (Exception ex)
             {
 
@@ -191,9 +198,11 @@ namespace API.Controllers
                 if (typeof(T) == typeof(OrderDetail))
                 {
                     var orderDetails = entities.Cast<OrderDetail>().ToList();
-
+                    int lastNumber = 0;
+                    
                     foreach (var orderDetail in orderDetails)
                     {
+                       
                         // Kiểm tra xem có một đơn đặt hàng nào thỏa mãn điều kiện hay không
                         var order = _context.Set<Order>()
                             .FirstOrDefault(x => x.CreateDate == DateTime.Now.Date && x.RestaurantId == orderDetail.RestaurantId);
@@ -209,20 +218,48 @@ namespace API.Controllers
                                 OrderDate = DateTime.Now,
                                 OrderTotal = 0,
                                 OrderStatus = "Đang chờ xử lý",
-                                PaymentStatus = "Chưa thanh toán"
+                                PaymentStatus = "Chưa thanh toán",
+                                Id= GenerateId<Order>("OD")
+
                             };
 
                             _context.Set<Order>().Add(order);
+                            await _context.SaveChangesAsync();
                         }
 
+                        //var order = _context.Set<Order>()
+                        //   .FirstOrDefault(x => x.CreateDate == DateTime.Now.Date && x.RestaurantId == orderDetail.RestaurantId);
+
+                        var orderDetailExsts = _context.Set<OrderDetail>().Find(orderDetail.Id);
+
+                        // cập nhật orderDetail đã có trong bảng OrderDetail
+                        //if (orderDetailExsts != null)
+                        //{
+                        //    orderDetailExsts.Count += orderDetail.Count;
+                        //    orderDetailExsts.Price += orderDetail.Price;
+                        //    _context.Set<OrderDetail>().Update(orderDetailExsts);
+                        //    await _context.SaveChangesAsync();
+                        //    continue;
+                        //}
+
+                        if (lastNumber == 0)
+                        {
+                            var lastId = GenerateId<OrderDetail>("ODER");
+                            lastNumber = int.Parse(new string(lastId.Where(char.IsDigit).ToArray()));
+                        }
+                        else
+                        {
+                            lastNumber++;
+                        }
+                        orderDetail.Id = "ODER" + lastNumber.ToString("D2");
                         orderDetail.OrderId = order.Id;
 
-                        // Tiếp theo, bạn có thể thêm đối tượng OrderDetail vào DbContext
                         _context.Set<OrderDetail>().Add(orderDetail);
+                       
                     }
                 }
 
-                // Thêm các thực thể vào DbContext hiện tại
+                
                 _context.Set<T>().AddRange(entities);
                 await _context.SaveChangesAsync();
 
@@ -234,11 +271,6 @@ namespace API.Controllers
                 return new ApiResponse<List<T>>(HttpStatusCode.BadRequest, "Lỗi khi tạo: " + ex.Message, null);
             }
         }
-
-
-
-
-
 
         [HttpPut("{id}")]
         public async Task<ActionResult<ApiResponse<T>>> Update(int id, T entity)
@@ -296,6 +328,21 @@ namespace API.Controllers
                 {
                     return new ApiResponse<T>(HttpStatusCode.BadRequest, "Id không hợp lệ", null);
                 }
+                if (typeof(T) == typeof(OrderDetail))
+                {
+                    var orderDetailsToDelete = _context.Set<OrderDetail>()
+                        .Where(od => od.UserId == id && od.CreateDate.Date == DateTime.Now.Date)
+                        .ToList();
+                    if (orderDetailsToDelete.Count < 0)
+                    {
+                        return new ApiResponse<T>(HttpStatusCode.NotFound, "Không tìm thấy đối tượng", null);
+                    }
+
+                    _context.Set<OrderDetail>().RemoveRange(orderDetailsToDelete);
+                    await _context.SaveChangesAsync();
+
+                    return new ApiResponse<T>(HttpStatusCode.OK, "Xóa thành công", null);
+                }
 
                 var entity = await _context.Set<T>().FindAsync(id);
                 if (entity == null)
@@ -315,6 +362,75 @@ namespace API.Controllers
                 return new ApiResponse<T>(HttpStatusCode.BadRequest, "Lỗi khi xóa", null);
             }
         }
+
+        [HttpDelete("DeleteList")]
+        public async Task<ActionResult<ApiResponse<List<T>>>> DeleteList(List<T> entities)
+        {
+            try
+            {
+                if (entities == null || entities.Count == 0)
+                {
+                    return new ApiResponse<List<T>>(HttpStatusCode.BadRequest, "Danh sách đối tượng để xóa không hợp lệ", null);
+                }
+                if (typeof(T) == typeof(OrderDetail))
+                {
+
+                    var orderDetails = entities.Cast<OrderDetail>().ToList();
+                    // duyệt  danh sách orderDetail để xóa theo Id trong list entities
+                    foreach (var item in orderDetails)
+                    {
+                        // tìm kiếm orderDetail theo Id trong bảng OrderDetail nếu ra giá trị thì xóa
+                        var orderDetail = _context.Set<OrderDetail>().FirstOrDefault(x=> x.Id.Equals(item.Id));
+                        if (orderDetail != null)
+                            _context.Set<OrderDetail>().Remove(orderDetail);
+                    }
+                   
+                }
+
+                    _context.Set<T>().RemoveRange(entities);
+
+                await _context.SaveChangesAsync();
+                return new ApiResponse<List<T>>(HttpStatusCode.OK, "Xóa danh sách thành công", entities);
+            }
+            catch (DbUpdateException ex)
+            {
+                _logger.LogError(ex, "Error occurred in DeleteList method.");
+                return new ApiResponse<List<T>>(HttpStatusCode.BadRequest, "Lỗi khi xóa danh sách", null);
+            }
+        }
+
+
+
+
+        private string GenerateId<T>(string prefix) where T : class
+        {
+            var lastId = _context.Set<T>().OrderByDescending(e => EF.Property<string>(e, "Id"))
+                          .Where(t => EF.Property<string>(t, "Id").StartsWith(prefix.ToUpper()))
+                          .Select(t => EF.Property<string>(t, "Id"))
+                          .FirstOrDefault();
+
+            if (lastId == null)
+            {
+                return prefix.ToLower() + "01";
+            }
+
+            // Tách và lấy chỉ phần số nguyên
+            var numberString = new string(lastId.Where(char.IsDigit).ToArray());
+
+            int numberPart;
+            if (!int.TryParse(numberString, out numberPart))
+            {
+                throw new InvalidOperationException("Failed to parse the numeric part of the ID.");
+            }
+
+            numberPart++;
+
+            return prefix.ToLower() + numberPart.ToString("D2"); // Định dạng số với ít nhất 2 chữ số
+        }
+
+
+
+
 
     }
 }

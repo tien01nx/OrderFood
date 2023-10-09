@@ -52,6 +52,11 @@ namespace DataAccess.Model
         public Restaurant Restaurant { get; set; }
 
 
+        // các biến tạo thêm để lấy dự liệu từ sql
+
+        public string  OrderId { get; set; }
+
+
         //[NotMapped]
 
 

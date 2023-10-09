@@ -71,7 +71,7 @@
             menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             menuToolStripMenuItem.Size = new Size(97, 24);
             menuToolStripMenuItem.Text = "HỆ THỐNG";
-            menuToolStripMenuItem.Click += menuToolStripMenuItem_Click;
+ 
             // 
             // restaurantToolStripMenuItem
             // 

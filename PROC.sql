@@ -47,7 +47,7 @@ END
 
 
 EXEC sp_GetUserOrderDetails 
-@StartDate = '2023-10-08',
+@StartDate = '2023-10-09',
 @EndDate = null,
 @UserName = null,
 @Restaurants = null,

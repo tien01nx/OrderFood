@@ -30,6 +30,8 @@ namespace Client.UserControls
         private string dateString;
         private List<Product> productList = new List<Product>();
 
+        private int userId = 2;
+
 
         public ucOrder(frmMain frmMain)
         {
@@ -85,8 +87,9 @@ namespace Client.UserControls
 
             if (products != null && products.Any())
             {
-                OrderId = products[0].Id;
+                OrderId = products[0].OrderId;
                 SortProducts(products);
+                selectedRestaurantId = products[0].RestaurantId;
                 gridDataProduct.DataSource = products;
 
                 // hiện thị thông tin người đã dặt hàng hay chưa
@@ -94,6 +97,7 @@ namespace Client.UserControls
             }
             else
             {
+                OrderId = "0";
                 gridDataProduct.DataSource = null;
                 gridDataProduct.RefreshDataSource();
 
@@ -214,6 +218,13 @@ namespace Client.UserControls
 
                 Console.WriteLine(JsonConvert.SerializeObject(userOrder));
                 userOrderList = userOrder;
+                //khi userOrder có 1 giá trị thì mới kiểm tra
+                if (userOrder.Count == 1)
+                {
+                    userOrderList.RemoveAll(u => u.ProductId.Equals("0"));
+
+                }
+                // tìm kiếm kiểm tra  phần tử nào có productId =0 xóa khỏi userOrderList
                 gridDataUser.DataSource = userOrder;
                 GridView view = gridDataUser.MainView as GridView;
                 if (view != null)
@@ -235,34 +246,68 @@ namespace Client.UserControls
         }
 
 
+
+        public void UserSendOrderDelete()
+        {
+
+            var orderDetail = ConvertToListOrderDetail(userOrderList, OrderId, userId);
+
+            var resource = "OrderDetail";
+
+            var response = _apiClient.SendDeteleRequest<OrderDetail>(resource + "/2", 2);
+
+            if (response != null)
+            {
+                if (response.Code == HttpStatusCode.OK)
+                {
+
+                    //MessageBox.Show($"Thêm thành công:");
+                    //GetUserProduct();
+                }
+                else
+                {
+                    //Đăng nhập thất bại
+                    string errorMessage = response.Message;
+                    MessageBox.Show($"Thêm thất bại: {errorMessage}");
+                }
+            }
+            else
+            {
+                //Kết nối đến server thất bại hoặc lỗi khác
+                MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối và thử lại.");
+            }
+        }
+
         public void UserSendOrder()
         {
 
-            //var orderDetail = ConvertToListOrderDetail(userOrderList, OrderId, "2");
-            //var resource = "OrderDetail/Create";
+            var orderDetail = ConvertToListOrderDetail(userOrderList, OrderId, userId);
 
-            //var response = _apiClient.SendListToApi<OrderDetail>(resource, orderDetail);
+            var resource = "OrderDetail/CreateList";
+            UserSendOrderDelete();
 
-            //if (response != null)
-            //{
-            //    if (response.Code == HttpStatusCode.OK)
-            //    {
+            var response = _apiClient.SendListToApi<OrderDetail>(resource, orderDetail);
 
-            //        MessageBox.Show($"Thêm thành công:");
-            //        //GetUserProduct();
-            //    }
-            //    else
-            //    {
-            //        // Đăng nhập thất bại
-            //        string errorMessage = response.Message;
-            //        MessageBox.Show($"Thêm thất bại: {errorMessage}");
-            //    }
-            //}
-            //else
-            //{
-            //    // Kết nối đến server thất bại hoặc lỗi khác
-            //    MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối và thử lại.");
-            //}
+            if (response != null)
+            {
+                if (response.Code == HttpStatusCode.OK)
+                {
+
+                    MessageBox.Show($"Thêm thành công:");
+                    //GetUserProduct();
+                }
+                else
+                {
+                    //Đăng nhập thất bại
+                    string errorMessage = response.Message;
+                    MessageBox.Show($"Thêm thất bại: {errorMessage}");
+                }
+            }
+            else
+            {
+                //Kết nối đến server thất bại hoặc lỗi khác
+                MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối và thử lại.");
+            }
         }
 
 
@@ -323,26 +368,28 @@ namespace Client.UserControls
         }
 
 
-        public Cart ConvertToOrderDetail(UserInfoDTO userInfo, string orderId, string userId)
+        public OrderDetail ConvertToOrderDetail(UserInfoDTO userInfo, string orderId, int userId)
         {
-            return new Cart
+            return new OrderDetail
             {
-                //Id = userInfo.Id,
+                Id = userInfo.OrderDetailID ?? "0",
                 OrderId = orderId,
                 ProductId = userInfo.ProductId,
                 UserId = userId,
-                Count = userInfo.TotalQuantity
+                Count = userInfo.TotalQuantity,
+                Price = userInfo.TotalPrice,
+                RestaurantId = selectedRestaurantId
             };
         }
 
-        public List<Cart> ConvertToListOrderDetail(List<UserInfoDTO> userOrderList, string orderId, string userId)
+        public List<OrderDetail> ConvertToListOrderDetail(List<UserInfoDTO> userOrderList, string orderId, int userId)
         {
-            List<Cart> orderDetails = new List<Cart>();
+            List<OrderDetail> orderDetails = new List<OrderDetail>();
 
-            //foreach (var user in userOrderList)
-            //{
-            //    orderDetails.Add(ConvertToOrderDetail(user, orderId, userId));
-            //}
+            foreach (var user in userOrderList)
+            {
+                orderDetails.Add(ConvertToOrderDetail(user, orderId, userId));
+            }
 
             return orderDetails;
         }
@@ -413,11 +460,11 @@ namespace Client.UserControls
                 else
                 {
                     userOrderList.Remove(existingUserProduct);
-                   
+
 
                 }
             }
-           
+
             UpdateGridData();
         }
 

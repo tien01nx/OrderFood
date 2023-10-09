@@ -87,7 +87,7 @@ namespace Client
         //    }
         //}
 
-        public void UserSendOrder(int orderId, int productId, int count, int userId)
+        public void UserSendOrder(string orderId, string productId, int count, int userId)
         {
 
             var orderDetail = new OrderDetail { OrderId = orderId, ProductId = productId, Count = count, UserId = userId };
