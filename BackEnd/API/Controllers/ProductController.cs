@@ -5,6 +5,7 @@ using DataAccess.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repository.IRepository;
+using System.Net;
 
 namespace API.Controllers
 {
@@ -45,6 +46,50 @@ namespace API.Controllers
 
             return new ApiResponse<List<User>>(System.Net.HttpStatusCode.OK, "Lấy dữ dữ liệu", products);
 
+        }
+
+        [HttpPost("UpLoadImage/{productId}")]
+        public async Task<ApiResponse<Product>> UpLoadImage(string productId, IFormFile file)
+        {
+            try
+            {
+
+                var product = _unitOfWork.Product.Get(u => u.Id.Equals(productId));
+                if (product == null)
+                {
+                    return new ApiResponse<Product>(HttpStatusCode.NotFound, $"Product {productId}", null);
+                }
+
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
+
+                if (file != null)
+                {
+                    string filename = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    string productPath = @"images/product-" + product.Id;
+                    string finalPath = Path.Combine(wwwRootPath, productPath);
+                    if (!Directory.Exists(finalPath))
+                    {
+                        Directory.CreateDirectory(finalPath);
+                    }
+
+                    using (var fileStream = new FileStream(Path.Combine(finalPath, filename), FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+
+                    product.Images = @"/" + productPath + @"/" + filename;
+
+                    _unitOfWork.Product.Update(product);
+                    _unitOfWork.Save();
+                    return new ApiResponse<Product>(HttpStatusCode.OK, "Thêm hình thành công", null);
+                }
+            }
+            catch (Exception ex)
+            {
+                //_logger.LogError(ex.Message);
+                return new ApiResponse<Product>(HttpStatusCode.BadRequest, ex.Message, null);
+            }
+            return new ApiResponse<Product>(HttpStatusCode.BadRequest, "Thêm hình thất bại", null);
         }
 
 

@@ -1,6 +1,22 @@
 {
   "Files": [
     {
+      "Id": "D:\\Angular\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\0d86b3e4-7b53-4095-9037-ae955203a00d.png",
+      "PackagePath": "staticwebassets\\images\\product-3\\0d86b3e4-7b53-4095-9037-ae955203a00d.png"
+    },
+    {
+      "Id": "D:\\Angular\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\12f7cfae-522e-44bf-97fe-ddaa6c96a9df.png",
+      "PackagePath": "staticwebassets\\images\\product-3\\12f7cfae-522e-44bf-97fe-ddaa6c96a9df.png"
+    },
+    {
+      "Id": "D:\\Angular\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\91faff3f-8842-4653-9b64-9104fe9eb4fa.png",
+      "PackagePath": "staticwebassets\\images\\product-3\\91faff3f-8842-4653-9b64-9104fe9eb4fa.png"
+    },
+    {
+      "Id": "D:\\Angular\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\f04be1ac-0687-4f87-aa11-81a53b5c4c10.png",
+      "PackagePath": "staticwebassets\\images\\product-3\\f04be1ac-0687-4f87-aa11-81a53b5c4c10.png"
+    },
+    {
       "Id": "D:\\Angular\\OrderFood\\BackEnd\\API\\wwwroot\\images\\products\\product-11\\2ac9bf21-3b07-430d-a39b-27008f610df7.jpg",
       "PackagePath": "staticwebassets\\images\\products\\product-11\\2ac9bf21-3b07-430d-a39b-27008f610df7.jpg"
     },

@@ -4756,3 +4756,73 @@
 2023-10-10 15:55:21.8108 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
 2023-10-10 15:55:21.8297 Info Configuration initialized.
 2023-10-10 15:55:21.8297 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:19:42.7544 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-10 17:19:42.7971 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-10 17:19:42.7971 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-10 17:19:42.8299 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-10 17:19:42.8502 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:19:42.8683 Info Configuration initialized.
+2023-10-10 17:19:42.8683 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:21:19.5404 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-10 17:21:19.5721 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-10 17:21:19.5820 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-10 17:21:19.6204 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-10 17:21:19.6452 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:21:19.6744 Info Configuration initialized.
+2023-10-10 17:21:19.6744 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:32:32.1227 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-10 17:32:32.1610 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-10 17:32:32.1610 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-10 17:32:32.2015 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-10 17:32:32.2321 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:32:32.2604 Info Configuration initialized.
+2023-10-10 17:32:32.2604 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:33:15.3392 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-10 17:33:15.4115 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-10 17:33:15.4260 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-10 17:33:15.4611 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-10 17:33:15.4901 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:33:15.5206 Info Configuration initialized.
+2023-10-10 17:33:15.5206 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:33:47.2830 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-10 17:33:47.3181 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-10 17:33:47.3181 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-10 17:33:47.3545 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-10 17:33:47.3775 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:33:47.4033 Info Configuration initialized.
+2023-10-10 17:33:47.4033 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:34:47.9800 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-10 17:34:48.1508 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-10 17:34:48.1508 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-10 17:34:48.1986 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-10 17:34:48.2265 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:34:48.2547 Info Configuration initialized.
+2023-10-10 17:34:48.2547 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:36:59.1564 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-10 17:36:59.2075 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-10 17:36:59.2075 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-10 17:36:59.2650 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-10 17:36:59.3011 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:36:59.3481 Info Configuration initialized.
+2023-10-10 17:36:59.3481 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:37:46.9224 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-10 17:37:46.9596 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-10 17:37:46.9596 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-10 17:37:47.0071 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-10 17:37:47.0310 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:37:47.0606 Info Configuration initialized.
+2023-10-10 17:37:47.0606 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:38:46.3717 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-10 17:38:46.4428 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-10 17:38:46.4643 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-10 17:38:46.6406 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-10 17:38:46.6772 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:38:46.7678 Info Configuration initialized.
+2023-10-10 17:38:46.7715 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:39:11.3666 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-10 17:39:11.4414 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-10 17:39:11.4414 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-10 17:39:11.5080 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-10 17:39:11.5572 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-10 17:39:11.5944 Info Configuration initialized.
+2023-10-10 17:39:11.5944 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\Angular\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
