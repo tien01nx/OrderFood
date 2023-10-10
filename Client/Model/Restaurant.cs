@@ -23,5 +23,7 @@ namespace Client.Model
         public byte FavoriteLevel { get; set; }
         public string Notes { get; set; }
 
+        public  Image Image { get; set; }
+
     }
 }

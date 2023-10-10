@@ -39,12 +39,13 @@
             toolStrip1 = new ToolStrip();
             btnClose = new ToolStripButton();
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            Data = new DevExpress.XtraEditors.GroupControl();
             girdRestaurant = new DevExpress.XtraGrid.GridControl();
             gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             RestaurantName = new DevExpress.XtraGrid.Columns.GridColumn();
             PhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             ImageUrl = new DevExpress.XtraGrid.Columns.GridColumn();
+            svgImage = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             OpenTime = new DevExpress.XtraGrid.Columns.GridColumn();
             CloseTime = new DevExpress.XtraGrid.Columns.GridColumn();
             BankAccount = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,7 +56,7 @@
             Xoa = new DevExpress.XtraGrid.Columns.GridColumn();
             btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
+            ckOpenTime = new DevExpress.XtraEditors.CheckEdit();
             cboFavoriteLevel = new DevExpress.XtraEditors.ComboBoxEdit();
             label2 = new Label();
             cboRestaurant = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -63,14 +64,15 @@
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
             groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)groupControl3).BeginInit();
-            groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Data).BeginInit();
+            Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)girdRestaurant).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)svgImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnXoa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
             groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)checkEdit1.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ckOpenTime.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cboFavoriteLevel.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).BeginInit();
             SuspendLayout();
@@ -110,7 +112,7 @@
             // 
             // groupControl1
             // 
-            groupControl1.Controls.Add(groupControl3);
+            groupControl1.Controls.Add(Data);
             groupControl1.Controls.Add(groupControl2);
             groupControl1.Controls.Add(toolStrip1);
             groupControl1.Dock = DockStyle.Fill;
@@ -120,15 +122,15 @@
             groupControl1.TabIndex = 1;
             groupControl1.Text = "DANH SÁCH NHÀ HÀNG";
             // 
-            // groupControl3
+            // Data
             // 
-            groupControl3.Controls.Add(girdRestaurant);
-            groupControl3.Dock = DockStyle.Fill;
-            groupControl3.Location = new Point(315, 50);
-            groupControl3.Name = "groupControl3";
-            groupControl3.Size = new Size(684, 535);
-            groupControl3.TabIndex = 4;
-            groupControl3.Text = "groupControl3";
+            Data.Controls.Add(girdRestaurant);
+            Data.Dock = DockStyle.Fill;
+            Data.Location = new Point(315, 50);
+            Data.Name = "Data";
+            Data.Size = new Size(684, 535);
+            Data.TabIndex = 4;
+            Data.Text = "Danh sách nhà hàng";
             // 
             // girdRestaurant
             // 
@@ -136,7 +138,7 @@
             girdRestaurant.Location = new Point(2, 23);
             girdRestaurant.MainView = gridView2;
             girdRestaurant.Name = "girdRestaurant";
-            girdRestaurant.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { btnXoa });
+            girdRestaurant.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { btnXoa, svgImage });
             girdRestaurant.Size = new Size(680, 510);
             girdRestaurant.TabIndex = 0;
             girdRestaurant.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView2 });
@@ -146,6 +148,7 @@
             gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { RestaurantName, PhoneNumber, ImageUrl, OpenTime, CloseTime, BankAccount, BankNumber, BankName, FavoriteLevel, Notes, Xoa });
             gridView2.GridControl = girdRestaurant;
             gridView2.Name = "gridView2";
+            gridView2.OptionsView.RowAutoHeight = true;
             // 
             // RestaurantName
             // 
@@ -154,6 +157,7 @@
             RestaurantName.Name = "RestaurantName";
             RestaurantName.Visible = true;
             RestaurantName.VisibleIndex = 8;
+            RestaurantName.Width = 55;
             // 
             // PhoneNumber
             // 
@@ -166,26 +170,43 @@
             // ImageUrl
             // 
             ImageUrl.Caption = "ImageUrl";
-            ImageUrl.FieldName = "ImageUrl";
+            ImageUrl.ColumnEdit = svgImage;
+            ImageUrl.FieldName = "Image";
+            ImageUrl.MaxWidth = 125;
+            ImageUrl.MinWidth = 140;
             ImageUrl.Name = "ImageUrl";
+            ImageUrl.OptionsColumn.FixedWidth = true;
             ImageUrl.Visible = true;
             ImageUrl.VisibleIndex = 1;
+            // 
+            // svgImage
+            // 
+            svgImage.CustomHeight = 200;
+            svgImage.Name = "svgImage";
+            svgImage.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            svgImage.SvgImageSize = new Size(100, 100);
             // 
             // OpenTime
             // 
             OpenTime.Caption = "OpenTime";
+            OpenTime.DisplayFormat.FormatString = "hh:mm:ss";
+            OpenTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             OpenTime.FieldName = "OpenTime";
             OpenTime.Name = "OpenTime";
             OpenTime.Visible = true;
             OpenTime.VisibleIndex = 2;
+            OpenTime.Width = 55;
             // 
             // CloseTime
             // 
             CloseTime.Caption = "CloseTime";
+            CloseTime.DisplayFormat.FormatString = "hh:mm:ss";
+            CloseTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             CloseTime.FieldName = "CloseTime";
             CloseTime.Name = "CloseTime";
             CloseTime.Visible = true;
             CloseTime.VisibleIndex = 3;
+            CloseTime.Width = 55;
             // 
             // BankAccount
             // 
@@ -194,6 +215,7 @@
             BankAccount.Name = "BankAccount";
             BankAccount.Visible = true;
             BankAccount.VisibleIndex = 4;
+            BankAccount.Width = 55;
             // 
             // BankNumber
             // 
@@ -202,6 +224,7 @@
             BankNumber.Name = "BankNumber";
             BankNumber.Visible = true;
             BankNumber.VisibleIndex = 5;
+            BankNumber.Width = 55;
             // 
             // BankName
             // 
@@ -210,6 +233,7 @@
             BankName.Name = "BankName";
             BankName.Visible = true;
             BankName.VisibleIndex = 6;
+            BankName.Width = 55;
             // 
             // FavoriteLevel
             // 
@@ -218,6 +242,7 @@
             FavoriteLevel.Name = "FavoriteLevel";
             FavoriteLevel.Visible = true;
             FavoriteLevel.VisibleIndex = 7;
+            FavoriteLevel.Width = 55;
             // 
             // Notes
             // 
@@ -226,6 +251,7 @@
             Notes.Name = "Notes";
             Notes.Visible = true;
             Notes.VisibleIndex = 9;
+            Notes.Width = 55;
             // 
             // Xoa
             // 
@@ -235,6 +261,7 @@
             Xoa.Name = "Xoa";
             Xoa.Visible = true;
             Xoa.VisibleIndex = 10;
+            Xoa.Width = 67;
             // 
             // btnXoa
             // 
@@ -247,7 +274,7 @@
             // groupControl2
             // 
             groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            groupControl2.Controls.Add(checkEdit1);
+            groupControl2.Controls.Add(ckOpenTime);
             groupControl2.Controls.Add(cboFavoriteLevel);
             groupControl2.Controls.Add(label2);
             groupControl2.Controls.Add(cboRestaurant);
@@ -260,15 +287,16 @@
             groupControl2.TabIndex = 3;
             groupControl2.Text = "Chức năng tìm kiếm";
             // 
-            // checkEdit1
+            // ckOpenTime
             // 
-            checkEdit1.Location = new Point(5, 139);
-            checkEdit1.Name = "checkEdit1";
-            checkEdit1.Properties.Appearance.Font = new Font("Tahoma", 8.5F, FontStyle.Bold, GraphicsUnit.Point);
-            checkEdit1.Properties.Appearance.Options.UseFont = true;
-            checkEdit1.Properties.Caption = "Mở cửa";
-            checkEdit1.Size = new Size(75, 20);
-            checkEdit1.TabIndex = 5;
+            ckOpenTime.Location = new Point(5, 139);
+            ckOpenTime.Name = "ckOpenTime";
+            ckOpenTime.Properties.Appearance.Font = new Font("Tahoma", 8.5F, FontStyle.Bold, GraphicsUnit.Point);
+            ckOpenTime.Properties.Appearance.Options.UseFont = true;
+            ckOpenTime.Properties.Caption = "Mở cửa";
+            ckOpenTime.Size = new Size(75, 20);
+            ckOpenTime.TabIndex = 5;
+            ckOpenTime.CheckedChanged += ckOpenTime_CheckedChanged;
             // 
             // cboFavoriteLevel
             // 
@@ -278,6 +306,7 @@
             cboFavoriteLevel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             cboFavoriteLevel.Size = new Size(302, 20);
             cboFavoriteLevel.TabIndex = 3;
+            cboFavoriteLevel.EditValueChanged += cboFavoriteLevel_EditValueChanged;
             // 
             // label2
             // 
@@ -297,6 +326,7 @@
             cboRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             cboRestaurant.Size = new Size(302, 20);
             cboRestaurant.TabIndex = 1;
+            cboRestaurant.EditValueChanged += cboRestaurant_EditValueChanged;
             // 
             // label1
             // 
@@ -321,15 +351,16 @@
             ((System.ComponentModel.ISupportInitialize)groupControl1).EndInit();
             groupControl1.ResumeLayout(false);
             groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)groupControl3).EndInit();
-            groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)Data).EndInit();
+            Data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)girdRestaurant).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)svgImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnXoa).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).EndInit();
             groupControl2.ResumeLayout(false);
             groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)checkEdit1.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ckOpenTime.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)cboFavoriteLevel.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).EndInit();
             ResumeLayout(false);
@@ -345,11 +376,11 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl gridData;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.GroupControl Data;
         private DevExpress.XtraGrid.GridControl girdRestaurant;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
+        private DevExpress.XtraEditors.CheckEdit ckOpenTime;
         private DevExpress.XtraEditors.ComboBoxEdit cboFavoriteLevel;
         private Label label2;
         private DevExpress.XtraEditors.ComboBoxEdit cboRestaurant;
@@ -366,5 +397,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn Notes;
         private DevExpress.XtraGrid.Columns.GridColumn Xoa;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit svgImage;
     }
 }

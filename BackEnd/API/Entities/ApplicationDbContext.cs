@@ -55,11 +55,11 @@ namespace API.Entities
 
 
 
-        //// Lấy danh sách sản người dùng đã đặt đồ ăn hay chưa, theo ngày truyền vào và id người dùng
-        //public List<UserInfoDTO> GetUserCartDetailsByDateAndUserId(string userId, string date)
-        //{
-        //    return UserCartDetails.FromSqlRaw("EXEC sp_GetUserCartDetails {0}, {1}", userId, date).ToList();
-        //}
+        // Lấy danh sách nhà hàng Restaurant theo ngày hiện tại 
+        public List<Restaurant> GetRestaurant(string restaurantName, string faroriteLevel,string time)
+        {
+            return Restaurants.FromSqlRaw("EXEC SearchRestaurants {0}, {1}, {2}", restaurantName, faroriteLevel, time).ToList();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

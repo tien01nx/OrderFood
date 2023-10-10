@@ -32,19 +32,25 @@ namespace Client.Entities
 
         public ApiResponse<List<T>> GetData<T>(string resource)
         {
-
-            var request = new RestRequest(resource, Method.Get);
-            var response = _client.Execute(request);
-            if (response.IsSuccessful)
+            try
             {
-                var content = response.Content;
-                return JsonConvert.DeserializeObject<ApiResponse<List<T>>>(content);
+                var request = new RestRequest(resource, Method.Get);
+                var response = _client.Execute(request);
+                if (response.IsSuccessful)
+                {
+                    var content = response.Content;
+                    return JsonConvert.DeserializeObject<ApiResponse<List<T>>>(content);
+                }
+               
+                    Console.WriteLine(response.ErrorMessage);
+                   return null;
+                
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine(response.ErrorMessage);
                 return null;
             }
+          
         }
 
         public ApiResponse<T> SendPostRequest<T>(string resource, object body)

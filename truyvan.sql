@@ -172,76 +172,38 @@ EXEC sp_GetUserOrderDetails
 
 
 
+Go
 ALTER PROCEDURE SearchRestaurants
-    @SearchText NVARCHAR(255),
-    @FavoriteLevel INT,
-    @CurrentTimeAsString NVARCHAR(5)  -- Chuỗi thời gian, ví dụ: "HH:mm"
+    @RestaurantName NVARCHAR(300),
+    @FavoriteLevel TINYINT,
+    @SearchTime TIME
 AS
 BEGIN
-    -- Kiểm tra xem lệnh gọi đệ quy hay không
-    IF (@@NESTLEVEL > 1)
-    BEGIN
-        RETURN;
-    END
-
-    DECLARE @CurrentTime TIME;
-
-    -- Chuyển đổi chuỗi thời gian thành kiểu dữ liệu TIME
-    SET @CurrentTime = NULL;
-    IF (@CurrentTimeAsString IS NOT NULL)
-    BEGIN
-        SET @CurrentTime = CONVERT(TIME, @CurrentTimeAsString);
-    END
-
-    SELECT [Id]
-        ,[RestaurantName]
-        ,[PhoneNumber]
-        ,[ImageUrl]
-        ,[OpenTime]
-        ,[CloseTime]
-        ,[BankAccount]
-        ,[BankNumber]
-        ,[BankName]
-        ,[FavoriteLevel]
-        ,[Notes]
-        ,[CreateBy]
-        ,[UpdateBy]
-        ,[CreateDate]
-        ,[UpdateDate]
-    FROM [orderfood].[dbo].[Restaurants]
-    WHERE
-        (
-            -- Tìm kiếm theo RestaurantName
-            @SearchText IS NULL OR [RestaurantName] LIKE '%' + @SearchText + '%'
-        )
-        AND
-        (
-            -- Tìm kiếm theo FavoriteLevel
-            (@FavoriteLevel IS NULL OR [FavoriteLevel] IS NULL OR [FavoriteLevel] = @FavoriteLevel)
-        )
-        AND
-        (
-            -- Kiểm tra thời gian mở cửa
-            (
-                -- Trường hợp đặc biệt: Nếu OpenTime > CloseTime (qua ngày)
-                (
-                    ([OpenTime] > [CloseTime]) AND (ISNULL(@CurrentTime, '00:00') >= CONVERT(TIME, [OpenTime]) OR ISNULL(@CurrentTime, '00:00') <= CONVERT(TIME, [CloseTime]))
-                )
-                OR
-                (
-                    ([OpenTime] <= [CloseTime]) AND (ISNULL(@CurrentTime, '00:00') >= CONVERT(TIME, [OpenTime]) AND ISNULL(@CurrentTime, '00:00') <= CONVERT(TIME, [CloseTime]))
-                )
-                OR
-                (
-                    -- Nếu không có thông tin thời gian mở cửa hoặc đóng cửa, hiển thị tất cả
-                    ([OpenTime] IS NULL AND [CloseTime] IS NULL)
-                )
-            )
-        );
+    SELECT *
+    FROM [dbo].[Restaurants]
+    WHERE 
+        (CASE 
+             WHEN @RestaurantName IS NOT NULL THEN 
+                 CASE WHEN CHARINDEX(@RestaurantName, RestaurantName) > 0 THEN 1 ELSE 0 END
+             ELSE 1
+         END = 1)
+    AND
+        (CASE 
+             WHEN @FavoriteLevel IS NOT NULL THEN 
+                 CASE WHEN FavoriteLevel = @FavoriteLevel THEN 1 ELSE 0 END
+             ELSE 1
+         END = 1)
+    AND
+        (CASE 
+             WHEN @SearchTime IS NOT NULL THEN 
+                 CASE WHEN @SearchTime BETWEEN OpenTime AND CloseTime THEN 1 ELSE 0 END
+             ELSE 1
+         END = 1);
 END;
+GO
 
 
 EXEC SearchRestaurants
-    @SearchText = null,
-    @FavoriteLevel = '2',
-    @CurrentTimeAsString = null;
+    @RestaurantName = null,
+    @FavoriteLevel = '4',
+    @SearchTime = null;

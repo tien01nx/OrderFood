@@ -128,27 +128,35 @@ namespace Client.UserControls
         private void SortProducts(List<Product> products)
         {
             // Tìm những sản phẩm product có trong userOrderList
-            List<Product> purchasedProducts = new List<Product>();
-
-            foreach (var product in products)
+            try
             {
-                var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId.Equals(product.Id));
-                if (existingUserProduct != null)
+                List<Product> purchasedProducts = new List<Product>();
+
+                foreach (var product in products)
                 {
-                    product.Quantity = existingUserProduct.TotalQuantity;
-                    product.IsSelected = true;
-                    product.Image = LoadProductImage(product.Images);
-                    purchasedProducts.Add(product);
+                    var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId.Equals(product.Id));
+                    if (existingUserProduct != null)
+                    {
+                        product.Quantity = existingUserProduct.TotalQuantity;
+                        product.IsSelected = true;
+                        product.Image = LoadProductImage(product.Images);
+                        purchasedProducts.Add(product);
+                    }
+                    else
+                    {
+                        product.Image = LoadProductImage(product.Images);
+                        product.Quantity = 1;
+                        product.IsSelected = false;
+                    }
                 }
-                else
-                {
-                    product.Image = LoadProductImage(product.Images);
-                    product.Quantity = 1;
-                    product.IsSelected = false;
-                }
+                products.RemoveAll(product => purchasedProducts.Contains(product));
+                products.InsertRange(0, purchasedProducts);
             }
-            products.RemoveAll(product => purchasedProducts.Contains(product));
-            products.InsertRange(0, purchasedProducts);
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+         
         }
 
         // hiện thị thông tin sản phẩm product sang layoutview và cập nhật lại thông tin sản phẩm

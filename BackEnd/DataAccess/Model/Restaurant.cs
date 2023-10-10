@@ -20,9 +20,9 @@ namespace DataAccess.Model
         [StringLength(100)]
         public string ImageUrl { get; set; }
 
-        public DateTime OpenTime { get; set; }
+        public TimeSpan OpenTime { get; set; }
 
-        public DateTime CloseTime { get; set; }
+        public TimeSpan CloseTime { get; set; }
 
 
         [Required(ErrorMessage = "Vui lòng nhập số tài khoản")]
@@ -36,7 +36,7 @@ namespace DataAccess.Model
 
 
 
-        [StringLength(50, ErrorMessage = "BankName tối đa {1} ký tự")]
+        [StringLength(50, ErrorMessage = "Tên chủ tài khoản tối đa {1} ký tự")]
         [Required(ErrorMessage = "Vui lòng nhập tên tài khoản")]
         public string BankName { get; set; }
 

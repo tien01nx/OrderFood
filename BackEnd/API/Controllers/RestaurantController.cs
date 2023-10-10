@@ -48,5 +48,22 @@ namespace API.Controllers
             }
         }
 
+        // Lấy thông tin nhà hàng theo từ khóa
+        [HttpGet("GetRestaurantByKeyword")]
+        public async Task<ApiResponse<List<Restaurant>>> GetRestaurant(string restaurant, string favoriteLevel, string time)
+        {
+            try {
+                var restaurants =  _context.GetRestaurant(restaurant, favoriteLevel, time).ToList();
+
+                return new ApiResponse<List<Restaurant>>(System.Net.HttpStatusCode.OK, "lay thanh cong", restaurants);
+
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse<List<Restaurant>>(System.Net.HttpStatusCode.InternalServerError, ex.Message, null);
+            }
+
+        }
     }
+
 }
