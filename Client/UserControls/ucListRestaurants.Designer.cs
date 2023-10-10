@@ -86,16 +86,17 @@
             btnUcProduct.Image = (Image)resources.GetObject("btnUcProduct.Image");
             btnUcProduct.ImageTransparentColor = Color.Magenta;
             btnUcProduct.Name = "btnUcProduct";
-            btnUcProduct.Size = new Size(114, 24);
+            btnUcProduct.Size = new Size(135, 24);
             btnUcProduct.Text = "Thêm nhà hàng";
+            btnUcProduct.Click += btnUcProduct_Click;
             // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnUcProduct, btnClose });
-            toolStrip1.Location = new Point(2, 23);
+            toolStrip1.Location = new Point(2, 28);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(997, 27);
+            toolStrip1.Size = new Size(1164, 27);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -107,7 +108,7 @@
             btnClose.ImageTransparentColor = Color.Magenta;
             btnClose.Name = "btnClose";
             btnClose.RightToLeft = RightToLeft.No;
-            btnClose.Size = new Size(24, 24);
+            btnClose.Size = new Size(29, 24);
             btnClose.Text = "toolStripButton6";
             // 
             // groupControl1
@@ -117,8 +118,9 @@
             groupControl1.Controls.Add(toolStrip1);
             groupControl1.Dock = DockStyle.Fill;
             groupControl1.Location = new Point(0, 0);
+            groupControl1.Margin = new Padding(4, 4, 4, 4);
             groupControl1.Name = "groupControl1";
-            groupControl1.Size = new Size(1001, 587);
+            groupControl1.Size = new Size(1168, 722);
             groupControl1.TabIndex = 1;
             groupControl1.Text = "DANH SÁCH NHÀ HÀNG";
             // 
@@ -126,26 +128,30 @@
             // 
             Data.Controls.Add(girdRestaurant);
             Data.Dock = DockStyle.Fill;
-            Data.Location = new Point(315, 50);
+            Data.Location = new Point(367, 55);
+            Data.Margin = new Padding(4, 4, 4, 4);
             Data.Name = "Data";
-            Data.Size = new Size(684, 535);
+            Data.Size = new Size(799, 665);
             Data.TabIndex = 4;
             Data.Text = "Danh sách nhà hàng";
             // 
             // girdRestaurant
             // 
             girdRestaurant.Dock = DockStyle.Fill;
-            girdRestaurant.Location = new Point(2, 23);
+            girdRestaurant.EmbeddedNavigator.Margin = new Padding(4, 4, 4, 4);
+            girdRestaurant.Location = new Point(2, 28);
             girdRestaurant.MainView = gridView2;
+            girdRestaurant.Margin = new Padding(4, 4, 4, 4);
             girdRestaurant.Name = "girdRestaurant";
             girdRestaurant.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { btnXoa, svgImage });
-            girdRestaurant.Size = new Size(680, 510);
+            girdRestaurant.Size = new Size(795, 635);
             girdRestaurant.TabIndex = 0;
             girdRestaurant.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView2 });
             // 
             // gridView2
             // 
             gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { RestaurantName, PhoneNumber, ImageUrl, OpenTime, CloseTime, BankAccount, BankNumber, BankName, FavoriteLevel, Notes, Xoa });
+            gridView2.DetailHeight = 431;
             gridView2.GridControl = girdRestaurant;
             gridView2.Name = "gridView2";
             gridView2.OptionsView.RowAutoHeight = true;
@@ -154,30 +160,34 @@
             // 
             RestaurantName.Caption = "RestaurantName";
             RestaurantName.FieldName = "RestaurantName";
+            RestaurantName.MinWidth = 23;
             RestaurantName.Name = "RestaurantName";
             RestaurantName.Visible = true;
             RestaurantName.VisibleIndex = 8;
-            RestaurantName.Width = 55;
+            RestaurantName.Width = 64;
             // 
             // PhoneNumber
             // 
             PhoneNumber.Caption = "PhoneNumber";
             PhoneNumber.FieldName = "PhoneNumber";
+            PhoneNumber.MinWidth = 23;
             PhoneNumber.Name = "PhoneNumber";
             PhoneNumber.Visible = true;
             PhoneNumber.VisibleIndex = 0;
+            PhoneNumber.Width = 87;
             // 
             // ImageUrl
             // 
             ImageUrl.Caption = "ImageUrl";
             ImageUrl.ColumnEdit = svgImage;
             ImageUrl.FieldName = "Image";
-            ImageUrl.MaxWidth = 125;
-            ImageUrl.MinWidth = 140;
+            ImageUrl.MaxWidth = 146;
+            ImageUrl.MinWidth = 163;
             ImageUrl.Name = "ImageUrl";
             ImageUrl.OptionsColumn.FixedWidth = true;
             ImageUrl.Visible = true;
             ImageUrl.VisibleIndex = 1;
+            ImageUrl.Width = 87;
             // 
             // svgImage
             // 
@@ -192,10 +202,11 @@
             OpenTime.DisplayFormat.FormatString = "hh:mm:ss";
             OpenTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             OpenTime.FieldName = "OpenTime";
+            OpenTime.MinWidth = 23;
             OpenTime.Name = "OpenTime";
             OpenTime.Visible = true;
             OpenTime.VisibleIndex = 2;
-            OpenTime.Width = 55;
+            OpenTime.Width = 64;
             // 
             // CloseTime
             // 
@@ -203,65 +214,72 @@
             CloseTime.DisplayFormat.FormatString = "hh:mm:ss";
             CloseTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             CloseTime.FieldName = "CloseTime";
+            CloseTime.MinWidth = 23;
             CloseTime.Name = "CloseTime";
             CloseTime.Visible = true;
             CloseTime.VisibleIndex = 3;
-            CloseTime.Width = 55;
+            CloseTime.Width = 64;
             // 
             // BankAccount
             // 
             BankAccount.Caption = "BankAccount";
             BankAccount.FieldName = "BankAccount";
+            BankAccount.MinWidth = 23;
             BankAccount.Name = "BankAccount";
             BankAccount.Visible = true;
             BankAccount.VisibleIndex = 4;
-            BankAccount.Width = 55;
+            BankAccount.Width = 64;
             // 
             // BankNumber
             // 
             BankNumber.Caption = "BankNumber";
             BankNumber.FieldName = "BankNumber";
+            BankNumber.MinWidth = 23;
             BankNumber.Name = "BankNumber";
             BankNumber.Visible = true;
             BankNumber.VisibleIndex = 5;
-            BankNumber.Width = 55;
+            BankNumber.Width = 64;
             // 
             // BankName
             // 
             BankName.Caption = "BankName";
             BankName.FieldName = "BankName";
+            BankName.MinWidth = 23;
             BankName.Name = "BankName";
             BankName.Visible = true;
             BankName.VisibleIndex = 6;
-            BankName.Width = 55;
+            BankName.Width = 64;
             // 
             // FavoriteLevel
             // 
             FavoriteLevel.Caption = "FavoriteLevel";
             FavoriteLevel.FieldName = "FavoriteLevel";
+            FavoriteLevel.MinWidth = 23;
             FavoriteLevel.Name = "FavoriteLevel";
             FavoriteLevel.Visible = true;
             FavoriteLevel.VisibleIndex = 7;
-            FavoriteLevel.Width = 55;
+            FavoriteLevel.Width = 64;
             // 
             // Notes
             // 
             Notes.Caption = "Notes";
             Notes.FieldName = "Notes";
+            Notes.MinWidth = 23;
             Notes.Name = "Notes";
             Notes.Visible = true;
             Notes.VisibleIndex = 9;
-            Notes.Width = 55;
+            Notes.Width = 64;
             // 
             // Xoa
             // 
             Xoa.Caption = "Xoa";
             Xoa.ColumnEdit = btnXoa;
             Xoa.FieldName = "Xoa";
+            Xoa.MinWidth = 23;
             Xoa.Name = "Xoa";
             Xoa.Visible = true;
             Xoa.VisibleIndex = 10;
-            Xoa.Width = 67;
+            Xoa.Width = 78;
             // 
             // btnXoa
             // 
@@ -280,31 +298,32 @@
             groupControl2.Controls.Add(cboRestaurant);
             groupControl2.Controls.Add(label1);
             groupControl2.Dock = DockStyle.Left;
-            groupControl2.Location = new Point(2, 50);
-            groupControl2.Margin = new Padding(3, 2, 3, 2);
+            groupControl2.Location = new Point(2, 55);
+            groupControl2.Margin = new Padding(4, 2, 4, 2);
             groupControl2.Name = "groupControl2";
-            groupControl2.Size = new Size(313, 535);
+            groupControl2.Size = new Size(365, 665);
             groupControl2.TabIndex = 3;
             groupControl2.Text = "Chức năng tìm kiếm";
             // 
             // ckOpenTime
             // 
-            ckOpenTime.Location = new Point(5, 139);
+            ckOpenTime.Location = new Point(6, 171);
+            ckOpenTime.Margin = new Padding(4, 4, 4, 4);
             ckOpenTime.Name = "ckOpenTime";
             ckOpenTime.Properties.Appearance.Font = new Font("Tahoma", 8.5F, FontStyle.Bold, GraphicsUnit.Point);
             ckOpenTime.Properties.Appearance.Options.UseFont = true;
             ckOpenTime.Properties.Caption = "Mở cửa";
-            ckOpenTime.Size = new Size(75, 20);
+            ckOpenTime.Size = new Size(88, 24);
             ckOpenTime.TabIndex = 5;
             ckOpenTime.CheckedChanged += ckOpenTime_CheckedChanged;
             // 
             // cboFavoriteLevel
             // 
-            cboFavoriteLevel.Location = new Point(4, 105);
-            cboFavoriteLevel.Margin = new Padding(3, 2, 3, 2);
+            cboFavoriteLevel.Location = new Point(5, 129);
+            cboFavoriteLevel.Margin = new Padding(4, 2, 4, 2);
             cboFavoriteLevel.Name = "cboFavoriteLevel";
             cboFavoriteLevel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            cboFavoriteLevel.Size = new Size(302, 20);
+            cboFavoriteLevel.Size = new Size(352, 22);
             cboFavoriteLevel.TabIndex = 3;
             cboFavoriteLevel.EditValueChanged += cboFavoriteLevel_EditValueChanged;
             // 
@@ -312,19 +331,20 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(5, 85);
+            label2.Location = new Point(6, 105);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(59, 13);
+            label2.Size = new Size(74, 17);
             label2.TabIndex = 2;
             label2.Text = "Xếp hạng";
             // 
             // cboRestaurant
             // 
-            cboRestaurant.Location = new Point(5, 58);
-            cboRestaurant.Margin = new Padding(3, 2, 3, 2);
+            cboRestaurant.Location = new Point(6, 71);
+            cboRestaurant.Margin = new Padding(4, 2, 4, 2);
             cboRestaurant.Name = "cboRestaurant";
             cboRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            cboRestaurant.Size = new Size(302, 20);
+            cboRestaurant.Size = new Size(352, 22);
             cboRestaurant.TabIndex = 1;
             cboRestaurant.EditValueChanged += cboRestaurant_EditValueChanged;
             // 
@@ -332,19 +352,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(4, 36);
+            label1.Location = new Point(5, 44);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(59, 13);
+            label1.Size = new Size(75, 17);
             label1.TabIndex = 0;
             label1.Text = "Nhà hàng";
             // 
             // ucListRestaurants
             // 
-            AutoScaleDimensions = new SizeF(6F, 13F);
+            AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(groupControl1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "ucListRestaurants";
-            Size = new Size(1001, 587);
+            Size = new Size(1168, 722);
             Load += ucListRestaurants_Load;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();

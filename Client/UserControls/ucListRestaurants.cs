@@ -60,7 +60,7 @@ namespace Client.UserControls
             var restaurants = _apiClient.GetData<Restaurant>($"Restaurant/GetRestaurantByKeyword?restaurant={_selectedRestaurant}&favoriteLevel={_selectedFavoriteLevel}&time={currentTime}").Data;
             foreach (var item in restaurants)
             {
-                item.Image = LoadProductImage(item.ImageUrl);
+                //item.Image = LoadProductImage(item.ImageUrl);
                 cboRestaurant.Properties.Items.Add(item.RestaurantName);
                 // Kiểm tra nếu cboFavoriteLevel chưa có mục này thì mới thêm
                 if (!cboFavoriteLevel.Properties.Items.Contains(item.FavoriteLevel))
@@ -130,6 +130,12 @@ namespace Client.UserControls
                     return img;
                 }
             }
+        }
+
+        private void btnUcProduct_Click(object sender, EventArgs e)
+        {
+            demoooo uc = new demoooo(_frmMain);
+            _frmMain.AddUC(uc);
         }
     }
 }

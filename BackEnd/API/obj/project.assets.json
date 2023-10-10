@@ -2415,40 +2415,42 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tien\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\API.csproj",
+      "projectUniqueName": "D:\\Angular\\OrderFood\\BackEnd\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\Tien\\.nuget\\packages\\",
-      "outputPath": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\obj\\",
+      "projectPath": "D:\\Angular\\OrderFood\\BackEnd\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "D:\\Angular\\OrderFood\\BackEnd\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages"
+        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tien\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\ThucTap\\OrderFood\\BackEnd\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "D:\\ThucTap\\OrderFood\\BackEnd\\DataAccess\\DataAccess.csproj"
+            "D:\\Angular\\OrderFood\\BackEnd\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\Angular\\OrderFood\\BackEnd\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -2523,7 +2525,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
       }
     }
   }

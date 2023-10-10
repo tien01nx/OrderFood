@@ -42,14 +42,14 @@ namespace DataAccess.Model
 
 
 
-        [Required(ErrorMessage = "Vui lòng nhập cấp độ yêu thích")]
-        public byte FavoriteLevel { get; set; }
+        //[Required(ErrorMessage = "Vui lòng nhập cấp độ yêu thích")]
+        public byte ?FavoriteLevel { get; set; }
 
 
         [StringLength(100, ErrorMessage = "Notes tối đa {1} ký tự")]
         [Required(ErrorMessage = "Notes không được để trống.")]
         public string Notes { get; set; }
-
+        
 
 
     }

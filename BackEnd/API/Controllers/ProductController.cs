@@ -2,6 +2,7 @@ using API.DTO;
 using API.Entities;
 using AutoMapper;
 using DataAccess.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repository.IRepository;
 
@@ -24,7 +25,7 @@ namespace API.Controllers
         }
 
         [HttpGet("Restaurant/{restaurantId}")]
-
+        
         public async Task<ApiResponse<List<Product>>> GetProductRestaurant(string restaurantId)
         {
 
