@@ -1,16 +1,26 @@
 ﻿using API.Entities;
 using DataAccess.Model;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Repository.IRepository;
 using System.Globalization;
+using System.Net;
 
 namespace API.Controllers
 {
     public class RestaurantController : BaseController<Restaurant>
     {
-        public RestaurantController(ApplicationDbContext context, ILogger<BaseController<Restaurant>> logger) : base(context, logger)
-        {
 
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        private readonly ImageHelper _imageHelper;
+        public RestaurantController(ApplicationDbContext context, ILogger<BaseController<Restaurant>> logger, IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment) : base(context, logger)
+        {
+            _unitOfWork = unitOfWork;
+            _webHostEnvironment = webHostEnvironment;
+            _imageHelper = new ImageHelper(_webHostEnvironment);
         }
 
         // lấy ra tất cả các nhà hàng theo ngày hiện tại trong order cân truyền id ngày
@@ -64,6 +74,40 @@ namespace API.Controllers
             }
 
         }
+
+
+
+        [HttpPost("UpLoadImage/{restaurantId}")]
+        public async Task<ApiResponse<Restaurant>> UpLoadImage(string restaurantId, IFormFile file)
+        {
+            try
+            {
+                var restaurant = _unitOfWork.Restaurant.Get(u => u.Id.Equals(restaurantId));
+                if (restaurant == null)
+                {
+                    return new ApiResponse<Restaurant>(HttpStatusCode.NotFound, $"restaurantID {restaurantId}", null);
+                }
+
+
+                string restaurantPath = @"images/restaurants/restaurant-" + restaurant.Id;
+                string imageUrl = _imageHelper.UploadImage(restaurantPath, file);
+
+                if (!string.IsNullOrEmpty(imageUrl))
+                {
+                    restaurant.ImageUrl = imageUrl;
+                    _unitOfWork.Restaurant.Update(restaurant);
+                    _unitOfWork.Save();
+                    return new ApiResponse<Restaurant>(HttpStatusCode.OK, "Thêm hình thành công", null);
+                }
+            }
+            catch (Exception ex)
+            {
+                //_logger.LogError(ex.Message);
+                return new ApiResponse<Restaurant>(HttpStatusCode.BadRequest, ex.Message, null);
+            }
+            return new ApiResponse<Restaurant>(HttpStatusCode.BadRequest, "Thêm hình thất bại", null);
+        }
+
     }
 
 }

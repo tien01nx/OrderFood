@@ -4,7 +4,7 @@ namespace DataAccess.Model
 {
     public class Restaurant : BaseModel
     {
-        [StringLength(10, ErrorMessage = "Id tối đa {1} ký tự")]
+  
         public string Id { get; set; }
 
         [Required(ErrorMessage = "RestaurantName không được để trống.")]
@@ -18,7 +18,7 @@ namespace DataAccess.Model
         public string PhoneNumber { get; set; }
 
         [StringLength(100)]
-        public string ImageUrl { get; set; }
+        public string ?ImageUrl { get; set; }
 
         public TimeSpan OpenTime { get; set; }
 

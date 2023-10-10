@@ -52,7 +52,8 @@ namespace Client
         // thêm ucContainer vào frmMain
         private void frmMain_Load(object sender, EventArgs e)
         {
-            ucListOrder uc = new ucListOrder(this);
+            //ucListOrder uc = new ucListOrder(this);
+            demoooo uc = new demoooo(this);
             AddUC(uc);
         }
 

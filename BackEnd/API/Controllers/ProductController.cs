@@ -17,12 +17,14 @@ namespace API.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly IMapper _mapper;
+        private readonly ImageHelper _imageHelper;
 
         public ProductController(ApplicationDbContext context, ILogger<BaseController<Product>> logger, IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment, IMapper mapper) : base(context, logger)
         {
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
             _mapper = mapper;
+            _imageHelper = new ImageHelper(_webHostEnvironment);
         }
 
         [HttpGet("Restaurant/{restaurantId}")]
@@ -33,18 +35,6 @@ namespace API.Controllers
             List<Product> products = _unitOfWork.Product.GetAll(u => u.RestaurantId.Equals(restaurantId)).ToList();
 
             return new ApiResponse<List<Product>>(System.Net.HttpStatusCode.OK, "Lấy dữ dữ liệu", products);
-
-        }
-
-
-        [HttpGet("User")]
-        public async Task<ApiResponse<List<User>>> GetUser()
-        {
-
-            List<User> products = _unitOfWork.User.GetAll().ToList();
-
-
-            return new ApiResponse<List<User>>(System.Net.HttpStatusCode.OK, "Lấy dữ dữ liệu", products);
 
         }
 
@@ -59,30 +49,18 @@ namespace API.Controllers
                 {
                     return new ApiResponse<Product>(HttpStatusCode.NotFound, $"Product {productId}", null);
                 }
+                string restaurantPath = @"images/product-" + product.Id;
+                string imageUrl = _imageHelper.UploadImage(restaurantPath, file);
 
-                string wwwRootPath = _webHostEnvironment.WebRootPath;
-
-                if (file != null)
+                if (!string.IsNullOrEmpty(imageUrl))
                 {
-                    string filename = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                    string productPath = @"images/product-" + product.Id;
-                    string finalPath = Path.Combine(wwwRootPath, productPath);
-                    if (!Directory.Exists(finalPath))
-                    {
-                        Directory.CreateDirectory(finalPath);
-                    }
-
-                    using (var fileStream = new FileStream(Path.Combine(finalPath, filename), FileMode.Create))
-                    {
-                        file.CopyTo(fileStream);
-                    }
-
-                    product.Images = @"/" + productPath + @"/" + filename;
-
+                    product.Images = imageUrl;
                     _unitOfWork.Product.Update(product);
                     _unitOfWork.Save();
                     return new ApiResponse<Product>(HttpStatusCode.OK, "Thêm hình thành công", null);
                 }
+
+
             }
             catch (Exception ex)
             {
@@ -92,71 +70,14 @@ namespace API.Controllers
             return new ApiResponse<Product>(HttpStatusCode.BadRequest, "Thêm hình thất bại", null);
         }
 
-
-
-        //[HttpPost("Upsert")]
-        //public async Task<ApiResponse<Product>> Upsert(Product product, List<IFormFile>? files)
+        //[HttpGet("User")]
+        //public async Task<ApiResponse<List<User>>> GetUser()
         //{
-        //    try
-        //    {
-        //        if (product.Id == 0)
-        //        {
-        //            _unitOfWork.Product.Add(product);
-        //        }
-        //        else
-        //        {
-        //            _unitOfWork.Product.Update(product);
-        //        }
+
+        //    List<User> products = _unitOfWork.User.GetAll().ToList();
 
 
-        //        _unitOfWork.Save();
-
-        //        string wwwRootPath = _webHostEnvironment.WebRootPath;
-        //        if (files != null)
-        //        {
-        //            foreach (IFormFile file in files)
-        //            {
-        //                string filename = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-        //                string productPath = @"images\products\product-" + product.Id;
-        //                string finalPath = Path.Combine(wwwRootPath, productPath);
-        //                if (!Directory.Exists(finalPath))
-        //                {
-        //                    Directory.CreateDirectory(finalPath);
-        //                }
-
-        //                using (var fileStream = new FileStream(Path.Combine(finalPath, filename), FileMode.Create))
-        //                {
-        //                    file.CopyTo(fileStream);
-        //                }
-
-        //                ProductImage productImageDto = new ProductImage()
-        //                {
-        //                    ImageUrl = @"\" + productPath + @"\" + filename,
-        //                    ProductId = product.Id
-        //                };
-
-        //                if (product.ProductImages == null)
-        //                {
-        //                    product.ProductImages = new List<ProductImage>();
-        //                }
-
-        //                product.ProductImages.Add(productImageDto);
-        //            }
-
-        //            _unitOfWork.Product.Update(product);
-        //            _unitOfWork.Save();
-        //        }
-
-
-        //        // TempData["success"] = "Product created/update successfully";
-        //        return new ApiResponse<Product>(System.Net.HttpStatusCode.OK, "", product);
-
-        //    }catch (Exception ex)
-        //    {
-        //        return new ApiResponse<Product>(System.Net.HttpStatusCode.OK, ex.ToString(), null);
-        //    }
-
-
+        //    return new ApiResponse<List<User>>(System.Net.HttpStatusCode.OK, "Lấy dữ dữ liệu", products);
 
         //}
 

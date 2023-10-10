@@ -1,5 +1,8 @@
-﻿using Newtonsoft.Json;
+﻿using DevExpress.RichEdit.Export;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 using RestSharp;
+using System.IO;
 
 namespace Client.Entities
 {
@@ -128,6 +131,37 @@ namespace Client.Entities
                 return null;
             }
         }
+
+
+        public ApiResponse<string> SendImageUploadRequest(string resource, string restaurantId, byte[] imageData)
+        {
+            try
+            {
+                var request = new RestRequest(resource + "/" + restaurantId, Method.Post);
+
+                // Đính kèm hình ảnh vào yêu cầu
+                request.AddFile("file", imageData, "restaurant_image.jpg");
+
+                var response = _client.Execute(request);
+
+                if (response.IsSuccessful)
+                {
+                    var content = response.Content;
+                    return JsonConvert.DeserializeObject<ApiResponse<string>>(content);
+                }
+                else
+                {
+                    Console.WriteLine(response.ErrorMessage);
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
 
 
 

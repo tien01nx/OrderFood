@@ -1,33 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Angular\\OrderFood\\Client\\Client.csproj": {}
+    "D:\\ThucTap\\OrderFood\\Client\\Client.csproj": {}
   },
   "projects": {
-    "D:\\Angular\\OrderFood\\Client\\Client.csproj": {
+    "D:\\ThucTap\\OrderFood\\Client\\Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Angular\\OrderFood\\Client\\Client.csproj",
+        "projectUniqueName": "D:\\ThucTap\\OrderFood\\Client\\Client.csproj",
         "projectName": "Client",
-        "projectPath": "D:\\Angular\\OrderFood\\Client\\Client.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Angular\\OrderFood\\Client\\obj\\",
+        "projectPath": "D:\\ThucTap\\OrderFood\\Client\\Client.csproj",
+        "packagesPath": "C:\\Users\\Tien\\.nuget\\packages\\",
+        "outputPath": "D:\\ThucTap\\OrderFood\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Users\\Tien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +48,10 @@
             "DevExpress.Win.Design": {
               "target": "Package",
               "version": "[21.2.6, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -90,7 +93,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

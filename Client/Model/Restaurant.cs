@@ -31,6 +31,12 @@ namespace Client.Model
         public string Notes { get; set; }
 
         public  Image Image { get; set; }
+
+        public void GenerateRandomId()
+        {
+            RandomString randomStringGenerator = new RandomString();
+            Id = "Res" + randomStringGenerator.NextString(10); // Độ dài của ID
+        }
         public override string ToString()
         {
             return $"Restaurant ID: {Id}\n" +

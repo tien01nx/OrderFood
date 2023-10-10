@@ -938,3 +938,6 @@ D:\Angular\OrderFood\Client\obj\Debug\net6.0-windows\refint\Client.dll
 D:\Angular\OrderFood\Client\obj\Debug\net6.0-windows\Client.pdb
 D:\Angular\OrderFood\Client\obj\Debug\net6.0-windows\Client.genruntimeconfig.cache
 D:\Angular\OrderFood\Client\obj\Debug\net6.0-windows\ref\Client.dll
+D:\ThucTap\OrderFood\Client\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Http.Features.dll
+D:\ThucTap\OrderFood\Client\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+D:\ThucTap\OrderFood\Client\bin\Debug\net6.0-windows\System.IO.Pipelines.dll

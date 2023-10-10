@@ -6,7 +6,7 @@ namespace DataAccess.Model
 {
     public class Category : BaseModel
     {
-        [StringLength(10, ErrorMessage = "Id tối đa {1} ký tự")]
+   
         public string Id { get; set; }
 
         [Required(ErrorMessage = "không được để trống  nhà hàng.")]
