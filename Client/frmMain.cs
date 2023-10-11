@@ -53,7 +53,7 @@ namespace Client
         private void frmMain_Load(object sender, EventArgs e)
         {
             //ucListOrder uc = new ucListOrder(this);
-            demoooo uc = new demoooo(this);
+            ucRestaurants uc = new ucRestaurants(this);
             AddUC(uc);
         }
 

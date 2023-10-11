@@ -67,7 +67,7 @@
             spdtQuantity = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             layoutViewField_Quantity = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             Images = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            svgImage = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            svgImage111 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             layoutViewField_Image = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
             groupControl5 = new DevExpress.XtraEditors.GroupControl();
@@ -99,7 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Price).BeginInit();
             ((System.ComponentModel.ISupportInitialize)spdtQuantity).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Quantity).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)svgImage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)svgImage111).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Image).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewCard1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl5).BeginInit();
@@ -317,7 +317,7 @@
             gridDataProduct.Location = new Point(2, 23);
             gridDataProduct.MainView = layoutView;
             gridDataProduct.Name = "gridDataProduct";
-            gridDataProduct.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { spdtQuantity, svgImage, checkOrder });
+            gridDataProduct.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { spdtQuantity, svgImage111, checkOrder });
             gridDataProduct.Size = new Size(985, 214);
             gridDataProduct.TabIndex = 0;
             gridDataProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { layoutView });
@@ -438,7 +438,7 @@
             // Images
             // 
             Images.Caption = "Hình ảnh";
-            Images.ColumnEdit = svgImage;
+            Images.ColumnEdit = svgImage111;
             Images.FieldName = "Image";
             Images.LayoutViewField = layoutViewField_Image;
             Images.MinWidth = 21;
@@ -446,13 +446,13 @@
             Images.OptionsColumn.FixedWidth = true;
             Images.Width = 81;
             // 
-            // svgImage
+            // svgImage111
             // 
-            svgImage.CustomHeight = 100;
-            svgImage.Name = "svgImage";
-            svgImage.ShowMenu = false;
-            svgImage.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            svgImage.SvgImageSize = new Size(100, 100);
+            svgImage111.CustomHeight = 100;
+            svgImage111.Name = "svgImage111";
+            svgImage111.ShowMenu = false;
+            svgImage111.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            svgImage111.SvgImageSize = new Size(100, 100);
             // 
             // layoutViewField_Image
             // 
@@ -567,7 +567,7 @@
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Price).EndInit();
             ((System.ComponentModel.ISupportInitialize)spdtQuantity).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Quantity).EndInit();
-            ((System.ComponentModel.ISupportInitialize)svgImage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)svgImage111).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewField_Image).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutViewCard1).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl5).EndInit();
@@ -600,7 +600,7 @@
         private DevExpress.XtraEditors.LabelControl lblRestaurant;
         private DevExpress.XtraGrid.GridControl gridDataProduct;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit spdtQuantity;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit svgImage;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit svgImage111;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit checkOrder;
         private DevExpress.XtraGrid.Columns.GridColumn TitleProduct;
         private DevExpress.XtraGrid.Columns.GridColumn PriceProduct;

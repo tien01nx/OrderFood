@@ -4882,3 +4882,1112 @@
 2023-10-10 23:32:35.9048 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
 2023-10-10 23:32:35.9169 Info Configuration initialized.
 2023-10-10 23:32:35.9169 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 08:54:20.2044 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 08:54:20.2239 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 08:54:20.2239 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 08:54:20.2411 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 08:54:20.2866 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 08:54:20.3025 Info Configuration initialized.
+2023-10-11 08:54:20.3025 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:21:57.5861 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 09:21:57.5884 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 09:21:57.5884 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 09:21:57.5884 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 09:21:57.6172 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:21:57.6297 Info Configuration initialized.
+2023-10-11 09:21:57.6297 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:46:40.6896 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 09:46:40.6896 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 09:46:40.7054 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 09:46:40.7231 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 09:46:40.7340 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:46:40.7453 Info Configuration initialized.
+2023-10-11 09:46:40.7453 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:46:58.5830 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 09:46:58.5885 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 09:46:58.5885 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 09:46:58.5885 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 09:46:58.6122 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:46:58.6235 Info Configuration initialized.
+2023-10-11 09:46:58.6235 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:47:02.8417 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 09:47:02.8417 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 09:47:02.8417 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 09:47:02.8591 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 09:47:02.8591 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:47:02.8819 Info Configuration initialized.
+2023-10-11 09:47:02.8819 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:51:32.4868 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 09:51:32.4868 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 09:51:32.4868 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 09:51:32.5046 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 09:51:32.5153 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:51:32.5273 Info Configuration initialized.
+2023-10-11 09:51:32.5273 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:52:29.8032 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 09:52:29.8086 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 09:52:29.8086 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 09:52:29.8086 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 09:52:29.8298 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:52:29.8406 Info Configuration initialized.
+2023-10-11 09:52:29.8406 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:52:55.4390 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 09:52:55.4390 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 09:52:55.4390 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 09:52:55.4558 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 09:52:55.4662 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 09:52:55.4662 Info Configuration initialized.
+2023-10-11 09:52:55.4662 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:04:12.2782 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:04:12.2782 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:04:12.2782 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:04:12.2982 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:04:12.3127 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:04:12.3264 Info Configuration initialized.
+2023-10-11 10:04:12.3264 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:04:20.4396 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:04:20.4396 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:04:20.4396 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:04:20.4603 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:04:20.4717 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:04:20.4853 Info Configuration initialized.
+2023-10-11 10:04:20.4853 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:04:28.6299 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:04:28.6359 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:04:28.6359 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:04:28.6359 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:04:28.6597 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:04:28.6737 Info Configuration initialized.
+2023-10-11 10:04:28.6737 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:04:49.4316 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:04:49.4345 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:04:49.4345 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:04:49.4506 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:04:49.4662 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:04:49.4790 Info Configuration initialized.
+2023-10-11 10:04:49.4790 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:04:58.7592 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:04:58.7614 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:04:58.7614 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:04:58.7768 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:04:58.7768 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:04:58.8052 Info Configuration initialized.
+2023-10-11 10:04:58.8052 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:05:16.8013 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:05:16.8013 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:05:16.8078 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:05:16.8078 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:05:16.8312 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:05:16.8427 Info Configuration initialized.
+2023-10-11 10:05:16.8427 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:05:44.1495 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:05:44.1520 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:05:44.1520 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:05:44.1680 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:05:47.0248 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:05:47.0273 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:05:47.0273 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:05:47.0424 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:05:47.0424 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:05:47.0654 Info Configuration initialized.
+2023-10-11 10:05:47.0654 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:05:55.5353 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:05:55.5353 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:05:55.5419 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:05:55.5419 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:05:55.5642 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:05:55.5758 Info Configuration initialized.
+2023-10-11 10:05:55.5758 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:06:10.9387 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:06:10.9387 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:06:10.9387 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:06:10.9583 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:06:10.9684 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:06:10.9795 Info Configuration initialized.
+2023-10-11 10:06:10.9795 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:06:13.3989 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:06:13.4012 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:06:13.4012 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:06:13.4012 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:06:13.4268 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:06:13.4379 Info Configuration initialized.
+2023-10-11 10:06:13.4379 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:06:36.9395 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:06:36.9395 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:06:36.9395 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:06:36.9563 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:06:36.9659 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:06:36.9659 Info Configuration initialized.
+2023-10-11 10:06:36.9659 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:06:55.1847 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:06:55.1847 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:06:55.1847 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:06:55.2030 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:06:55.2030 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:06:55.2248 Info Configuration initialized.
+2023-10-11 10:06:55.2248 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:08:50.6615 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:08:50.6677 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:08:50.6677 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:08:50.6677 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:08:50.7077 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:08:50.7204 Info Configuration initialized.
+2023-10-11 10:08:50.7204 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:08:59.7175 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:08:59.7175 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:08:59.7175 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:08:59.7360 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:08:59.7460 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:08:59.7460 Info Configuration initialized.
+2023-10-11 10:08:59.7460 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:10:45.9610 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:10:45.9633 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:10:45.9633 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:10:45.9633 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:10:45.9909 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:10:46.0026 Info Configuration initialized.
+2023-10-11 10:10:46.0026 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 10:35:39.5059 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 10:35:39.6075 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 10:35:39.6075 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 10:35:39.6411 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 10:35:39.6787 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 10:35:39.6940 Info Configuration initialized.
+2023-10-11 10:35:39.6940 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 11:13:30.9288 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 11:13:30.9652 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 11:13:30.9975 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 11:13:31.0332 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 11:13:31.0577 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 11:13:31.0828 Info Configuration initialized.
+2023-10-11 11:13:31.0828 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 11:19:26.7219 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 11:19:26.7219 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 11:19:26.7291 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 11:19:26.7291 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 11:19:26.7632 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 11:19:26.8103 Info Configuration initialized.
+2023-10-11 11:19:26.8103 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 11:25:26.6179 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 11:25:26.6216 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 11:25:26.6216 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 11:25:26.6373 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 11:25:26.6611 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 11:25:26.6737 Info Configuration initialized.
+2023-10-11 11:25:26.6737 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 11:25:37.5313 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 11:25:37.5313 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 11:25:37.5313 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 11:25:37.5500 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 11:25:37.5608 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 11:25:37.5726 Info Configuration initialized.
+2023-10-11 11:25:37.5726 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 11:59:37.7932 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 11:59:37.8452 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 11:59:37.8452 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 11:59:37.8771 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 11:59:37.8987 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 11:59:37.9160 Info Configuration initialized.
+2023-10-11 11:59:37.9170 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 12:00:57.7209 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 12:00:57.7603 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 12:00:57.7603 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 12:00:57.7826 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 12:00:57.8041 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 12:00:57.8235 Info Configuration initialized.
+2023-10-11 12:00:57.8235 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 12:21:16.9197 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 12:21:16.9506 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 12:21:16.9506 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 12:21:16.9714 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 12:21:16.9872 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 12:21:17.0032 Info Configuration initialized.
+2023-10-11 12:21:17.0032 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 12:25:52.4598 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 12:25:52.5321 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 12:25:52.5321 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 12:25:52.5798 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 12:25:52.5980 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 12:25:52.6170 Info Configuration initialized.
+2023-10-11 12:25:52.6170 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 12:27:44.7856 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 12:27:44.8392 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 12:27:44.8392 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 12:27:44.8593 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 12:27:44.8833 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 12:27:44.9039 Info Configuration initialized.
+2023-10-11 12:27:44.9039 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 12:28:37.2293 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 12:28:37.2293 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 12:28:37.2537 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 12:28:37.2657 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 12:28:37.2769 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 12:28:37.2769 Info Configuration initialized.
+2023-10-11 12:28:37.2769 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 12:29:40.6651 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 12:29:40.6681 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 12:29:40.6681 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 12:29:40.6899 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 12:29:40.6999 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 12:29:40.6999 Info Configuration initialized.
+2023-10-11 12:29:40.6999 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 13:07:27.7397 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 13:07:27.8720 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 13:07:27.8720 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 13:07:27.9052 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 13:07:27.9211 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 13:07:27.9369 Info Configuration initialized.
+2023-10-11 13:07:27.9369 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 13:07:28.0664 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:28.3119 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:29.0553 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:29.0576 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:29.2304 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:29.2462 Warn FileTarget(Name=ownFile-web): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-own-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-own-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:29.2462 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:29.2462 Warn FileTarget(Name=ownFile-web): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-own-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-own-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:29.2462 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:29.2462 Warn FileTarget(Name=ownFile-web): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-own-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-own-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:29.5931 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:29.7476 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:29.7672 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.1154 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.1298 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.1392 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.1392 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.2140 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.2140 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.2408 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.2601 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.2601 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.2601 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.2601 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.2601 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3370 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3370 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3388 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3388 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3388 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3388 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3388 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3388 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3388 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3549 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3549 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3549 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3549 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3549 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3549 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3549 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3735 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3981 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.3981 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.4273 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.4273 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.4273 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.4273 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.4331 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.4331 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.4545 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.4545 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.4545 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.4706 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.5447 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.5447 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.5447 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.5678 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.5678 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.5678 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.5731 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.6018 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.6079 Warn FileTarget(Name=ownFile-web): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-own-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-own-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.6079 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.6196 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.6196 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.6722 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.6830 Warn FileTarget(Name=ownFile-web): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-own-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-own-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.6830 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.7160 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.7160 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.7160 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.7389 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.7389 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.7389 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.7457 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.7457 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.7457 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.7457 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:07:30.7457 Warn FileTarget(Name=allfile): Failed to create file appender: D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log Exception: System.IO.IOException: The process cannot access the file 'D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\log\nlog-AspNetCore-all-2023-10-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-10-11 13:08:09.9990 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 13:08:09.9990 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 13:08:09.9990 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 13:08:10.0180 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 13:08:10.0293 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 13:08:10.0293 Info Configuration initialized.
+2023-10-11 13:08:10.0416 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:32:20.4611 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:32:20.4640 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:32:20.4640 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:32:20.4794 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:32:20.4794 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:32:20.5040 Info Configuration initialized.
+2023-10-11 14:32:20.5040 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:33:05.1975 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:33:05.2015 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:33:05.2015 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:33:05.2986 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:33:05.3104 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:33:05.3252 Info Configuration initialized.
+2023-10-11 14:33:05.3252 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:33:10.0839 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:33:10.0895 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:33:10.0895 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:33:10.0895 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:33:10.1125 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:33:10.1241 Info Configuration initialized.
+2023-10-11 14:33:10.1241 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:33:47.8314 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:33:47.8314 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:33:47.8413 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:33:47.8413 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:33:47.8702 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:33:47.8702 Info Configuration initialized.
+2023-10-11 14:33:47.8702 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:33:54.5260 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:33:54.5291 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:33:54.5291 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:33:54.5729 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:33:54.5729 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:33:54.5971 Info Configuration initialized.
+2023-10-11 14:33:54.5971 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:34:01.5874 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:34:01.5942 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:34:01.5942 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:34:01.6194 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:34:01.6316 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:34:01.6453 Info Configuration initialized.
+2023-10-11 14:34:01.6453 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:34:59.1724 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:34:59.1724 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:34:59.1724 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:34:59.1902 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:34:59.2010 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:34:59.2010 Info Configuration initialized.
+2023-10-11 14:34:59.2010 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:35:09.0070 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:35:09.0130 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:35:09.0130 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:35:09.0130 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:35:09.0362 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:35:09.0486 Info Configuration initialized.
+2023-10-11 14:35:09.0486 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:35:21.3816 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:35:21.3898 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:35:21.3898 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:35:21.4027 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:35:21.4027 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:35:21.4252 Info Configuration initialized.
+2023-10-11 14:35:21.4252 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:35:33.0630 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:35:33.0833 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:35:33.0833 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:35:33.0999 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:35:33.1123 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:35:33.1266 Info Configuration initialized.
+2023-10-11 14:35:33.1266 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:37:14.2223 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:37:14.2223 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:37:14.2293 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:37:14.2293 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:37:14.2524 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:37:14.2657 Info Configuration initialized.
+2023-10-11 14:37:14.2657 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:37:17.5038 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:37:17.5108 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:37:17.5108 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:37:17.5108 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:37:17.5339 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:37:17.5476 Info Configuration initialized.
+2023-10-11 14:37:17.5476 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:37:56.4909 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:37:56.4979 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:37:56.4979 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:37:56.5144 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:37:56.5144 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:37:56.5384 Info Configuration initialized.
+2023-10-11 14:37:56.5384 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:37:58.9557 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:37:58.9557 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:37:58.9634 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:37:58.9634 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:37:58.9872 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:37:59.0001 Info Configuration initialized.
+2023-10-11 14:37:59.0001 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:38:02.4015 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:38:02.4015 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:38:02.4015 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:38:02.4188 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:38:02.4188 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:38:02.4395 Info Configuration initialized.
+2023-10-11 14:38:02.4395 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:39:07.0594 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:39:07.0594 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:39:07.0594 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:39:07.0809 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:39:07.0922 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:39:07.1044 Info Configuration initialized.
+2023-10-11 14:39:07.1044 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:39:11.4839 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 14:39:11.4839 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 14:39:11.4839 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 14:39:11.5037 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 14:39:11.5155 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 14:39:11.5272 Info Configuration initialized.
+2023-10-11 14:39:11.5272 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 20:56:51.9158 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 20:56:51.9361 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 20:56:51.9361 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 20:56:51.9552 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 20:56:51.9687 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 20:56:51.9822 Info Configuration initialized.
+2023-10-11 20:56:51.9822 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config

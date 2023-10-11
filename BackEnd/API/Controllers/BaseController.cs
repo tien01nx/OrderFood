@@ -90,6 +90,20 @@ namespace API.Controllers
                     baseModel.onCreate();
                 }
 
+                // kiểm tra T có phải là Restaurant không, nếu đúng ta thực hiện lấy id trong entity để tìm trong bảng Restaurant
+                // nếu tồn tại thì update còn không tồn tại thì create
+                if(typeof(T) == typeof(Restaurant)){
+
+                    var restaurantEntity = entity as Restaurant;
+                    var restaurant = _context.Set<Restaurant>().FirstOrDefault(x => x.Id.Equals(restaurantEntity.Id));
+                    if(restaurant!= null){
+
+                        _context.Entry(restaurant).CurrentValues.SetValues(entity);
+                        await _context.SaveChangesAsync();
+                        return new ApiResponse<T>(HttpStatusCode.OK, "Cập nhật thành công", entity);
+                    }
+                }
+
                 if (typeof(T) == typeof(Bank))
                 {
                     var bankEntity = entity as Bank;
@@ -165,7 +179,7 @@ namespace API.Controllers
                 }
                 _context.Set<T>().Add(entity);
                 await _context.SaveChangesAsync();
-                return new ApiResponse<T>(HttpStatusCode.OK, "Tạo thành công", entity);
+                return new ApiResponse<T>(HttpStatusCode.Created, "Tạo thành công", entity);
             }
             catch (Exception ex)
             {

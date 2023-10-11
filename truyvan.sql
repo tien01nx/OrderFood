@@ -207,3 +207,47 @@ EXEC SearchRestaurants
     @RestaurantName = null,
     @FavoriteLevel = '4',
     @SearchTime = null;
+
+
+
+
+Go
+-- IF ELSE
+ALTER PROCEDURE GetRestaurantData
+    @RestaurantName nvarchar(300) = NULL
+AS
+BEGIN
+    IF @RestaurantName IS NULL
+    BEGIN
+        SELECT *, NULL AS CategoryName, NULL AS Descriptions
+        FROM Restaurants
+    END
+    ELSE
+    BEGIN
+        SELECT R.*, C.CategoryName, C.Descriptions
+        FROM Restaurants R
+        INNER JOIN Categories C ON R.Id = C.RestaurantID
+        WHERE R.RestaurantName = @RestaurantName
+    END
+END
+
+
+-- CASE when then 
+Go
+CREATE PROCEDURE GetRestaurantData
+    @RestaurantName nvarchar(300) = NULL
+AS
+BEGIN
+    SELECT C.*,R.RestaurantName
+    FROM Restaurants R
+    LEFT JOIN Categories C ON R.Id = C.RestaurantID
+    WHERE 
+        (CASE 
+            WHEN @RestaurantName IS NULL THEN 1
+            WHEN R.RestaurantName = @RestaurantName THEN 1
+            ELSE 0
+        END) = 1
+END
+
+
+exec GetRestaurantData 

@@ -62,8 +62,9 @@ namespace API.Controllers
         [HttpGet("GetRestaurantByKeyword")]
         public async Task<ApiResponse<List<Restaurant>>> GetRestaurant(string restaurant, string favoriteLevel, string time)
         {
-            try {
-                var restaurants =  _context.GetRestaurant(restaurant, favoriteLevel, time).ToList();
+            try
+            {
+                var restaurants = _context.GetRestaurant(restaurant, favoriteLevel, time).ToList();
 
                 return new ApiResponse<List<Restaurant>>(System.Net.HttpStatusCode.OK, "lay thanh cong", restaurants);
 
@@ -81,6 +82,8 @@ namespace API.Controllers
         public async Task<ApiResponse<Restaurant>> UpLoadImage(string restaurantId, IFormFile file)
         {
             try
+
+
             {
                 var restaurant = _unitOfWork.Restaurant.Get(u => u.Id.Equals(restaurantId));
                 if (restaurant == null)
@@ -97,7 +100,7 @@ namespace API.Controllers
                     restaurant.ImageUrl = imageUrl;
                     _unitOfWork.Restaurant.Update(restaurant);
                     _unitOfWork.Save();
-                    return new ApiResponse<Restaurant>(HttpStatusCode.OK, "Thêm hình thành công", null);
+                    return new ApiResponse<Restaurant>(HttpStatusCode.OK, "Thêm hình thành công", restaurant);
                 }
             }
             catch (Exception ex)
@@ -108,6 +111,60 @@ namespace API.Controllers
             return new ApiResponse<Restaurant>(HttpStatusCode.BadRequest, "Thêm hình thất bại", null);
         }
 
+        // thực hiện xóa hình ảnh theo restaurantId
+        [HttpDelete("DeleteImage/{restaurantId}")]
+        public async Task<ApiResponse<Restaurant>> DeleteImage(string restaurantId)
+        {
+            try
+            {
+                var restaurant = _unitOfWork.Restaurant.Get(u => u.Id.Equals(restaurantId));
+                if (restaurant == null)
+                {
+                    return new ApiResponse<Restaurant>(HttpStatusCode.NotFound, $"restaurantID {restaurantId}", null);
+                }
+
+                string restaurantPath = @"images/restaurants/restaurant-" + restaurant.Id;
+                _imageHelper.DeleteImage(restaurantPath);
+
+                restaurant.ImageUrl = null;
+                _unitOfWork.Restaurant.Update(restaurant);
+                _unitOfWork.Save();
+                return new ApiResponse<Restaurant>(HttpStatusCode.OK, "Xóa hình thành công", restaurant);
+            }
+            catch (Exception ex)
+            {
+                //_logger.LogError(ex.Message);
+                return new ApiResponse<Restaurant>(HttpStatusCode.BadRequest, ex.Message, null);
+            }
+
+        }
+
+        // xóa restaurant theo id và xóa hình ảnh theo restaurantId
+        [HttpDelete("DeleteRestaurant/{restaurantId}")]
+        public async Task<ApiResponse<Restaurant>> DeleteRestaurant(string restaurantId)
+        {
+            try
+            {
+                var restaurant = _unitOfWork.Restaurant.Get(u => u.Id.Equals(restaurantId));
+                if (restaurant == null)
+                {
+                    return new ApiResponse<Restaurant>(HttpStatusCode.NotFound, $"restaurantID {restaurantId}", null);
+                }
+
+                string restaurantPath = @"images/restaurants/restaurant-" + restaurant.Id;
+                _imageHelper.DeleteImage(restaurantPath);
+
+                _unitOfWork.Restaurant.Remove (restaurant);
+                _unitOfWork.Save();
+                return new ApiResponse<Restaurant>(HttpStatusCode.OK, "Xóa nhà hàng thành công", restaurant);
+            }
+            catch (Exception ex)
+            {
+                //_logger.LogError(ex.Message);
+                return new ApiResponse<Restaurant>(HttpStatusCode.BadRequest, ex.Message, null);
+            }
+
+        }
     }
 
 }

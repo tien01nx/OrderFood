@@ -39,7 +39,7 @@ namespace Client.Entities
             {
                 var request = new RestRequest(resource, Method.Get);
                 var response = _client.Execute(request);
-                if (response.IsSuccessful)
+                  if (response.IsSuccessful)
                 {
                     var content = response.Content;
                     return JsonConvert.DeserializeObject<ApiResponse<List<T>>>(content);
@@ -133,7 +133,7 @@ namespace Client.Entities
         }
 
 
-        public ApiResponse<string> SendImageUploadRequest(string resource, string restaurantId, byte[] imageData)
+        public ApiResponse<T> SendImageUploadRequest<T>(string resource, string restaurantId, byte[] imageData)
         {
             try
             {
@@ -147,7 +147,8 @@ namespace Client.Entities
                 if (response.IsSuccessful)
                 {
                     var content = response.Content;
-                    return JsonConvert.DeserializeObject<ApiResponse<string>>(content);
+                    return JsonConvert.DeserializeObject<ApiResponse<T>>(content);
+
                 }
                 else
                 {

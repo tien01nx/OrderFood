@@ -69,8 +69,108 @@
       "PackagePath": "staticwebassets\\images\\restaurant-ResiaJwyuNLOb\\8d67886e-ade9-44b0-9621-a5ce2ef5ee39.png"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\058a75fb-3cb5-48a1-913d-5e9956ea4754.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\058a75fb-3cb5-48a1-913d-5e9956ea4754.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\082074ff-fe20-4543-bdee-e79e2d4ef543.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\082074ff-fe20-4543-bdee-e79e2d4ef543.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\0916fb12-e9cd-4b17-bd6b-7fd3d210ab28.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\0916fb12-e9cd-4b17-bd6b-7fd3d210ab28.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\0e04e2d8-bddf-4dda-94dd-60a3df9dcbfd.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\0e04e2d8-bddf-4dda-94dd-60a3df9dcbfd.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\14d7eecb-84fe-465e-a8cc-d82728b2b7b7.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\14d7eecb-84fe-465e-a8cc-d82728b2b7b7.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\481be170-aaf3-41b2-b88c-248f9ab7f1a7.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\481be170-aaf3-41b2-b88c-248f9ab7f1a7.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\5dbbc452-5194-4dc5-ad4f-cf4bac155e95.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\5dbbc452-5194-4dc5-ad4f-cf4bac155e95.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\6befb337-1a76-4db8-a581-bd7a29b50db8.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\6befb337-1a76-4db8-a581-bd7a29b50db8.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\786dd951-0ecd-41be-96df-19f384e9a175.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\786dd951-0ecd-41be-96df-19f384e9a175.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\7b6ac226-25c0-41cc-9040-8bf4a8305eca.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\7b6ac226-25c0-41cc-9040-8bf4a8305eca.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\98e09263-c47b-4474-a93d-f0d8520b2d14.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\98e09263-c47b-4474-a93d-f0d8520b2d14.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\ac1ca4e1-b214-4541-b8ad-9f1f0ecf9a23.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\ac1ca4e1-b214-4541-b8ad-9f1f0ecf9a23.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\c58b2913-32c2-4a87-a16d-ec6c3ed016b2.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\c58b2913-32c2-4a87-a16d-ec6c3ed016b2.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\e099cbb9-f134-442a-82d5-eb5b0b3e6ce4.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\e099cbb9-f134-442a-82d5-eb5b0b3e6ce4.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\e76a96cf-7e90-4c35-838b-61be0b881d67.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\e76a96cf-7e90-4c35-838b-61be0b881d67.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-2\\2f63e35d-7181-4afb-9198-2d51e1b2243d.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-2\\2f63e35d-7181-4afb-9198-2d51e1b2243d.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-2\\59db4d92-3852-4829-89b5-9dc2684bd604.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-2\\59db4d92-3852-4829-89b5-9dc2684bd604.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-2\\830ff208-1282-4710-946e-426c4c99c1ac.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-2\\830ff208-1282-4710-946e-426c4c99c1ac.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-3\\60060fad-f1e4-42d6-a2fe-c848fc3b3369.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-3\\60060fad-f1e4-42d6-a2fe-c848fc3b3369.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-4\\14c3cfd2-8538-4c71-8f22-c4fa8327cff5.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-4\\14c3cfd2-8538-4c71-8f22-c4fa8327cff5.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-6\\20fef1c4-bd93-4c27-8e4d-1ca18e9fa80a.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-6\\20fef1c4-bd93-4c27-8e4d-1ca18e9fa80a.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-7\\9d1c1595-6182-40ed-9b4a-136d67e7e0f0.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-7\\9d1c1595-6182-40ed-9b4a-136d67e7e0f0.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-8\\daee607e-bc83-4367-90ae-218bf6e79e72.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-8\\daee607e-bc83-4367-90ae-218bf6e79e72.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Id\\9d672409-100c-43d8-b393-e4b3da70c794.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-Id\\9d672409-100c-43d8-b393-e4b3da70c794.jpg"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Res2hqsbdmM3U\\4ba9e9e6-ce15-4f90-aadd-f44233c90259.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-Res2hqsbdmM3U\\4ba9e9e6-ce15-4f90-aadd-f44233c90259.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Res74naI6qT4r\\e93525e4-e463-4c6d-9d4e-a386c8ebdbe0.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-Res74naI6qT4r\\e93525e4-e463-4c6d-9d4e-a386c8ebdbe0.jpg"
     },
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResAoE9e1vwBC\\7b1ccaef-ab7b-4c5b-b8f0-35c1a0430cf2.jpg",
@@ -81,12 +181,44 @@
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResGy8gRqzR6o\\cc21e904-d8bd-409f-bc96-a8d6c69c63d6.jpg"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResKi4dwxSBI5\\bfbeb166-02e2-4702-b15a-6ba494789fe1.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResKi4dwxSBI5\\bfbeb166-02e2-4702-b15a-6ba494789fe1.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResM9yggaKuFS\\856de836-45a8-4766-ae3a-ac3db7ec635b.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResM9yggaKuFS\\856de836-45a8-4766-ae3a-ac3db7ec635b.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResOiMB5OZDoI\\757b80dd-a2ec-497c-960f-96a5e7650d6e.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResOiMB5OZDoI\\757b80dd-a2ec-497c-960f-96a5e7650d6e.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResQfARAsP1hP\\9b7f7b64-f4a5-4136-b0ec-d99210e3c0e4.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResQfARAsP1hP\\9b7f7b64-f4a5-4136-b0ec-d99210e3c0e4.jpg"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResdM8dQ6Hvnq\\a6a247d2-4864-47ac-8a44-ada3e4b0e3be.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResdM8dQ6Hvnq\\a6a247d2-4864-47ac-8a44-ada3e4b0e3be.jpg"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResdUSgUlip3B\\df135b6f-7544-484e-ba9b-4c673a026bde.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResdUSgUlip3B\\df135b6f-7544-484e-ba9b-4c673a026bde.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResppNREu0DT1\\523e6c10-2443-4c18-af4e-55a48d62b441.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResppNREu0DT1\\523e6c10-2443-4c18-af4e-55a48d62b441.jpg"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResrDYJdCN2Cm\\84258745-c2bc-4497-a9ea-6ae1444a951c.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResrDYJdCN2Cm\\84258745-c2bc-4497-a9ea-6ae1444a951c.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-RessEfUiKRgEm\\a3fa72f8-d4d1-4371-aadc-3ff6379e5de4.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-RessEfUiKRgEm\\a3fa72f8-d4d1-4371-aadc-3ff6379e5de4.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-RessFWcvaHus4\\59291599-b618-4d4e-8830-a0208b1536b2.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-RessFWcvaHus4\\59291599-b618-4d4e-8830-a0208b1536b2.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -9,7 +9,7 @@ namespace API.Entities
     public class ApplicationDbContext : IdentityDbContext<User, Role, int,
        IdentityUserClaim<int>, UserRole, IdentityUserLogin<int>,
        IdentityRoleClaim<int>, IdentityUserToken<int>>
-    {   
+    {
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
 
@@ -41,7 +41,7 @@ namespace API.Entities
             return Products.FromSqlRaw("EXEC sp_GetProductsByOrderDate {0}", date).ToList();
         }
 
-        public List<UserInfoDTO> GetUserCartDetails(string startDate,string endDate, string userName,string userId,string restaurants, string productName)
+        public List<UserInfoDTO> GetUserCartDetails(string startDate, string endDate, string userName, string userId, string restaurants, string productName)
         {
             startDate = string.IsNullOrEmpty(startDate) ? null : startDate;
             endDate = string.IsNullOrEmpty(endDate) ? null : endDate;
@@ -49,17 +49,24 @@ namespace API.Entities
             userId = string.IsNullOrEmpty(userId) ? null : userId;
             restaurants = string.IsNullOrEmpty(restaurants) ? null : restaurants;
             productName = string.IsNullOrEmpty(productName) ? null : productName;
-            return UserCartDetails.FromSqlRaw("EXEC sp_GetUserOrderDetails @p0, @p1, @p2, @p3, @p4, @p5", startDate,endDate, userName,userId, restaurants, productName).ToList();
+            return UserCartDetails.FromSqlRaw("EXEC sp_GetUserOrderDetails @p0, @p1, @p2, @p3, @p4, @p5", startDate, endDate, userName, userId, restaurants, productName).ToList();
         }
 
 
 
 
         // Lấy danh sách nhà hàng Restaurant theo ngày hiện tại 
-        public List<Restaurant> GetRestaurant(string restaurantName, string faroriteLevel,string time)
+        public List<Restaurant> GetRestaurant(string restaurantName, string faroriteLevel, string time)
         {
             return Restaurants.FromSqlRaw("EXEC SearchRestaurants {0}, {1}, {2}", restaurantName, faroriteLevel, time).ToList();
         }
+
+        // lấy danh sách category và restaurant tham số truyền vào là restaurantname
+        public List<Category> GetCategories(string restaurantName)
+        {
+            return Categories.FromSqlRaw("EXEC GetRestaurantData {0}", restaurantName).ToList();
+        }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

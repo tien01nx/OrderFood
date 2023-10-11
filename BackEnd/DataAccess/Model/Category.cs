@@ -6,12 +6,12 @@ namespace DataAccess.Model
 {
     public class Category : BaseModel
     {
-   
+
         public string Id { get; set; }
 
         [Required(ErrorMessage = "không được để trống  nhà hàng.")]
-        public string RestaurantID { get; set; }
-        [ForeignKey("RestaurantID")]
+        public string RestaurantId { get; set; }
+        [ForeignKey("RestaurantId")]
         [ValidateNever]
         public Restaurant Restaurant { get; set; }
 

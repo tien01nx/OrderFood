@@ -10,6 +10,13 @@ namespace API.Controllers
         {
         }
 
+        // lấy danh sách categories và restaurant
+        [HttpGet("GetAllCategory")]
+        public async Task<ApiResponse<List<Category>>> GetCategory(string restaurantId){
+
+            var categories  = _context.GetCategories(restaurantId).ToList();
+            return new ApiResponse<List<Category>>(System.Net.HttpStatusCode.OK, "", categories);
+        }
        
     }
 }

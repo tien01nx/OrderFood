@@ -152,11 +152,11 @@ namespace Client.UserControls
                 products.RemoveAll(product => purchasedProducts.Contains(product));
                 products.InsertRange(0, purchasedProducts);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-         
+
         }
 
         // hiện thị thông tin sản phẩm product sang layoutview và cập nhật lại thông tin sản phẩm
@@ -393,8 +393,13 @@ namespace Client.UserControls
         private void checkOrder_CheckedChanged(object sender, EventArgs e)
         {
             var checkbox = sender as CheckEdit;
+
+            // lấy ra dữ liệu của dòng đang được chọn
             var product = layoutView.GetFocusedRow() as Product;
+
+
             var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
+
 
             if (checkbox != null && product != null)
             {
