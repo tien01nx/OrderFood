@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -24,6 +25,9 @@ namespace Client.UserControls
 
         // tạo list để lưu dữ liệu từ db về
         private List<Restaurant> _restaurants = new List<Restaurant>();
+
+        private bool _isUpdate = false;
+        private bool _isUpdateImage = false;
 
         public click(frmMain frmMain)
         {
@@ -71,6 +75,7 @@ namespace Client.UserControls
                 PhoneNumber = txtPhoneNumber.Text,
                 OpenTime = timeOpen,
                 CloseTime = timeClose,
+                ImageUrl = "",
                 BankName = txtBankName.Text,
                 BankNumber = txtBankNumber.Text,
                 BankAccount = int.Parse(txtBankAccount.Text),
@@ -79,11 +84,12 @@ namespace Client.UserControls
 
 
 
+
             };
-            if (restaurant.Id == null)
+            // Kiểm tra biến _isUpdate và xác định xem cần tạo ID mới hay không
+            if (!_isUpdate || restaurant.Id == null)
             {
                 restaurant.GenerateRandomId();
-
             }
 
             return restaurant;
@@ -100,6 +106,16 @@ namespace Client.UserControls
             peImage.Image = null;
             lbId.Text = "";
         }
+
+        // check dữ liệu phải nhập đầy đủ
+        //public bool CheckData()
+        //{
+        //    if (string.IsNullOrEmpty(txtRestaurantName.Text) || string.IsNullOrEmpty(txtPhoneNumber.Text) || string.IsNullOrEmpty(txtBankAccount.Text) || string.IsNullOrEmpty(txtBankName.Text) || string.IsNullOrEmpty(txtBankNumber.Text) || string.IsNullOrEmpty(meNotes.Text))
+        //    {
+        //        return false;
+        //    }
+        //    return true;
+        //}
 
 
         private Image LoadProductImage(string imagePath)
@@ -132,56 +148,102 @@ namespace Client.UserControls
 
         private void BtnXoa_Click(object? sender, EventArgs e)
         {
-            MessageBox.Show("Xóa thành công");
+          // ép kiểu từ layout view lấy dữ liệu để xóa
+           var selectedRow = gridView1.GetFocusedRow() as Restaurant;
+            if (selectedRow != null)
+            {
+                DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa nhà hàng {selectedRow.RestaurantName} không?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    ApiResponse<Restaurant> deleteResponse = _apiClient.SendDeteleRequest<Restaurant>($"Restaurant/DeleteRestaurant/{selectedRow.Id}", 2);
+                    if (deleteResponse != null && deleteResponse.Code == HttpStatusCode.OK)
+                    {
+                        // lấy id của từ lbId và kiểm tra trong list restaurant có id đó không
+                        // nếu có thì thực hiện xóa nó đi
+
+                        var restaurant = _restaurants.FirstOrDefault(r => r.Id.Equals(selectedRow.Id));
+                        if (restaurant != null)
+                        {
+                            _restaurants.Remove(restaurant);
+                            Clear();
+                            ShowGrid();
+
+                            MessageBox.Show("Xóa nhà hàng thành công");
+                        }
+
+                        //_restaurants.Remove(restaurant);  
+                    }
+                }
+            }
         }
 
         private void SubBtnAddRestaurant_Click(object sender, EventArgs e)
         {
             try
             {
+
+                //if (!CheckData())
+                //{
+                //    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                //    return;
+                //}
                 Restaurant restaurant = GetRestaurant();
                 ApiResponse<Restaurant> createResponse = _apiClient.SendPostRequest<Restaurant>("Restaurant/Create", restaurant);
-                if (createResponse != null && createResponse.Code == HttpStatusCode.OK)
+                if (createResponse != null)
                 {
                     string restaurantId = createResponse.Data.Id;
 
                     if (createResponse.Code == HttpStatusCode.OK)
                     {
-                        if (peImage.Image != null)
+
+                        if (_isUpdateImage)
                         {
-                            // Chuyển đổi hình ảnh trong PictureBox thành một đối tượng MemoryStream
-                            using (MemoryStream ms = new MemoryStream())
+                            // xử lý thêm người dùng thay ảnh thì mới gửi lên  không thì thôi
+
+                            if (peImage.Image != null)
                             {
-                                peImage.Image.Save(ms, peImage.Image.RawFormat);
-                                ApiResponse<Restaurant> uploadImageResponse = _apiClient.SendImageUploadRequest<Restaurant>("Restaurant/UpLoadImage", restaurantId, ms.ToArray());
-
-                                if (uploadImageResponse != null && uploadImageResponse.Code == HttpStatusCode.OK)
+                                // Chuyển đổi hình ảnh trong PictureBox thành một đối tượng MemoryStream
+                                using (MemoryStream ms = new MemoryStream())
                                 {
+                                    //peImage.Image.Save(ms, peImage.Image.RawFormat);
+                                    peImage.Image.Save(ms, ImageFormat.Jpeg);
+                                    ApiResponse<Restaurant> uploadImageResponse = _apiClient.SendImageUploadRequest<Restaurant>("Restaurant/UpLoadImage", restaurantId, ms.ToArray());
 
-                                    // thực hiện cập nhật  dữ liệu theo id
-                                    _restaurants.Where(r => r.Id.Equals(restaurantId)).ToList().ForEach(r =>
+                                    if (uploadImageResponse != null && uploadImageResponse.Code == HttpStatusCode.OK)
                                     {
-                                        r.RestaurantName = restaurant.RestaurantName;
-                                        r.PhoneNumber = restaurant.PhoneNumber;
-                                        r.OpenTime = restaurant.OpenTime;
-                                        r.CloseTime = restaurant.CloseTime;
-                                        r.BankName = restaurant.BankName;
-                                        r.BankNumber = restaurant.BankNumber;
-                                        r.BankAccount = restaurant.BankAccount;
-                                        r.Notes = restaurant.Notes;
-                                        r.Image = LoadProductImage(uploadImageResponse.Data.ImageUrl);
-                                    });
-                                    Clear(); ;
-                                    ShowGrid();
-                                    MessageBox.Show("Cập nhật nhà hàng thành công");
-                                }
-                                else
-                                {
 
-                                    MessageBox.Show("Lỗi khi thêm hình");
+                                        // thực hiện cập nhật  dữ liệu theo id
+                                        _restaurants.Where(r => r.Id.Equals(restaurantId)).ToList().ForEach(r =>
+                                        {
+                                            r.RestaurantName = restaurant.RestaurantName;
+                                            r.PhoneNumber = restaurant.PhoneNumber;
+                                            r.OpenTime = restaurant.OpenTime;
+                                            r.CloseTime = restaurant.CloseTime;
+                                            r.BankName = restaurant.BankName;
+                                            r.BankNumber = restaurant.BankNumber;
+                                            r.BankAccount = restaurant.BankAccount;
+                                            r.Notes = restaurant.Notes;
+                                            r.Image = LoadProductImage(uploadImageResponse.Data.ImageUrl);
+                                        });
+                                        Clear(); ;
+                                        ShowGrid();
+                                        MessageBox.Show("Cập nhật nhà hàng thành công");
+                                    }
+                                    else
+                                    {
+
+                                        MessageBox.Show("Lỗi khi thêm hình");
+                                    }
                                 }
+                      
                             }
                         }
+                        else
+                        {
+                            Clear(); ;
+                            ShowGrid();
+                            MessageBox.Show("Cập nhật nhà hàng thành công");
+                        }    
                     }
 
                     if (createResponse.Code == HttpStatusCode.Created)
@@ -287,6 +349,56 @@ namespace Client.UserControls
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            if (e.RowHandle >= 0)
+            {
+                var selectedRow = gridView1.GetRow(e.RowHandle) as Restaurant;
+
+                if (selectedRow != null)
+                {
+                    // Hiển thị dữ liệu từ dòng đã chọn vào các TextBox
+                    txtRestaurantName.Text = selectedRow.RestaurantName;
+                    txtPhoneNumber.Text = selectedRow.PhoneNumber;
+                    //peImage.Image = selectedRow.Image;
+                    txtBankAccount.Text = selectedRow.BankAccount.ToString();
+                    txtBankName.Text = selectedRow.BankName;
+                    txtBankNumber.Text = selectedRow.BankNumber;
+                    meNotes.Text = selectedRow.Notes;
+                    lbId.Text = selectedRow.Id;
+                    timeStart.Time = DateTime.Today.Add(selectedRow.OpenTime);
+                    timeEnd.Time = DateTime.Today.Add(selectedRow.CloseTime);
+                    _isUpdate = true;
+                    // Hiển thị hình ảnh từ URL
+                    if (!string.IsNullOrEmpty(selectedRow.ImageUrl)) // Kiểm tra xem có URL hình ảnh không
+                    {
+                        peImage.Image = LoadProductImage(selectedRow.ImageUrl);
+                    }
+                    else
+                    {
+                        // Nếu không có URL hình ảnh, xử lý mặc định (hiển thị hình ảnh mặc định hoặc trống)
+                        peImage.Image = null;
+                    }
+
+                    _isUpdate = true;
+                }
+            }
+        }
+
+        private void txtBankAccount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ngăn người dùng nhập các ký tự khác số
+            }
+        }
+
+        private void peImage_EditValueChanged(object sender, EventArgs e)
+        {
+            // người dùng đx thay ảnh  
+            _isUpdateImage = true;
         }
     }
 }

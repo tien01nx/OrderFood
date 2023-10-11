@@ -132,6 +132,7 @@
             txtBankAccount.Name = "txtBankAccount";
             txtBankAccount.Size = new Size(302, 21);
             txtBankAccount.TabIndex = 40;
+            txtBankAccount.KeyPress += txtBankAccount_KeyPress;
             // 
             // meNotes
             // 
@@ -266,6 +267,7 @@
             peImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             peImage.Size = new Size(302, 160);
             peImage.TabIndex = 27;
+            peImage.EditValueChanged += peImage_EditValueChanged;
             peImage.MouseDown += peImage_MouseDown;
             // 
             // txtPhoneNumber
@@ -331,6 +333,7 @@
             gridView1.GridControl = gridControl1;
             gridView1.Name = "gridView1";
             gridView1.OptionsView.RowAutoHeight = true;
+            gridView1.RowCellClick += gridView1_RowCellClick;
             // 
             // RestaurantName
             // 
