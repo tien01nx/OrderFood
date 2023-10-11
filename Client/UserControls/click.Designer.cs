@@ -121,10 +121,11 @@
             gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { RestaurantName, PhoneNumber, ImageUrl, OpenTime, CloseTime, BankAccount, BankNumber, BankName, FavoriteLevel, Notes, Xoa });
             gridView1.GridControl = gridControl1;
             gridView1.Name = "gridView1";
+            gridView1.OptionsView.RowAutoHeight = true;
             // 
             // RestaurantName
             // 
-            RestaurantName.Caption = "RestaurantName";
+            RestaurantName.Caption = "Tên nhà hàng";
             RestaurantName.FieldName = "RestaurantName";
             RestaurantName.Name = "RestaurantName";
             RestaurantName.Visible = true;
@@ -132,7 +133,7 @@
             // 
             // PhoneNumber
             // 
-            PhoneNumber.Caption = "PhoneNumber";
+            PhoneNumber.Caption = "Số điện thoại";
             PhoneNumber.FieldName = "PhoneNumber";
             PhoneNumber.Name = "PhoneNumber";
             PhoneNumber.Visible = true;
@@ -140,15 +141,15 @@
             // 
             // ImageUrl
             // 
-            ImageUrl.Caption = "ImageUrl";
-            ImageUrl.FieldName = "ImageUrl";
+            ImageUrl.Caption = "Ảnh";
+            ImageUrl.FieldName = "Image";
             ImageUrl.Name = "ImageUrl";
             ImageUrl.Visible = true;
             ImageUrl.VisibleIndex = 2;
             // 
             // OpenTime
             // 
-            OpenTime.Caption = "OpenTime";
+            OpenTime.Caption = "Mở cửa";
             OpenTime.FieldName = "OpenTime";
             OpenTime.Name = "OpenTime";
             OpenTime.Visible = true;
@@ -156,7 +157,7 @@
             // 
             // CloseTime
             // 
-            CloseTime.Caption = "CloseTime";
+            CloseTime.Caption = "Đóng cửa";
             CloseTime.FieldName = "CloseTime";
             CloseTime.Name = "CloseTime";
             CloseTime.Visible = true;
@@ -164,7 +165,7 @@
             // 
             // BankAccount
             // 
-            BankAccount.Caption = "BankAccount";
+            BankAccount.Caption = "Số tài khoản";
             BankAccount.FieldName = "BankAccount";
             BankAccount.Name = "BankAccount";
             BankAccount.Visible = true;
@@ -172,7 +173,7 @@
             // 
             // BankNumber
             // 
-            BankNumber.Caption = "BankNumber";
+            BankNumber.Caption = "Chủ tài khoản";
             BankNumber.FieldName = "BankNumber";
             BankNumber.Name = "BankNumber";
             BankNumber.Visible = true;
@@ -180,7 +181,7 @@
             // 
             // BankName
             // 
-            BankName.Caption = "BankName";
+            BankName.Caption = "Tên ngân hàng";
             BankName.FieldName = "BankName";
             BankName.Name = "BankName";
             BankName.Visible = true;
@@ -188,7 +189,7 @@
             // 
             // FavoriteLevel
             // 
-            FavoriteLevel.Caption = "FavoriteLevel";
+            FavoriteLevel.Caption = "Mức độ yêu thích";
             FavoriteLevel.FieldName = "FavoriteLevel";
             FavoriteLevel.Name = "FavoriteLevel";
             FavoriteLevel.Visible = true;
@@ -196,7 +197,7 @@
             // 
             // Notes
             // 
-            Notes.Caption = "Notes";
+            Notes.Caption = "Ghi chú";
             Notes.FieldName = "Notes";
             Notes.Name = "Notes";
             Notes.Visible = true;

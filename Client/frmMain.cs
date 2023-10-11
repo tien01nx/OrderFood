@@ -53,7 +53,7 @@ namespace Client
         private void frmMain_Load(object sender, EventArgs e)
         {
             //ucListOrder uc = new ucListOrder(this);
-            ucRestaurants uc = new ucRestaurants(this);
+            click uc = new click(this);
             AddUC(uc);
         }
 

@@ -132,7 +132,7 @@ namespace Client.UserControls
 
         private void BtnXoa_Click(object? sender, EventArgs e)
         {
-          MessageBox.Show("Xóa thành công");
+            MessageBox.Show("Xóa thành công");
         }
     }
 }
