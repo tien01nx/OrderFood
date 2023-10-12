@@ -26,5 +26,8 @@ namespace Client.Model
 
         public string OrderId { get; set; }
 
+
+        public Image ImageProduct { get; set; }
+
     }
 }

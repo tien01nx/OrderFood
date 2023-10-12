@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucProduct));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             openFileDialog = new OpenFileDialog();
             toolStripButton5 = new ToolStripButton();
             toolStripButton4 = new ToolStripButton();
@@ -37,7 +37,7 @@
             toolStripButton2 = new ToolStripButton();
             pictureBox1 = new PictureBox();
             label8 = new Label();
-            comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            cboCategoryName = new DevExpress.XtraEditors.ComboBoxEdit();
             label7 = new Label();
             spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
             label5 = new Label();
@@ -47,24 +47,31 @@
             label4 = new Label();
             memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             label3 = new Label();
-            cboRestaurant = new DevExpress.XtraEditors.ComboBoxEdit();
             label1 = new Label();
             groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            cboRestaurant = new DevExpress.XtraEditors.ComboBoxEdit();
             textEdit1 = new DevExpress.XtraEditors.TextEdit();
             girdProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
+            Id = new DevExpress.XtraGrid.Columns.GridColumn();
+            ProductName = new DevExpress.XtraGrid.Columns.GridColumn();
+            Description = new DevExpress.XtraGrid.Columns.GridColumn();
+            Images = new DevExpress.XtraGrid.Columns.GridColumn();
+            PictureEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            Price = new DevExpress.XtraGrid.Columns.GridColumn();
             gridData = new DevExpress.XtraGrid.GridControl();
             groupControl3 = new DevExpress.XtraEditors.GroupControl();
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)comboBoxEdit1.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)cboCategoryName.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)spinEdit1.Properties).BeginInit();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)memoEdit1.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
             groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)girdProduct).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PictureEdit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridData).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl3).BeginInit();
             groupControl3.SuspendLayout();
@@ -128,14 +135,14 @@
             label8.TabIndex = 14;
             label8.Text = "Hình ảnh minh họa";
             // 
-            // comboBoxEdit1
+            // cboCategoryName
             // 
-            comboBoxEdit1.Location = new Point(5, 267);
-            comboBoxEdit1.Margin = new Padding(3, 2, 3, 2);
-            comboBoxEdit1.Name = "comboBoxEdit1";
-            comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            comboBoxEdit1.Size = new Size(302, 20);
-            comboBoxEdit1.TabIndex = 11;
+            cboCategoryName.Location = new Point(5, 267);
+            cboCategoryName.Margin = new Padding(3, 2, 3, 2);
+            cboCategoryName.Name = "cboCategoryName";
+            cboCategoryName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            cboCategoryName.Size = new Size(302, 20);
+            cboCategoryName.TabIndex = 11;
             // 
             // label7
             // 
@@ -224,15 +231,6 @@
             label3.TabIndex = 2;
             label3.Text = "Tên sản phẩm";
             // 
-            // cboRestaurant
-            // 
-            cboRestaurant.Location = new Point(5, 45);
-            cboRestaurant.Margin = new Padding(3, 2, 3, 2);
-            cboRestaurant.Name = "cboRestaurant";
-            cboRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            cboRestaurant.Size = new Size(302, 20);
-            cboRestaurant.TabIndex = 1;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -246,9 +244,10 @@
             // groupControl2
             // 
             groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            groupControl2.Controls.Add(cboRestaurant);
             groupControl2.Controls.Add(pictureBox1);
             groupControl2.Controls.Add(label8);
-            groupControl2.Controls.Add(comboBoxEdit1);
+            groupControl2.Controls.Add(cboCategoryName);
             groupControl2.Controls.Add(label7);
             groupControl2.Controls.Add(spinEdit1);
             groupControl2.Controls.Add(label5);
@@ -256,7 +255,6 @@
             groupControl2.Controls.Add(memoEdit1);
             groupControl2.Controls.Add(textEdit1);
             groupControl2.Controls.Add(label3);
-            groupControl2.Controls.Add(cboRestaurant);
             groupControl2.Controls.Add(label1);
             groupControl2.Dock = DockStyle.Left;
             groupControl2.Location = new Point(2, 50);
@@ -265,6 +263,16 @@
             groupControl2.Size = new Size(313, 535);
             groupControl2.TabIndex = 2;
             groupControl2.Text = "Thông tin sản phẩm";
+            // 
+            // cboRestaurant
+            // 
+            cboRestaurant.Location = new Point(5, 43);
+            cboRestaurant.Margin = new Padding(3, 2, 3, 2);
+            cboRestaurant.Name = "cboRestaurant";
+            cboRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            cboRestaurant.Size = new Size(302, 20);
+            cboRestaurant.TabIndex = 16;
+            cboRestaurant.SelectedIndexChanged += cboRestaurant_SelectedIndexChanged;
             // 
             // textEdit1
             // 
@@ -275,25 +283,76 @@
             // 
             // girdProduct
             // 
+            girdProduct.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { Id, ProductName, Description, Images, Price });
             girdProduct.DetailHeight = 284;
             girdProduct.GridControl = gridData;
             girdProduct.Name = "girdProduct";
             girdProduct.OptionsBehavior.Editable = false;
             girdProduct.OptionsBehavior.ReadOnly = true;
             girdProduct.OptionsEditForm.PopupEditFormWidth = 588;
+            girdProduct.OptionsView.RowAutoHeight = true;
             girdProduct.OptionsView.ShowGroupPanel = false;
             girdProduct.OptionsView.ShowIndicator = false;
+            // 
+            // Id
+            // 
+            Id.Caption = "Id";
+            Id.FieldName = "Id";
+            Id.Name = "Id";
+            Id.Visible = true;
+            Id.VisibleIndex = 4;
+            // 
+            // ProductName
+            // 
+            ProductName.Caption = "Tên sản phẩm";
+            ProductName.FieldName = "ProductName";
+            ProductName.Name = "ProductName";
+            ProductName.Visible = true;
+            ProductName.VisibleIndex = 0;
+            // 
+            // Description
+            // 
+            Description.Caption = "Mô tả";
+            Description.FieldName = "Description";
+            Description.Name = "Description";
+            Description.Visible = true;
+            Description.VisibleIndex = 1;
+            // 
+            // Images
+            // 
+            Images.Caption = "Hình ảnh";
+            Images.ColumnEdit = PictureEdit;
+            Images.FieldName = "ImageProduct";
+            Images.MaxWidth = 140;
+            Images.Name = "Images";
+            Images.Visible = true;
+            Images.VisibleIndex = 2;
+            Images.Width = 30;
+            // 
+            // PictureEdit
+            // 
+            PictureEdit.Name = "PictureEdit";
+            PictureEdit.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            // 
+            // Price
+            // 
+            Price.Caption = "Giá bán";
+            Price.FieldName = "Price";
+            Price.Name = "Price";
+            Price.Visible = true;
+            Price.VisibleIndex = 3;
             // 
             // gridData
             // 
             gridData.Dock = DockStyle.Fill;
             gridData.EmbeddedNavigator.Margin = new Padding(3, 2, 3, 2);
-            gridLevelNode2.RelationName = "Level1";
-            gridData.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] { gridLevelNode2 });
+            gridLevelNode1.RelationName = "Level1";
+            gridData.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] { gridLevelNode1 });
             gridData.Location = new Point(2, 23);
             gridData.MainView = girdProduct;
             gridData.Margin = new Padding(3, 2, 3, 2);
             gridData.Name = "gridData";
+            gridData.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { PictureEdit });
             gridData.Size = new Size(680, 510);
             gridData.TabIndex = 2;
             gridData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { girdProduct });
@@ -329,18 +388,20 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "ucProduct";
             Size = new Size(1001, 587);
+            Load += ucProduct_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)comboBoxEdit1.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)cboCategoryName.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)spinEdit1.Properties).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)memoEdit1.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).EndInit();
             groupControl2.ResumeLayout(false);
             groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)girdProduct).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PictureEdit).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridData).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl3).EndInit();
             groupControl3.ResumeLayout(false);
@@ -359,7 +420,7 @@
         private ToolStripButton toolStripButton2;
         private PictureBox pictureBox1;
         private Label label8;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cboCategoryName;
         private Label label7;
         private DevExpress.XtraEditors.SpinEdit spinEdit1;
         private Label label5;
@@ -369,7 +430,6 @@
         private Label label4;
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
         private Label label3;
-        private DevExpress.XtraEditors.ComboBoxEdit cboRestaurant;
         private Label label1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.TextEdit textEdit1;
@@ -377,5 +437,12 @@
         private DevExpress.XtraGrid.GridControl gridData;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.ComboBoxEdit cboRestaurant;
+        private DevExpress.XtraGrid.Columns.GridColumn Id;
+        private DevExpress.XtraGrid.Columns.GridColumn ProductName;
+        private DevExpress.XtraGrid.Columns.GridColumn Description;
+        private DevExpress.XtraGrid.Columns.GridColumn Images;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit PictureEdit;
+        private DevExpress.XtraGrid.Columns.GridColumn Price;
     }
 }

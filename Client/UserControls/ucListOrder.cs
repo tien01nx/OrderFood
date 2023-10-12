@@ -86,6 +86,7 @@ namespace Client.UserControls
             {
                 Console.WriteLine(ex.ToString());
             }
+           
         }
 
         private void SubBtnOrder_Click(object sender, EventArgs e)

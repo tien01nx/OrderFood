@@ -93,6 +93,10 @@
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\481be170-aaf3-41b2-b88c-248f9ab7f1a7.jpg"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\500efdba-0000-455b-af33-66297fda30bf.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\500efdba-0000-455b-af33-66297fda30bf.jpg"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\5dbbc452-5194-4dc5-ad4f-cf4bac155e95.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\5dbbc452-5194-4dc5-ad4f-cf4bac155e95.jpg"
     },
@@ -111,6 +115,10 @@
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\98e09263-c47b-4474-a93d-f0d8520b2d14.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\98e09263-c47b-4474-a93d-f0d8520b2d14.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\a044e178-5291-49cc-81b4-9d91dfb2eb21.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\a044e178-5291-49cc-81b4-9d91dfb2eb21.jpg"
     },
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\ac1ca4e1-b214-4541-b8ad-9f1f0ecf9a23.jpg",
@@ -141,8 +149,16 @@
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-2\\830ff208-1282-4710-946e-426c4c99c1ac.jpg"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-2\\8cb2122f-a237-4816-9d1c-d142a24defa4.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-2\\8cb2122f-a237-4816-9d1c-d142a24defa4.jpg"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-3\\60060fad-f1e4-42d6-a2fe-c848fc3b3369.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-3\\60060fad-f1e4-42d6-a2fe-c848fc3b3369.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-3\\da995af4-232c-4224-8412-a4601fcaafe2.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-3\\da995af4-232c-4224-8412-a4601fcaafe2.jpg"
     },
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-4\\14c3cfd2-8538-4c71-8f22-c4fa8327cff5.jpg",
@@ -153,12 +169,20 @@
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-6\\20fef1c4-bd93-4c27-8e4d-1ca18e9fa80a.jpg"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-6\\a8df5eb4-6a92-4906-a1f7-f1e21bb78e33.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-6\\a8df5eb4-6a92-4906-a1f7-f1e21bb78e33.jpg"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-7\\9d1c1595-6182-40ed-9b4a-136d67e7e0f0.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-7\\9d1c1595-6182-40ed-9b4a-136d67e7e0f0.jpg"
     },
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-8\\daee607e-bc83-4367-90ae-218bf6e79e72.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-8\\daee607e-bc83-4367-90ae-218bf6e79e72.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Id\\8e01d12c-9c42-4e35-8b4f-e24367843e10.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-Id\\8e01d12c-9c42-4e35-8b4f-e24367843e10.jpg"
     },
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Id\\9d672409-100c-43d8-b393-e4b3da70c794.jpg",
@@ -169,12 +193,20 @@
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-Res2hqsbdmM3U\\4ba9e9e6-ce15-4f90-aadd-f44233c90259.jpg"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Res3ROlMg55Jr\\a84a995a-e09f-473a-bd43-2c59f6bd4fe9.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-Res3ROlMg55Jr\\a84a995a-e09f-473a-bd43-2c59f6bd4fe9.jpg"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Res74naI6qT4r\\e93525e4-e463-4c6d-9d4e-a386c8ebdbe0.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-Res74naI6qT4r\\e93525e4-e463-4c6d-9d4e-a386c8ebdbe0.jpg"
     },
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResAoE9e1vwBC\\7b1ccaef-ab7b-4c5b-b8f0-35c1a0430cf2.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResAoE9e1vwBC\\7b1ccaef-ab7b-4c5b-b8f0-35c1a0430cf2.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResD7RQyUzkMk\\48b4dda9-38ae-42ef-8beb-d9ecc86299c7.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResD7RQyUzkMk\\48b4dda9-38ae-42ef-8beb-d9ecc86299c7.jpg"
     },
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResGy8gRqzR6o\\cc21e904-d8bd-409f-bc96-a8d6c69c63d6.jpg",
@@ -203,6 +235,10 @@
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResdUSgUlip3B\\df135b6f-7544-484e-ba9b-4c673a026bde.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResdUSgUlip3B\\df135b6f-7544-484e-ba9b-4c673a026bde.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResfLGYZ0JCR6\\7df64921-677f-4ada-88e9-82c89206a5e4.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResfLGYZ0JCR6\\7df64921-677f-4ada-88e9-82c89206a5e4.jpg"
     },
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResppNREu0DT1\\523e6c10-2443-4c18-af4e-55a48d62b441.jpg",

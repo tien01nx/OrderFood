@@ -85,6 +85,7 @@
             productToolStripMenuItem.Name = "productToolStripMenuItem";
             productToolStripMenuItem.Size = new Size(180, 22);
             productToolStripMenuItem.Text = "QL Sản Phẩm";
+            productToolStripMenuItem.Click += productToolStripMenuItem_Click;
             // 
             // categoryToolStripMenuItem
             // 

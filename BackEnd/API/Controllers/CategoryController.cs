@@ -1,4 +1,5 @@
-﻿using API.Entities;
+﻿using API.DTO;
+using API.Entities;
 using DataAccess.Model;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,10 +13,10 @@ namespace API.Controllers
 
         // lấy danh sách categories và restaurant
         [HttpGet("GetAllCategory")]
-        public async Task<ApiResponse<List<Category>>> GetCategory(string restaurantId){
+        public async Task<ApiResponse<List<CategoryDto>>> GetCategory(string restaurantName){
 
-            var categories  = _context.GetCategories(restaurantId).ToList();
-            return new ApiResponse<List<Category>>(System.Net.HttpStatusCode.OK, "", categories);
+            var categories  = _context.GetCategories(restaurantName).ToList();
+            return new ApiResponse<List<CategoryDto>>(System.Net.HttpStatusCode.OK, "", categories);
         }
        
     }

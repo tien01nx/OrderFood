@@ -5991,3 +5991,59 @@
 2023-10-11 20:56:51.9687 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
 2023-10-11 20:56:51.9822 Info Configuration initialized.
 2023-10-11 20:56:51.9822 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 23:26:39.1074 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 23:26:39.1590 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 23:26:39.2958 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 23:26:39.7335 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 23:26:39.7625 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 23:26:39.8384 Info Configuration initialized.
+2023-10-11 23:26:39.8384 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 23:27:50.6804 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 23:27:50.7060 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 23:27:50.7060 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 23:27:50.7353 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 23:27:50.7576 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 23:27:50.7795 Info Configuration initialized.
+2023-10-11 23:27:50.7795 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\API\bin\Debug\net6.0\NLog.config
+2023-10-11 23:31:18.5269 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 23:31:18.5269 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 23:31:18.5269 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 23:31:18.5491 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 23:31:18.5677 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 23:31:18.6617 Info Configuration initialized.
+2023-10-11 23:31:18.6617 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 23:31:45.4465 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 23:31:45.4514 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 23:31:45.4514 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 23:31:45.4692 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 23:31:45.4819 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 23:31:45.4819 Info Configuration initialized.
+2023-10-11 23:31:45.4954 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 23:31:49.9798 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-11 23:31:49.9798 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-11 23:31:49.9798 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-11 23:31:50.0012 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-11 23:31:50.0126 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-11 23:31:50.0271 Info Configuration initialized.
+2023-10-11 23:31:50.0271 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-12 08:42:13.6194 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-12 08:42:13.6317 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-12 08:42:13.6317 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-12 08:42:13.6497 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-12 08:42:13.6497 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-12 08:42:13.6733 Info Configuration initialized.
+2023-10-12 08:42:13.6733 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-12 09:57:11.0996 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-12 09:57:11.1019 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-12 09:57:11.1019 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-12 09:57:11.1191 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-12 09:57:11.1429 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-12 09:57:11.1736 Info Configuration initialized.
+2023-10-12 09:57:11.1736 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-12 10:07:41.7625 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-12 10:07:41.7625 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-12 10:07:41.7815 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-10-12 10:07:41.7919 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-12 10:07:41.8221 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config
+2023-10-12 10:07:41.8221 Info Configuration initialized.
+2023-10-12 10:07:41.8221 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=71, FilePath=D:\ThucTap\OrderFood\BackEnd\api\bin\Debug\net6.0\NLog.config

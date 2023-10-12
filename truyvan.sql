@@ -219,15 +219,16 @@ AS
 BEGIN
     IF @RestaurantName IS NULL
     BEGIN
-        SELECT *, NULL AS CategoryName, NULL AS Descriptions
+
+        SELECT ISNULL(Null, 'N/A') 'CategoryName', RestaurantName,Restaurants.Id AS 'RestaurantId'
         FROM Restaurants
     END
     ELSE
     BEGIN
-        SELECT R.*, C.CategoryName, C.Descriptions
+        SELECT C.CategoryName, R.RestaurantName, R.Id as 'RestaurantId'
         FROM Restaurants R
         INNER JOIN Categories C ON R.Id = C.RestaurantID
-        WHERE R.RestaurantName = @RestaurantName
+        WHERE R.Id = @RestaurantName
     END
 END
 
@@ -250,4 +251,4 @@ BEGIN
 END
 
 
-exec GetRestaurantData 
+exec GetRestaurantData '3'

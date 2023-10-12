@@ -82,6 +82,7 @@ namespace Client.UserControls
             ComboBoxEdit comboBox = sender as ComboBoxEdit;
             _selectedRestaurant = comboBox.EditValue.ToString();
             LoadData();
+
             //MessageBox.Show(_selectedRestaurant,_selectedFavoriteLevel);
         }
 
@@ -134,8 +135,8 @@ namespace Client.UserControls
 
         private void btnUcProduct_Click(object sender, EventArgs e)
         {
-            //demo uc = new demo(_frmMain);
-            //_frmMain.AddUC(uc);
+            click uc = new click(_frmMain);
+            _frmMain.AddUC(uc);
         }
     }
 }

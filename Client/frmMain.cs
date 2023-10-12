@@ -53,7 +53,7 @@ namespace Client
         private void frmMain_Load(object sender, EventArgs e)
         {
             //ucListOrder uc = new ucListOrder(this);
-            click uc = new click(this);
+            ucProduct uc = new ucProduct(this);
             AddUC(uc);
         }
 
@@ -83,6 +83,12 @@ namespace Client
         private void restaurantToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ucListRestaurants uc = new ucListRestaurants(this);
+            AddUC(uc);
+        }
+
+        private void productToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ucProduct uc = new ucProduct(this);
             AddUC(uc);
         }
     }

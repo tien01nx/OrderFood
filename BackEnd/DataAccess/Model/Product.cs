@@ -7,7 +7,7 @@ namespace DataAccess.Model
 {
     public class Product : BaseModel
     {
- 
+
         [Key] public string Id { get; set; }
 
         [Required(ErrorMessage = "ProductName không được để trống.")]

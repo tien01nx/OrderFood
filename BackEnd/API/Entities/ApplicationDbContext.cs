@@ -31,6 +31,7 @@ namespace API.Entities
 
         public DbSet<UserInfoDTO> UserCartDetails { get; set; }
 
+        public DbSet<CategoryDto> CategoriesDto { get; set; }
 
 
         // Sử dụng PROC
@@ -62,9 +63,9 @@ namespace API.Entities
         }
 
         // lấy danh sách category và restaurant tham số truyền vào là restaurantname
-        public List<Category> GetCategories(string restaurantName)
+        public List<CategoryDto> GetCategories(string restaurantName)
         {
-            return Categories.FromSqlRaw("EXEC GetRestaurantData {0}", restaurantName).ToList();
+            return CategoriesDto.FromSqlRaw("EXEC GetRestaurantData {0}", restaurantName).ToList();
         }
 
 
@@ -73,6 +74,8 @@ namespace API.Entities
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<UserInfoDTO>().HasNoKey();
+            modelBuilder.Entity<CategoryDto>().HasNoKey();
+
 
             modelBuilder.Entity<User>()
                 .HasMany(ur => ur.UserRoles)
