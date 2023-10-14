@@ -6,7 +6,7 @@ namespace DataAccess.Model
 {
     public class Bank : BaseModel
     {
-       
+
         public string Id { get; set; }
 
 

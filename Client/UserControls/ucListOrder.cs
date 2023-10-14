@@ -1,27 +1,21 @@
 ﻿using Client.Entities;
 using Client.Model;
-using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraRichEdit.Model;
-using Newtonsoft.Json;
 
 namespace Client.UserControls
 {
     public partial class ucListOrder : DevExpress.XtraEditors.XtraUserControl
     {
         private readonly ApiClient _apiClient;
-        private readonly frmMain _mainForm;
+
         private string selectedRestaurantId;
         private List<UserInfoDTO> userInfoDTOs;
         private List<Order> orders;
-        public ucListOrder(frmMain mainForm)
+        public ucListOrder()
         {
             InitializeComponent();
             _apiClient = new ApiClient();
-            _mainForm = mainForm;
-            //GetRestaurantDate();
-
         }
 
         private void ucListOrder_Load(object sender, EventArgs e)
@@ -60,7 +54,6 @@ namespace Client.UserControls
         }
 
 
-
         private void GetRestaurant()
         {
             try
@@ -86,18 +79,24 @@ namespace Client.UserControls
             {
                 Console.WriteLine(ex.ToString());
             }
-           
+
         }
 
         private void SubBtnOrder_Click(object sender, EventArgs e)
         {
-            ucOrder uc = new ucOrder(_mainForm);
-            _mainForm.AddUC(uc);
+            if (frmMain.Instance != null)
+            {
+                frmMain.Instance.AddUserControl(new ucOrder(), "ucOrder");
+            }
+
         }
 
         private void closeUcListOrder_Click(object sender, EventArgs e)
         {
-            _mainForm.RemoveUC();
+            if (frmMain.Instance != null)
+            {
+                frmMain.Instance.AddUserControl(new ucListOrder(), "ucListOrder");
+            }
         }
 
 

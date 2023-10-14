@@ -44,10 +44,10 @@ namespace API.Controllers
 
         }
         [HttpGet("UserAllOrders")]
-        public async Task<ApiResponse<List<UserInfoDTO>>> UserAllOrders(string startDate,string endDate, string UserName,string userId, string restaurants, string productName)
+        public async Task<ApiResponse<List<UserInfoDTO>>> UserAllOrders(string startDate, string endDate, string UserName, string userId, string restaurants, string productName)
         {
 
-            var details = _context.GetUserCartDetails(startDate,endDate, UserName, userId, restaurants,productName).ToList();
+            var details = _context.GetUserCartDetails(startDate, endDate, UserName, userId, restaurants, productName).ToList();
 
             return new ApiResponse<List<UserInfoDTO>>(System.Net.HttpStatusCode.OK, "", details);
 
@@ -57,7 +57,7 @@ namespace API.Controllers
         // dữ liệu lấy ra thu được OrderDetailId, 
 
         [HttpGet("GetProductsByOrderDate")]
-        public async Task<ApiResponse<List<Product>>> UserOrders( string date)
+        public async Task<ApiResponse<List<Product>>> UserOrders(string date)
         {
 
             var products = _context.GetProductsByOrderDate(date).ToList();

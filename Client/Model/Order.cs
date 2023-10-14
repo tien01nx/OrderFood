@@ -1,4 +1,6 @@
-﻿namespace Client.Model
+﻿using DataAccess.Model;
+
+namespace Client.Model
 {
     public class Order : BaseModel
     {

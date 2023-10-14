@@ -2,7 +2,6 @@
 using DataAccess.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using System.Net;
 
 namespace API.Controllers
@@ -14,7 +13,7 @@ namespace API.Controllers
         protected readonly ApplicationDbContext _context;
         private readonly ILogger<BaseController<T>> _logger;
         internal DbSet<T> dbSet;
-      
+
 
 
         public BaseController(ApplicationDbContext context, ILogger<BaseController<T>> logger)
@@ -22,7 +21,7 @@ namespace API.Controllers
             _context = context;
             _logger = logger;
             this.dbSet = _context.Set<T>();
-            
+
         }
         [HttpGet("GetAll")]
         public async Task<ApiResponse<List<T>>> GetAll()
@@ -36,7 +35,7 @@ namespace API.Controllers
 
                 // kiểm tra T có phải là order hay không
                 // nếu phải thì lấy ra danh sách order theo ngày hiện tại
-            
+
 
                 var entities = await _context.Set<T>().ToListAsync();
                 if (entities != null && entities.Count > 0)
@@ -47,7 +46,7 @@ namespace API.Controllers
                     result = new ApiResponse<List<T>>(System.Net.HttpStatusCode.NotFound, "", null);
             }
 
-           
+
             catch (Exception ex)
             {
 
@@ -92,11 +91,13 @@ namespace API.Controllers
 
                 // kiểm tra T có phải là Restaurant không, nếu đúng ta thực hiện lấy id trong entity để tìm trong bảng Restaurant
                 // nếu tồn tại thì update còn không tồn tại thì create
-                if(typeof(T) == typeof(Restaurant)){
+                if (typeof(T) == typeof(Restaurant))
+                {
 
                     var restaurantEntity = entity as Restaurant;
                     var restaurant = _context.Set<Restaurant>().FirstOrDefault(x => x.Id.Equals(restaurantEntity.Id));
-                    if(restaurant!= null){
+                    if (restaurant != null)
+                    {
 
                         _context.Entry(restaurant).CurrentValues.SetValues(entity);
                         await _context.SaveChangesAsync();
@@ -134,7 +135,7 @@ namespace API.Controllers
                 }
 
 
-                if(typeof(T) == typeof(OrderDetail))
+                if (typeof(T) == typeof(OrderDetail))
                 {
 
                     // Tìm số tự động tăng cuối cùng bằng cách thực hiện truy vấn LINQ trên danh sách đã lấy
@@ -151,7 +152,7 @@ namespace API.Controllers
                     // kiểm tra Order theo ngày hiện tại đã có chưa, và theo điều kiện RestauranId
                     // nêu chưa có order và RestaurantId thì tạo mới order và orderDetail
                     var order = _context.Set<Order>().Where(x => x.CreateDate == DateTime.Now.Date && x.RestaurantId == orderDetail.RestaurantId).FirstOrDefault();
-                    if(order==null)
+                    if (order == null)
                     {
                         Order newOrder = new Order()
                         {
@@ -175,7 +176,7 @@ namespace API.Controllers
                     {
                         return new ApiResponse<T>(HttpStatusCode.OK, "Đã có", entity);
                     }
-                    
+
                 }
                 _context.Set<T>().Add(entity);
                 await _context.SaveChangesAsync();
@@ -213,10 +214,10 @@ namespace API.Controllers
                 {
                     var orderDetails = entities.Cast<OrderDetail>().ToList();
                     int lastNumber = 0;
-                    
+
                     foreach (var orderDetail in orderDetails)
                     {
-                       
+
                         // Kiểm tra xem có một đơn đặt hàng nào thỏa mãn điều kiện hay không
                         var order = _context.Set<Order>()
                             .FirstOrDefault(x => x.CreateDate == DateTime.Now.Date && x.RestaurantId == orderDetail.RestaurantId);
@@ -233,7 +234,7 @@ namespace API.Controllers
                                 OrderTotal = 0,
                                 OrderStatus = "Đang chờ xử lý",
                                 PaymentStatus = "Chưa thanh toán",
-                                Id= GenerateId<Order>("OD")
+                                Id = GenerateId<Order>("OD")
 
                             };
 
@@ -269,11 +270,11 @@ namespace API.Controllers
                         orderDetail.OrderId = order.Id;
 
                         _context.Set<OrderDetail>().Add(orderDetail);
-                       
+
                     }
                 }
 
-                
+
                 _context.Set<T>().AddRange(entities);
                 await _context.SaveChangesAsync();
 
@@ -394,14 +395,14 @@ namespace API.Controllers
                     foreach (var item in orderDetails)
                     {
                         // tìm kiếm orderDetail theo Id trong bảng OrderDetail nếu ra giá trị thì xóa
-                        var orderDetail = _context.Set<OrderDetail>().FirstOrDefault(x=> x.Id.Equals(item.Id));
+                        var orderDetail = _context.Set<OrderDetail>().FirstOrDefault(x => x.Id.Equals(item.Id));
                         if (orderDetail != null)
                             _context.Set<OrderDetail>().Remove(orderDetail);
                     }
-                   
+
                 }
 
-                    _context.Set<T>().RemoveRange(entities);
+                _context.Set<T>().RemoveRange(entities);
 
                 await _context.SaveChangesAsync();
                 return new ApiResponse<List<T>>(HttpStatusCode.OK, "Xóa danh sách thành công", entities);

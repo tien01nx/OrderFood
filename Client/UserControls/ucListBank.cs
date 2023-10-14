@@ -19,14 +19,19 @@
 
         private void closeUcBank_Click(object sender, EventArgs e)
         {
-            _frmMain.RemoveUC();
+            if (frmMain.Instance != null)
+            {
+                frmMain.Instance.AddUserControl(new ucListOrder(), "ucListOrder");
+            }
         }
 
         private void btnSwitchToBank_Click(object sender, EventArgs e)
         {
 
-            ucBank uc = new ucBank(_frmMain);
-            _frmMain.AddUC(uc);
+            if (frmMain.Instance != null)
+            {
+                frmMain.Instance.AddUserControl(new ucBank(), "ucBank");
+            }
 
         }
     }

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucListRestaurants));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             openFileDialog = new OpenFileDialog();
             btnUcProduct = new ToolStripButton();
             toolStrip1 = new ToolStrip();
@@ -41,7 +41,7 @@
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
             Data = new DevExpress.XtraEditors.GroupControl();
             girdRestaurant = new DevExpress.XtraGrid.GridControl();
-            gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            gridlayout = new DevExpress.XtraGrid.Views.Grid.GridView();
             RestaurantName = new DevExpress.XtraGrid.Columns.GridColumn();
             PhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             Image = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,7 +50,8 @@
             BankAccount = new DevExpress.XtraGrid.Columns.GridColumn();
             BankNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             BankName = new DevExpress.XtraGrid.Columns.GridColumn();
-            gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            Chon = new DevExpress.XtraGrid.Columns.GridColumn();
+            btnSubmitData = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             svgImage = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -65,7 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)Data).BeginInit();
             Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)girdRestaurant).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)gridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridlayout).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnSubmitData).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnXoa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)svgImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
@@ -108,6 +110,7 @@
             btnClose.RightToLeft = RightToLeft.No;
             btnClose.Size = new Size(24, 24);
             btnClose.Text = "toolStripButton6";
+            btnClose.Click += btnClose_Click;
             // 
             // groupControl1
             // 
@@ -135,20 +138,20 @@
             // 
             girdRestaurant.Dock = DockStyle.Fill;
             girdRestaurant.Location = new Point(2, 23);
-            girdRestaurant.MainView = gridView2;
+            girdRestaurant.MainView = gridlayout;
             girdRestaurant.Name = "girdRestaurant";
-            girdRestaurant.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { btnXoa, svgImage });
+            girdRestaurant.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { btnXoa, svgImage, btnSubmitData });
             girdRestaurant.Size = new Size(680, 510);
             girdRestaurant.TabIndex = 0;
-            girdRestaurant.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView2 });
+            girdRestaurant.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridlayout });
             // 
-            // gridView2
+            // gridlayout
             // 
-            gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { RestaurantName, PhoneNumber, Image, OpenTime, CloseTime, BankAccount, BankNumber, BankName, gridColumn9 });
-            gridView2.GridControl = girdRestaurant;
-            gridView2.Name = "gridView2";
-            gridView2.OptionsEditForm.PopupEditFormWidth = 686;
-            gridView2.OptionsView.RowAutoHeight = true;
+            gridlayout.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { RestaurantName, PhoneNumber, Image, OpenTime, CloseTime, BankAccount, BankNumber, BankName, Chon });
+            gridlayout.GridControl = girdRestaurant;
+            gridlayout.Name = "gridlayout";
+            gridlayout.OptionsEditForm.PopupEditFormWidth = 686;
+            gridlayout.OptionsView.RowAutoHeight = true;
             // 
             // RestaurantName
             // 
@@ -214,18 +217,28 @@
             BankName.Visible = true;
             BankName.VisibleIndex = 7;
             // 
-            // gridColumn9
+            // Chon
             // 
-            gridColumn9.Caption = "gridColumn9";
-            gridColumn9.Name = "gridColumn9";
-            gridColumn9.Visible = true;
-            gridColumn9.VisibleIndex = 8;
+            Chon.Caption = "Chọn";
+            Chon.ColumnEdit = btnSubmitData;
+            Chon.FieldName = "Chon";
+            Chon.Name = "Chon";
+            Chon.Visible = true;
+            Chon.VisibleIndex = 8;
+            // 
+            // btnSubmitData
+            // 
+            btnSubmitData.AutoHeight = false;
+            btnSubmitData.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus) });
+            btnSubmitData.Name = "btnSubmitData";
+            btnSubmitData.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            btnSubmitData.Click += btnSubmitData_Click;
             // 
             // btnXoa
             // 
             btnXoa.AutoHeight = false;
-            editorButtonImageOptions2.Image = (Image)resources.GetObject("editorButtonImageOptions2.Image");
-            btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
+            editorButtonImageOptions1.Image = (Image)resources.GetObject("editorButtonImageOptions1.Image");
+            btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
             btnXoa.Name = "btnXoa";
             btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -319,7 +332,8 @@
             ((System.ComponentModel.ISupportInitialize)Data).EndInit();
             Data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)girdRestaurant).EndInit();
-            ((System.ComponentModel.ISupportInitialize)gridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridlayout).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnSubmitData).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnXoa).EndInit();
             ((System.ComponentModel.ISupportInitialize)svgImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).EndInit();
@@ -343,7 +357,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl Data;
         private DevExpress.XtraGrid.GridControl girdRestaurant;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridlayout;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.CheckEdit ckOpenTime;
         private DevExpress.XtraEditors.ComboBoxEdit cboFavoriteLevel;
@@ -360,6 +374,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn BankAccount;
         private DevExpress.XtraGrid.Columns.GridColumn BankNumber;
         private DevExpress.XtraGrid.Columns.GridColumn BankName;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn Chon;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSubmitData;
     }
 }

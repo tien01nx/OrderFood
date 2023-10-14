@@ -1,25 +1,16 @@
-﻿using Client.Entities;
-using Client.Model;
-using DevExpress.Utils.DirectXPaint;
-using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using API.Entities;
+using Client.Entities;
+using DataAccess.Model;
 using System.Data;
-using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Client.UserControls
 {
     public partial class click : DevExpress.XtraEditors.XtraUserControl
     {
-        private readonly frmMain _frmMain;
+
 
         private readonly ApiClient _apiClient;
 
@@ -29,10 +20,10 @@ namespace Client.UserControls
         private bool _isUpdate = false;
         private bool _isUpdateImage = false;
 
-        public click(frmMain frmMain)
+        public click()
         {
             InitializeComponent();
-            _frmMain = frmMain;
+
             _apiClient = new ApiClient();
             GetData();
             ShowGrid();
@@ -46,7 +37,7 @@ namespace Client.UserControls
             // từ imageurl lấy hình ảnh
             foreach (var restaurant in restaurants)
             {
-                restaurant.Image = LoadProductImage(restaurant.ImageUrl);
+                //restaurant.Image = LoadProductImage(restaurant.ImageUrl);
             }
             _restaurants = restaurants;
         }
@@ -148,8 +139,8 @@ namespace Client.UserControls
 
         private void BtnXoa_Click(object? sender, EventArgs e)
         {
-          // ép kiểu từ layout view lấy dữ liệu để xóa
-           var selectedRow = gridView1.GetFocusedRow() as Restaurant;
+            // ép kiểu từ layout view lấy dữ liệu để xóa
+            var selectedRow = gridView1.GetFocusedRow() as Restaurant;
             if (selectedRow != null)
             {
                 DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa nhà hàng {selectedRow.RestaurantName} không?", "Xác nhận xóa", MessageBoxButtons.YesNo);
@@ -223,7 +214,7 @@ namespace Client.UserControls
                                             r.BankNumber = restaurant.BankNumber;
                                             r.BankAccount = restaurant.BankAccount;
                                             r.Notes = restaurant.Notes;
-                                            r.Image = LoadProductImage(uploadImageResponse.Data.ImageUrl);
+                                            //r.Image = LoadProductImage(uploadImageResponse.Data.ImageUrl);
                                         });
                                         Clear(); ;
                                         ShowGrid();
@@ -235,7 +226,7 @@ namespace Client.UserControls
                                         MessageBox.Show("Lỗi khi thêm hình");
                                     }
                                 }
-                      
+
                             }
                         }
                         else
@@ -243,7 +234,7 @@ namespace Client.UserControls
                             Clear(); ;
                             ShowGrid();
                             MessageBox.Show("Cập nhật nhà hàng thành công");
-                        }    
+                        }
                     }
 
                     if (createResponse.Code == HttpStatusCode.Created)
@@ -259,7 +250,7 @@ namespace Client.UserControls
                                 if (uploadImageResponse != null && uploadImageResponse.Code == HttpStatusCode.OK)
                                 {
                                     Clear();
-                                    restaurant.Image = LoadProductImage(uploadImageResponse.Data.ImageUrl);
+                                    //restaurant.Image = LoadProductImage(uploadImageResponse.Data.ImageUrl);
                                     _restaurants.Add(restaurant);
                                     ShowGrid();
                                     MessageBox.Show("Tạo nhà hàng thành công");

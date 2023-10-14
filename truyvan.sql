@@ -252,3 +252,31 @@ END
 
 
 exec GetRestaurantData '3'
+
+
+
+
+Go
+CREATE PROCEDURE GetCategories
+    @CategoryName nvarchar(50),
+    @RestaurantId varchar(20)
+AS
+BEGIN
+    SELECT *
+    FROM [dbo].Categories
+    WHERE 
+        (CASE 
+             WHEN @CategoryName IS NOT NULL THEN 
+                 CASE WHEN CHARINDEX(@CategoryName, CategoryName) > 0 THEN 1 ELSE 0 END
+             ELSE 1
+         END = 1)
+    AND
+        (CASE 
+             WHEN @RestaurantId IS NOT NULL THEN 
+                 CASE WHEN RestaurantID = @RestaurantId THEN 1 ELSE 0 END
+             ELSE 1
+         END = 1)
+   
+END;
+
+Exec GetCategories @CategoryName=null,@RestaurantId = 3

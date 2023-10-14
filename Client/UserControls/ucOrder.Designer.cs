@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucOrder));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -104,8 +103,8 @@
             ((System.ComponentModel.ISupportInitialize)layoutViewCard1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl5).BeginInit();
             groupControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties.CalendarTimeProperties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl3).BeginInit();
             groupControl3.SuspendLayout();
             toolStrip1.SuspendLayout();
@@ -121,9 +120,6 @@
             // gridDataUser
             // 
             gridDataUser.Dock = DockStyle.Fill;
-            gridLevelNode1.LevelTemplate = gridView1;
-            gridLevelNode1.RelationName = "Level1";
-            gridDataUser.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] { gridLevelNode1 });
             gridDataUser.Location = new Point(2, 23);
             gridDataUser.MainView = gridView2;
             gridDataUser.Name = "gridDataUser";
@@ -321,6 +317,7 @@
             gridDataProduct.Size = new Size(985, 214);
             gridDataProduct.TabIndex = 0;
             gridDataProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { layoutView });
+            gridDataProduct.Click += gridDataProduct_Click;
             // 
             // layoutView
             // 
@@ -331,7 +328,7 @@
             layoutView.OptionsFind.AlwaysVisible = true;
             layoutView.OptionsView.ShowHeaderPanel = false;
             layoutView.OptionsView.ViewMode = DevExpress.XtraGrid.Views.Layout.LayoutViewMode.MultiRow;
-            layoutView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(ProductName, DevExpress.Data.ColumnSortOrder.Ascending) });
+            layoutView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(Quantity, DevExpress.Data.ColumnSortOrder.Ascending) });
             layoutView.TemplateCard = layoutViewCard1;
             // 
             // IsSelected
@@ -355,7 +352,7 @@
             layoutViewField_IsSelected.EditorPreferredWidth = 117;
             layoutViewField_IsSelected.Location = new Point(0, 0);
             layoutViewField_IsSelected.Name = "layoutViewField_IsSelected";
-            layoutViewField_IsSelected.Size = new Size(216, 24);
+            layoutViewField_IsSelected.Size = new Size(197, 24);
             layoutViewField_IsSelected.TextSize = new Size(71, 13);
             // 
             // ProductName
@@ -374,7 +371,7 @@
             layoutViewField_Title.EditorPreferredWidth = 117;
             layoutViewField_Title.Location = new Point(0, 24);
             layoutViewField_Title.Name = "layoutViewField_Title";
-            layoutViewField_Title.Size = new Size(216, 24);
+            layoutViewField_Title.Size = new Size(197, 24);
             layoutViewField_Title.TextSize = new Size(71, 13);
             // 
             // Price
@@ -396,7 +393,7 @@
             layoutViewField_Price.EditorPreferredWidth = 117;
             layoutViewField_Price.Location = new Point(0, 48);
             layoutViewField_Price.Name = "layoutViewField_Price";
-            layoutViewField_Price.Size = new Size(216, 24);
+            layoutViewField_Price.Size = new Size(197, 24);
             layoutViewField_Price.TextSize = new Size(71, 13);
             // 
             // Quantity
@@ -432,7 +429,7 @@
             layoutViewField_Quantity.EditorPreferredWidth = 117;
             layoutViewField_Quantity.Location = new Point(0, 72);
             layoutViewField_Quantity.Name = "layoutViewField_Quantity";
-            layoutViewField_Quantity.Size = new Size(216, 24);
+            layoutViewField_Quantity.Size = new Size(197, 24);
             layoutViewField_Quantity.TextSize = new Size(71, 13);
             // 
             // Images
@@ -459,7 +456,7 @@
             layoutViewField_Image.EditorPreferredWidth = 117;
             layoutViewField_Image.Location = new Point(0, 96);
             layoutViewField_Image.Name = "layoutViewField_Image";
-            layoutViewField_Image.Size = new Size(216, 110);
+            layoutViewField_Image.Size = new Size(197, 110);
             layoutViewField_Image.StartNewLine = true;
             layoutViewField_Image.TextSize = new Size(71, 13);
             // 

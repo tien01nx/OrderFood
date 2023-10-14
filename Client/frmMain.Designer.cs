@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             menuStrip1 = new MenuStrip();
             menuToolStripMenuItem = new ToolStripMenuItem();
-            restaurantToolStripMenuItem = new ToolStripMenuItem();
+            ucRestaurants = new ToolStripMenuItem();
             productToolStripMenuItem = new ToolStripMenuItem();
             categoryToolStripMenuItem = new ToolStripMenuItem();
             thôngTinNgườiDùngToolStripMenuItem = new ToolStripMenuItem();
@@ -39,7 +40,7 @@
             thôngTinQuyềnToolStripMenuItem1 = new ToolStripMenuItem();
             phânQuyềnToolStripMenuItem = new ToolStripMenuItem();
             đơnHàngToolStripMenuItem = new ToolStripMenuItem();
-            btnDanhsachdonhang = new ToolStripMenuItem();
+            ucOrderDetail = new ToolStripMenuItem();
             đặtHàngToolStripMenuItem = new ToolStripMenuItem();
             khơiToolStripMenuItem = new ToolStripMenuItem();
             sảnPhẩmToolStripMenuItem = new ToolStripMenuItem();
@@ -48,6 +49,7 @@
             layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             pnParent = new DevExpress.XtraEditors.PanelControl();
+            SubBtnListCategories = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Root).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup1).BeginInit();
@@ -68,17 +70,17 @@
             // 
             // menuToolStripMenuItem
             // 
-            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { restaurantToolStripMenuItem, productToolStripMenuItem, categoryToolStripMenuItem, qLQuyềnToolStripMenuItem });
+            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ucRestaurants, SubBtnListCategories, productToolStripMenuItem, categoryToolStripMenuItem, qLQuyềnToolStripMenuItem });
             menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             menuToolStripMenuItem.Size = new Size(78, 20);
             menuToolStripMenuItem.Text = "HỆ THỐNG";
             // 
-            // restaurantToolStripMenuItem
+            // ucRestaurants
             // 
-            restaurantToolStripMenuItem.Name = "restaurantToolStripMenuItem";
-            restaurantToolStripMenuItem.Size = new Size(180, 22);
-            restaurantToolStripMenuItem.Text = "QL Nhà Hàng";
-            restaurantToolStripMenuItem.Click += restaurantToolStripMenuItem_Click;
+            ucRestaurants.Name = "ucRestaurants";
+            ucRestaurants.Size = new Size(180, 22);
+            ucRestaurants.Text = "QL Nhà Hàng";
+            ucRestaurants.Click += restaurantToolStripMenuItem_Click;
             // 
             // productToolStripMenuItem
             // 
@@ -116,28 +118,28 @@
             // thôngTinQuyềnToolStripMenuItem1
             // 
             thôngTinQuyềnToolStripMenuItem1.Name = "thôngTinQuyềnToolStripMenuItem1";
-            thôngTinQuyềnToolStripMenuItem1.Size = new Size(165, 22);
+            thôngTinQuyềnToolStripMenuItem1.Size = new Size(180, 22);
             thôngTinQuyềnToolStripMenuItem1.Text = "Thông Tin Quyền";
             // 
             // phânQuyềnToolStripMenuItem
             // 
             phânQuyềnToolStripMenuItem.Name = "phânQuyềnToolStripMenuItem";
-            phânQuyềnToolStripMenuItem.Size = new Size(165, 22);
+            phânQuyềnToolStripMenuItem.Size = new Size(180, 22);
             phânQuyềnToolStripMenuItem.Text = "Phân Quyền";
             // 
             // đơnHàngToolStripMenuItem
             // 
-            đơnHàngToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { btnDanhsachdonhang, đặtHàngToolStripMenuItem, khơiToolStripMenuItem });
+            đơnHàngToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ucOrderDetail, đặtHàngToolStripMenuItem, khơiToolStripMenuItem });
             đơnHàngToolStripMenuItem.Name = "đơnHàngToolStripMenuItem";
             đơnHàngToolStripMenuItem.Size = new Size(82, 20);
             đơnHàngToolStripMenuItem.Text = "ĐƠN HÀNG";
             // 
-            // btnDanhsachdonhang
+            // ucOrderDetail
             // 
-            btnDanhsachdonhang.Name = "btnDanhsachdonhang";
-            btnDanhsachdonhang.Size = new Size(233, 22);
-            btnDanhsachdonhang.Text = "Danh sách đơn hàng";
-            btnDanhsachdonhang.Click += btnDanhsachdonhang_Click;
+            ucOrderDetail.Name = "ucOrderDetail";
+            ucOrderDetail.Size = new Size(233, 22);
+            ucOrderDetail.Text = "Danh sách đơn hàng";
+            ucOrderDetail.Click += btnDanhsachdonhang_Click;
             // 
             // đặtHàngToolStripMenuItem
             // 
@@ -201,6 +203,13 @@
             pnParent.Size = new Size(1100, 500);
             pnParent.TabIndex = 1;
             // 
+            // SubBtnListCategories
+            // 
+            SubBtnListCategories.Name = "SubBtnListCategories";
+            SubBtnListCategories.Size = new Size(180, 22);
+            SubBtnListCategories.Text = "QL Danh Mục";
+            SubBtnListCategories.Click += SubBtnListCategories_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -208,10 +217,11 @@
             ClientSize = new Size(1100, 524);
             Controls.Add(pnParent);
             Controls.Add(menuStrip1);
+            IconOptions.Icon = (Icon)resources.GetObject("frmMain.IconOptions.Icon");
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmMain";
-            Text = "frmMain";
+            Text = "OrderFood";
             WindowState = FormWindowState.Maximized;
             Load += frmMain_Load;
             menuStrip1.ResumeLayout(false);
@@ -228,7 +238,7 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuToolStripMenuItem;
-        private ToolStripMenuItem restaurantToolStripMenuItem;
+        private ToolStripMenuItem ucRestaurants;
         private ToolStripMenuItem productToolStripMenuItem;
         private ToolStripMenuItem categoryToolStripMenuItem;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
@@ -236,7 +246,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraEditors.PanelControl pnParent;
         private ToolStripMenuItem đơnHàngToolStripMenuItem;
-        private ToolStripMenuItem btnDanhsachdonhang;
+        private ToolStripMenuItem ucOrderDetail;
         private ToolStripMenuItem đặtHàngToolStripMenuItem;
         private ToolStripMenuItem sảnPhẩmToolStripMenuItem;
         private ToolStripMenuItem danhSáchSảnPhẩmToolStripMenuItem;
@@ -246,5 +256,6 @@
         private ToolStripMenuItem thôngTinQuyềnToolStripMenuItem1;
         private ToolStripMenuItem phânQuyềnToolStripMenuItem;
         private ToolStripMenuItem khơiToolStripMenuItem;
+        private ToolStripMenuItem SubBtnListCategories;
     }
 }

@@ -1,45 +1,29 @@
 ﻿using Client.Entities;
-using Client.Model;
+using DataAccess.Model;
 using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using DevExpress.XtraGrid.Views.Grid;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Client.UserControls
 {
     public partial class ucListRestaurants : DevExpress.XtraEditors.XtraUserControl
     {
-        private readonly frmMain _frmMain;
         private readonly ApiClient _apiClient;
-
-        private string _selectedRestaurant = null;
-        private string _selectedFavoriteLevel = null;
+        public bool _isCheckuc = false;
+        private string _selectedRestaurant = string.Empty;
+        private string _selectedFavoriteLevel = string.Empty;
         private bool _isOpenTime;
 
-        public ucListRestaurants(frmMain frmMain)
+        public ucListRestaurants(bool isCheckuc)
         {
             InitializeComponent();
-            _frmMain = frmMain;
             _apiClient = new ApiClient();
             btnXoa.Click += btnXoa_Click;
         }
 
-        private void ucListRestaurants_Load(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-        private void btnXoa_Click(object? sender, EventArgs e)
-        {
-            MessageBox.Show("Xóa thành công");
-        }
+        private void ucListRestaurants_Load(object sender, EventArgs e) { LoadData(); }
+        private void btnXoa_Click(object? sender, EventArgs e) { MessageBox.Show("Xóa thành công"); }
 
         public void LoadData()
         {
@@ -54,13 +38,14 @@ namespace Client.UserControls
             string currentTime = hour + ":" + minute;
             if (_isOpenTime != true)
             {
-
-                currentTime = "";
+                currentTime = string.Empty;
             }
-            var restaurants = _apiClient.GetData<Restaurant>($"Restaurant/GetRestaurantByKeyword?restaurant={_selectedRestaurant}&favoriteLevel={_selectedFavoriteLevel}&time={currentTime}").Data;
+            var restaurants = _apiClient.GetData<Restaurant>(
+                $"Restaurant/GetRestaurantByKeyword?restaurant={_selectedRestaurant}&favoriteLevel={_selectedFavoriteLevel}&time={currentTime}")
+                .Data;
             foreach (var item in restaurants)
             {
-                item.Image = LoadProductImage(item.ImageUrl);
+                //item.Image = LoadProductImage(item.ImageUrl);
                 cboRestaurant.Properties.Items.Add(item.RestaurantName);
                 // Kiểm tra nếu cboFavoriteLevel chưa có mục này thì mới thêm
                 if (!cboFavoriteLevel.Properties.Items.Contains(item.FavoriteLevel))
@@ -69,12 +54,19 @@ namespace Client.UserControls
                 }
             }
             girdRestaurant.DataSource = restaurants;
+
+            GridView view = girdRestaurant.MainView as GridView;
+            if (view != null)
+            {
+                if (_isCheckuc)
+                {
+                    view.Columns["Chon"].Visible = false;
+                }
+            }
         }
 
-        private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Edit");
-        }
+
+        private void repositoryItemButtonEdit1_Click(object sender, EventArgs e) { MessageBox.Show("Edit"); }
 
         private void cboRestaurant_EditValueChanged(object sender, EventArgs e)
         {
@@ -91,8 +83,6 @@ namespace Client.UserControls
             ComboBoxEdit comboBox = sender as ComboBoxEdit;
             _selectedFavoriteLevel = comboBox.EditValue.ToString();
             LoadData();
-
-
         }
 
         private void ckOpenTime_CheckedChanged(object sender, EventArgs e)
@@ -102,7 +92,6 @@ namespace Client.UserControls
             {
                 _isOpenTime = true;
                 LoadData();
-
             }
             else
             {
@@ -135,8 +124,48 @@ namespace Client.UserControls
 
         private void btnUcProduct_Click(object sender, EventArgs e)
         {
-            click uc = new click(_frmMain);
-            _frmMain.AddUC(uc);
+            if (frmMain.Instance != null)
+            {
+                frmMain.Instance.AddUserControl(new click(), "click");
+            }
+        }
+
+        private void btnSubmitData_Click(object sender, EventArgs e)
+        {
+            var restaurant = (gridlayout.GetFocusedRow() as Restaurant);
+            if (restaurant != null)
+            {
+                SessionData.AddRestaurant(restaurant);
+
+                // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
+                var existingUcProduct = frmMain.Instance?.GetUserControl("ucProduct") as ucProduct;
+                if (existingUcProduct != null)
+                {
+                    existingUcProduct.GetRestaurant();
+                    SessionData.RemoveRestaurant(restaurant);
+                }
+                this.Hide();
+            }
+        }
+
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (frmMain.Instance != null)
+            {
+                frmMain.Instance.AddUserControl(new ucListOrder(), "ucListOrder");
+            }
+        }
+
+
+        // RefreshUI giao diện uc này
+        public void RefreshUI()
+        {
+            // cập nhật lại các dữ liệu trên form này về ban đầu
+            cboRestaurant.EditValue = null;
+            cboFavoriteLevel.EditValue = null;
+            ckOpenTime.Checked = false;
+            _isCheckuc = true;
         }
     }
 }

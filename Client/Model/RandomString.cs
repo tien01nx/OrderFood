@@ -1,13 +1,6 @@
-﻿using DevExpress.Office;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Client.Model
+﻿namespace Client.Model
 {
-    
+
     public class RandomString
     {
         private readonly Random _random = new Random();

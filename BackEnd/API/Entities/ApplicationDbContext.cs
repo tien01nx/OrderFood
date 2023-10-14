@@ -16,7 +16,7 @@ namespace API.Entities
         }
         // Tạo bảng
         public DbSet<User> Users { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<DataAccess.Model.Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         //public DbSet<ProductImage> ProductImages { get; set; }
 
@@ -32,6 +32,8 @@ namespace API.Entities
         public DbSet<UserInfoDTO> UserCartDetails { get; set; }
 
         public DbSet<CategoryDto> CategoriesDto { get; set; }
+
+        //public DbSet<CategoryDTO> CategoriesFont { get; set; }
 
 
         // Sử dụng PROC
@@ -69,12 +71,20 @@ namespace API.Entities
         }
 
 
+        // lấy danh sách category và restaurant tham số truyền vào là restaurantname
+        public List<Category> GetCategories(string categoryName, string restaurantId)
+        {
+            return Categories.FromSqlRaw("EXEC GetCategories {0}, {1}", categoryName, restaurantId).ToList();
+        }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<UserInfoDTO>().HasNoKey();
             modelBuilder.Entity<CategoryDto>().HasNoKey();
+            //modelBuilder.Entity<CategoryDTO>().HasNoKey();
 
 
             modelBuilder.Entity<User>()

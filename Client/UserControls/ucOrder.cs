@@ -1,26 +1,17 @@
 ﻿using Client.Entities;
 using Client.Model;
-using DevExpress.DataAccess.Native.Web;
-using DevExpress.XtraBars.Alerter;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
-using System.Drawing;
-using DevExpress.XtraGrid.Views.Grid.ViewInfo;
-using DevExpress.XtraGrid.Views.Layout;
-using DevExpress.XtraGrid.Views.Layout.ViewInfo;
 using Newtonsoft.Json;
 using System.IO;
 using System.Net;
-using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Controls;
-using DevExpress.XtraEditors.Repository;
-using DevExpress.XtraGrid.Views.Base;
 
 namespace Client.UserControls
 {
     public partial class ucOrder : DevExpress.XtraEditors.XtraUserControl
     {
-        private readonly frmMain _frmMain;
-
         private readonly ApiClient _apiClient;
 
         private List<UserInfoDTO> userOrderList;
@@ -33,10 +24,10 @@ namespace Client.UserControls
         private int userId = 2;
 
 
-        public ucOrder(frmMain frmMain)
+        public ucOrder()
         {
             InitializeComponent();
-            _frmMain = frmMain;
+
             _apiClient = new ApiClient();
         }
 
@@ -275,7 +266,10 @@ namespace Client.UserControls
 
         private void closeUcOrder_Click(object sender, EventArgs e)
         {
-            _frmMain.RemoveUC();
+            if (frmMain.Instance != null)
+            {
+                frmMain.Instance.AddUserControl(new ucListOrder(), "ucListOrder");
+            }
         }
 
 
@@ -381,11 +375,10 @@ namespace Client.UserControls
             if (dg == DialogResult.Yes)
             {
                 UserSendOrder();
-                // đóng uc hiện tại
-                _frmMain.RemoveUC();
-                // mở ucOrder 
-                ucListOrder ucOrder = new ucListOrder(_frmMain);
-                _frmMain.AddUC(ucOrder);
+                if (frmMain.Instance != null)
+                {
+                    frmMain.Instance.AddUserControl(new ucListOrder(), "ucListOrder");
+                }
             }
         }
 
@@ -470,6 +463,11 @@ namespace Client.UserControls
                 ButtonEdit edit = (ButtonEdit)view.ActiveEditor;
                 edit.ButtonClick += btnXoa_ButtonClick;
             }
+        }
+
+        private void gridDataProduct_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

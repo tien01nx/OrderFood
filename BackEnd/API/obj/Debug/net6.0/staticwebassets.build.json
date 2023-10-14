@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QxxjqquK4F1el6M2nAUqTIFCKfT5ThRdL0sF3FAR5u0=",
+  "Hash": "RetPZhHyCJ1c2OY35Hb99j1c00mzv1xZrkYRs+hr96g=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "API\\wwwroot",
       "Source": "API",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\product-3\\0d86b3e4-7b53-4095-9037-ae955203a00d.png",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\0d86b3e4-7b53-4095-9037-ae955203a00d.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/product-3/0d86b3e4-7b53-4095-9037-ae955203a00d.png",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product-3\\0d86b3e4-7b53-4095-9037-ae955203a00d.png"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\product-3\\12f7cfae-522e-44bf-97fe-ddaa6c96a9df.png",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\12f7cfae-522e-44bf-97fe-ddaa6c96a9df.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/product-3/12f7cfae-522e-44bf-97fe-ddaa6c96a9df.png",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product-3\\12f7cfae-522e-44bf-97fe-ddaa6c96a9df.png"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\product-3\\60ae79d6-1d78-48c8-bc30-f04227c9c69c.png",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\60ae79d6-1d78-48c8-bc30-f04227c9c69c.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/product-3/60ae79d6-1d78-48c8-bc30-f04227c9c69c.png",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product-3\\60ae79d6-1d78-48c8-bc30-f04227c9c69c.png"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\product-3\\91faff3f-8842-4653-9b64-9104fe9eb4fa.png",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\91faff3f-8842-4653-9b64-9104fe9eb4fa.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/product-3/91faff3f-8842-4653-9b64-9104fe9eb4fa.png",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product-3\\91faff3f-8842-4653-9b64-9104fe9eb4fa.png"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\product-3\\f04be1ac-0687-4f87-aa11-81a53b5c4c10.png",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\f04be1ac-0687-4f87-aa11-81a53b5c4c10.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/product-3/f04be1ac-0687-4f87-aa11-81a53b5c4c10.png",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product-3\\f04be1ac-0687-4f87-aa11-81a53b5c4c10.png"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\product-ResiaJwyuNLOb\\cb2a1947-c672-48b8-94a4-024413acc057.png",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-ResiaJwyuNLOb\\cb2a1947-c672-48b8-94a4-024413acc057.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/product-ResiaJwyuNLOb/cb2a1947-c672-48b8-94a4-024413acc057.png",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product-ResiaJwyuNLOb\\cb2a1947-c672-48b8-94a4-024413acc057.png"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\products\\product-11\\2ac9bf21-3b07-430d-a39b-27008f610df7.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\products\\product-11\\2ac9bf21-3b07-430d-a39b-27008f610df7.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/products/product-11/2ac9bf21-3b07-430d-a39b-27008f610df7.jpg",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\product-11\\2ac9bf21-3b07-430d-a39b-27008f610df7.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\products\\product-2\\27c5805b-7909-4805-ab78-a99bf7be51c0.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\products\\product-2\\27c5805b-7909-4805-ab78-a99bf7be51c0.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/products/product-2/27c5805b-7909-4805-ab78-a99bf7be51c0.jpg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\product-2\\27c5805b-7909-4805-ab78-a99bf7be51c0.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\products\\product-6\\32fbad8d-b410-4a47-82fb-ce63de9d4e56.png",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\products\\product-6\\32fbad8d-b410-4a47-82fb-ce63de9d4e56.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/products/product-6/32fbad8d-b410-4a47-82fb-ce63de9d4e56.png",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\product-6\\32fbad8d-b410-4a47-82fb-ce63de9d4e56.png"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\products\\product-6\\7038f07d-95db-45a1-9015-fb267d47f072.png",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\products\\product-6\\7038f07d-95db-45a1-9015-fb267d47f072.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/products/product-6/7038f07d-95db-45a1-9015-fb267d47f072.png",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\product-6\\7038f07d-95db-45a1-9015-fb267d47f072.png"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\products\\product-6\\7bb2053a-5b02-47d8-b38c-025ec556f193.png",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\products\\product-6\\7bb2053a-5b02-47d8-b38c-025ec556f193.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/products/product-6/7bb2053a-5b02-47d8-b38c-025ec556f193.png",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\product-6\\7bb2053a-5b02-47d8-b38c-025ec556f193.png"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\products\\product-6\\908d33a0-f215-4df1-bd25-c9632e5a389b.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\products\\product-6\\908d33a0-f215-4df1-bd25-c9632e5a389b.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/products/product-6/908d33a0-f215-4df1-bd25-c9632e5a389b.jpg",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\product-6\\908d33a0-f215-4df1-bd25-c9632e5a389b.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\products\\product-6\\f59f7871-d2cb-48f3-8a8b-1fd45cba4844.png",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\products\\product-6\\f59f7871-d2cb-48f3-8a8b-1fd45cba4844.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/products/product-6/f59f7871-d2cb-48f3-8a8b-1fd45cba4844.png",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\product-6\\f59f7871-d2cb-48f3-8a8b-1fd45cba4844.png"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\products\\product-7\\63a9db00-88df-4b1b-bdf0-32bd49d3397d.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\products\\product-7\\63a9db00-88df-4b1b-bdf0-32bd49d3397d.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/products/product-7/63a9db00-88df-4b1b-bdf0-32bd49d3397d.jpg",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\product-7\\63a9db00-88df-4b1b-bdf0-32bd49d3397d.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\products\\product-7\\f897f631-5f93-4527-8361-eed1b9d5f4a2.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\products\\product-7\\f897f631-5f93-4527-8361-eed1b9d5f4a2.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/products/product-7/f897f631-5f93-4527-8361-eed1b9d5f4a2.jpg",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\product-7\\f897f631-5f93-4527-8361-eed1b9d5f4a2.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurant-ResfUEFXJf6un\\e639df2b-ac74-4a83-bc0d-e0a6e5340c9c.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurant-ResfUEFXJf6un\\e639df2b-ac74-4a83-bc0d-e0a6e5340c9c.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurant-ResfUEFXJf6un/e639df2b-ac74-4a83-bc0d-e0a6e5340c9c.jpg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurant-ResfUEFXJf6un\\e639df2b-ac74-4a83-bc0d-e0a6e5340c9c.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurant-ResiaJwyuNLOb\\8d67886e-ade9-44b0-9621-a5ce2ef5ee39.png",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurant-ResiaJwyuNLOb\\8d67886e-ade9-44b0-9621-a5ce2ef5ee39.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurant-ResiaJwyuNLOb/8d67886e-ade9-44b0-9621-a5ce2ef5ee39.png",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurant-ResiaJwyuNLOb\\8d67886e-ade9-44b0-9621-a5ce2ef5ee39.png"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\058a75fb-3cb5-48a1-913d-5e9956ea4754.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\058a75fb-3cb5-48a1-913d-5e9956ea4754.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/058a75fb-3cb5-48a1-913d-5e9956ea4754.jpg",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\058a75fb-3cb5-48a1-913d-5e9956ea4754.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\082074ff-fe20-4543-bdee-e79e2d4ef543.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\082074ff-fe20-4543-bdee-e79e2d4ef543.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/082074ff-fe20-4543-bdee-e79e2d4ef543.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\082074ff-fe20-4543-bdee-e79e2d4ef543.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\0916fb12-e9cd-4b17-bd6b-7fd3d210ab28.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\0916fb12-e9cd-4b17-bd6b-7fd3d210ab28.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/0916fb12-e9cd-4b17-bd6b-7fd3d210ab28.jpg",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\0916fb12-e9cd-4b17-bd6b-7fd3d210ab28.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\0e04e2d8-bddf-4dda-94dd-60a3df9dcbfd.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\0e04e2d8-bddf-4dda-94dd-60a3df9dcbfd.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/0e04e2d8-bddf-4dda-94dd-60a3df9dcbfd.jpg",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\0e04e2d8-bddf-4dda-94dd-60a3df9dcbfd.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\14d7eecb-84fe-465e-a8cc-d82728b2b7b7.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\14d7eecb-84fe-465e-a8cc-d82728b2b7b7.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/14d7eecb-84fe-465e-a8cc-d82728b2b7b7.jpg",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\14d7eecb-84fe-465e-a8cc-d82728b2b7b7.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\481be170-aaf3-41b2-b88c-248f9ab7f1a7.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\481be170-aaf3-41b2-b88c-248f9ab7f1a7.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/481be170-aaf3-41b2-b88c-248f9ab7f1a7.jpg",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\481be170-aaf3-41b2-b88c-248f9ab7f1a7.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\500efdba-0000-455b-af33-66297fda30bf.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\500efdba-0000-455b-af33-66297fda30bf.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/500efdba-0000-455b-af33-66297fda30bf.jpg",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\500efdba-0000-455b-af33-66297fda30bf.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\5dbbc452-5194-4dc5-ad4f-cf4bac155e95.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\5dbbc452-5194-4dc5-ad4f-cf4bac155e95.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/5dbbc452-5194-4dc5-ad4f-cf4bac155e95.jpg",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\5dbbc452-5194-4dc5-ad4f-cf4bac155e95.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\6befb337-1a76-4db8-a581-bd7a29b50db8.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\6befb337-1a76-4db8-a581-bd7a29b50db8.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/6befb337-1a76-4db8-a581-bd7a29b50db8.jpg",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\6befb337-1a76-4db8-a581-bd7a29b50db8.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\786dd951-0ecd-41be-96df-19f384e9a175.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\786dd951-0ecd-41be-96df-19f384e9a175.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/786dd951-0ecd-41be-96df-19f384e9a175.jpg",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\786dd951-0ecd-41be-96df-19f384e9a175.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\7b6ac226-25c0-41cc-9040-8bf4a8305eca.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\7b6ac226-25c0-41cc-9040-8bf4a8305eca.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/7b6ac226-25c0-41cc-9040-8bf4a8305eca.jpg",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\7b6ac226-25c0-41cc-9040-8bf4a8305eca.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\98e09263-c47b-4474-a93d-f0d8520b2d14.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\98e09263-c47b-4474-a93d-f0d8520b2d14.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/98e09263-c47b-4474-a93d-f0d8520b2d14.jpg",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\98e09263-c47b-4474-a93d-f0d8520b2d14.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\a044e178-5291-49cc-81b4-9d91dfb2eb21.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\a044e178-5291-49cc-81b4-9d91dfb2eb21.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/a044e178-5291-49cc-81b4-9d91dfb2eb21.jpg",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\a044e178-5291-49cc-81b4-9d91dfb2eb21.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\ac1ca4e1-b214-4541-b8ad-9f1f0ecf9a23.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\ac1ca4e1-b214-4541-b8ad-9f1f0ecf9a23.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/ac1ca4e1-b214-4541-b8ad-9f1f0ecf9a23.jpg",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\ac1ca4e1-b214-4541-b8ad-9f1f0ecf9a23.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\c58b2913-32c2-4a87-a16d-ec6c3ed016b2.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\c58b2913-32c2-4a87-a16d-ec6c3ed016b2.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/c58b2913-32c2-4a87-a16d-ec6c3ed016b2.jpg",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\c58b2913-32c2-4a87-a16d-ec6c3ed016b2.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\e099cbb9-f134-442a-82d5-eb5b0b3e6ce4.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\e099cbb9-f134-442a-82d5-eb5b0b3e6ce4.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/e099cbb9-f134-442a-82d5-eb5b0b3e6ce4.jpg",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\e099cbb9-f134-442a-82d5-eb5b0b3e6ce4.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-1\\e76a96cf-7e90-4c35-838b-61be0b881d67.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\e76a96cf-7e90-4c35-838b-61be0b881d67.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-1/e76a96cf-7e90-4c35-838b-61be0b881d67.jpg",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\e76a96cf-7e90-4c35-838b-61be0b881d67.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-2\\2f63e35d-7181-4afb-9198-2d51e1b2243d.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-2\\2f63e35d-7181-4afb-9198-2d51e1b2243d.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-2/2f63e35d-7181-4afb-9198-2d51e1b2243d.jpg",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-2\\2f63e35d-7181-4afb-9198-2d51e1b2243d.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-2\\59db4d92-3852-4829-89b5-9dc2684bd604.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-2\\59db4d92-3852-4829-89b5-9dc2684bd604.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-2/59db4d92-3852-4829-89b5-9dc2684bd604.jpg",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-2\\59db4d92-3852-4829-89b5-9dc2684bd604.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-2\\830ff208-1282-4710-946e-426c4c99c1ac.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-2\\830ff208-1282-4710-946e-426c4c99c1ac.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-2/830ff208-1282-4710-946e-426c4c99c1ac.jpg",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-2\\830ff208-1282-4710-946e-426c4c99c1ac.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-2\\8cb2122f-a237-4816-9d1c-d142a24defa4.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-2\\8cb2122f-a237-4816-9d1c-d142a24defa4.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-2/8cb2122f-a237-4816-9d1c-d142a24defa4.jpg",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-2\\8cb2122f-a237-4816-9d1c-d142a24defa4.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-3\\60060fad-f1e4-42d6-a2fe-c848fc3b3369.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-3\\60060fad-f1e4-42d6-a2fe-c848fc3b3369.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-3/60060fad-f1e4-42d6-a2fe-c848fc3b3369.jpg",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-3\\60060fad-f1e4-42d6-a2fe-c848fc3b3369.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-3\\da995af4-232c-4224-8412-a4601fcaafe2.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-3\\da995af4-232c-4224-8412-a4601fcaafe2.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-3/da995af4-232c-4224-8412-a4601fcaafe2.jpg",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-3\\da995af4-232c-4224-8412-a4601fcaafe2.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-4\\14c3cfd2-8538-4c71-8f22-c4fa8327cff5.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-4\\14c3cfd2-8538-4c71-8f22-c4fa8327cff5.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-4/14c3cfd2-8538-4c71-8f22-c4fa8327cff5.jpg",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-4\\14c3cfd2-8538-4c71-8f22-c4fa8327cff5.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-6\\20fef1c4-bd93-4c27-8e4d-1ca18e9fa80a.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-6\\20fef1c4-bd93-4c27-8e4d-1ca18e9fa80a.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-6/20fef1c4-bd93-4c27-8e4d-1ca18e9fa80a.jpg",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-6\\20fef1c4-bd93-4c27-8e4d-1ca18e9fa80a.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-6\\a8df5eb4-6a92-4906-a1f7-f1e21bb78e33.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-6\\a8df5eb4-6a92-4906-a1f7-f1e21bb78e33.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-6/a8df5eb4-6a92-4906-a1f7-f1e21bb78e33.jpg",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-6\\a8df5eb4-6a92-4906-a1f7-f1e21bb78e33.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-7\\9d1c1595-6182-40ed-9b4a-136d67e7e0f0.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-7\\9d1c1595-6182-40ed-9b4a-136d67e7e0f0.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-7/9d1c1595-6182-40ed-9b4a-136d67e7e0f0.jpg",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-7\\9d1c1595-6182-40ed-9b4a-136d67e7e0f0.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-8\\daee607e-bc83-4367-90ae-218bf6e79e72.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-8\\daee607e-bc83-4367-90ae-218bf6e79e72.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-8/daee607e-bc83-4367-90ae-218bf6e79e72.jpg",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-8\\daee607e-bc83-4367-90ae-218bf6e79e72.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Id\\8e01d12c-9c42-4e35-8b4f-e24367843e10.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-Id\\8e01d12c-9c42-4e35-8b4f-e24367843e10.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-Id/8e01d12c-9c42-4e35-8b4f-e24367843e10.jpg",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-Id\\8e01d12c-9c42-4e35-8b4f-e24367843e10.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Id\\9d672409-100c-43d8-b393-e4b3da70c794.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-Id\\9d672409-100c-43d8-b393-e4b3da70c794.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-Id/9d672409-100c-43d8-b393-e4b3da70c794.jpg",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-Id\\9d672409-100c-43d8-b393-e4b3da70c794.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Res2hqsbdmM3U\\4ba9e9e6-ce15-4f90-aadd-f44233c90259.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-Res2hqsbdmM3U\\4ba9e9e6-ce15-4f90-aadd-f44233c90259.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-Res2hqsbdmM3U/4ba9e9e6-ce15-4f90-aadd-f44233c90259.jpg",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-Res2hqsbdmM3U\\4ba9e9e6-ce15-4f90-aadd-f44233c90259.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Res3ROlMg55Jr\\a84a995a-e09f-473a-bd43-2c59f6bd4fe9.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-Res3ROlMg55Jr\\a84a995a-e09f-473a-bd43-2c59f6bd4fe9.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-Res3ROlMg55Jr/a84a995a-e09f-473a-bd43-2c59f6bd4fe9.jpg",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-Res3ROlMg55Jr\\a84a995a-e09f-473a-bd43-2c59f6bd4fe9.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-Res74naI6qT4r\\e93525e4-e463-4c6d-9d4e-a386c8ebdbe0.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-Res74naI6qT4r\\e93525e4-e463-4c6d-9d4e-a386c8ebdbe0.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-Res74naI6qT4r/e93525e4-e463-4c6d-9d4e-a386c8ebdbe0.jpg",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-Res74naI6qT4r\\e93525e4-e463-4c6d-9d4e-a386c8ebdbe0.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResAoE9e1vwBC\\7b1ccaef-ab7b-4c5b-b8f0-35c1a0430cf2.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResAoE9e1vwBC\\7b1ccaef-ab7b-4c5b-b8f0-35c1a0430cf2.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResAoE9e1vwBC/7b1ccaef-ab7b-4c5b-b8f0-35c1a0430cf2.jpg",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResAoE9e1vwBC\\7b1ccaef-ab7b-4c5b-b8f0-35c1a0430cf2.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResD7RQyUzkMk\\48b4dda9-38ae-42ef-8beb-d9ecc86299c7.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResD7RQyUzkMk\\48b4dda9-38ae-42ef-8beb-d9ecc86299c7.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResD7RQyUzkMk/48b4dda9-38ae-42ef-8beb-d9ecc86299c7.jpg",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResD7RQyUzkMk\\48b4dda9-38ae-42ef-8beb-d9ecc86299c7.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResdM8dQ6Hvnq\\a6a247d2-4864-47ac-8a44-ada3e4b0e3be.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResdM8dQ6Hvnq\\a6a247d2-4864-47ac-8a44-ada3e4b0e3be.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResdM8dQ6Hvnq/a6a247d2-4864-47ac-8a44-ada3e4b0e3be.jpg",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResdM8dQ6Hvnq\\a6a247d2-4864-47ac-8a44-ada3e4b0e3be.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResdUSgUlip3B\\df135b6f-7544-484e-ba9b-4c673a026bde.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResdUSgUlip3B\\df135b6f-7544-484e-ba9b-4c673a026bde.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResdUSgUlip3B/df135b6f-7544-484e-ba9b-4c673a026bde.jpg",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResdUSgUlip3B\\df135b6f-7544-484e-ba9b-4c673a026bde.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResfLGYZ0JCR6\\7df64921-677f-4ada-88e9-82c89206a5e4.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResfLGYZ0JCR6\\7df64921-677f-4ada-88e9-82c89206a5e4.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResfLGYZ0JCR6/7df64921-677f-4ada-88e9-82c89206a5e4.jpg",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResfLGYZ0JCR6\\7df64921-677f-4ada-88e9-82c89206a5e4.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResGy8gRqzR6o\\cc21e904-d8bd-409f-bc96-a8d6c69c63d6.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResGy8gRqzR6o\\cc21e904-d8bd-409f-bc96-a8d6c69c63d6.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResGy8gRqzR6o/cc21e904-d8bd-409f-bc96-a8d6c69c63d6.jpg",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResGy8gRqzR6o\\cc21e904-d8bd-409f-bc96-a8d6c69c63d6.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResKi4dwxSBI5\\bfbeb166-02e2-4702-b15a-6ba494789fe1.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResKi4dwxSBI5\\bfbeb166-02e2-4702-b15a-6ba494789fe1.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResKi4dwxSBI5/bfbeb166-02e2-4702-b15a-6ba494789fe1.jpg",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResKi4dwxSBI5\\bfbeb166-02e2-4702-b15a-6ba494789fe1.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResM9yggaKuFS\\856de836-45a8-4766-ae3a-ac3db7ec635b.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResM9yggaKuFS\\856de836-45a8-4766-ae3a-ac3db7ec635b.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResM9yggaKuFS/856de836-45a8-4766-ae3a-ac3db7ec635b.jpg",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResM9yggaKuFS\\856de836-45a8-4766-ae3a-ac3db7ec635b.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResOiMB5OZDoI\\757b80dd-a2ec-497c-960f-96a5e7650d6e.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResOiMB5OZDoI\\757b80dd-a2ec-497c-960f-96a5e7650d6e.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResOiMB5OZDoI/757b80dd-a2ec-497c-960f-96a5e7650d6e.jpg",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResOiMB5OZDoI\\757b80dd-a2ec-497c-960f-96a5e7650d6e.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResppNREu0DT1\\523e6c10-2443-4c18-af4e-55a48d62b441.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResppNREu0DT1\\523e6c10-2443-4c18-af4e-55a48d62b441.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResppNREu0DT1/523e6c10-2443-4c18-af4e-55a48d62b441.jpg",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResppNREu0DT1\\523e6c10-2443-4c18-af4e-55a48d62b441.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResQfARAsP1hP\\9b7f7b64-f4a5-4136-b0ec-d99210e3c0e4.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResQfARAsP1hP\\9b7f7b64-f4a5-4136-b0ec-d99210e3c0e4.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResQfARAsP1hP/9b7f7b64-f4a5-4136-b0ec-d99210e3c0e4.jpg",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResQfARAsP1hP\\9b7f7b64-f4a5-4136-b0ec-d99210e3c0e4.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-ResrDYJdCN2Cm\\84258745-c2bc-4497-a9ea-6ae1444a951c.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResrDYJdCN2Cm\\84258745-c2bc-4497-a9ea-6ae1444a951c.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-ResrDYJdCN2Cm/84258745-c2bc-4497-a9ea-6ae1444a951c.jpg",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResrDYJdCN2Cm\\84258745-c2bc-4497-a9ea-6ae1444a951c.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-RessEfUiKRgEm\\a3fa72f8-d4d1-4371-aadc-3ff6379e5de4.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-RessEfUiKRgEm\\a3fa72f8-d4d1-4371-aadc-3ff6379e5de4.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-RessEfUiKRgEm/a3fa72f8-d4d1-4371-aadc-3ff6379e5de4.jpg",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-RessEfUiKRgEm\\a3fa72f8-d4d1-4371-aadc-3ff6379e5de4.jpg"
     },
     {
-      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\images\\restaurants\\restaurant-RessFWcvaHus4\\59291599-b618-4d4e-8830-a0208b1536b2.jpg",
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-RessFWcvaHus4\\59291599-b618-4d4e-8830-a0208b1536b2.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\api\\wwwroot\\",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "images/restaurants/restaurant-RessFWcvaHus4/59291599-b618-4d4e-8830-a0208b1536b2.jpg",
       "AssetKind": "All",

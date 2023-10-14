@@ -1,18 +1,9 @@
-﻿using Client.Entities;
-using Client.Model;
-using DevExpress.Xpf.Bars;
-using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using API.Entities;
+using Client.Entities;
+using DataAccess.Model;
 using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Client.UserControls
 {
@@ -22,6 +13,7 @@ namespace Client.UserControls
         private readonly frmMain _frmMain;
 
         private readonly ApiClient _apiClient;
+
 
         // tạo list để lưu dữ liệu từ db về
         private List<Restaurant> _restaurants = new List<Restaurant>();
@@ -43,7 +35,7 @@ namespace Client.UserControls
             // từ imageurl lấy hình ảnh
             foreach (var restaurant in restaurants)
             {
-                restaurant.Image = LoadProductImage(restaurant.ImageUrl);
+                //restaurant.Image = LoadProductImage(restaurant.ImageUrl);
             }
             _restaurants = restaurants;
         }
@@ -126,7 +118,7 @@ namespace Client.UserControls
                                         r.BankNumber = restaurant.BankNumber;
                                         r.BankAccount = restaurant.BankAccount;
                                         r.Notes = restaurant.Notes;
-                                        r.Image = LoadProductImage(uploadImageResponse.Data.ImageUrl);
+                                        //r.Image = LoadProductImage(uploadImageResponse.Data.ImageUrl);
                                     });
                                     Clear(); ;
                                     ShowGrid();
@@ -154,7 +146,7 @@ namespace Client.UserControls
                                 if (uploadImageResponse != null && uploadImageResponse.Code == HttpStatusCode.OK)
                                 {
                                     Clear();
-                                    restaurant.Image = LoadProductImage(uploadImageResponse.Data.ImageUrl);
+                                    //restaurant.Image = LoadProductImage(uploadImageResponse.Data.ImageUrl);
                                     _restaurants.Add(restaurant);
                                     ShowGrid();
                                     MessageBox.Show("Tạo nhà hàng thành công");
@@ -306,7 +298,7 @@ namespace Client.UserControls
                     // Hiển thị dữ liệu từ dòng đã chọn vào các TextBox
                     txtRestaurantName.Text = selectedRow.RestaurantName;
                     txtPhoneNumber.Text = selectedRow.PhoneNumber;
-                    peImage.Image = selectedRow.Image;
+                    //peImage.Image = selectedRow.Image;
                     txtBankAccount.Text = selectedRow.BankAccount.ToString();
                     txtBankName.Text = selectedRow.BankName;
                     txtBankNumber.Text = selectedRow.BankNumber;
@@ -318,12 +310,12 @@ namespace Client.UserControls
             }
         }
 
-      
 
-     
+
+
         private void ucRestaurants_Load(object sender, EventArgs e)
         {
-         clickXoa.Click += BtnXoa_Click;
+            clickXoa.Click += BtnXoa_Click;
         }
 
         private void BtnXoa_Click(object? sender, EventArgs e)

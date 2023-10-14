@@ -1,8 +1,6 @@
 ﻿using Client.DTO;
 using Client.Entities;
-using Client.Model;
-using DevExpress.ClipboardSource.SpreadsheetML;
-using DevExpress.Xpf.Editors;
+using DataAccess.Model;
 using System.IO;
 using System.Net;
 
@@ -14,37 +12,46 @@ namespace Client.UserControls
         private readonly frmMain _frmMain;
         private readonly ApiClient _apiClient;
         private List<Restaurant> _restaurants;
-        public ucProduct(frmMain frmMain)
+        public ucProduct()
         {
             InitializeComponent();
-            _frmMain = frmMain;
+
             _apiClient = new ApiClient();
-            _restaurants = new List<Restaurant>();
+            _restaurants = new List<DataAccess.Model.Restaurant>();
 
             GetData();
+            GetRestaurant();
         }
-
-
-
 
         private void closeucProduct_Click(object sender, EventArgs e)
         {
-            _frmMain.RemoveUC();
+            frmMain.Instance.AddUserControl(new ucListProduct(), "ucListProduct");
         }
 
-
         // lấy thông tin từ DTO/CategoryDTO.cs lấy dữ liệu từ database
+
         public void GetData()
         {
-            var restaurants = _apiClient.GetData<CategoryDTO>($"Category/GetAllCategory").Data;
-
-            foreach (var itemData in restaurants)
+            try
             {
-                ComboBoxItem comboBoxItem = new ComboBoxItem(itemData.RestaurantId, itemData.RestaurantName);
-                cboRestaurant.Properties.Items.Add(comboBoxItem);
+                var restaurants = _apiClient.GetData<CategoryDTO>($"Category/GetAllCategory").Data;
+                //if (restaurants != null)
+                //{
+                //    foreach (var itemData in restaurants)
+                //    {
+                //        ComboBoxItem comboBoxItem = new ComboBoxItem(itemData.RestaurantId, itemData.RestaurantName);
+                //        cboRestaurant.Properties.Items.Add(comboBoxItem);
+                //    }
+
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi" + ex.Message);
             }
 
-            //cboRestaurant.SelectedIndex = 0;
+
+
         }
 
         private void ucProduct_Load(object sender, EventArgs e)
@@ -52,10 +59,9 @@ namespace Client.UserControls
 
         }
 
+
         private void cboRestaurant_EditValueChanged(object sender, EventArgs e)
         {
-
-
 
         }
         private bool isInitialized = false;
@@ -63,14 +69,14 @@ namespace Client.UserControls
         private void cboRestaurant_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            if (cboRestaurant.SelectedItem != null)
-            {
-                ComboBoxItem selectedItem = (ComboBoxItem)cboRestaurant.SelectedItem;
-                string selectedValue = selectedItem.Value;
-                string selectedText = selectedItem.Text;
-                MessageBox.Show(selectedValue + " " + selectedText);
+            //if (cboRestaurant.SelectedItem != null)
+            //{
+            //    ComboBoxItem selectedItem = (ComboBoxItem)cboRestaurant.SelectedItem;
+            //    string selectedValue = selectedItem.Value;
+            //    string selectedText = selectedItem.Text;
+            //    MessageBox.Show(selectedValue + " " + selectedText);
 
-            }
+            //}
             //    if (isInitialized)
             //{
             //    int selectedIndex = cboRestaurant.SelectedIndex;
@@ -140,6 +146,48 @@ namespace Client.UserControls
                     return img;
                 }
             }
+        }
+
+        private void btnRestaurant_Click(object sender, EventArgs e)
+        {
+            // cập nhật giao diện ucListRestaurants
+
+            var existingUcProduct = frmMain.Instance?.GetUserControl("ucListRestaurants");
+            if (existingUcProduct != null)
+            {
+                existingUcProduct.Refresh();
+            }
+
+            if (frmMain.Instance != null)
+            {
+                frmMain.Instance.AddUserControl(new ucListRestaurants(true), "ucListRestaurants");
+            }
+        }
+        // lấy dữ liệu từ DataSession
+
+        public void GetRestaurant()
+        {
+            // Kiểm tra xem có danh sách nhà hàng nào trong SessionData không
+            if (SessionData.AllRestaurants.Count > 0)
+            {
+                // Tạo một danh sách tên nhà hàng để hiển thị
+                List<string> restaurantNames = new List<string>();
+
+                // Lấy tên của tất cả các nhà hàng từ SessionData
+                foreach (var restaurant in SessionData.AllRestaurants)
+                {
+                    restaurantNames.Add(restaurant.RestaurantName);
+                }
+
+                // Hiển thị danh sách tên nhà hàng lên buttonEdit
+                btnRestaurant.Text = string.Join(", ", restaurantNames);
+            }
+
+        }
+
+        private void btnRestaurant_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

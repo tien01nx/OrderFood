@@ -1,8 +1,6 @@
-﻿using DevExpress.RichEdit.Export;
-using Microsoft.AspNetCore.Http;
+﻿using API.Entities;
 using Newtonsoft.Json;
 using RestSharp;
-using System.IO;
 
 namespace Client.Entities
 {
@@ -39,21 +37,22 @@ namespace Client.Entities
             {
                 var request = new RestRequest(resource, Method.Get);
                 var response = _client.Execute(request);
-                  if (response.IsSuccessful)
+                if (response.IsSuccessful)
                 {
                     var content = response.Content;
                     return JsonConvert.DeserializeObject<ApiResponse<List<T>>>(content);
                 }
-               
-                    Console.WriteLine(response.ErrorMessage);
-                   return null;
-                
+
+                Console.WriteLine(response.ErrorMessage);
+                return new ApiResponse<List<T>>(System.Net.HttpStatusCode.BadRequest, "Lỗi kết nối với server", null);
+
             }
             catch (Exception ex)
             {
-                return null;
+                return new ApiResponse<List<T>>(System.Net.HttpStatusCode.BadRequest, "Lỗi kết nối với server", null);
+
             }
-          
+
         }
 
         public ApiResponse<T> SendPostRequest<T>(string resource, object body)
@@ -74,10 +73,10 @@ namespace Client.Entities
                 return null;
             }
         }
-        
-        public ApiResponse<List<T>> SendListToApi<T>( string resource, List<T> entities)
+
+        public ApiResponse<List<T>> SendListToApi<T>(string resource, List<T> entities)
         {
-          
+
             var request = new RestRequest(resource, Method.Post);
             request.AddJsonBody(entities);
 

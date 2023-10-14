@@ -3,11 +3,11 @@
     public partial class ucListProduct : DevExpress.XtraEditors.XtraUserControl
     {
 
-        private readonly frmMain _frmMain;
-        public ucListProduct(frmMain mainForm)
+
+        public ucListProduct()
         {
             InitializeComponent();
-            _frmMain = mainForm;
+
         }
 
 
@@ -41,13 +41,16 @@
         private void btnClose_Click(object sender, EventArgs e)
         {
 
-            _frmMain.RemoveUC();
+            frmMain.Instance.AddUserControl(new ucListOrder(), "ucListOrder");
+
         }
 
         private void btnUcProduct_Click(object sender, EventArgs e)
         {
-            ucProduct uc = new ucProduct(_frmMain);
-            _frmMain.AddUC(uc);
+            if (frmMain.Instance != null)
+            {
+                frmMain.Instance.AddUserControl(new ucProduct(), "ucProduct");
+            }
         }
     }
 }

@@ -5,63 +5,71 @@ namespace Client
 {
     public partial class frmMain : XtraForm
     {
-        // tạo một stack để lưu trữ các UserControl 
-        private Stack<XtraUserControl> userControlStack = new Stack<XtraUserControl>();
+        public static frmMain Instance;
 
         public frmMain()
         {
 
             InitializeComponent();
+            Instance = this;
 
         }
 
-        public void AddUC(XtraUserControl uc)
+        public PanelControl PnlParent
         {
-
-
-
-            // Ẩn UserControl hiện tại (nếu có)
-            if (userControlStack.Count > 0)
-            {
-                userControlStack.Peek().Hide();
-            }
-
-            // Thêm  mới vào stack
-            userControlStack.Push(uc);
-
-            // Hiển thị UserControl mới
-            uc.Dock = DockStyle.Fill;
-            pnParent.Controls.Add(uc);
-            uc.Show();
+            get { return pnParent; }
+            set { pnParent = value; }
         }
 
-
-        // kiểm tra xem stack có UserControl nào không 
-        public void RemoveUC()
-        {
-            if (userControlStack.Count > 0)
-            {
-                XtraUserControl currentUC = userControlStack.Pop();
-                currentUC.Hide();
-                if (userControlStack.Count > 0)
-                {
-                    userControlStack.Peek().Show();
-                }
-            }
-        }
-        // thêm ucContainer vào frmMain
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //ucListOrder uc = new ucListOrder(this);
-            ucProduct uc = new ucProduct(this);
-            AddUC(uc);
+
+            if (!PnlParent.Controls.ContainsKey("ucListProduct"))
+            {
+                ucListProduct uc = new ucListProduct();
+                uc.Name = "ucListProduct";
+                uc.Dock = DockStyle.Fill;
+                PnlParent.Controls.Add(uc);
+            }
+
+            PnlParent.Controls["ucListProduct"].BringToFront();
+            PnlParent.Controls["ucListProduct"].Show();
+
         }
+
+        // thêm UserControl vào frmMain
+        public void AddUserControl(XtraUserControl uc, string ucName)
+        {
+            if (!PnlParent.Controls.ContainsKey(ucName))
+            {
+                uc.Name = ucName;
+                uc.Dock = DockStyle.Fill;
+                PnlParent.Controls.Add(uc);
+            }
+            PnlParent.Controls[ucName].BringToFront();
+            PnlParent.Controls[ucName].Show();
+
+        }
+
+
+        public XtraUserControl GetUserControl(string controlName)
+        {
+            if (PnlParent.Controls.ContainsKey(controlName))
+            {
+                return PnlParent.Controls[controlName] as XtraUserControl;
+            }
+            return null;
+        }
+
+
 
         // thêm ucListOrder vào frmMain
         private void btnDanhsachdonhang_Click(object sender, EventArgs e)
         {
-            ucListOrder uc = new ucListOrder(this);
-            AddUC(uc);
+            //ucListOrder uc = new ucListOrder(this);
+            //AddUC(uc);
+
+            AddUserControl(new ucListOrder(), "ucListOrder");
 
         }
 
@@ -69,27 +77,40 @@ namespace Client
 
         private void danhSáchSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ucListProduct uc = new ucListProduct(this);
-            AddUC(uc);
+
+            AddUserControl(new ucListProduct(), "ucListProduct");
+            //ucListProduct uc = new ucListProduct(this);
+            //AddUC(uc);
         }
 
         // thêm ucListBank vào frmMain
         private void danhSáchThẻToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ucListBank uc = new ucListBank(this);
-            AddUC(uc);
+            AddUserControl(new ucListBank(this), "ucListBank");
+
+            //ucListBank uc = new ucListBank(this);
+            //AddUC(uc);
         }
 
         private void restaurantToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ucListRestaurants uc = new ucListRestaurants(this);
-            AddUC(uc);
+            AddUserControl(new ucListRestaurants(false), "ucListRestaurants");
+
+            //ucListRestaurants uc = new ucListRestaurants(this, false);
+            //AddUC(uc);
         }
 
         private void productToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ucProduct uc = new ucProduct(this);
-            AddUC(uc);
+            AddUserControl(new ucListProduct(), "ucListProduct");
+
+            //ucProduct uc = new ucProduct(this);
+            //AddUC(uc);
+        }
+
+        private void SubBtnListCategories_Click(object sender, EventArgs e)
+        {
+            AddUserControl(new ucListCategories(), "ucListCategories");
         }
     }
 

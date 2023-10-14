@@ -49,7 +49,7 @@
             label3 = new Label();
             label1 = new Label();
             groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            cboRestaurant = new DevExpress.XtraEditors.ComboBoxEdit();
+            btnRestaurant = new DevExpress.XtraEditors.ButtonEdit();
             textEdit1 = new DevExpress.XtraEditors.TextEdit();
             girdProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
             Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -68,7 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)memoEdit1.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
             groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnRestaurant.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)girdProduct).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PictureEdit).BeginInit();
@@ -244,7 +244,7 @@
             // groupControl2
             // 
             groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            groupControl2.Controls.Add(cboRestaurant);
+            groupControl2.Controls.Add(btnRestaurant);
             groupControl2.Controls.Add(pictureBox1);
             groupControl2.Controls.Add(label8);
             groupControl2.Controls.Add(cboCategoryName);
@@ -264,15 +264,16 @@
             groupControl2.TabIndex = 2;
             groupControl2.Text = "Thông tin sản phẩm";
             // 
-            // cboRestaurant
+            // btnRestaurant
             // 
-            cboRestaurant.Location = new Point(5, 43);
-            cboRestaurant.Margin = new Padding(3, 2, 3, 2);
-            cboRestaurant.Name = "cboRestaurant";
-            cboRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            cboRestaurant.Size = new Size(302, 20);
-            cboRestaurant.TabIndex = 16;
-            cboRestaurant.SelectedIndexChanged += cboRestaurant_SelectedIndexChanged;
+            btnRestaurant.EditValue = "Hihi";
+            btnRestaurant.Location = new Point(4, 45);
+            btnRestaurant.Name = "btnRestaurant";
+            btnRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton() });
+            btnRestaurant.Size = new Size(302, 20);
+            btnRestaurant.TabIndex = 18;
+            btnRestaurant.EditValueChanged += btnRestaurant_EditValueChanged;
+            btnRestaurant.Click += btnRestaurant_Click;
             // 
             // textEdit1
             // 
@@ -398,7 +399,7 @@
             ((System.ComponentModel.ISupportInitialize)groupControl2).EndInit();
             groupControl2.ResumeLayout(false);
             groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnRestaurant.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)girdProduct).EndInit();
             ((System.ComponentModel.ISupportInitialize)PictureEdit).EndInit();
@@ -437,12 +438,12 @@
         private DevExpress.XtraGrid.GridControl gridData;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.ComboBoxEdit cboRestaurant;
         private DevExpress.XtraGrid.Columns.GridColumn Id;
         private DevExpress.XtraGrid.Columns.GridColumn ProductName;
         private DevExpress.XtraGrid.Columns.GridColumn Description;
         private DevExpress.XtraGrid.Columns.GridColumn Images;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit PictureEdit;
         private DevExpress.XtraGrid.Columns.GridColumn Price;
+        private DevExpress.XtraEditors.ButtonEdit btnRestaurant;
     }
 }
