@@ -1,4 +1,5 @@
-﻿using Client.Entities;
+﻿using API.DTO;
+using Client.Entities;
 using Client.Model;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
@@ -24,6 +25,7 @@ namespace Client.UserControls
             dtOrderDate.DateTime = DateTime.Now;
             GetData();
             GetRestaurant();
+            getRestaurantAddList();
         }
 
 
@@ -228,6 +230,23 @@ namespace Client.UserControls
                 SizeF _Size = e.Graphics.MeasureString(e.Info.DisplayText, e.Appearance.Font);
                 Int32 _Width = Convert.ToInt32(_Size.Width) + 20;
                 BeginInvoke(new MethodInvoker(delegate { CalRowIndicatorWidth(_Width, gridView4); }));
+            }
+        }
+
+        private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            MessageBox.Show("Edit");
+        }
+
+        // lấy thông tin nhà hàng cho vào list trong SessionData
+        private void getRestaurantAddList()
+        {
+            var restaurant = _apiClient.GetData<RestaurantVM>(
+                               $"Restaurant/Getall").Data;
+            // add dữ liệu vào list
+            foreach (var item in restaurant)
+            {
+                SessionData.addAllRestaurant(item);
             }
         }
     }

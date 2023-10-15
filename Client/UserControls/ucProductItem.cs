@@ -1,8 +1,4 @@
-﻿using Client.Entities;
-using Client.Model;
-using DevExpress.PivotGrid.OLAP;
-using DevExpress.Utils.Svg;
-using DevExpress.Xpf.Editors;
+﻿using API.DTO;
 
 namespace Client
 {

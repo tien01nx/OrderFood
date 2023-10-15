@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RetPZhHyCJ1c2OY35Hb99j1c00mzv1xZrkYRs+hr96g=",
+  "Hash": "AD/yK/ix0KgOxPhlSNL6SwAMEMeDKLShqd+UMAnl3xc=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product-3\\60ae79d6-1d78-48c8-bc30-f04227c9c69c.png"
+    },
+    {
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\6fc5792f-25e0-4008-bc88-a3a7dd314f94.png",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/product-3/6fc5792f-25e0-4008-bc88-a3a7dd314f94.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product-3\\6fc5792f-25e0-4008-bc88-a3a7dd314f94.png"
     },
     {
       "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\91faff3f-8842-4653-9b64-9104fe9eb4fa.png",

@@ -29,19 +29,13 @@ namespace DataAccess.Model
         [Required(ErrorMessage = "Vui lòng nhập số tài khoản")]
         public int BankAccount { get; set; }
 
-
-
         [StringLength(50, ErrorMessage = "BankNumber tối đa {1} ký tự")]
         [Required(ErrorMessage = "Vui lòng nhập số  tài khoản")]
         public string BankNumber { get; set; }
 
-
-
         [StringLength(50, ErrorMessage = "Tên chủ tài khoản tối đa {1} ký tự")]
         [Required(ErrorMessage = "Vui lòng nhập tên tài khoản")]
         public string BankName { get; set; }
-
-
 
         //[Required(ErrorMessage = "Vui lòng nhập cấp độ yêu thích")]
         public byte? FavoriteLevel { get; set; }
@@ -49,13 +43,17 @@ namespace DataAccess.Model
 
         [StringLength(100, ErrorMessage = "Notes tối đa {1} ký tự")]
         [Required(ErrorMessage = "Notes không được để trống.")]
+
         public string Notes { get; set; }
+
 
         public void GenerateRandomId()
         {
             RandomString randomStringGenerator = new RandomString();
             Id = "Res" + randomStringGenerator.NextString(10); // Độ dài của ID
         }
+
+
         public override string ToString()
         {
             return $"Restaurant ID: {Id}\n" +

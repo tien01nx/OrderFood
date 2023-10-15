@@ -266,7 +266,7 @@
             // 
             // btnRestaurant
             // 
-            btnRestaurant.EditValue = "Hihi";
+            btnRestaurant.EditValue = "Chọn nhà hàng";
             btnRestaurant.Location = new Point(4, 45);
             btnRestaurant.Name = "btnRestaurant";
             btnRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton() });

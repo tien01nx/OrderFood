@@ -1,5 +1,5 @@
 ﻿using Client.Entities;
-using DataAccess.Model;
+using Client.Model;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using System.IO;
@@ -20,6 +20,8 @@ namespace Client.UserControls
             InitializeComponent();
             _apiClient = new ApiClient();
             btnXoa.Click += btnXoa_Click;
+
+
         }
 
         private void ucListRestaurants_Load(object sender, EventArgs e) { LoadData(); }
@@ -40,12 +42,13 @@ namespace Client.UserControls
             {
                 currentTime = string.Empty;
             }
-            var restaurants = _apiClient.GetData<Restaurant>(
+            var restaurants = _apiClient.GetData<RestaurantVM>(
                 $"Restaurant/GetRestaurantByKeyword?restaurant={_selectedRestaurant}&favoriteLevel={_selectedFavoriteLevel}&time={currentTime}")
                 .Data;
             foreach (var item in restaurants)
             {
-                //item.Image = LoadProductImage(item.ImageUrl);
+                item.Image = LoadProductImage(item.ImageUrl);
+
                 cboRestaurant.Properties.Items.Add(item.RestaurantName);
                 // Kiểm tra nếu cboFavoriteLevel chưa có mục này thì mới thêm
                 if (!cboFavoriteLevel.Properties.Items.Contains(item.FavoriteLevel))
@@ -63,6 +66,8 @@ namespace Client.UserControls
                     view.Columns["Chon"].Visible = false;
                 }
             }
+
+
         }
 
 
@@ -132,7 +137,7 @@ namespace Client.UserControls
 
         private void btnSubmitData_Click(object sender, EventArgs e)
         {
-            var restaurant = (gridlayout.GetFocusedRow() as Restaurant);
+            var restaurant = (gridlayout.GetFocusedRow() as RestaurantVM);
             if (restaurant != null)
             {
                 SessionData.AddRestaurant(restaurant);
@@ -166,6 +171,32 @@ namespace Client.UserControls
             cboFavoriteLevel.EditValue = null;
             ckOpenTime.Checked = false;
             _isCheckuc = true;
+        }
+
+        private void gridlayout_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+
+
+            //if (e.Column.FieldName == "Hehe" && e.IsGetData)
+            //{
+            //    // Lấy giá trị URL từ cột ImageUrl
+            //    string imageUrl = gridlayout.GetRowCellValue(e.ListSourceRowIndex, "ImageUrl") as string;
+
+            //    // Kiểm tra xem URL có tồn tại không
+            //    if (!string.IsNullOrEmpty(imageUrl))
+            //    {
+            //        Image image = LoadProductImage(imageUrl);
+            //        if (image != null)
+            //        {
+            //            e.Value = image;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        // Nếu không có URL, bạn có thể gán một hình ảnh mặc định hoặc giá trị khác tùy ý.
+            //    }
+
+            //}
         }
     }
 }

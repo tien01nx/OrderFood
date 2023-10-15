@@ -1,5 +1,5 @@
-﻿using Client.Entities;
-using Client.Model;
+﻿using API.DTO;
+using Client.Entities;
 using DevExpress.XtraEditors;
 using System.IO;
 using System.Net;

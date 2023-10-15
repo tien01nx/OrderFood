@@ -164,6 +164,7 @@
             gridView1.MasterRowGetChildList += gridView1_MasterRowGetChildList;
             gridView1.MasterRowGetRelationName += gridView1_MasterRowGetRelationName;
             gridView1.MasterRowGetRelationCount += gridView1_MasterRowGetRelationCount;
+            gridView1.CustomUnboundColumnData += gridView1_CustomUnboundColumnData;
             // 
             // RestaurantName
             // 

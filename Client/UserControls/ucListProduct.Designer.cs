@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucListProduct));
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
             groupControl3 = new DevExpress.XtraEditors.GroupControl();
@@ -105,8 +105,8 @@
             // 
             gridData.Dock = DockStyle.Fill;
             gridData.EmbeddedNavigator.Margin = new Padding(3, 2, 3, 2);
-            gridLevelNode2.RelationName = "Level1";
-            gridData.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] { gridLevelNode2 });
+            gridLevelNode1.RelationName = "Level1";
+            gridData.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] { gridLevelNode1 });
             gridData.Location = new Point(2, 23);
             gridData.MainView = gridView1;
             gridData.Margin = new Padding(3, 2, 3, 2);

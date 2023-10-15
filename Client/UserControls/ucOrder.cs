@@ -1,4 +1,5 @@
-﻿using Client.Entities;
+﻿using API.DTO;
+using Client.Entities;
 using Client.Model;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
@@ -241,22 +242,26 @@ namespace Client.UserControls
 
                 Console.WriteLine(JsonConvert.SerializeObject(userOrder));
                 userOrderList = userOrder;
-                //khi userOrder có 1 giá trị thì mới kiểm tra
-                if (userOrder.Count == 1)
+                if (userId != null)
                 {
-                    userOrderList.RemoveAll(u => u.ProductId.Equals("0"));
+                    //khi userOrder có 1 giá trị thì mới kiểm tra
+                    if (userOrder.Count == 1)
+                    {
+                        userOrderList.RemoveAll(u => u.ProductId.Equals("0"));
+                    }
+
+                    // tìm kiếm kiểm tra  phần tử nào có productId =0 xóa khỏi userOrderList
+                    gridDataUser.DataSource = userOrder;
+                    GridView view = gridDataUser.MainView as GridView;
+                    if (view != null)
+                    {
+                        // Ẩn các cột  không muốn hiển thị`
+                        //view.Columns["OrderDetailID"].Visible = false;
+
+                        //view.Columns["ProductId"].Visible = false;
+                    }
                 }
 
-                // tìm kiếm kiểm tra  phần tử nào có productId =0 xóa khỏi userOrderList
-                gridDataUser.DataSource = userOrder;
-                GridView view = gridDataUser.MainView as GridView;
-                if (view != null)
-                {
-                    // Ẩn các cột  không muốn hiển thị`
-                    //view.Columns["OrderDetailID"].Visible = false;
-
-                    //view.Columns["ProductId"].Visible = false;
-                }
             }
             catch (Exception ex)
             {
@@ -469,5 +474,9 @@ namespace Client.UserControls
         {
 
         }
+
+
+
+
     }
 }

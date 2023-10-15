@@ -1,12 +1,13 @@
 ﻿
-using DataAccess.Model;
+using Client.Model;
+
 
 namespace Client.Entities
 {
     public static class SessionData
     {
-        private static Restaurant _currentRestaurant;
-        private static List<Restaurant> _restaurantList = new List<Restaurant>();
+        private static RestaurantVM _currentRestaurant;
+        private static List<RestaurantVM> _restaurantList = new List<RestaurantVM>();
 
         private static Category _currentCategory;
         private static List<Category> _categoryList = new List<Category>();
@@ -17,17 +18,56 @@ namespace Client.Entities
             set { _currentCategory = value; }
         }
 
+
+        // lấy danh sách nhà hàng 
+        private static RestaurantVM _getAllRestaurant;
+        private static List<RestaurantVM> _getAllRestaurantList = new List<RestaurantVM>();
+        private static RestaurantVM GetAllRestaurant
+        {
+            get { return _getAllRestaurant; }
+            set { _getAllRestaurant = value; }
+        }
+
+        public static IReadOnlyList<RestaurantVM> GetAllRestaurants => _getAllRestaurantList.AsReadOnly();
+
+        public static void addAllRestaurant(RestaurantVM restaurant)
+        {
+            if (restaurant != null && !_getAllRestaurantList.Contains(restaurant))
+            {
+                _getAllRestaurantList.Add(restaurant);
+            }
+        }
+        // xóa hết khỏi list
+        public static void removeAllRestaurant(RestaurantVM restaurant)
+        {
+            if (restaurant != null)
+            {
+                _getAllRestaurantList.Remove(restaurant);
+            }
+        }
+        // xóa theo id
+
+        public static void removeAllRestaurantById(string id)
+        {
+            var restaurantToRemove = _getAllRestaurantList.FirstOrDefault(r => r.Id == id);
+            if (restaurantToRemove != null)
+            {
+                _getAllRestaurantList.Remove(restaurantToRemove);
+            }
+        }
+
+
         public static IReadOnlyList<Category> AllCategories => _categoryList.AsReadOnly();
-        public static Restaurant CurrentRestaurant
+        public static RestaurantVM CurrentRestaurant
         {
             get { return _currentRestaurant; }
             set { _currentRestaurant = value; }
         }
 
-        public static IReadOnlyList<Restaurant> AllRestaurants => _restaurantList.AsReadOnly();
+        public static IReadOnlyList<RestaurantVM> AllRestaurants => _restaurantList.AsReadOnly();
 
 
-        public static void AddRestaurant(Restaurant restaurant)
+        public static void AddRestaurant(RestaurantVM restaurant)
         {
             if (restaurant != null && !_restaurantList.Contains(restaurant))
             {
@@ -35,7 +75,7 @@ namespace Client.Entities
             }
         }
 
-        public static void RemoveRestaurant(Restaurant restaurant)
+        public static void RemoveRestaurant(RestaurantVM restaurant)
         {
             if (restaurant != null)
             {
@@ -84,6 +124,9 @@ namespace Client.Entities
                 _categoryList.Remove(categoryToRemove);
             }
         }
+
+
+
 
 
 

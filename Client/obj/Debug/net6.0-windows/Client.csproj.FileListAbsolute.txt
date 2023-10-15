@@ -828,7 +828,6 @@ D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.UserControls.ucListR
 D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.UserControls.ucOrder.resources
 D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.UserControls.ucProduct.resources
 D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.ucProductItem.resources
-D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.UserControls.ucRestaurants.resources
 D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.csproj.GenerateResource.cache
 D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.GeneratedMSBuildEditorConfig.editorconfig
 D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.AssemblyInfoInputs.cache

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿using DataAccess.Utilis;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -26,5 +27,10 @@ namespace DataAccess.Model
         [MinLength(3, ErrorMessage = "Mô tả phải có ít nhất 3 ký tự")]
         [Required(ErrorMessage = "Yêu cầu nhập Mô tả.")]
         public string Descriptions { get; set; }
+        public void GenerateRandomId()
+        {
+            RandomString randomStringGenerator = new RandomString();
+            Id = "CA" + randomStringGenerator.NextString(10); // Độ dài của ID
+        }
     }
 }

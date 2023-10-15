@@ -84,6 +84,7 @@ namespace API.Entities
 
             modelBuilder.Entity<UserInfoDTO>().HasNoKey();
             modelBuilder.Entity<CategoryDto>().HasNoKey();
+
             //modelBuilder.Entity<CategoryDTO>().HasNoKey();
 
 

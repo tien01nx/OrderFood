@@ -43,6 +43,7 @@
             RestaurantName = new DevExpress.XtraGrid.Columns.GridColumn();
             Xoa = new DevExpress.XtraGrid.Columns.GridColumn();
             btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             closeUcOrder = new ToolStripButton();
@@ -130,7 +131,7 @@
             // 
             // gridView2
             // 
-            gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { TitleProduct, TotalQuantity, PriceProduct, RestaurantName, Xoa });
+            gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { TitleProduct, TotalQuantity, PriceProduct, RestaurantName, Xoa, gridColumn2 });
             gridView2.GridControl = gridDataUser;
             gridView2.Name = "gridView2";
             gridView2.OptionsBehavior.Editable = false;
@@ -202,6 +203,16 @@
             btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             btnXoa.ButtonClick += btnXoa_ButtonClick;
             btnXoa.Click += btnXoa_Click;
+            // 
+            // gridColumn2
+            // 
+            gridColumn2.DisplayFormat.FormatString = "c2";
+            gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            gridColumn2.FieldName = "Total";
+            gridColumn2.Name = "gridColumn2";
+            gridColumn2.UnboundDataType = typeof(decimal);
+            gridColumn2.Visible = true;
+            gridColumn2.VisibleIndex = 5;
             // 
             // btnDelete
             // 
@@ -622,5 +633,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn Xoa;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }
