@@ -3,6 +3,7 @@
     public class Category : BaseModel
     {
 
+
         public string Id { get; set; }
 
 
@@ -12,10 +13,15 @@
 
 
         public string Descriptions { get; set; }
+
         public void GenerateRandomId()
         {
             RandomString randomStringGenerator = new RandomString();
             Id = "CA" + randomStringGenerator.NextString(10); // Độ dài của ID
+        }
+        public override string ToString()
+        {
+            return $"Id: {Id}, RestaurantId: {RestaurantId}, CategoryName: {CategoryName}";
         }
     }
 }

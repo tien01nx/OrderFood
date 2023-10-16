@@ -163,9 +163,5 @@ namespace Client.Entities
         }
 
 
-
-
-
-
     }
 }

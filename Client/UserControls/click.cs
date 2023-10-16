@@ -74,8 +74,6 @@ namespace Client.UserControls
                 Id = lbId.Text
 
 
-
-
             };
             // Kiểm tra biến _isUpdate và xác định xem cần tạo ID mới hay không
             if (!_isUpdate || restaurant.Id == null)

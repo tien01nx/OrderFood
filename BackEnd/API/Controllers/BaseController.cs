@@ -59,7 +59,7 @@ namespace API.Controllers
 
 
         [HttpGet("{id}")]
-        public async Task<ApiResponse<T>> GetById(int id)
+        public async Task<ApiResponse<T>> GetById(string id)
         {
             try
             {
@@ -79,6 +79,7 @@ namespace API.Controllers
         }
 
 
+
         [HttpPost("Create")]
         public async Task<ActionResult<ApiResponse<T>>> Create(T entity)
         {
@@ -87,6 +88,21 @@ namespace API.Controllers
                 if (entity is BaseModel baseModel)
                 {
                     baseModel.onCreate();
+                }
+
+                // kiểm tra phải category hay không
+                if (typeof(T) == typeof(Category))
+                {
+
+                    var existsCategory = entity as Category;
+                    var category = _context.Set<Restaurant>().FirstOrDefault(x => x.Id.Equals(existsCategory.Id));
+                    if (category != null)
+                    {
+
+                        _context.Entry(category).CurrentValues.SetValues(entity);
+                        await _context.SaveChangesAsync();
+                        return new ApiResponse<T>(HttpStatusCode.OK, "Cập nhật thành công", entity);
+                    }
                 }
 
                 // kiểm tra T có phải là Restaurant không, nếu đúng ta thực hiện lấy id trong entity để tìm trong bảng Restaurant
@@ -334,19 +350,19 @@ namespace API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<ApiResponse<T>>> Delete(int id)
+        public async Task<ActionResult<ApiResponse<T>>> Delete(string id)
         {
             try
             {
 
-                if (id <= 0)
+                if (id == null)
                 {
                     return new ApiResponse<T>(HttpStatusCode.BadRequest, "Id không hợp lệ", null);
                 }
                 if (typeof(T) == typeof(OrderDetail))
                 {
                     var orderDetailsToDelete = _context.Set<OrderDetail>()
-                        .Where(od => od.UserId == id && od.CreateDate.Date == DateTime.Now.Date)
+                        .Where(od => od.UserId.Equals(id) && od.CreateDate.Date == DateTime.Now.Date)
                         .ToList();
                     if (orderDetailsToDelete.Count < 0)
                     {

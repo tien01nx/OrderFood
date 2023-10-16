@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucListCategories));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             btnClose = new ToolStripButton();
             toolStripSeparator3 = new ToolStripSeparator();
             SubBtnDelete = new ToolStripButton();
@@ -44,6 +43,8 @@
             toolStrip1 = new ToolStrip();
             toolStripSeparator2 = new ToolStripSeparator();
             SubBtnSelect = new ToolStripButton();
+            toolStripSeparator6 = new ToolStripSeparator();
+            SubBtnClear = new ToolStripButton();
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
             groupControl3 = new DevExpress.XtraEditors.GroupControl();
             gridCategories = new DevExpress.XtraGrid.GridControl();
@@ -53,10 +54,11 @@
             CategoryName = new DevExpress.XtraGrid.Columns.GridColumn();
             Descriptions = new DevExpress.XtraGrid.Columns.GridColumn();
             RestaurantName = new DevExpress.XtraGrid.Columns.GridColumn();
+            gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            txtCategoryName = new DevExpress.XtraEditors.TextEdit();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            btnRestaurantname = new DevExpress.XtraEditors.ButtonEdit();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
@@ -65,10 +67,11 @@
             groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridCategories).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
             groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)buttonEdit1.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtCategoryName.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnRestaurantname.Properties).BeginInit();
             SuspendLayout();
             // 
             // btnClose
@@ -93,6 +96,7 @@
             SubBtnDelete.Name = "SubBtnDelete";
             SubBtnDelete.Size = new Size(51, 24);
             SubBtnDelete.Text = "Xóa";
+            SubBtnDelete.Click += SubBtnDelete_Click;
             // 
             // toolStripSeparator1
             // 
@@ -106,6 +110,7 @@
             SubBtnEdit.Name = "SubBtnEdit";
             SubBtnEdit.Size = new Size(50, 24);
             SubBtnEdit.Text = "Sửa";
+            SubBtnEdit.Click += SubBtnEdit_Click;
             // 
             // toolStripSeparator4
             // 
@@ -144,11 +149,12 @@
             SubBtnAdd.Name = "SubBtnAdd";
             SubBtnAdd.Size = new Size(61, 24);
             SubBtnAdd.Text = "Thêm";
+            SubBtnAdd.Click += SubBtnAdd_Click;
             // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { SubBtnAdd, toolStripSeparator2, btnClose, SubBtnEdit, toolStripSeparator3, SubBtnDelete, toolStripSeparator1, SubBtnDeleteAll, toolStripSeparator4, SubBtnSearch, toolStripSeparator5, SubBtnSelect });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { SubBtnAdd, toolStripSeparator2, btnClose, SubBtnEdit, toolStripSeparator3, SubBtnDelete, toolStripSeparator1, SubBtnDeleteAll, toolStripSeparator4, SubBtnSearch, toolStripSeparator5, SubBtnSelect, toolStripSeparator6, SubBtnClear });
             toolStrip1.Location = new Point(2, 23);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(997, 27);
@@ -167,6 +173,21 @@
             SubBtnSelect.Name = "SubBtnSelect";
             SubBtnSelect.Size = new Size(60, 24);
             SubBtnSelect.Text = "Chọn";
+            SubBtnSelect.Click += SubBtnSelect_Click;
+            // 
+            // toolStripSeparator6
+            // 
+            toolStripSeparator6.Name = "toolStripSeparator6";
+            toolStripSeparator6.Size = new Size(6, 27);
+            // 
+            // SubBtnClear
+            // 
+            SubBtnClear.Image = (Image)resources.GetObject("SubBtnClear.Image");
+            SubBtnClear.ImageTransparentColor = Color.Magenta;
+            SubBtnClear.Name = "SubBtnClear";
+            SubBtnClear.Size = new Size(78, 24);
+            SubBtnClear.Text = "Làm mới";
+            SubBtnClear.Click += SubBtnClear_Click;
             // 
             // groupControl1
             // 
@@ -188,21 +209,19 @@
             groupControl3.Name = "groupControl3";
             groupControl3.Size = new Size(684, 535);
             groupControl3.TabIndex = 2;
-            groupControl3.Text = "groupControl3";
+            groupControl3.Text = "DANH SÁCH NHÀ HÀNG";
             // 
             // gridCategories
             // 
             gridCategories.Dock = DockStyle.Fill;
             gridCategories.EmbeddedNavigator.Margin = new Padding(3, 2, 3, 2);
-            gridLevelNode1.RelationName = "Level1";
-            gridCategories.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] { gridLevelNode1 });
             gridCategories.Location = new Point(2, 23);
             gridCategories.MainView = gridView1;
             gridCategories.Margin = new Padding(3, 2, 3, 2);
             gridCategories.Name = "gridCategories";
             gridCategories.Size = new Size(680, 510);
             gridCategories.TabIndex = 3;
-            gridCategories.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
+            gridCategories.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1, gridView2 });
             // 
             // gridView1
             // 
@@ -213,9 +232,12 @@
             gridView1.OptionsBehavior.Editable = false;
             gridView1.OptionsBehavior.ReadOnly = true;
             gridView1.OptionsEditForm.PopupEditFormWidth = 686;
+            gridView1.OptionsSelection.MultiSelect = true;
+            gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             gridView1.OptionsView.ShowGroupPanel = false;
             gridView1.OptionsView.ShowIndicator = false;
             gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(CategoryName, DevExpress.Data.ColumnSortOrder.Ascending) });
+            gridView1.RowCellClick += gridView1_RowCellClick;
             gridView1.CustomUnboundColumnData += gridView1_CustomUnboundColumnData;
             // 
             // Id
@@ -236,7 +258,7 @@
             CategoryName.FieldName = "CategoryName";
             CategoryName.Name = "CategoryName";
             CategoryName.Visible = true;
-            CategoryName.VisibleIndex = 0;
+            CategoryName.VisibleIndex = 1;
             // 
             // Descriptions
             // 
@@ -244,7 +266,7 @@
             Descriptions.FieldName = "Descriptions";
             Descriptions.Name = "Descriptions";
             Descriptions.Visible = true;
-            Descriptions.VisibleIndex = 1;
+            Descriptions.VisibleIndex = 2;
             // 
             // RestaurantName
             // 
@@ -252,27 +274,33 @@
             RestaurantName.Name = "RestaurantName";
             RestaurantName.UnboundDataType = typeof(string);
             RestaurantName.Visible = true;
-            RestaurantName.VisibleIndex = 2;
+            RestaurantName.VisibleIndex = 3;
+            // 
+            // gridView2
+            // 
+            gridView2.GridControl = gridCategories;
+            gridView2.Name = "gridView2";
             // 
             // groupControl2
             // 
-            groupControl2.Controls.Add(textEdit1);
+            groupControl2.Controls.Add(txtCategoryName);
             groupControl2.Controls.Add(labelControl2);
-            groupControl2.Controls.Add(buttonEdit1);
+            groupControl2.Controls.Add(btnRestaurantname);
             groupControl2.Controls.Add(labelControl1);
             groupControl2.Dock = DockStyle.Left;
             groupControl2.Location = new Point(2, 50);
             groupControl2.Name = "groupControl2";
             groupControl2.Size = new Size(313, 535);
             groupControl2.TabIndex = 1;
-            groupControl2.Text = "groupControl2";
+            groupControl2.Text = "DANH SÁCH LỌC";
             // 
-            // textEdit1
+            // txtCategoryName
             // 
-            textEdit1.Location = new Point(5, 101);
-            textEdit1.Name = "textEdit1";
-            textEdit1.Size = new Size(302, 20);
-            textEdit1.TabIndex = 3;
+            txtCategoryName.Location = new Point(5, 101);
+            txtCategoryName.Name = "txtCategoryName";
+            txtCategoryName.Size = new Size(302, 20);
+            txtCategoryName.TabIndex = 2;
+            txtCategoryName.EditValueChanged += txtCategoryName_EditValueChanged;
             // 
             // labelControl2
             // 
@@ -284,13 +312,15 @@
             labelControl2.TabIndex = 2;
             labelControl2.Text = "Tên danh mục";
             // 
-            // buttonEdit1
+            // btnRestaurantname
             // 
-            buttonEdit1.Location = new Point(5, 52);
-            buttonEdit1.Name = "buttonEdit1";
-            buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton() });
-            buttonEdit1.Size = new Size(302, 20);
-            buttonEdit1.TabIndex = 1;
+            btnRestaurantname.Location = new Point(5, 52);
+            btnRestaurantname.Name = "btnRestaurantname";
+            btnRestaurantname.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton() });
+            btnRestaurantname.Size = new Size(302, 20);
+            btnRestaurantname.TabIndex = 1;
+            btnRestaurantname.EditValueChanged += btnRestaurantname_EditValueChanged;
+            btnRestaurantname.Click += btnRestaurantname_Click;
             // 
             // labelControl1
             // 
@@ -320,11 +350,12 @@
             groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)gridCategories).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).EndInit();
             groupControl2.ResumeLayout(false);
             groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)buttonEdit1.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtCategoryName.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnRestaurantname.Properties).EndInit();
             ResumeLayout(false);
         }
 
@@ -354,9 +385,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn CategoryName;
         private DevExpress.XtraGrid.Columns.GridColumn Descriptions;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
+        private DevExpress.XtraEditors.ButtonEdit btnRestaurantname;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtCategoryName;
         private DevExpress.XtraGrid.Columns.GridColumn RestaurantName;
+        private ToolStripSeparator toolStripSeparator6;
+        private ToolStripButton SubBtnClear;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }

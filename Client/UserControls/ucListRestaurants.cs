@@ -45,27 +45,34 @@ namespace Client.UserControls
             var restaurants = _apiClient.GetData<RestaurantVM>(
                 $"Restaurant/GetRestaurantByKeyword?restaurant={_selectedRestaurant}&favoriteLevel={_selectedFavoriteLevel}&time={currentTime}")
                 .Data;
-            foreach (var item in restaurants)
+            if (restaurants != null)
             {
-                item.Image = LoadProductImage(item.ImageUrl);
-
-                cboRestaurant.Properties.Items.Add(item.RestaurantName);
-                // Kiểm tra nếu cboFavoriteLevel chưa có mục này thì mới thêm
-                if (!cboFavoriteLevel.Properties.Items.Contains(item.FavoriteLevel))
+                foreach (var item in restaurants)
                 {
-                    cboFavoriteLevel.Properties.Items.Add(item.FavoriteLevel);
-                }
-            }
-            girdRestaurant.DataSource = restaurants;
+                    item.Image = LoadProductImage(item.ImageUrl);
 
-            GridView view = girdRestaurant.MainView as GridView;
-            if (view != null)
-            {
-                if (_isCheckuc)
-                {
-                    view.Columns["Chon"].Visible = false;
+                    cboRestaurant.Properties.Items.Add(item.RestaurantName);
+                    // Kiểm tra nếu cboFavoriteLevel chưa có mục này thì mới thêm
+                    if (!cboFavoriteLevel.Properties.Items.Contains(item.FavoriteLevel))
+                    {
+                        cboFavoriteLevel.Properties.Items.Add(item.FavoriteLevel);
+                    }
                 }
+                girdRestaurant.DataSource = restaurants;
+                girdRestaurant.RefreshDataSource();
+                if (SessionData.GetUC() == null)
+                {
+                    GridView view = girdRestaurant.MainView as GridView;
+                    if (view != null)
+                    {
+
+                        view.Columns["Chon"].Visible = false;
+
+                    }
+                }
+
             }
+
 
 
         }
@@ -141,14 +148,48 @@ namespace Client.UserControls
             if (restaurant != null)
             {
                 SessionData.AddRestaurant(restaurant);
-
-                // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
-                var existingUcProduct = frmMain.Instance?.GetUserControl("ucProduct") as ucProduct;
-                if (existingUcProduct != null)
+                if (SessionData.GetUC() != null)
                 {
-                    existingUcProduct.GetRestaurant();
-                    SessionData.RemoveRestaurant(restaurant);
+                    if (SessionData.GetUC().Equals("ucProduct"))
+                    {
+                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
+                        var existingUcProduct = frmMain.Instance?.GetUserControl("ucProduct") as ucProduct;
+                        if (existingUcProduct != null)
+                        {
+                            existingUcProduct.GetRestaurant();
+
+                            SessionData.RemoveRestaurant(restaurant);
+
+                        }
+                    }
+                    if (SessionData.GetUC().Equals("ucListCategories"))
+                    {
+                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
+                        var existingUcCategory = frmMain.Instance?.GetUserControl("ucListCategories") as ucListCategories;
+                        if (existingUcCategory != null)
+                        {
+                            existingUcCategory.GetRestaurant();
+                            existingUcCategory.getData();
+                            SessionData.RemoveRestaurant(restaurant);
+
+                        }
+                    }
+                    if (SessionData.GetUC().Equals("ucCategory"))
+                    {
+                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
+                        var existingUcCategory = frmMain.Instance?.GetUserControl("ucCategory") as ucCategory;
+                        if (existingUcCategory != null)
+                        {
+                            existingUcCategory.GetRestaurant();
+
+                            SessionData.RemoveRestaurant(restaurant);
+
+                        }
+                    }
+                    SessionData.ClearUC();
                 }
+
+
                 this.Hide();
             }
         }
@@ -158,6 +199,7 @@ namespace Client.UserControls
         {
             if (frmMain.Instance != null)
             {
+
                 frmMain.Instance.AddUserControl(new ucListOrder(), "ucListOrder");
             }
         }

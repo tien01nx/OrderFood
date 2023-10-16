@@ -158,7 +158,7 @@
             gridView1.OptionsFind.AlwaysVisible = true;
             gridView1.OptionsView.ShowGroupPanel = false;
             gridView1.RowHeight = 23;
-            gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(RestaurantName, DevExpress.Data.ColumnSortOrder.Descending) });
+            gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(RestaurantName, DevExpress.Data.ColumnSortOrder.Ascending) });
             gridView1.CustomDrawRowIndicator += gridView1_CustomDrawRowIndicator;
             gridView1.MasterRowEmpty += gridView1_MasterRowEmpty;
             gridView1.MasterRowGetChildList += gridView1_MasterRowGetChildList;

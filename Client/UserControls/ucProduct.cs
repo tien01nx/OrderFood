@@ -152,14 +152,16 @@ namespace Client.UserControls
         {
             // cập nhật giao diện ucListRestaurants
 
-            var existingUcProduct = frmMain.Instance?.GetUserControl("ucListRestaurants");
-            if (existingUcProduct != null)
-            {
-                existingUcProduct.Refresh();
-            }
+            //var existingUcRestaurant = frmMain.Instance?.GetUserControl("ucListCategories") as ucListRestaurants;
+            //if (existingUcRestaurant != null)
+            //{
+            //    //existingUcRestaurant.LoadData();
+
+            //}
 
             if (frmMain.Instance != null)
             {
+                SessionData.SetUC("ucProduct");
                 frmMain.Instance.AddUserControl(new ucListRestaurants(true), "ucListRestaurants");
             }
         }

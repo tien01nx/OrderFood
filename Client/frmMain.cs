@@ -24,16 +24,16 @@ namespace Client
         private void frmMain_Load(object sender, EventArgs e)
         {
 
-            if (!PnlParent.Controls.ContainsKey("ucListProduct"))
+            if (!PnlParent.Controls.ContainsKey("ucListOrder"))
             {
-                ucListProduct uc = new ucListProduct();
-                uc.Name = "ucListProduct";
+                ucListOrder uc = new ucListOrder();
+                uc.Name = "ucListOrder";
                 uc.Dock = DockStyle.Fill;
                 PnlParent.Controls.Add(uc);
             }
 
-            PnlParent.Controls["ucListProduct"].BringToFront();
-            PnlParent.Controls["ucListProduct"].Show();
+            PnlParent.Controls["ucListOrder"].BringToFront();
+            PnlParent.Controls["ucListOrder"].Show();
 
         }
 

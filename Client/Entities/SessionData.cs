@@ -18,6 +18,27 @@ namespace Client.Entities
             set { _currentCategory = value; }
         }
 
+        private static string _userControl;
+
+        public static string UcControl
+        {
+            get { return _userControl; }
+            set { _userControl = value; }
+        }
+
+        public static void SetUC(string value)
+        {
+            _userControl = value;
+        }
+
+        public static string GetUC()
+        {
+            return _userControl;
+        }
+        public static void ClearUC()
+        {
+            _userControl = null;
+        }
 
         // lấy danh sách nhà hàng 
         private static RestaurantVM _getAllRestaurant;
@@ -124,6 +145,20 @@ namespace Client.Entities
                 _categoryList.Remove(categoryToRemove);
             }
         }
+
+
+        // lưu thông tin category ở dạng đối tượng 
+        private static Category category;
+        public static Category Category
+        {
+            get { return category; }
+            set { category = value; }
+        }
+
+
+
+
+
 
 
 

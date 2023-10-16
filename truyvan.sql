@@ -257,7 +257,7 @@ exec GetRestaurantData '3'
 
 
 Go
-CREATE PROCEDURE GetCategories
+ALTER PROCEDURE GetCategories
     @CategoryName nvarchar(50),
     @RestaurantId varchar(20)
 AS
