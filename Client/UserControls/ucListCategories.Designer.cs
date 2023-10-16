@@ -53,13 +53,13 @@
             RestaurantId = new DevExpress.XtraGrid.Columns.GridColumn();
             CategoryName = new DevExpress.XtraGrid.Columns.GridColumn();
             Descriptions = new DevExpress.XtraGrid.Columns.GridColumn();
-            RestaurantName = new DevExpress.XtraGrid.Columns.GridColumn();
             gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             groupControl2 = new DevExpress.XtraEditors.GroupControl();
             txtCategoryName = new DevExpress.XtraEditors.TextEdit();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             btnRestaurantname = new DevExpress.XtraEditors.ButtonEdit();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            RestaurantName = new DevExpress.XtraGrid.Columns.GridColumn();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
             groupControl1.SuspendLayout();
@@ -268,14 +268,6 @@
             Descriptions.Visible = true;
             Descriptions.VisibleIndex = 2;
             // 
-            // RestaurantName
-            // 
-            RestaurantName.FieldName = "RestaurantName";
-            RestaurantName.Name = "RestaurantName";
-            RestaurantName.UnboundDataType = typeof(string);
-            RestaurantName.Visible = true;
-            RestaurantName.VisibleIndex = 3;
-            // 
             // gridView2
             // 
             gridView2.GridControl = gridCategories;
@@ -331,6 +323,14 @@
             labelControl1.Size = new Size(52, 13);
             labelControl1.TabIndex = 0;
             labelControl1.Text = "Nhà hàng";
+            // 
+            // RestaurantName
+            // 
+            RestaurantName.Caption = "Nhà hàng";
+            RestaurantName.FieldName = "RestaurantName";
+            RestaurantName.Name = "RestaurantName";
+            RestaurantName.Visible = true;
+            RestaurantName.VisibleIndex = 3;
             // 
             // ucListCategories
             // 
@@ -388,9 +388,9 @@
         private DevExpress.XtraEditors.ButtonEdit btnRestaurantname;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtCategoryName;
-        private DevExpress.XtraGrid.Columns.GridColumn RestaurantName;
         private ToolStripSeparator toolStripSeparator6;
         private ToolStripButton SubBtnClear;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn RestaurantName;
     }
 }

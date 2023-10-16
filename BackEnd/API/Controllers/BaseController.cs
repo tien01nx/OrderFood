@@ -8,7 +8,7 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class BaseController<T> : Controller where T : class
+    public abstract class BaseController<T> : Controller where T : class
     {
         protected readonly ApplicationDbContext _context;
         private readonly ILogger<BaseController<T>> _logger;
@@ -204,6 +204,8 @@ namespace API.Controllers
                 return new ApiResponse<T>(HttpStatusCode.BadRequest, ex.Message, null);
             }
         }
+
+
 
         //[HttpPost("CreateList")]
         //public async Task<ActionResult<ApiResponse<List<T>>>> Create(List<T> entities)

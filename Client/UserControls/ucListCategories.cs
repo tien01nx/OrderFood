@@ -1,4 +1,5 @@
 ﻿
+using API.DTO;
 using API.Entities;
 using Client.Entities;
 using Client.Model;
@@ -35,7 +36,7 @@ namespace Client.UserControls
             {
                 string categoryName = txtCategoryName.Text.Trim();
                 string restaurantName = btnRestaurantname.Text.Trim();
-                var categories = _apiClient.GetData<Category>($"Category/GetCategory?categoryName={categoryName}&restaurantId={selectedRestaurantId}")
+                var categories = _apiClient.GetData<CategoryDto>($"Category/GetCategory?categoryName={categoryName}&restaurantId={selectedRestaurantId}")
             .Data;
                 if (categories != null)
                 {
@@ -66,11 +67,11 @@ namespace Client.UserControls
 
         private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
         {
-            if (e.Column.FieldName == "RestaurantName" && e.IsGetData)
-            {
-                string restaurantId = gridView1.GetListSourceRowCellValue(e.ListSourceRowIndex, "RestaurantId").ToString();
-                e.Value = GetRestaurantName(restaurantId);
-            };
+            //if (e.Column.FieldName == "RestaurantName" && e.IsGetData)
+            //{
+            //    string restaurantId = gridView1.GetListSourceRowCellValue(e.ListSourceRowIndex, "RestaurantId").ToString();
+            //    e.Value = GetRestaurantName(restaurantId);
+            //};
         }
 
         private void btnRestaurantname_Click(object sender, EventArgs e)
@@ -93,22 +94,22 @@ namespace Client.UserControls
 
         public void GetRestaurant()
         {
-            // Kiểm tra xem có danh sách nhà hàng nào trong SessionData không
-            if (SessionData.AllRestaurants.Count > 0)
-            {
-                // Tạo một danh sách tên nhà hàng để hiển thị
-                List<string> restaurantNames = new List<string>();
+            //// Kiểm tra xem có danh sách nhà hàng nào trong SessionData không
+            //if (SessionData.AllRestaurants.Count > 0)
+            //{
+            //    // Tạo một danh sách tên nhà hàng để hiển thị
+            //    List<string> restaurantNames = new List<string>();
 
-                // Lấy tên của tất cả các nhà hàng từ SessionData
-                foreach (var restaurant in SessionData.AllRestaurants)
-                {
-                    restaurantNames.Add(restaurant.RestaurantName);
-                }
+            //    // Lấy tên của tất cả các nhà hàng từ SessionData
+            //    foreach (var restaurant in SessionData.AllRestaurants)
+            //    {
+            //        restaurantNames.Add(restaurant.RestaurantName);
+            //    }
 
-                // Hiển thị danh sách tên nhà hàng lên buttonEdit
-                btnRestaurantname.Text = string.Join(", ", restaurantNames);
-                selectedRestaurantId = SessionData.AllRestaurants.FirstOrDefault().Id;
-            }
+            //    // Hiển thị danh sách tên nhà hàng lên buttonEdit
+            //    btnRestaurantname.Text = string.Join(", ", restaurantNames);
+            //    selectedRestaurantId = SessionData.AllRestaurants.FirstOrDefault().Id;
+            //}
 
         }
 
@@ -152,7 +153,7 @@ namespace Client.UserControls
             if (gridView1.SelectedRowsCount > 0)
             {
                 var firstSelectedRowHandle = gridView1.GetSelectedRows()[0];
-                var firstSelectedRow = gridView1.GetRow(firstSelectedRowHandle) as Category;
+                var firstSelectedRow = gridView1.GetRow(firstSelectedRowHandle) as CategoryDto;
 
                 if (firstSelectedRow != null)
                 {
@@ -217,28 +218,22 @@ namespace Client.UserControls
 
         private void SubBtnEdit_Click(object sender, EventArgs e)
         {
-            if (gridView1.SelectedRowsCount > 0)
+            if (SessionData.Category != null)
             {
-                var firstSelectedRowHandle = gridView1.GetSelectedRows()[0];
-                var firstSelectedRow = gridView1.GetRow(firstSelectedRowHandle) as Category;
-
-                if (firstSelectedRow != null)
                 {
                     var existingUcProduct = frmMain.Instance?.GetUserControl("ucCategory") as ucCategory;
                     if (existingUcProduct != null)
                     {
-                        existingUcProduct.setCategory(firstSelectedRow);
+                        existingUcProduct.setCategory(SessionData.Category);
                         frmMain.Instance.AddUserControl(new ucCategory(), "ucCategory");
                     }
                     else
                     {
                         // UserControl chưa tồn tại, tạo và thêm vào frmMain
                         ucCategory newUcCategory = new ucCategory();
-                        newUcCategory.setCategory(firstSelectedRow);
+                        newUcCategory.setCategory(SessionData.Category);
                         frmMain.Instance.AddUserControl(newUcCategory, "ucCategory");
                     }
-                    SessionData.Category = firstSelectedRow;
-                    //MessageBox.Show("Đã chọn");
                 }
             }
         }
@@ -248,7 +243,7 @@ namespace Client.UserControls
             if (gridView1.SelectedRowsCount > 0)
             {
                 var firstSelectedRowHandle = gridView1.GetSelectedRows()[0];
-                var firstSelectedRow = gridView1.GetRow(firstSelectedRowHandle) as Category;
+                var firstSelectedRow = gridView1.GetRow(firstSelectedRowHandle) as CategoryDto;
                 // Hiện thông báo xem người dùng có xác nhận xóa không
                 DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)

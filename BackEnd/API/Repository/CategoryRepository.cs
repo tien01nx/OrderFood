@@ -1,7 +1,7 @@
-﻿using System.Linq.Expressions;
-using API.Entities;
+﻿using API.Entities;
 using DataAccess.Model;
 using DataAccess.Repository.IRepository;
+using System.Linq.Expressions;
 
 
 namespace DataAccess.Repository

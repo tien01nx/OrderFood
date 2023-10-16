@@ -1,4 +1,5 @@
 ﻿
+using API.DTO;
 using Client.Model;
 
 
@@ -148,8 +149,8 @@ namespace Client.Entities
 
 
         // lưu thông tin category ở dạng đối tượng 
-        private static Category category;
-        public static Category Category
+        private static CategoryDto category;
+        public static CategoryDto Category
         {
             get { return category; }
             set { category = value; }

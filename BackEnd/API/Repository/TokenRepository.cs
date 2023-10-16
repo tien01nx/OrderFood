@@ -1,13 +1,10 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+﻿using DataAccess.Model;
 using DataAccess.Repository.IRepository;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using API.Entities;
-using DataAccess.Model;
 
 namespace DataAccess.Repository
 {
@@ -22,7 +19,7 @@ namespace DataAccess.Repository
             _userManager = userManager;
         }
 
-        
+
         public async Task<string> CreateToken(User user)
         {
             var claims = new List<Claim>

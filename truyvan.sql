@@ -220,12 +220,13 @@ BEGIN
     IF @RestaurantName IS NULL
     BEGIN
 
-        SELECT ISNULL(Null, 'N/A') 'CategoryName', RestaurantName,Restaurants.Id AS 'RestaurantId'
+        SELECT ISNULL(Null, 'N/A') 'CategoryName', RestaurantName,Restaurants.Id AS 'RestaurantId', ISNULL(Null, 'N/A') 'Descriptions', ISNULL(Null, 'N/A') 'Id'
+
         FROM Restaurants
     END
     ELSE
     BEGIN
-        SELECT C.CategoryName, R.RestaurantName, R.Id as 'RestaurantId'
+        SELECT C.CategoryName, R.RestaurantName, R.Id as 'RestaurantId',C.Id
         FROM Restaurants R
         INNER JOIN Categories C ON R.Id = C.RestaurantID
         WHERE R.Id = @RestaurantName
@@ -251,7 +252,7 @@ BEGIN
 END
 
 
-exec GetRestaurantData '3'
+exec GetRestaurantData 
 
 
 
@@ -259,11 +260,11 @@ exec GetRestaurantData '3'
 Go
 ALTER PROCEDURE GetCategories
     @CategoryName nvarchar(50),
-    @RestaurantId varchar(20)
+    @RestaurantName varchar(30)
 AS
 BEGIN
-    SELECT *
-    FROM [dbo].Categories
+    SELECT Categories.*,RestaurantName
+    FROM [dbo].Categories join Restaurants on Categories.RestaurantID = Restaurants.Id
     WHERE 
         (CASE 
              WHEN @CategoryName IS NOT NULL THEN 
@@ -272,11 +273,36 @@ BEGIN
          END = 1)
     AND
         (CASE 
-             WHEN @RestaurantId IS NOT NULL THEN 
-                 CASE WHEN RestaurantID = @RestaurantId THEN 1 ELSE 0 END
+             WHEN @RestaurantName IS NOT NULL THEN 
+                 CASE WHEN Restaurants.RestaurantName = @RestaurantName THEN 1 ELSE 0 END
              ELSE 1
          END = 1)
    
 END;
 
-Exec GetCategories @CategoryName=null,@RestaurantId = 3
+
+
+
+
+
+
+EXEC GetCategories null,N'Vịt'
+
+go
+Alter PROCEDURE [dbo].GetCategories
+    @CategoryName nvarchar(50) = NULL,
+    @RestaurantName nvarchar(300) = NULL
+AS
+BEGIN
+    SELECT c.*, r.RestaurantName
+    FROM [dbo].[Categories] c
+    LEFT JOIN [dbo].[Restaurants] r ON c.[RestaurantID] = r.[Id]
+    WHERE
+        (@CategoryName IS NULL OR c.[CategoryName] LIKE '%' + @CategoryName + '%')
+        AND
+        (@RestaurantName IS NULL OR r.[RestaurantName] LIKE '%' + @RestaurantName + '%')
+END
+GO
+
+
+

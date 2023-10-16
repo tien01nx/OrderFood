@@ -1,6 +1,4 @@
-﻿
-using API.Entities;
-using DataAccess.Model;
+﻿using DataAccess.Model;
 using System.Linq.Expressions;
 
 namespace DataAccess.Repository.IRepository

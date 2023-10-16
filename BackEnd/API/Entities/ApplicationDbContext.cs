@@ -33,7 +33,7 @@ namespace API.Entities
 
         public DbSet<CategoryDto> CategoriesDto { get; set; }
 
-        //public DbSet<CategoryDTO> CategoriesFont { get; set; }
+
 
 
         // Sử dụng PROC
@@ -72,9 +72,9 @@ namespace API.Entities
 
 
         // lấy danh sách category và restaurant tham số truyền vào là restaurantname
-        public List<Category> GetCategories(string categoryName, string restaurantId)
+        public List<CategoryDto> GetCategories(string categoryName, string restaurantname)
         {
-            return Categories.FromSqlRaw("EXEC GetCategories {0}, {1}", categoryName, restaurantId).ToList();
+            return CategoriesDto.FromSqlRaw("EXEC GetCategories {0}, {1}", categoryName, restaurantname).ToList();
         }
 
 

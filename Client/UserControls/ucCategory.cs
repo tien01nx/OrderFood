@@ -1,4 +1,5 @@
-﻿using API.Entities;
+﻿using API.DTO;
+using API.Entities;
 using Client.Entities;
 using Client.Model;
 using Client.UserControls;
@@ -118,7 +119,7 @@ namespace Client
         }
 
         // nhận giữ liệu gửi sang
-        public void setCategory(Category category)
+        public void setCategory(CategoryDto category)
         {
             if (category != null)
             {
@@ -128,6 +129,7 @@ namespace Client
                 btnRestaurantName.Text = "";
                 RestaurantId.Text = category.RestaurantId;
                 mdDescriptions.Text = category.Descriptions;
+                btnRestaurantName.Text = category.RestaurantName;
             }
         }
 
@@ -135,7 +137,7 @@ namespace Client
         {
 
             SubBtnClear_Click(sender, e);
-            frmMain.Instance.AddUserControl(new ucListRestaurants(true), "ucListRestaurants");
+            frmMain.Instance.AddUserControl(new ucListCategories(), "ucListRestaurants");
         }
     }
 }

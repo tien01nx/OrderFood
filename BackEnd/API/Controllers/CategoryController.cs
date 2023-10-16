@@ -25,12 +25,12 @@ namespace API.Controllers
 
 
         [HttpGet("GetCategory")]
-        public async Task<ApiResponse<List<Category>>> GetCategory(string categoryName, string restaurantId)
+        public async Task<ApiResponse<List<CategoryDto>>> GetCategory(string categoryName, string restaurantId)
         {
 
             var categories = _context.GetCategories(categoryName, restaurantId).ToList();
 
-            return new ApiResponse<List<Category>>(System.Net.HttpStatusCode.OK, "", categories);
+            return new ApiResponse<List<CategoryDto>>(System.Net.HttpStatusCode.OK, "", categories);
         }
 
 
