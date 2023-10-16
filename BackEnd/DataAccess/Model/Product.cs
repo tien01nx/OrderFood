@@ -24,7 +24,7 @@ namespace DataAccess.Model
 
 
         [MaxLength(300)]
-        public string Images { get; set; }
+        public string ?Images { get; set; }
 
 
 

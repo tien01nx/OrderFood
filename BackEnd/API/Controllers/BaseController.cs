@@ -121,6 +121,20 @@ namespace API.Controllers
                     }
                 }
 
+                if (typeof(T) == typeof(Product))
+                {
+
+                    var productEntity = entity as Product;
+                    var product = _context.Set<Product>().FirstOrDefault(x => x.Id.Equals(productEntity.Id));
+                    if (product != null)
+                    {
+
+                        _context.Entry(product).CurrentValues.SetValues(entity);
+                        await _context.SaveChangesAsync();
+                        return new ApiResponse<T>(HttpStatusCode.OK, "Cập nhật thành công", entity);
+                    }
+                }
+
                 if (typeof(T) == typeof(Bank))
                 {
                     var bankEntity = entity as Bank;

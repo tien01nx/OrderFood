@@ -29,15 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucListRestaurants));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             openFileDialog = new OpenFileDialog();
-            btnUcProduct = new ToolStripButton();
             toolStrip1 = new ToolStrip();
             btnClose = new ToolStripButton();
+            SubBtnAdd = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            SubBtnEdit = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
+            SubBtnDelete = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            SubBtnDeleteAll = new ToolStripButton();
+            toolStripSeparator4 = new ToolStripSeparator();
+            SubBtnSearch = new ToolStripButton();
+            toolStripSeparator5 = new ToolStripSeparator();
+            SubBtnSelect = new ToolStripButton();
+            toolStripSeparator6 = new ToolStripSeparator();
+            SubBtnClear = new ToolStripButton();
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
             Data = new DevExpress.XtraEditors.GroupControl();
             girdRestaurant = new DevExpress.XtraGrid.GridControl();
@@ -81,19 +93,10 @@
             // 
             openFileDialog.FileName = "openFileDialog1";
             // 
-            // btnUcProduct
-            // 
-            btnUcProduct.Image = (Image)resources.GetObject("btnUcProduct.Image");
-            btnUcProduct.ImageTransparentColor = Color.Magenta;
-            btnUcProduct.Name = "btnUcProduct";
-            btnUcProduct.Size = new Size(114, 24);
-            btnUcProduct.Text = "Thêm nhà hàng";
-            btnUcProduct.Click += btnUcProduct_Click;
-            // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnUcProduct, btnClose });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnClose, SubBtnAdd, toolStripSeparator2, SubBtnEdit, toolStripSeparator3, SubBtnDelete, toolStripSeparator1, SubBtnDeleteAll, toolStripSeparator4, SubBtnSearch, toolStripSeparator5, SubBtnSelect, toolStripSeparator6, SubBtnClear });
             toolStrip1.Location = new Point(2, 23);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(997, 27);
@@ -111,6 +114,96 @@
             btnClose.Size = new Size(24, 24);
             btnClose.Text = "toolStripButton6";
             btnClose.Click += btnClose_Click;
+            // 
+            // SubBtnAdd
+            // 
+            SubBtnAdd.Image = (Image)resources.GetObject("SubBtnAdd.Image");
+            SubBtnAdd.ImageTransparentColor = Color.Magenta;
+            SubBtnAdd.Name = "SubBtnAdd";
+            SubBtnAdd.Size = new Size(61, 24);
+            SubBtnAdd.Text = "Thêm";
+            SubBtnAdd.Click += SubBtnAdd_Click;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 27);
+            // 
+            // SubBtnEdit
+            // 
+            SubBtnEdit.Image = (Image)resources.GetObject("SubBtnEdit.Image");
+            SubBtnEdit.ImageTransparentColor = Color.Magenta;
+            SubBtnEdit.Name = "SubBtnEdit";
+            SubBtnEdit.Size = new Size(50, 24);
+            SubBtnEdit.Text = "Sửa";
+            SubBtnEdit.Click += SubBtnEdit_Click;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 27);
+            // 
+            // SubBtnDelete
+            // 
+            SubBtnDelete.Image = (Image)resources.GetObject("SubBtnDelete.Image");
+            SubBtnDelete.ImageTransparentColor = Color.Magenta;
+            SubBtnDelete.Name = "SubBtnDelete";
+            SubBtnDelete.Size = new Size(51, 24);
+            SubBtnDelete.Text = "Xóa";
+            SubBtnDelete.Click += SubBtnDelete_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 27);
+            // 
+            // SubBtnDeleteAll
+            // 
+            SubBtnDeleteAll.Image = (Image)resources.GetObject("SubBtnDeleteAll.Image");
+            SubBtnDeleteAll.ImageTransparentColor = Color.Magenta;
+            SubBtnDeleteAll.Name = "SubBtnDeleteAll";
+            SubBtnDeleteAll.Size = new Size(83, 24);
+            SubBtnDeleteAll.Text = "Xóa tất cả";
+            // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(6, 27);
+            // 
+            // SubBtnSearch
+            // 
+            SubBtnSearch.Image = (Image)resources.GetObject("SubBtnSearch.Image");
+            SubBtnSearch.ImageTransparentColor = Color.Magenta;
+            SubBtnSearch.Name = "SubBtnSearch";
+            SubBtnSearch.Size = new Size(80, 24);
+            SubBtnSearch.Text = "Tìm kiếm";
+            // 
+            // toolStripSeparator5
+            // 
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            toolStripSeparator5.Size = new Size(6, 27);
+            // 
+            // SubBtnSelect
+            // 
+            SubBtnSelect.Image = (Image)resources.GetObject("SubBtnSelect.Image");
+            SubBtnSelect.ImageTransparentColor = Color.Magenta;
+            SubBtnSelect.Name = "SubBtnSelect";
+            SubBtnSelect.Size = new Size(60, 24);
+            SubBtnSelect.Text = "Chọn";
+            SubBtnSelect.Click += SubBtnSelect_Click;
+            // 
+            // toolStripSeparator6
+            // 
+            toolStripSeparator6.Name = "toolStripSeparator6";
+            toolStripSeparator6.Size = new Size(6, 27);
+            // 
+            // SubBtnClear
+            // 
+            SubBtnClear.Image = (Image)resources.GetObject("SubBtnClear.Image");
+            SubBtnClear.ImageTransparentColor = Color.Magenta;
+            SubBtnClear.Name = "SubBtnClear";
+            SubBtnClear.Size = new Size(78, 24);
+            SubBtnClear.Text = "Làm mới";
             // 
             // groupControl1
             // 
@@ -154,6 +247,7 @@
             gridlayout.OptionsSelection.MultiSelect = true;
             gridlayout.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             gridlayout.OptionsView.RowAutoHeight = true;
+            gridlayout.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(PhoneNumber, DevExpress.Data.ColumnSortOrder.Ascending) });
             // 
             // RestaurantName
             // 
@@ -161,7 +255,7 @@
             RestaurantName.FieldName = "RestaurantName";
             RestaurantName.Name = "RestaurantName";
             RestaurantName.Visible = true;
-            RestaurantName.VisibleIndex = 0;
+            RestaurantName.VisibleIndex = 1;
             // 
             // PhoneNumber
             // 
@@ -169,7 +263,7 @@
             PhoneNumber.FieldName = "PhoneNumber";
             PhoneNumber.Name = "PhoneNumber";
             PhoneNumber.Visible = true;
-            PhoneNumber.VisibleIndex = 1;
+            PhoneNumber.VisibleIndex = 2;
             // 
             // Image
             // 
@@ -177,7 +271,7 @@
             Image.FieldName = "Image";
             Image.Name = "Image";
             Image.Visible = true;
-            Image.VisibleIndex = 2;
+            Image.VisibleIndex = 3;
             // 
             // OpenTime
             // 
@@ -185,7 +279,7 @@
             OpenTime.FieldName = "OpenTime";
             OpenTime.Name = "OpenTime";
             OpenTime.Visible = true;
-            OpenTime.VisibleIndex = 3;
+            OpenTime.VisibleIndex = 4;
             // 
             // CloseTime
             // 
@@ -193,7 +287,7 @@
             CloseTime.FieldName = "CloseTime";
             CloseTime.Name = "CloseTime";
             CloseTime.Visible = true;
-            CloseTime.VisibleIndex = 4;
+            CloseTime.VisibleIndex = 5;
             // 
             // BankAccount
             // 
@@ -201,7 +295,7 @@
             BankAccount.FieldName = "BankAccount";
             BankAccount.Name = "BankAccount";
             BankAccount.Visible = true;
-            BankAccount.VisibleIndex = 5;
+            BankAccount.VisibleIndex = 6;
             // 
             // BankNumber
             // 
@@ -209,7 +303,7 @@
             BankNumber.FieldName = "BankNumber";
             BankNumber.Name = "BankNumber";
             BankNumber.Visible = true;
-            BankNumber.VisibleIndex = 6;
+            BankNumber.VisibleIndex = 7;
             // 
             // BankName
             // 
@@ -217,7 +311,7 @@
             BankName.FieldName = "BankName";
             BankName.Name = "BankName";
             BankName.Visible = true;
-            BankName.VisibleIndex = 7;
+            BankName.VisibleIndex = 8;
             // 
             // Chon
             // 
@@ -239,8 +333,8 @@
             // btnXoa
             // 
             btnXoa.AutoHeight = false;
-            editorButtonImageOptions2.Image = (Image)resources.GetObject("editorButtonImageOptions2.Image");
-            btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
+            editorButtonImageOptions1.Image = (Image)resources.GetObject("editorButtonImageOptions1.Image");
+            btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
             btnXoa.Name = "btnXoa";
             btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -351,7 +445,6 @@
 
         private OpenFileDialog openFileDialog;
         private ToolStripButton toolStripButton4;
-        private ToolStripButton btnUcProduct;
         private ToolStrip toolStrip1;
         private ToolStripButton btnClose;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -378,5 +471,18 @@
         private DevExpress.XtraGrid.Columns.GridColumn BankName;
         private DevExpress.XtraGrid.Columns.GridColumn Chon;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSubmitData;
+        private ToolStripButton SubBtnAdd;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripButton SubBtnEdit;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripButton SubBtnDelete;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripButton SubBtnDeleteAll;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripButton SubBtnSearch;
+        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripButton SubBtnSelect;
+        private ToolStripSeparator toolStripSeparator6;
+        private ToolStripButton SubBtnClear;
     }
 }

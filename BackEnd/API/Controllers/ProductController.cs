@@ -1,3 +1,4 @@
+using API.DTO;
 using API.Entities;
 using AutoMapper;
 using DataAccess.Model;
@@ -68,16 +69,23 @@ namespace API.Controllers
             return new ApiResponse<Product>(HttpStatusCode.BadRequest, "Thêm hình thất bại", null);
         }
 
-        //[HttpGet("User")]
-        //public async Task<ApiResponse<List<User>>> GetUser()
-        //{
+        // lấy danh sách product
+        [HttpGet("GetListProduct")]
+       public async Task<ApiResponse<List<ProductDto>>> GetListProduct(string restaurantName,string categoryName,string productName)
+        {
+            try {
 
-        //    List<User> products = _unitOfWork.User.GetAll().ToList();
+                List<ProductDto> products = _context.GetProducts(restaurantName, categoryName, productName);
 
-
-        //    return new ApiResponse<List<User>>(System.Net.HttpStatusCode.OK, "Lấy dữ dữ liệu", products);
-
-        //}
+                return new ApiResponse<List<ProductDto>>(System.Net.HttpStatusCode.OK, "Lấy dữ dữ liệu", products);
+            }
+            catch(Exception ex)
+            {
+                //_logger.LogError(ex.Message);
+                return new ApiResponse<List<ProductDto>>(HttpStatusCode.BadRequest, ex.Message, null);
+            }
+            
+        }
 
 
     }

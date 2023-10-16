@@ -304,5 +304,27 @@ BEGIN
 END
 GO
 
+Select Products.*,Categories.CategoryName, RestaurantName from Products join Categories on Products.CategoryID = Categories.Id 
+Join Restaurants on Restaurants.Id = Products.RestaurantID
 
 
+
+Go
+ALTER PROC GetListProduct
+@RestaurantName nvarchar(50) = null,
+@CategoryName nvarchar(50) = null,
+@ProductName nvarchar(50) = null
+AS
+	BEGIN
+		Select Products.*,Categories.CategoryName, RestaurantName from Products join Categories on Products.CategoryID = Categories.Id 
+		Join Restaurants on Restaurants.Id = Products.RestaurantID
+		Where 
+		( @RestaurantName IS NULL OR Restaurants.RestaurantName LIKE '%' + @RestaurantName + '%')
+		AND 
+		( @ProductName  IS NULL OR Products.ProductName LIKE '%' + @ProductName +'%')
+		AND 
+		(@CategoryName  IS NULL OR Categories.CategoryName LIKE '%' + @CategoryName + '%')
+		
+	End
+
+EXEC GetListProduct null,null,null

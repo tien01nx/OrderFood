@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AD/yK/ix0KgOxPhlSNL6SwAMEMeDKLShqd+UMAnl3xc=",
+  "Hash": "TJfjp1L10gcGnyiPTQRfsAbIyjEYukKJB59eajki1CY=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product-3\\f04be1ac-0687-4f87-aa11-81a53b5c4c10.png"
+    },
+    {
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-Peo1222\\1fb3a476-58ac-4a0d-9615-4c20fc2e3a49.png",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/product-Peo1222/1fb3a476-58ac-4a0d-9615-4c20fc2e3a49.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product-Peo1222\\1fb3a476-58ac-4a0d-9615-4c20fc2e3a49.png"
     },
     {
       "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-ResiaJwyuNLOb\\cb2a1947-c672-48b8-94a4-024413acc057.png",
@@ -576,6 +593,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\c58b2913-32c2-4a87-a16d-ec6c3ed016b2.jpg"
+    },
+    {
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\de06d96a-db23-427b-975d-8578784d7489.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/restaurants/restaurant-1/de06d96a-db23-427b-975d-8578784d7489.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-1\\de06d96a-db23-427b-975d-8578784d7489.jpg"
     },
     {
       "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\e099cbb9-f134-442a-82d5-eb5b0b3e6ce4.jpg",
@@ -1120,6 +1154,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-RessFWcvaHus4\\59291599-b618-4d4e-8830-a0208b1536b2.jpg"
+    },
+    {
+      "Identity": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResXcqMacfJEG\\608fab8f-340a-4530-9ad1-0d30cd02d84c.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/restaurants/restaurant-ResXcqMacfJEG/608fab8f-340a-4530-9ad1-0d30cd02d84c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\restaurants\\restaurant-ResXcqMacfJEG\\608fab8f-340a-4530-9ad1-0d30cd02d84c.jpg"
     }
   ]
 }

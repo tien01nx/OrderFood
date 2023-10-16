@@ -156,6 +156,14 @@ namespace Client.Entities
             set { category = value; }
         }
 
+        // lưu thông tin restaurantVM ở dạng đối tượng 
+        private static RestaurantVM restauranVM;
+        public static RestaurantVM RestaurantVM
+        {
+            get { return restauranVM; }
+            set { restauranVM = value; }
+        }
+
 
 
 

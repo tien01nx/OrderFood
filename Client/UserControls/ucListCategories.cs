@@ -36,7 +36,7 @@ namespace Client.UserControls
             {
                 string categoryName = txtCategoryName.Text.Trim();
                 string restaurantName = btnRestaurantname.Text.Trim();
-                var categories = _apiClient.GetData<CategoryDto>($"Category/GetCategory?categoryName={categoryName}&restaurantId={selectedRestaurantId}")
+                var categories = _apiClient.GetData<CategoryDto>($"Category/GetCategory?categoryName={categoryName}&restaurantId={restaurantName}")
             .Data;
                 if (categories != null)
                 {
@@ -94,22 +94,22 @@ namespace Client.UserControls
 
         public void GetRestaurant()
         {
-            //// Kiểm tra xem có danh sách nhà hàng nào trong SessionData không
-            //if (SessionData.AllRestaurants.Count > 0)
-            //{
-            //    // Tạo một danh sách tên nhà hàng để hiển thị
-            //    List<string> restaurantNames = new List<string>();
+            // Kiểm tra xem có danh sách nhà hàng nào trong SessionData không
+            if (SessionData.AllRestaurants.Count > 0)
+            {
+                // Tạo một danh sách tên nhà hàng để hiển thị
+                List<string> restaurantNames = new List<string>();
 
-            //    // Lấy tên của tất cả các nhà hàng từ SessionData
-            //    foreach (var restaurant in SessionData.AllRestaurants)
-            //    {
-            //        restaurantNames.Add(restaurant.RestaurantName);
-            //    }
+                // Lấy tên của tất cả các nhà hàng từ SessionData
+                foreach (var restaurant in SessionData.AllRestaurants)
+                {
+                    restaurantNames.Add(restaurant.RestaurantName);
+                }
 
-            //    // Hiển thị danh sách tên nhà hàng lên buttonEdit
-            //    btnRestaurantname.Text = string.Join(", ", restaurantNames);
-            //    selectedRestaurantId = SessionData.AllRestaurants.FirstOrDefault().Id;
-            //}
+                // Hiển thị danh sách tên nhà hàng lên buttonEdit
+                btnRestaurantname.Text = string.Join(", ", restaurantNames);
+                selectedRestaurantId = SessionData.AllRestaurants.FirstOrDefault().Id;
+            }
 
         }
 
@@ -172,8 +172,37 @@ namespace Client.UserControls
                     //}
                     SessionData.Category = firstSelectedRow;
                     MessageBox.Show("Đã chọn");
+
+                    // kiểm trả Uc có phải là ucListProduct không nếu đúng thì cập nhật giao diện và ẩn đi
+                    if (SessionData.GetUC().Equals("ucListProduct"))
+                    {
+                        var existingucListProduct = frmMain.Instance?.GetUserControl("ucListProduct") as ucListProduct;
+                        if (existingucListProduct != null)
+                        {
+                            existingucListProduct.GetcategoryName();
+                            existingucListProduct.LoadData();
+
+                        }
+                        this.Hide();
+                    }
+                    // kiểm trả Uc có phải là ucProduct không nếu đúng thì cập nhật giao diện và ẩn đi
+                    if (SessionData.GetUC().Equals("ucProduct"))
+                    {
+                        var existingUcProduct = frmMain.Instance?.GetUserControl("ucProduct") as ucProduct;
+                        if (existingUcProduct != null)
+                        {
+
+                            existingUcProduct.setCategory();
+
+                        }
+                        this.Hide();
+                    }
                 }
+
+              
+
             }
+
         }
 
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
@@ -245,7 +274,7 @@ namespace Client.UserControls
                 var firstSelectedRowHandle = gridView1.GetSelectedRows()[0];
                 var firstSelectedRow = gridView1.GetRow(firstSelectedRowHandle) as CategoryDto;
                 // Hiện thông báo xem người dùng có xác nhận xóa không
-                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa {firstSelectedRow.CategoryName} không?", "Thông báo", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     if (firstSelectedRow != null)

@@ -1,130 +1,232 @@
-﻿using Client.DTO;
+﻿using API.Entities;
 using Client.Entities;
+using Client.Model;
 using DataAccess.Model;
+using DevExpress.XtraEditors;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
 using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Client.UserControls
 {
     public partial class ucProduct : DevExpress.XtraEditors.XtraUserControl
     {
 
-        private readonly frmMain _frmMain;
         private readonly ApiClient _apiClient;
-        private List<Restaurant> _restaurants;
+        private bool _isUpdateImage = false;
         public ucProduct()
         {
             InitializeComponent();
-
             _apiClient = new ApiClient();
-            _restaurants = new List<DataAccess.Model.Restaurant>();
-
-            GetData();
-            GetRestaurant();
         }
 
-        private void closeucProduct_Click(object sender, EventArgs e)
+        private void SubBtnClose_Click(object sender, EventArgs e)
         {
-            frmMain.Instance.AddUserControl(new ucListProduct(), "ucListProduct");
+            if (frmMain.Instance != null)
+            {
+                SessionData.SetUC("ucListProduct");
+                frmMain.Instance.AddUserControl(new ucListProduct(), "ucListProduct");
+            }
         }
 
-        // lấy thông tin từ DTO/CategoryDTO.cs lấy dữ liệu từ database
-
-        public void GetData()
+        private void SubbtnAdd_Click(object sender, EventArgs e)
         {
+
             try
             {
-                var restaurants = _apiClient.GetData<CategoryDTO>($"Category/GetAllCategory").Data;
-                //if (restaurants != null)
-                //{
-                //    foreach (var itemData in restaurants)
-                //    {
-                //        ComboBoxItem comboBoxItem = new ComboBoxItem(itemData.RestaurantId, itemData.RestaurantName);
-                //        cboRestaurant.Properties.Items.Add(comboBoxItem);
-                //    }
+                var product = productVM();
+                ApiResponse<ProductVM> createResponse = _apiClient.SendPostRequest<ProductVM>("Product/Create", product);
+                if (createResponse != null)
+                {
+                    string productId = createResponse.Data.Id;
 
-                //}
+                    if (createResponse.Code == HttpStatusCode.OK)
+                    {
+
+                        if (!_isUpdateImage)
+                        {
+                            // xử lý thêm người dùng thay ảnh thì mới gửi lên  không thì thôi
+
+                            if (svgProductImage.Image != null)
+                            {
+                                // Chuyển đổi hình ảnh trong PictureBox thành một đối tượng MemoryStream
+                                using (MemoryStream ms = new MemoryStream())
+                                {
+                                    //peImage.Image.Save(ms, peImage.Image.RawFormat);
+                                    svgProductImage.Image.Save(ms, ImageFormat.Jpeg);
+                                    ApiResponse<ProductVM> uploadImageResponse = _apiClient.SendImageUploadRequest<ProductVM>("Product/UpLoadImage", productId, ms.ToArray());
+
+                                    if (uploadImageResponse != null && uploadImageResponse.Code == HttpStatusCode.OK)
+                                    {
+                                        Clear();
+                                        MessageBox.Show("Cập nhật nhà hàng thành công");
+                                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
+                                        var existingUcCategory = frmMain.Instance?.GetUserControl("ucListRestaurants") as ucListRestaurants;
+                                        if (existingUcCategory != null)
+                                        {
+                                            existingUcCategory.LoadData();
+                                            frmMain.Instance.AddUserControl(new ucListRestaurants(false), "ucListRestaurants");
+
+                                        }
+                                    }
+                                    else
+                                    {
+
+                                        MessageBox.Show("Lỗi khi thêm hình");
+                                    }
+                                }
+
+                            }
+                        }
+                        else
+                        {
+                            Clear(); ;
+                            //ShowGrid();
+                            MessageBox.Show("Cập nhật nhà hàng thành công");
+                            // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
+                            var existingUcCategory = frmMain.Instance?.GetUserControl("ucListRestaurants") as ucListRestaurants;
+                            if (existingUcCategory != null)
+                            {
+                                existingUcCategory.LoadData();
+                                frmMain.Instance.AddUserControl(new ucListRestaurants(false), "ucListRestaurants");
+
+                            }
+                        }
+                    }
+
+                    if (createResponse.Code == HttpStatusCode.Created)
+                    {
+                        if (svgProductImage.Image != null)
+                        {
+                            // Chuyển đổi hình ảnh trong PictureBox thành một đối tượng MemoryStream
+                            using (MemoryStream ms = new MemoryStream())
+                            {
+                                svgProductImage.Image.Save(ms, svgProductImage.Image.RawFormat);
+                                ApiResponse<RestaurantVM> uploadImageResponse = _apiClient.SendImageUploadRequest<RestaurantVM>("Product/UpLoadImage", productId, ms.ToArray());
+
+                                if (uploadImageResponse != null && uploadImageResponse.Code == HttpStatusCode.OK)
+                                {
+                                    Clear();
+
+                                    MessageBox.Show("Tạo nhà hàng thành công");
+
+                                    // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
+                                    var existingUcCategory = frmMain.Instance?.GetUserControl("ucListProduct") as ucListProduct;
+                                    if (existingUcCategory != null)
+                                    {
+                                        existingUcCategory.LoadData();
+                                        frmMain.Instance.AddUserControl(new ucListProduct(), "ucListProduct");
+
+                                    }
+
+                                }
+                                else
+                                {
+
+                                    MessageBox.Show("Lỗi khi thêm hình");
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi" + ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
-
-
         }
 
-        private void ucProduct_Load(object sender, EventArgs e)
+        private void SubBtnClear_Click(object sender, EventArgs e)
         {
 
         }
 
-
-        private void cboRestaurant_EditValueChanged(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
-        private bool isInitialized = false;
 
-        private void cboRestaurant_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnRestaurant_Click(object sender, EventArgs e)
         {
-
-            //if (cboRestaurant.SelectedItem != null)
-            //{
-            //    ComboBoxItem selectedItem = (ComboBoxItem)cboRestaurant.SelectedItem;
-            //    string selectedValue = selectedItem.Value;
-            //    string selectedText = selectedItem.Text;
-            //    MessageBox.Show(selectedValue + " " + selectedText);
-
-            //}
-            //    if (isInitialized)
-            //{
-            //    int selectedIndex = cboRestaurant.SelectedIndex;
-            //    string restaurandId = "";
-
-
-
-            //    // Kiểm tra xem selectedIndex có hợp lệ hay không
-            //    if (selectedIndex >= 0)
-            //    {
-            //        string restaurantName = cboRestaurant.SelectedItem.ToString();
-
-            //        // lấy dữ liệu của categoryName theo restaurantName từ database
-            //        var categories = _apiClient.GetData<CategoryDTO>($"Category/GetAllCategory?restaurantName={restaurantName}").Data;
-            //        if (categories != null && categories.Count > 0)
-            //        {
-
-            //            restaurandId = categories[0].RestaurantId;
-            //            //lấy dữ liệu đổ ra product theo id nhà hàng
-            //            var products = _apiClient.GetData<Product>($"Product/Restaurant/{restaurandId}").Data;
-            //            // đổ dữ liệu vào gridview
-            //            products.ForEach(p => p.ImageProduct = LoadProductImage(p.Images));
-            //            gridData.DataSource = products;
-            //            gridData.RefreshDataSource();
-            //            // add dữ liệu vào cboCategoryName
-
-            //            foreach (var category in categories)
-            //            {
-            //                if (!cboCategoryName.Properties.Items.Contains(category.CategoryName) && category.CategoryName != "N/A")
-            //                {
-            //                    cboCategoryName.Properties.Items.Add(category.CategoryName);
-            //                }
-            //            }
-
-            //        }
-            //        else
-            //        {
-            //            cboCategoryName.Text = "";
-            //            cboCategoryName.Properties.Items.Clear();
-            //            gridData.DataSource = null;
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    isInitialized = true;
-            //}
+            // setUc là ucListProduct và thực hiện chuyển đến trang ucListRestaurant
+            SessionData.SetUC("ucProduct");
+            frmMain.Instance.AddUserControl(new ucListRestaurants(false), "ucListRestaurant");
         }
+
+        public void GetRestaurant()
+        {
+            // Kiểm tra xem có danh sách nhà hàng nào trong SessionData không
+            if (SessionData.AllRestaurants.Count > 0)
+            {
+                // Tạo một danh sách tên nhà hàng để hiển thị
+                List<string> restaurantNames = new List<string>();
+
+                // Lấy tên của tất cả các nhà hàng từ SessionData
+                foreach (var restaurant in SessionData.AllRestaurants)
+                {
+                    restaurantNames.Add(restaurant.RestaurantName);
+                }
+
+                // Hiển thị danh sách tên nhà hàng lên buttonEdit
+                btnRestaurant.Text = string.Join(", ", restaurantNames);
+                RestaurantId.Text = SessionData.AllRestaurants[0].Id.ToString();
+            }
+
+        }
+        public void setCategory()
+        {
+            if (SessionData.Category != null)
+            {
+                btnCategoryName.Text = SessionData.Category.CategoryName;
+                CategoryId.Text = SessionData.Category.Id.ToString();
+            }
+        }
+
+        private void btnCategoryName_Click(object sender, EventArgs e)
+        {
+            // setUc là ucProduct và thực hiện chuyển đến trang ucListCategory
+            SessionData.SetUC("ucProduct");
+            frmMain.Instance.AddUserControl(new ucListCategories(), "ucListCategories");
+        }
+
+        private ProductVM productVM()
+        {
+            // lấy dữ liệu trên form
+            ProductVM productVM = new ProductVM()
+            {
+                ProductName = txtProductName.Text,
+                Price = spPrice.Value,
+                Description = mdDescription.Text,
+                RestaurantId = RestaurantId.Text,
+                CategoryId = CategoryId.Text,
+                Id = id.Text,
+                Images = null,
+            };
+            if (productVM.Id.Equals(""))
+            {
+                productVM.GenerateRandomId();
+            }
+
+            return productVM;
+        }
+
         private Image LoadProductImage(string imagePath)
         {
             if (imagePath != null)
@@ -148,48 +250,45 @@ namespace Client.UserControls
             }
         }
 
-        private void btnRestaurant_Click(object sender, EventArgs e)
+        private void svgProductImage_MouseDown(object sender, MouseEventArgs e)
         {
-            // cập nhật giao diện ucListRestaurants
-
-            //var existingUcRestaurant = frmMain.Instance?.GetUserControl("ucListCategories") as ucListRestaurants;
-            //if (existingUcRestaurant != null)
-            //{
-            //    //existingUcRestaurant.LoadData();
-
-            //}
-
-            if (frmMain.Instance != null)
+            if (e.Button == MouseButtons.Left)
             {
-                SessionData.SetUC("ucProduct");
-                frmMain.Instance.AddUserControl(new ucListRestaurants(true), "ucListRestaurants");
-            }
-        }
-        // lấy dữ liệu từ DataSession
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Hình ảnh (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp|Tất cả các tệp (*.*)|*.*";
 
-        public void GetRestaurant()
-        {
-            // Kiểm tra xem có danh sách nhà hàng nào trong SessionData không
-            if (SessionData.AllRestaurants.Count > 0)
-            {
-                // Tạo một danh sách tên nhà hàng để hiển thị
-                List<string> restaurantNames = new List<string>();
-
-                // Lấy tên của tất cả các nhà hàng từ SessionData
-                foreach (var restaurant in SessionData.AllRestaurants)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    restaurantNames.Add(restaurant.RestaurantName);
+                    string selectedImagePath = openFileDialog.FileName;
+
+                    // Kiểm tra xem có hình ảnh được chọn không
+                    if (!string.IsNullOrEmpty(selectedImagePath))
+                    {
+                        // Đặt hình ảnh cho PictureEdit
+                        svgProductImage.Image = System.Drawing.Image.FromFile(selectedImagePath);
+                    }
                 }
-
-                // Hiển thị danh sách tên nhà hàng lên buttonEdit
-                btnRestaurant.Text = string.Join(", ", restaurantNames);
             }
-
         }
 
-        private void btnRestaurant_EditValueChanged(object sender, EventArgs e)
-        {
 
+        // clear dữ liệu trên form
+        private void Clear()
+        {
+            btnCategoryName.Text = "";
+            btnRestaurant.Text = "";
+            txtProductName.Text = "";
+            mdDescription.Text = "";
+            RestaurantId.Text = "";
+            CategoryId.Text = "";
+            svgProductImage.Image = null;
+            id.Text = "";
+            spPrice.Value = 20000;
+
+        }
+        private void svgProductImage_EditValueChanged(object sender, EventArgs e)
+        {
+            _isUpdateImage = true;
         }
     }
 }

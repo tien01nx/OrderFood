@@ -33,7 +33,8 @@ namespace API.Entities
 
         public DbSet<CategoryDto> CategoriesDto { get; set; }
 
-
+        public DbSet<ProductDto> ProductsDto { get; set; }
+       
 
 
         // Sử dụng PROC
@@ -76,6 +77,12 @@ namespace API.Entities
         {
             return CategoriesDto.FromSqlRaw("EXEC GetCategories {0}, {1}", categoryName, restaurantname).ToList();
         }
+        // lấy danh sách product
+        public List<ProductDto> GetProducts(string productName, string categoryName, string restaurantName)
+        {
+            return ProductsDto.FromSqlRaw("EXEC GetListProduct {0}, {1}, {2}", productName, categoryName, restaurantName).ToList();
+        }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -84,8 +91,9 @@ namespace API.Entities
 
             modelBuilder.Entity<UserInfoDTO>().HasNoKey();
             modelBuilder.Entity<CategoryDto>().HasNoKey();
+            modelBuilder.Entity<ProductDto>().HasNoKey();
 
-            //modelBuilder.Entity<CategoryDTO>().HasNoKey();
+
 
 
             modelBuilder.Entity<User>()

@@ -24,6 +24,8 @@ namespace Client.UserControls
 
         }
 
+
+
         private void ucListRestaurants_Load(object sender, EventArgs e) { LoadData(); }
         private void btnXoa_Click(object? sender, EventArgs e) { MessageBox.Show("Xóa thành công"); }
 
@@ -134,13 +136,7 @@ namespace Client.UserControls
             }
         }
 
-        private void btnUcProduct_Click(object sender, EventArgs e)
-        {
-            if (frmMain.Instance != null)
-            {
-                frmMain.Instance.AddUserControl(new click(), "click");
-            }
-        }
+
 
         private void btnSubmitData_Click(object sender, EventArgs e)
         {
@@ -153,7 +149,7 @@ namespace Client.UserControls
                     if (SessionData.GetUC().Equals("ucProduct"))
                     {
                         // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
-                        var existingUcProduct = frmMain.Instance?.GetUserControl("ucProduct") as ucProduct;
+                        var existingUcProduct = frmMain.Instance?.GetUserControl("ucProduct") as ucProducts;
                         if (existingUcProduct != null)
                         {
                             existingUcProduct.GetRestaurant();
@@ -182,6 +178,30 @@ namespace Client.UserControls
                         {
                             existingUcCategory.GetRestaurant();
 
+                            SessionData.RemoveRestaurant(restaurant);
+
+                        }
+                    }
+                    if (SessionData.GetUC().Equals("ucListProduct"))
+                    {
+                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
+                        var existingUcProduct = frmMain.Instance?.GetUserControl("ucListProduct") as ucListProduct;
+                        if (existingUcProduct != null)
+                        {
+                            existingUcProduct.GetRestaurant();
+                            existingUcProduct.LoadData();
+                            SessionData.RemoveRestaurant(restaurant);
+
+                        }
+                    }
+                    // kiếm tra có phải ucProduct không
+                    if (SessionData.GetUC().Equals("ucProduct"))
+                    {
+                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
+                        var existingUcProduct = frmMain.Instance?.GetUserControl("ucProduct") as ucProduct;
+                        if (existingUcProduct != null)
+                        {
+                            existingUcProduct.GetRestaurant();
                             SessionData.RemoveRestaurant(restaurant);
 
                         }
@@ -239,6 +259,99 @@ namespace Client.UserControls
             //    }
 
             //}
+        }
+
+        private void SubBtnAdd_Click(object sender, EventArgs e)
+        {
+            if (frmMain.Instance != null)
+            {
+                frmMain.Instance.AddUserControl(new ucRestaurant(), "ucRestaurant");
+            }
+        }
+
+        private void SubBtnSelect_Click(object sender, EventArgs e)
+        {
+            if (gridlayout.SelectedRowsCount > 0)
+            {
+                var firstSelectedRowHandle = gridlayout.GetSelectedRows()[0];
+                var firstSelectedRow = gridlayout.GetRow(firstSelectedRowHandle) as RestaurantVM;
+
+                if (firstSelectedRow != null)
+                {
+                    //var existingUcProduct = frmMain.Instance?.GetUserControl("ucCategory") as ucCategory;
+                    //if (existingUcProduct != null)
+                    //{
+                    //    existingUcProduct.setCategory(firstSelectedRow);
+                    //    frmMain.Instance.AddUserControl(new ucCategory(), "ucCategory");
+                    //}
+                    //else
+                    //{
+                    //    // UserControl chưa tồn tại, tạo và thêm vào frmMain
+                    //    ucCategory newUcCategory = new ucCategory();
+                    //    newUcCategory.setCategory(firstSelectedRow);
+                    //    frmMain.Instance.AddUserControl(newUcCategory, "ucCategory");
+                    //}
+
+
+                    //SessionData.Category = firstSelectedRow;
+                    SessionData.RestaurantVM = firstSelectedRow;
+                    MessageBox.Show("Đã chọn");
+                }
+            }
+        }
+
+        private void SubBtnEdit_Click(object sender, EventArgs e)
+        {
+            // chuyển  sang ucRestaurant và cập nhật giao diện ucRestaurant
+            // kiểm tra ucRestaurant đã tồn tại trong frmMain chưa nếu tồn tại thì cập nhật lại giao diện
+            // còn chưa tồn tại thì tao mới và thêm vào frmMain và cập nhật giao diện từ SessionData.RestaurantVM
+            if (frmMain.Instance != null)
+            {
+                var existingUcRestaurant = frmMain.Instance?.GetUserControl("ucRestaurant") as ucRestaurant;
+                if (existingUcRestaurant != null)
+                {
+                    existingUcRestaurant.setRestaurant(SessionData.RestaurantVM);
+                    frmMain.Instance.AddUserControl(existingUcRestaurant, "ucRestaurant");
+                }
+                else
+                {
+                    // UserControl chưa tồn tại, tạo và thêm vào frmMain
+                    ucRestaurant newUcRestaurant = new ucRestaurant();
+                    newUcRestaurant.setRestaurant(SessionData.RestaurantVM);
+                    frmMain.Instance.AddUserControl(newUcRestaurant, "ucRestaurant");
+                }
+            }
+        }
+
+        private void SubBtnDelete_Click(object sender, EventArgs e)
+        {
+            // lấy dữ liệu từ người dùng chọn => SessionData.RestaurantVM
+            if (SessionData.RestaurantVM != null)
+            {
+                // Thông báo cho người dùng có xóa không ?
+                DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa nhà hàng {SessionData.RestaurantVM.RestaurantName} không ?", "Thông báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    // xóa dữ liệu trong database
+                    var result = _apiClient.SendDeteleRequest<RestaurantVM>($"Restaurant/{SessionData.RestaurantVM.Id}", 2);
+                    if (result != null)
+                    {
+                        // xóa thành công
+                        MessageBox.Show("Xóa thành công");
+                        // cập nhật lại giao diện ucListRestaurants
+                        LoadData();
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("Vui lòng chọn nhà hàng muốn xoa");
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    // không xóa
+                }
+            }
         }
     }
 }

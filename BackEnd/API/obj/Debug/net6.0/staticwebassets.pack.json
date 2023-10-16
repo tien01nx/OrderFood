@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\images\\product-3\\f04be1ac-0687-4f87-aa11-81a53b5c4c10.png"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-Peo1222\\1fb3a476-58ac-4a0d-9615-4c20fc2e3a49.png",
+      "PackagePath": "staticwebassets\\images\\product-Peo1222\\1fb3a476-58ac-4a0d-9615-4c20fc2e3a49.png"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-ResiaJwyuNLOb\\cb2a1947-c672-48b8-94a4-024413acc057.png",
       "PackagePath": "staticwebassets\\images\\product-ResiaJwyuNLOb\\cb2a1947-c672-48b8-94a4-024413acc057.png"
     },
@@ -133,6 +137,10 @@
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\c58b2913-32c2-4a87-a16d-ec6c3ed016b2.jpg"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\de06d96a-db23-427b-975d-8578784d7489.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\de06d96a-db23-427b-975d-8578784d7489.jpg"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-1\\e099cbb9-f134-442a-82d5-eb5b0b3e6ce4.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-1\\e099cbb9-f134-442a-82d5-eb5b0b3e6ce4.jpg"
     },
@@ -231,6 +239,10 @@
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResQfARAsP1hP\\9b7f7b64-f4a5-4136-b0ec-d99210e3c0e4.jpg",
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResQfARAsP1hP\\9b7f7b64-f4a5-4136-b0ec-d99210e3c0e4.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResXcqMacfJEG\\608fab8f-340a-4530-9ad1-0d30cd02d84c.jpg",
+      "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-ResXcqMacfJEG\\608fab8f-340a-4530-9ad1-0d30cd02d84c.jpg"
     },
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\restaurants\\restaurant-ResdM8dQ6Hvnq\\a6a247d2-4864-47ac-8a44-ada3e4b0e3be.jpg",
