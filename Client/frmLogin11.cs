@@ -1,5 +1,7 @@
-﻿using Client.Entities;
+﻿using API.DTO;
+using Client.Entities;
 using Client.Model;
+using DataAccess.Model;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Security;
 
@@ -21,10 +23,10 @@ namespace Client
         {
             string username = txtUserName.Text;
             string password = txtPassword.Text;
-            var loginDto = new Login { UserName = username, Password = password };
+            var loginDto = new LoginDto { UserName = username, Password = password };
             var resource = "Account/login"; // Thay đổi này thành đường dẫn thực sự đến endpoint login của bạn
 
-            var response = _client.SendPostRequest<User>(resource, loginDto);
+            var response = _client.SendPostRequest<Login>(resource, loginDto);
 
             if (response != null)
             {

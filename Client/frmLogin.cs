@@ -1,5 +1,7 @@
 ﻿using API.DTO;
+using Client.DTO;
 using Client.Entities;
+using Client.Model;
 using DataAccess.Model;
 using DevExpress.XtraEditors;
 using System;
@@ -30,16 +32,16 @@ namespace Client
         {
             string username = txtUserName.Text;
             string password = txtPassword.Text;
-            var loginDto = new LoginDto { UserName = username, Password = password };
+            var loginDto = new LoginDTO { UserName = username, Password = password };
             var resource = "Account/login"; // Thay đổi này thành đường dẫn thực sự đến endpoint login của bạn
 
-            var response = _client.SendPostRequest<Login>(resource, loginDto);
+            var response = _client.SendPostRequest<LoginVM>(resource, loginDto);
 
             if (response != null)
             {
                 if (response.Code == System.Net.HttpStatusCode.OK)
                 {
-                    API.DTO.Login login = new API.DTO.Login();
+                    Login login = new Login();
                     
                     string token = response.Message;
                     SecureString secureToken = TokenManager.ConvertToSecureString(token);

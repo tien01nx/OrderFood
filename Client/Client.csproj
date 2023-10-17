@@ -21,7 +21,6 @@
   <ItemGroup>
     <Reference Include="API">
       <HintPath>..\BackEnd\API\bin\Debug\net6.0\API.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="DataAccess">
       <HintPath>..\BackEnd\DataAccess\bin\Debug\net6.0\DataAccess.dll</HintPath>

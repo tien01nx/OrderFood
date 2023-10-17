@@ -49,7 +49,7 @@ namespace Client.Entities
             }
             catch (Exception ex)
             {
-                return new ApiResponse<List<T>>(System.Net.HttpStatusCode.BadRequest, "Lỗi kết nối với server", null);
+                return new ApiResponse<List<T>>(System.Net.HttpStatusCode.BadRequest, "Lỗi kết nối với server"+ex.Message, null);
                 
             }
 
