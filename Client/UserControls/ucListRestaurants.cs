@@ -333,7 +333,7 @@ namespace Client.UserControls
                 if (dialogResult == DialogResult.Yes)
                 {
                     // xóa dữ liệu trong database
-                    var result = _apiClient.SendDeteleRequest<RestaurantVM>($"Restaurant/{SessionData.RestaurantVM.Id}", 2);
+                    var result = _apiClient.SendDeteleRequest<RestaurantVM>($"Restaurant/{SessionData.RestaurantVM.Id}");
                     if (result != null)
                     {
                         // xóa thành công

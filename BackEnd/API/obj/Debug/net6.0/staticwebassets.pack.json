@@ -1,6 +1,26 @@
 {
   "Files": [
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-10\\797a115c-b05c-481d-a1da-c74dd1d12e86.jpg",
+      "PackagePath": "staticwebassets\\images\\product-10\\797a115c-b05c-481d-a1da-c74dd1d12e86.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-10\\e661e369-3bcf-4815-b21c-790e3e532c6b.jpg",
+      "PackagePath": "staticwebassets\\images\\product-10\\e661e369-3bcf-4815-b21c-790e3e532c6b.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-11\\7aebecb6-034c-4dba-a05f-b0b690b67572.jpg",
+      "PackagePath": "staticwebassets\\images\\product-11\\7aebecb6-034c-4dba-a05f-b0b690b67572.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-11\\8efeccbd-de43-48af-9f40-93e18445f274.jpg",
+      "PackagePath": "staticwebassets\\images\\product-11\\8efeccbd-de43-48af-9f40-93e18445f274.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-2\\b638f38c-35a4-4f5d-8561-f9426116a314.jpg",
+      "PackagePath": "staticwebassets\\images\\product-2\\b638f38c-35a4-4f5d-8561-f9426116a314.jpg"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\0d86b3e4-7b53-4095-9037-ae955203a00d.png",
       "PackagePath": "staticwebassets\\images\\product-3\\0d86b3e4-7b53-4095-9037-ae955203a00d.png"
     },
@@ -21,12 +41,36 @@
       "PackagePath": "staticwebassets\\images\\product-3\\91faff3f-8842-4653-9b64-9104fe9eb4fa.png"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\e091188d-465e-4b8e-b073-0815edf1847c.jpg",
+      "PackagePath": "staticwebassets\\images\\product-3\\e091188d-465e-4b8e-b073-0815edf1847c.jpg"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-3\\f04be1ac-0687-4f87-aa11-81a53b5c4c10.png",
       "PackagePath": "staticwebassets\\images\\product-3\\f04be1ac-0687-4f87-aa11-81a53b5c4c10.png"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-4\\07b573c5-b66e-4276-a907-e123e6691090.jpg",
+      "PackagePath": "staticwebassets\\images\\product-4\\07b573c5-b66e-4276-a907-e123e6691090.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-5\\787bea7a-fd22-4d90-9722-2cdb32e79851.jpg",
+      "PackagePath": "staticwebassets\\images\\product-5\\787bea7a-fd22-4d90-9722-2cdb32e79851.jpg"
+    },
+    {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-Peo1222\\1fb3a476-58ac-4a0d-9615-4c20fc2e3a49.png",
       "PackagePath": "staticwebassets\\images\\product-Peo1222\\1fb3a476-58ac-4a0d-9615-4c20fc2e3a49.png"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-Pro344O178UvL\\82f64339-8301-4e94-9405-3592b3d8cd7e.jpg",
+      "PackagePath": "staticwebassets\\images\\product-Pro344O178UvL\\82f64339-8301-4e94-9405-3592b3d8cd7e.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-ProDeteOac0LR\\9a965e98-8885-4ee4-927c-93c0ca64195e.jpg",
+      "PackagePath": "staticwebassets\\images\\product-ProDeteOac0LR\\9a965e98-8885-4ee4-927c-93c0ca64195e.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-ProUMuXAA13Rm\\36cf1a34-9af5-4a03-83db-d72c9265f7af.jpg",
+      "PackagePath": "staticwebassets\\images\\product-ProUMuXAA13Rm\\36cf1a34-9af5-4a03-83db-d72c9265f7af.jpg"
     },
     {
       "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\product-ResiaJwyuNLOb\\cb2a1947-c672-48b8-94a4-024413acc057.png",

@@ -284,7 +284,7 @@ namespace Client.UserControls
 
             var resource = "OrderDetail";
 
-            var response = _apiClient.SendDeteleRequest<OrderDetail>(resource + "/2", 2);
+            var response = _apiClient.SendDeteleRequest<OrderDetail>(resource + "/2");
 
             if (response != null)
             {

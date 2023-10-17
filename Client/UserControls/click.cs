@@ -144,7 +144,7 @@ namespace Client.UserControls
                 DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa nhà hàng {selectedRow.RestaurantName} không?", "Xác nhận xóa", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    ApiResponse<Restaurant> deleteResponse = _apiClient.SendDeteleRequest<Restaurant>($"Restaurant/DeleteRestaurant/{selectedRow.Id}", 2);
+                    ApiResponse<Restaurant> deleteResponse = _apiClient.SendDeteleRequest<Restaurant>($"Restaurant/DeleteRestaurant/{selectedRow.Id}");
                     if (deleteResponse != null && deleteResponse.Code == HttpStatusCode.OK)
                     {
                         // lấy id của từ lbId và kiểm tra trong list restaurant có id đó không
@@ -282,7 +282,7 @@ namespace Client.UserControls
             DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa nhà hàng {txtRestaurantName.Text} không?", "Xác nhận xóa", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                ApiResponse<Restaurant> deleteResponse = _apiClient.SendDeteleRequest<Restaurant>($"Restaurant/DeleteRestaurant/{lbId.Text}", 2);
+                ApiResponse<Restaurant> deleteResponse = _apiClient.SendDeteleRequest<Restaurant>($"Restaurant/DeleteRestaurant/{lbId.Text}");
                 if (deleteResponse != null && deleteResponse.Code == HttpStatusCode.OK)
                 {
                     // lấy id của từ lbId và kiểm tra trong list restaurant có id đó không

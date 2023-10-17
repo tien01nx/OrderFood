@@ -64,19 +64,25 @@ namespace API.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<ApiResponse<User>> Login(LoginDto loginDto)
+        public async Task<ApiResponse<Login>> Login(LoginDto loginDto)
         {
             var user = await _userManager.Users
                   
                       .SingleOrDefaultAsync(x => x.UserName == loginDto.UserName);
 
-            if (user == null) return new ApiResponse<User>(System.Net.HttpStatusCode.Unauthorized, "Invalid username", null);
+            if (user == null) return new ApiResponse<Login>(System.Net.HttpStatusCode.Unauthorized, "Invalid username", null);
 
             var result = await _userManager.CheckPasswordAsync(user, loginDto.Password);
 
-            if (!result) return new ApiResponse<User>(System.Net.HttpStatusCode.Unauthorized, "Invalid Password", null);
+            if (!result) return new ApiResponse<Login>(System.Net.HttpStatusCode.Unauthorized, "Invalid Password", null);
 
-            return new ApiResponse<User>(System.Net.HttpStatusCode.OK, await _tokenRepository.CreateToken(user), user);
+            Login login = new Login()
+            {
+                user = user,
+                Token = await _tokenRepository.CreateToken(user),
+                expiresIn = DateTime.Now.AddDays(7).ToString()
+            };
+            return new ApiResponse<Login>(System.Net.HttpStatusCode.OK, "login successfully", login);
 
         }
 

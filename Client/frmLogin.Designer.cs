@@ -3,12 +3,12 @@
     partial class frmLogin
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,86 +23,89 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            txtUserName = new TextBox();
-            txtPassword = new TextBox();
-            btnLogin = new Button();
+            txtUserName = new DevExpress.XtraEditors.TextEdit();
+            txtPassword = new DevExpress.XtraEditors.TextEdit();
+            labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            btnLogin = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)txtUserName.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtPassword.Properties).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(26, 70);
-            label1.Name = "label1";
-            label1.Size = new Size(60, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Username";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(26, 103);
-            label2.Name = "label2";
-            label2.Size = new Size(57, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Password";
             // 
             // txtUserName
             // 
-            txtUserName.Location = new Point(119, 65);
-            txtUserName.Margin = new Padding(3, 2, 3, 2);
+            txtUserName.Location = new Point(124, 79);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(110, 23);
-            txtUserName.TabIndex = 2;
+            txtUserName.Size = new Size(165, 20);
+            txtUserName.TabIndex = 0;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(119, 98);
-            txtPassword.Margin = new Padding(3, 2, 3, 2);
+            txtPassword.Location = new Point(124, 133);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(110, 23);
-            txtPassword.TabIndex = 3;
+            txtPassword.Properties.PasswordChar = '*';
+            txtPassword.Properties.UseSystemPasswordChar = true;
+            txtPassword.Size = new Size(165, 20);
+            txtPassword.TabIndex = 1;
+            // 
+            // labelControl1
+            // 
+            labelControl1.Appearance.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelControl1.Appearance.Options.UseFont = true;
+            labelControl1.Location = new Point(29, 82);
+            labelControl1.Name = "labelControl1";
+            labelControl1.Size = new Size(58, 13);
+            labelControl1.TabIndex = 2;
+            labelControl1.Text = "UserName";
+            // 
+            // labelControl2
+            // 
+            labelControl2.Appearance.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelControl2.Appearance.Options.UseFont = true;
+            labelControl2.Location = new Point(29, 140);
+            labelControl2.Name = "labelControl2";
+            labelControl2.Size = new Size(54, 13);
+            labelControl2.TabIndex = 3;
+            labelControl2.Text = "Password";
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(119, 166);
-            btnLogin.Margin = new Padding(3, 2, 3, 2);
+            btnLogin.Location = new Point(157, 206);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(82, 22);
+            btnLogin.Size = new Size(75, 23);
             btnLogin.TabIndex = 4;
-            btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Text = "Đăng nhập";
             btnLogin.Click += btnLogin_Click;
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(316, 235);
+            ClientSize = new Size(413, 289);
             Controls.Add(btnLogin);
+            Controls.Add(labelControl2);
+            Controls.Add(labelControl1);
             Controls.Add(txtPassword);
             Controls.Add(txtUserName);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "frmLogin";
-            Text = "Form1";
+            Text = "Đăng Nhập";
+            ((System.ComponentModel.ISupportInitialize)txtUserName.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtPassword.Properties).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private TextBox txtUserName;
-        private TextBox txtPassword;
-        private Button btnLogin;
+        private DevExpress.XtraEditors.TextEdit txtUserName;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.SimpleButton btnLogin;
     }
 }

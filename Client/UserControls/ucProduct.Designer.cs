@@ -102,37 +102,41 @@
             // 
             // svgProductImage
             // 
-            svgProductImage.Location = new Point(390, 337);
+            svgProductImage.Location = new Point(406, 337);
             svgProductImage.Name = "svgProductImage";
             svgProductImage.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            svgProductImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             svgProductImage.Size = new Size(303, 155);
             svgProductImage.TabIndex = 26;
             svgProductImage.EditValueChanged += svgProductImage_EditValueChanged;
             // 
             // RestaurantId
             // 
-            RestaurantId.Location = new Point(296, 251);
+            RestaurantId.Location = new Point(312, 251);
             RestaurantId.Name = "RestaurantId";
             RestaurantId.Size = new Size(0, 13);
             RestaurantId.TabIndex = 22;
+            RestaurantId.Visible = false;
             // 
             // CategoryId
             // 
-            CategoryId.Location = new Point(274, 232);
+            CategoryId.Location = new Point(290, 232);
             CategoryId.Name = "CategoryId";
             CategoryId.Size = new Size(0, 13);
             CategoryId.TabIndex = 21;
+            CategoryId.Visible = false;
             // 
             // id
             // 
-            id.Location = new Point(274, 203);
+            id.Location = new Point(290, 203);
             id.Name = "id";
             id.Size = new Size(0, 13);
             id.TabIndex = 20;
+            id.Visible = false;
             // 
             // btnCategoryName
             // 
-            btnCategoryName.Location = new Point(390, 289);
+            btnCategoryName.Location = new Point(406, 289);
             btnCategoryName.Name = "btnCategoryName";
             btnCategoryName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton() });
             btnCategoryName.Size = new Size(303, 20);
@@ -142,7 +146,7 @@
             // btnRestaurant
             // 
             btnRestaurant.EditValue = "Chọn nhà hàng";
-            btnRestaurant.Location = new Point(390, 74);
+            btnRestaurant.Location = new Point(406, 74);
             btnRestaurant.Name = "btnRestaurant";
             btnRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton() });
             btnRestaurant.Size = new Size(302, 20);
@@ -153,7 +157,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(271, 337);
+            label8.Location = new Point(287, 337);
             label8.Name = "label8";
             label8.Size = new Size(111, 13);
             label8.TabIndex = 14;
@@ -163,7 +167,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(271, 292);
+            label7.Location = new Point(287, 292);
             label7.Name = "label7";
             label7.Size = new Size(88, 13);
             label7.TabIndex = 10;
@@ -173,7 +177,7 @@
             // spPrice
             // 
             spPrice.EditValue = new decimal(new int[] { 2000, 0, 0, 0 });
-            spPrice.Location = new Point(390, 141);
+            spPrice.Location = new Point(406, 141);
             spPrice.Name = "spPrice";
             spPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             spPrice.Size = new Size(72, 20);
@@ -184,7 +188,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.Red;
-            label5.Location = new Point(271, 148);
+            label5.Location = new Point(287, 148);
             label5.Name = "label5";
             label5.Size = new Size(35, 13);
             label5.TabIndex = 6;
@@ -194,7 +198,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(271, 179);
+            label4.Location = new Point(287, 179);
             label4.Name = "label4";
             label4.Size = new Size(97, 13);
             label4.TabIndex = 5;
@@ -202,14 +206,14 @@
             // 
             // mdDescription
             // 
-            mdDescription.Location = new Point(390, 178);
+            mdDescription.Location = new Point(406, 178);
             mdDescription.Name = "mdDescription";
             mdDescription.Size = new Size(303, 96);
             mdDescription.TabIndex = 4;
             // 
             // txtProductName
             // 
-            txtProductName.Location = new Point(390, 108);
+            txtProductName.Location = new Point(406, 108);
             txtProductName.Name = "txtProductName";
             txtProductName.Size = new Size(300, 20);
             txtProductName.TabIndex = 3;
@@ -218,7 +222,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(271, 111);
+            label3.Location = new Point(287, 111);
             label3.Name = "label3";
             label3.Size = new Size(86, 13);
             label3.TabIndex = 2;
@@ -228,7 +232,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(271, 77);
+            label1.Location = new Point(287, 77);
             label1.Name = "label1";
             label1.Size = new Size(59, 13);
             label1.TabIndex = 0;

@@ -279,7 +279,7 @@ namespace Client.UserControls
                 {
                     if (firstSelectedRow != null)
                     {
-                        ApiResponse<Category> deleteResponse = _apiClient.SendDeteleRequest<Category>($"Category/{firstSelectedRow.Id}", 2);
+                        ApiResponse<Category> deleteResponse = _apiClient.SendDeteleRequest<Category>($"Category/{firstSelectedRow.Id}");
                         if (deleteResponse != null && deleteResponse.Code == HttpStatusCode.OK)
                         {
                             MessageBox.Show("Xóa thành công");

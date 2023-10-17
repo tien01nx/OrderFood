@@ -1,12 +1,23 @@
-﻿using Client.Entities;
-using Client.Model;
-using Microsoft.VisualBasic.ApplicationServices;
+﻿using API.DTO;
+using Client.Entities;
+using DataAccess.Model;
+using DevExpress.XtraEditors;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Security;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : DevExpress.XtraEditors.XtraForm
     {
+
         private readonly ApiClient _client;
         public frmLogin()
         {
@@ -15,22 +26,21 @@ namespace Client
             _client = new ApiClient();
         }
 
-
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUserName.Text;
             string password = txtPassword.Text;
-            var loginDto = new Login { UserName = username, Password = password };
+            var loginDto = new LoginDto { UserName = username, Password = password };
             var resource = "Account/login"; // Thay đổi này thành đường dẫn thực sự đến endpoint login của bạn
 
-            var response = _client.SendPostRequest<User>(resource, loginDto);
+            var response = _client.SendPostRequest<Login>(resource, loginDto);
 
             if (response != null)
             {
                 if (response.Code == System.Net.HttpStatusCode.OK)
                 {
-
+                    API.DTO.Login login = new API.DTO.Login();
+                    
                     string token = response.Message;
                     SecureString secureToken = TokenManager.ConvertToSecureString(token);
                     //this.Hide();
@@ -52,6 +62,5 @@ namespace Client
                 MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối và thử lại.");
             }
         }
-
     }
 }

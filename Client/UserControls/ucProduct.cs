@@ -2,6 +2,7 @@
 using Client.Entities;
 using Client.Model;
 using DataAccess.Model;
+using DevExpress.Xpf.Bars;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -31,8 +32,10 @@ namespace Client.UserControls
 
         private void SubBtnClose_Click(object sender, EventArgs e)
         {
+
             if (frmMain.Instance != null)
             {
+                Clear();
                 SessionData.SetUC("ucListProduct");
                 frmMain.Instance.AddUserControl(new ucListProduct(), "ucListProduct");
             }
@@ -52,7 +55,7 @@ namespace Client.UserControls
                     if (createResponse.Code == HttpStatusCode.OK)
                     {
 
-                        if (!_isUpdateImage)
+                        if (_isUpdateImage)
                         {
                             // xử lý thêm người dùng thay ảnh thì mới gửi lên  không thì thôi
 
@@ -70,11 +73,11 @@ namespace Client.UserControls
                                         Clear();
                                         MessageBox.Show("Cập nhật nhà hàng thành công");
                                         // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
-                                        var existingUcCategory = frmMain.Instance?.GetUserControl("ucListRestaurants") as ucListRestaurants;
+                                        var existingUcCategory = frmMain.Instance?.GetUserControl("ucListProduct") as ucListProduct;
                                         if (existingUcCategory != null)
                                         {
                                             existingUcCategory.LoadData();
-                                            frmMain.Instance.AddUserControl(new ucListRestaurants(false), "ucListRestaurants");
+                                            frmMain.Instance.AddUserControl(new ucListProduct(), "ucListProduct");
 
                                         }
                                     }
@@ -93,11 +96,11 @@ namespace Client.UserControls
                             //ShowGrid();
                             MessageBox.Show("Cập nhật nhà hàng thành công");
                             // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
-                            var existingUcCategory = frmMain.Instance?.GetUserControl("ucListRestaurants") as ucListRestaurants;
+                            var existingUcCategory = frmMain.Instance?.GetUserControl("ucListProduct") as ucListProduct;
                             if (existingUcCategory != null)
                             {
                                 existingUcCategory.LoadData();
-                                frmMain.Instance.AddUserControl(new ucListRestaurants(false), "ucListRestaurants");
+                                frmMain.Instance.AddUserControl(new ucListProduct(), "ucListProduct");
 
                             }
                         }
@@ -226,6 +229,22 @@ namespace Client.UserControls
 
             return productVM;
         }
+        // hiện thị lên giao diện 
+        public void setProductVM(ProductVM productVM)
+        {
+            txtProductName.Text = productVM.ProductName;
+            spPrice.Value = productVM.Price;
+            mdDescription.Text = productVM.Description;
+            RestaurantId.Text = productVM.RestaurantId;
+            CategoryId.Text = productVM.CategoryId;
+            id.Text = productVM.Id;
+            btnCategoryName.Text = productVM.CategoryName;
+            btnRestaurant.Text = productVM.RestaurantName;
+            svgProductImage.Image = productVM.ImageProduct;
+            _isUpdateImage = true;
+
+        }
+
 
         private Image LoadProductImage(string imagePath)
         {

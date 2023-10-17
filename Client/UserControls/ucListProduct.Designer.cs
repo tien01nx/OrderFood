@@ -36,7 +36,8 @@
             Id = new DevExpress.XtraGrid.Columns.GridColumn();
             ProductName = new DevExpress.XtraGrid.Columns.GridColumn();
             Description = new DevExpress.XtraGrid.Columns.GridColumn();
-            gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            ImageProduct = new DevExpress.XtraGrid.Columns.GridColumn();
+            Photo = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             Price = new DevExpress.XtraGrid.Columns.GridColumn();
             RestaurantName = new DevExpress.XtraGrid.Columns.GridColumn();
             CategoryName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,6 +68,7 @@
             groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridListProduct).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Photo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
             groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnCategoryName.Properties).BeginInit();
@@ -104,15 +106,19 @@
             gridListProduct.Location = new Point(2, 23);
             gridListProduct.MainView = gridView1;
             gridListProduct.Name = "gridListProduct";
+            gridListProduct.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { Photo });
             gridListProduct.Size = new Size(680, 510);
             gridListProduct.TabIndex = 0;
             gridListProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
             // 
             // gridView1
             // 
-            gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { Id, ProductName, Description, gridColumn4, Price, RestaurantName, CategoryName });
+            gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { Id, ProductName, Description, ImageProduct, Price, RestaurantName, CategoryName });
             gridView1.GridControl = gridListProduct;
             gridView1.Name = "gridView1";
+            gridView1.OptionsSelection.MultiSelect = true;
+            gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            gridView1.OptionsView.RowAutoHeight = true;
             // 
             // Id
             // 
@@ -121,7 +127,7 @@
             Id.Name = "Id";
             Id.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.True;
             Id.Visible = true;
-            Id.VisibleIndex = 0;
+            Id.VisibleIndex = 1;
             // 
             // ProductName
             // 
@@ -129,7 +135,7 @@
             ProductName.FieldName = "ProductName";
             ProductName.Name = "ProductName";
             ProductName.Visible = true;
-            ProductName.VisibleIndex = 1;
+            ProductName.VisibleIndex = 2;
             // 
             // Description
             // 
@@ -137,14 +143,21 @@
             Description.FieldName = "Description";
             Description.Name = "Description";
             Description.Visible = true;
-            Description.VisibleIndex = 2;
+            Description.VisibleIndex = 3;
             // 
-            // gridColumn4
+            // ImageProduct
             // 
-            gridColumn4.Caption = "gridColumn4";
-            gridColumn4.Name = "gridColumn4";
-            gridColumn4.Visible = true;
-            gridColumn4.VisibleIndex = 3;
+            ImageProduct.Caption = "Hình ảnh";
+            ImageProduct.ColumnEdit = Photo;
+            ImageProduct.FieldName = "ImageProduct";
+            ImageProduct.Name = "ImageProduct";
+            ImageProduct.Visible = true;
+            ImageProduct.VisibleIndex = 4;
+            // 
+            // Photo
+            // 
+            Photo.Name = "Photo";
+            Photo.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             // 
             // Price
             // 
@@ -152,7 +165,7 @@
             Price.FieldName = "Price";
             Price.Name = "Price";
             Price.Visible = true;
-            Price.VisibleIndex = 4;
+            Price.VisibleIndex = 5;
             // 
             // RestaurantName
             // 
@@ -160,7 +173,7 @@
             RestaurantName.FieldName = "RestaurantName";
             RestaurantName.Name = "RestaurantName";
             RestaurantName.Visible = true;
-            RestaurantName.VisibleIndex = 5;
+            RestaurantName.VisibleIndex = 6;
             // 
             // CategoryName
             // 
@@ -168,7 +181,7 @@
             CategoryName.FieldName = "CategoryName";
             CategoryName.Name = "CategoryName";
             CategoryName.Visible = true;
-            CategoryName.VisibleIndex = 6;
+            CategoryName.VisibleIndex = 7;
             // 
             // groupControl2
             // 
@@ -287,6 +300,7 @@
             SubBtnEdit.Name = "SubBtnEdit";
             SubBtnEdit.Size = new Size(50, 24);
             SubBtnEdit.Text = "Sửa";
+            SubBtnEdit.Click += SubBtnEdit_Click;
             // 
             // toolStripSeparator3
             // 
@@ -300,6 +314,7 @@
             SubBtnDelete.Name = "SubBtnDelete";
             SubBtnDelete.Size = new Size(51, 24);
             SubBtnDelete.Text = "Xóa";
+            SubBtnDelete.Click += SubBtnDelete_Click;
             // 
             // toolStripSeparator1
             // 
@@ -339,6 +354,7 @@
             SubBtnSelect.Name = "SubBtnSelect";
             SubBtnSelect.Size = new Size(60, 24);
             SubBtnSelect.Text = "Chọn";
+            SubBtnSelect.Click += SubBtnSelect_Click;
             // 
             // openFileDialog
             // 
@@ -359,6 +375,7 @@
             groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)gridListProduct).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Photo).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl2).EndInit();
             groupControl2.ResumeLayout(false);
             groupControl2.PerformLayout();
@@ -404,9 +421,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn Id;
         private DevExpress.XtraGrid.Columns.GridColumn ProductName;
         private DevExpress.XtraGrid.Columns.GridColumn Description;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn ImageProduct;
         private DevExpress.XtraGrid.Columns.GridColumn Price;
         private DevExpress.XtraGrid.Columns.GridColumn RestaurantName;
         private DevExpress.XtraGrid.Columns.GridColumn CategoryName;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit Photo;
     }
 }

@@ -165,6 +165,14 @@ namespace Client.Entities
         }
 
 
+        private static ProductVM productVM;
+        public static ProductVM ProductVM
+        {
+            get { return productVM; }
+            set { productVM = value; }
+        }
+
+
 
 
 
