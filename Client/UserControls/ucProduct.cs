@@ -309,5 +309,70 @@ namespace Client.UserControls
         {
             _isUpdateImage = true;
         }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupControl2_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void RestaurantId_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void CategoryId_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void id_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnCategoryName_EditValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void btnRestaurant_EditValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void spPrice_EditValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void mdDescription_EditValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtProductName_EditValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+        }
     }
 }

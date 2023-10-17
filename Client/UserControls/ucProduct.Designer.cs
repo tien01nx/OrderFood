@@ -72,7 +72,8 @@
             groupControl1.Name = "groupControl1";
             groupControl1.Size = new Size(1001, 587);
             groupControl1.TabIndex = 1;
-            groupControl1.Text = "CHỨC NĂNG DANH MỤC";
+            groupControl1.Text = "CHỨC NĂNG PRODUCT";
+            groupControl1.Paint += groupControl1_Paint;
             // 
             // groupControl2
             // 
@@ -99,6 +100,7 @@
             groupControl2.Size = new Size(997, 537);
             groupControl2.TabIndex = 3;
             groupControl2.Text = "Thông tin sản phẩm";
+            groupControl2.Paint += groupControl2_Paint;
             // 
             // svgProductImage
             // 
@@ -117,6 +119,7 @@
             RestaurantId.Size = new Size(0, 13);
             RestaurantId.TabIndex = 22;
             RestaurantId.Visible = false;
+            RestaurantId.Click += RestaurantId_Click;
             // 
             // CategoryId
             // 
@@ -125,6 +128,7 @@
             CategoryId.Size = new Size(0, 13);
             CategoryId.TabIndex = 21;
             CategoryId.Visible = false;
+            CategoryId.Click += CategoryId_Click;
             // 
             // id
             // 
@@ -133,6 +137,7 @@
             id.Size = new Size(0, 13);
             id.TabIndex = 20;
             id.Visible = false;
+            id.Click += id_Click;
             // 
             // btnCategoryName
             // 
@@ -141,6 +146,7 @@
             btnCategoryName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton() });
             btnCategoryName.Size = new Size(303, 20);
             btnCategoryName.TabIndex = 19;
+            btnCategoryName.EditValueChanged += btnCategoryName_EditValueChanged;
             btnCategoryName.Click += btnCategoryName_Click;
             // 
             // btnRestaurant
@@ -151,6 +157,7 @@
             btnRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton() });
             btnRestaurant.Size = new Size(302, 20);
             btnRestaurant.TabIndex = 18;
+            btnRestaurant.EditValueChanged += btnRestaurant_EditValueChanged;
             btnRestaurant.Click += btnRestaurant_Click;
             // 
             // label8
@@ -162,6 +169,7 @@
             label8.Size = new Size(111, 13);
             label8.TabIndex = 14;
             label8.Text = "Hình ảnh minh họa";
+            label8.Click += label8_Click;
             // 
             // label7
             // 
@@ -182,6 +190,7 @@
             spPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             spPrice.Size = new Size(72, 20);
             spPrice.TabIndex = 7;
+            spPrice.EditValueChanged += spPrice_EditValueChanged;
             // 
             // label5
             // 
@@ -193,6 +202,7 @@
             label5.Size = new Size(35, 13);
             label5.TabIndex = 6;
             label5.Text = "Price";
+            label5.Click += label5_Click;
             // 
             // label4
             // 
@@ -203,6 +213,7 @@
             label4.Size = new Size(97, 13);
             label4.TabIndex = 5;
             label4.Text = "Mô tả sản phẩm";
+            label4.Click += label4_Click;
             // 
             // mdDescription
             // 
@@ -210,6 +221,7 @@
             mdDescription.Name = "mdDescription";
             mdDescription.Size = new Size(303, 96);
             mdDescription.TabIndex = 4;
+            mdDescription.EditValueChanged += mdDescription_EditValueChanged;
             // 
             // txtProductName
             // 
@@ -217,6 +229,7 @@
             txtProductName.Name = "txtProductName";
             txtProductName.Size = new Size(300, 20);
             txtProductName.TabIndex = 3;
+            txtProductName.EditValueChanged += txtProductName_EditValueChanged;
             // 
             // label3
             // 
@@ -227,6 +240,7 @@
             label3.Size = new Size(86, 13);
             label3.TabIndex = 2;
             label3.Text = "Tên sản phẩm";
+            label3.Click += label3_Click;
             // 
             // label1
             // 
@@ -237,6 +251,7 @@
             label1.Size = new Size(59, 13);
             label1.TabIndex = 0;
             label1.Text = "Nhà hàng";
+            label1.Click += label1_Click;
             // 
             // toolStrip1
             // 
@@ -246,6 +261,7 @@
             toolStrip1.Size = new Size(997, 25);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
+            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
             // 
             // SubbtnAdd
             // 

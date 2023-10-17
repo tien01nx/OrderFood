@@ -136,83 +136,73 @@ namespace Client.UserControls
             }
         }
 
-
-
         private void btnSubmitData_Click(object sender, EventArgs e)
         {
             var restaurant = (gridlayout.GetFocusedRow() as RestaurantVM);
-            if (restaurant != null)
+            if (restaurant == null) return;
+
+            SessionData.AddRestaurant(restaurant);
+            var ucName = SessionData.GetUC();
+
+            if (ucName != null)
             {
-                SessionData.AddRestaurant(restaurant);
-                if (SessionData.GetUC() != null)
+                UserControl userControl = frmMain.Instance?.GetUserControl(ucName);
+
+                switch (ucName)
                 {
-                    if (SessionData.GetUC().Equals("ucProduct"))
-                    {
-                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
-                        var existingUcProduct = frmMain.Instance?.GetUserControl("ucProduct") as ucProducts;
-                        if (existingUcProduct != null)
-                        {
-                            existingUcProduct.GetRestaurant();
+                    case "ucProduct":
+                        UpdateUcProduct(userControl as ucProduct, restaurant);
+                        break;
 
-                            SessionData.RemoveRestaurant(restaurant);
+                    case "ucListCategories":
+                        UpdateUcListCategories(userControl as ucListCategories, restaurant);
+                        break;
 
-                        }
-                    }
-                    if (SessionData.GetUC().Equals("ucListCategories"))
-                    {
-                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
-                        var existingUcCategory = frmMain.Instance?.GetUserControl("ucListCategories") as ucListCategories;
-                        if (existingUcCategory != null)
-                        {
-                            existingUcCategory.GetRestaurant();
-                            existingUcCategory.getData();
-                            SessionData.RemoveRestaurant(restaurant);
+                    case "ucCategory":
+                        UpdateUcCategory(userControl as ucCategory, restaurant);
+                        break;
 
-                        }
-                    }
-                    if (SessionData.GetUC().Equals("ucCategory"))
-                    {
-                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
-                        var existingUcCategory = frmMain.Instance?.GetUserControl("ucCategory") as ucCategory;
-                        if (existingUcCategory != null)
-                        {
-                            existingUcCategory.GetRestaurant();
-
-                            SessionData.RemoveRestaurant(restaurant);
-
-                        }
-                    }
-                    if (SessionData.GetUC().Equals("ucListProduct"))
-                    {
-                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
-                        var existingUcProduct = frmMain.Instance?.GetUserControl("ucListProduct") as ucListProduct;
-                        if (existingUcProduct != null)
-                        {
-                            existingUcProduct.GetRestaurant();
-                            existingUcProduct.LoadData();
-                            SessionData.RemoveRestaurant(restaurant);
-
-                        }
-                    }
-                    // kiếm tra có phải ucProduct không
-                    if (SessionData.GetUC().Equals("ucProduct"))
-                    {
-                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
-                        var existingUcProduct = frmMain.Instance?.GetUserControl("ucProduct") as ucProduct;
-                        if (existingUcProduct != null)
-                        {
-                            existingUcProduct.GetRestaurant();
-                            SessionData.RemoveRestaurant(restaurant);
-
-                        }
-                    }
-                    SessionData.ClearUC();
+                    case "ucListProduct":
+                        UpdateUcListProduct(userControl as ucListProduct, restaurant);
+                        break;
                 }
 
-
-                this.Hide();
+                SessionData.ClearUC();
             }
+
+            this.Hide();
         }
+
+        private void UpdateUcProduct(ucProduct control, RestaurantVM restaurant)
+        {
+            if (control == null) return;
+            control.GetRestaurant();
+            SessionData.RemoveRestaurant(restaurant);
+        }
+
+        private void UpdateUcListCategories(ucListCategories control, RestaurantVM restaurant)
+        {
+            if (control == null) return;
+            control.GetRestaurant();
+            control.getData();
+            SessionData.RemoveRestaurant(restaurant);
+        }
+
+        private void UpdateUcCategory(ucCategory control, RestaurantVM restaurant)
+        {
+            if (control == null) return;
+            control.GetRestaurant();
+            SessionData.RemoveRestaurant(restaurant);
+        }
+
+        private void UpdateUcListProduct(ucListProduct control, RestaurantVM restaurant)
+        {
+            if (control == null) return;
+            control.GetRestaurant();
+            control.LoadData();
+            SessionData.RemoveRestaurant(restaurant);
+        }
+
 
 
         private void btnClose_Click(object sender, EventArgs e)

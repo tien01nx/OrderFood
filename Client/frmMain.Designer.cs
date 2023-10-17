@@ -32,9 +32,10 @@
             menuStrip1 = new MenuStrip();
             menuToolStripMenuItem = new ToolStripMenuItem();
             ucRestaurants = new ToolStripMenuItem();
+            SubBtnListCategories = new ToolStripMenuItem();
             productToolStripMenuItem = new ToolStripMenuItem();
             categoryToolStripMenuItem = new ToolStripMenuItem();
-            thôngTinNgườiDùngToolStripMenuItem = new ToolStripMenuItem();
+            infoUser = new ToolStripMenuItem();
             thôngTinQuyềnToolStripMenuItem = new ToolStripMenuItem();
             qLQuyềnToolStripMenuItem = new ToolStripMenuItem();
             thôngTinQuyềnToolStripMenuItem1 = new ToolStripMenuItem();
@@ -49,7 +50,6 @@
             layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             pnParent = new DevExpress.XtraEditors.PanelControl();
-            SubBtnListCategories = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Root).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup1).BeginInit();
@@ -82,6 +82,13 @@
             ucRestaurants.Text = "QL Nhà Hàng";
             ucRestaurants.Click += restaurantToolStripMenuItem_Click;
             // 
+            // SubBtnListCategories
+            // 
+            SubBtnListCategories.Name = "SubBtnListCategories";
+            SubBtnListCategories.Size = new Size(180, 22);
+            SubBtnListCategories.Text = "QL Danh Mục";
+            SubBtnListCategories.Click += SubBtnListCategories_Click;
+            // 
             // productToolStripMenuItem
             // 
             productToolStripMenuItem.Name = "productToolStripMenuItem";
@@ -91,16 +98,17 @@
             // 
             // categoryToolStripMenuItem
             // 
-            categoryToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { thôngTinNgườiDùngToolStripMenuItem, thôngTinQuyềnToolStripMenuItem });
+            categoryToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { infoUser, thôngTinQuyềnToolStripMenuItem });
             categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
             categoryToolStripMenuItem.Size = new Size(180, 22);
             categoryToolStripMenuItem.Text = "QL Người Dùng";
             // 
-            // thôngTinNgườiDùngToolStripMenuItem
+            // infoUser
             // 
-            thôngTinNgườiDùngToolStripMenuItem.Name = "thôngTinNgườiDùngToolStripMenuItem";
-            thôngTinNgườiDùngToolStripMenuItem.Size = new Size(195, 22);
-            thôngTinNgườiDùngToolStripMenuItem.Text = "Thông Tin Người Dùng";
+            infoUser.Name = "infoUser";
+            infoUser.Size = new Size(195, 22);
+            infoUser.Text = "Thông Tin Người Dùng";
+            infoUser.Click += infoUser_Click;
             // 
             // thôngTinQuyềnToolStripMenuItem
             // 
@@ -118,13 +126,13 @@
             // thôngTinQuyềnToolStripMenuItem1
             // 
             thôngTinQuyềnToolStripMenuItem1.Name = "thôngTinQuyềnToolStripMenuItem1";
-            thôngTinQuyềnToolStripMenuItem1.Size = new Size(180, 22);
+            thôngTinQuyềnToolStripMenuItem1.Size = new Size(165, 22);
             thôngTinQuyềnToolStripMenuItem1.Text = "Thông Tin Quyền";
             // 
             // phânQuyềnToolStripMenuItem
             // 
             phânQuyềnToolStripMenuItem.Name = "phânQuyềnToolStripMenuItem";
-            phânQuyềnToolStripMenuItem.Size = new Size(180, 22);
+            phânQuyềnToolStripMenuItem.Size = new Size(165, 22);
             phânQuyềnToolStripMenuItem.Text = "Phân Quyền";
             // 
             // đơnHàngToolStripMenuItem
@@ -203,13 +211,6 @@
             pnParent.Size = new Size(1100, 500);
             pnParent.TabIndex = 1;
             // 
-            // SubBtnListCategories
-            // 
-            SubBtnListCategories.Name = "SubBtnListCategories";
-            SubBtnListCategories.Size = new Size(180, 22);
-            SubBtnListCategories.Text = "QL Danh Mục";
-            SubBtnListCategories.Click += SubBtnListCategories_Click;
-            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -257,5 +258,6 @@
         private ToolStripMenuItem phânQuyềnToolStripMenuItem;
         private ToolStripMenuItem khơiToolStripMenuItem;
         private ToolStripMenuItem SubBtnListCategories;
+        private ToolStripMenuItem infoUser;
     }
 }

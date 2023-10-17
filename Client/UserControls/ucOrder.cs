@@ -227,7 +227,8 @@ namespace Client.UserControls
             string startDate = date.ToString("yyyy/MM/dd");
             string endDate = null;
             string userName = null;
-            string userId = "2";
+            int userId = Properties.Settings.Default.ID;
+            
             //selectedRestaurantId = string.IsNullOrEmpty(selectedRestaurantId) ? "" : selectedRestaurantId;
             string restaurants = null;
             string productName = null;

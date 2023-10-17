@@ -967,4 +967,6 @@ D:\ThucTap\OrderFood\Client\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Sys
 D:\ThucTap\OrderFood\Client\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.ServiceProcess.ServiceController.dll
 D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.UserControls.ucRestaurant.resources
 D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.UserControls.ucProducts.resources
-D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.frmLogin11.resources
+D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.UserControls.ucListUser.resources
+D:\ThucTap\OrderFood\Client\obj\Debug\net6.0-windows\Client.UserControls.ucUser.resources
+D:\ThucTap\OrderFood\Client\bin\Debug\net6.0-windows\Client.dll.config
