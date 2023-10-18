@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucOrder));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -37,15 +38,14 @@
             gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             gridDataUser = new DevExpress.XtraGrid.GridControl();
             gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            RestaurantName = new DevExpress.XtraGrid.Columns.GridColumn();
             TitleProduct = new DevExpress.XtraGrid.Columns.GridColumn();
+            ProductPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             TotalQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
             PriceProduct = new DevExpress.XtraGrid.Columns.GridColumn();
-            RestaurantName = new DevExpress.XtraGrid.Columns.GridColumn();
-            Xoa = new DevExpress.XtraGrid.Columns.GridColumn();
-            btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             closeUcOrder = new ToolStripButton();
             SubBtnOrder = new ToolStripButton();
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -76,12 +76,13 @@
             groupControl3 = new DevExpress.XtraEditors.GroupControl();
             toolStrip1 = new ToolStrip();
             SubBtnDelete = new ToolStripButton();
+            notifyIcon = new NotifyIcon(components);
             ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridDataUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnXoa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnDelete).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repositoryItemButtonEdit1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnXoa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
             groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
@@ -104,8 +105,8 @@
             ((System.ComponentModel.ISupportInitialize)layoutViewCard1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl5).BeginInit();
             groupControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties.CalendarTimeProperties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtOrderDate.Properties.CalendarTimeProperties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl3).BeginInit();
             groupControl3.SuspendLayout();
             toolStrip1.SuspendLayout();
@@ -131,7 +132,7 @@
             // 
             // gridView2
             // 
-            gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { TitleProduct, TotalQuantity, PriceProduct, RestaurantName, Xoa, gridColumn2 });
+            gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { RestaurantName, TitleProduct, ProductPrice, TotalQuantity, PriceProduct });
             gridView2.GridControl = gridDataUser;
             gridView2.Name = "gridView2";
             gridView2.OptionsBehavior.Editable = false;
@@ -141,38 +142,6 @@
             gridView2.OptionsView.ShowIndicator = false;
             gridView2.ShowingEditor += gridView2_ShowingEditor;
             // 
-            // TitleProduct
-            // 
-            TitleProduct.Caption = "Sản phẩm";
-            TitleProduct.FieldName = "ProductName";
-            TitleProduct.MinWidth = 21;
-            TitleProduct.Name = "TitleProduct";
-            TitleProduct.Visible = true;
-            TitleProduct.VisibleIndex = 0;
-            TitleProduct.Width = 81;
-            // 
-            // TotalQuantity
-            // 
-            TotalQuantity.Caption = "Số lượng";
-            TotalQuantity.FieldName = "TotalQuantity";
-            TotalQuantity.MinWidth = 21;
-            TotalQuantity.Name = "TotalQuantity";
-            TotalQuantity.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalQuantity", "SUM={0:0.##}") });
-            TotalQuantity.Visible = true;
-            TotalQuantity.VisibleIndex = 2;
-            TotalQuantity.Width = 81;
-            // 
-            // PriceProduct
-            // 
-            PriceProduct.Caption = "Thành tiền";
-            PriceProduct.FieldName = "TotalPrice";
-            PriceProduct.MinWidth = 21;
-            PriceProduct.Name = "PriceProduct";
-            PriceProduct.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalPrice", "SUM={0:0.##}") });
-            PriceProduct.Visible = true;
-            PriceProduct.VisibleIndex = 1;
-            PriceProduct.Width = 81;
-            // 
             // RestaurantName
             // 
             RestaurantName.Caption = "Nhà hàng";
@@ -180,39 +149,51 @@
             RestaurantName.MinWidth = 21;
             RestaurantName.Name = "RestaurantName";
             RestaurantName.Visible = true;
-            RestaurantName.VisibleIndex = 3;
+            RestaurantName.VisibleIndex = 0;
             // 
-            // Xoa
+            // TitleProduct
             // 
-            Xoa.Caption = "Xoa";
-            Xoa.ColumnEdit = btnXoa;
-            Xoa.FieldName = "Xoa";
-            Xoa.MaxWidth = 25;
-            Xoa.MinWidth = 25;
-            Xoa.Name = "Xoa";
-            Xoa.Visible = true;
-            Xoa.VisibleIndex = 4;
-            Xoa.Width = 25;
+            TitleProduct.Caption = "Sản phẩm";
+            TitleProduct.FieldName = "ProductName";
+            TitleProduct.MinWidth = 21;
+            TitleProduct.Name = "TitleProduct";
+            TitleProduct.Visible = true;
+            TitleProduct.VisibleIndex = 1;
+            TitleProduct.Width = 81;
             // 
-            // btnXoa
+            // ProductPrice
             // 
-            btnXoa.AutoHeight = false;
-            editorButtonImageOptions1.Image = (Image)resources.GetObject("editorButtonImageOptions1.Image");
-            btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
-            btnXoa.Name = "btnXoa";
-            btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            btnXoa.ButtonClick += btnXoa_ButtonClick;
-            btnXoa.Click += btnXoa_Click;
+            ProductPrice.Caption = "Giá tiền";
+            ProductPrice.DisplayFormat.FormatString = "c";
+            ProductPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            ProductPrice.FieldName = "ProductPrice";
+            ProductPrice.Name = "ProductPrice";
+            ProductPrice.Visible = true;
+            ProductPrice.VisibleIndex = 2;
             // 
-            // gridColumn2
+            // TotalQuantity
             // 
-            gridColumn2.DisplayFormat.FormatString = "c2";
-            gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            gridColumn2.FieldName = "Total";
-            gridColumn2.Name = "gridColumn2";
-            gridColumn2.UnboundDataType = typeof(decimal);
-            gridColumn2.Visible = true;
-            gridColumn2.VisibleIndex = 5;
+            TotalQuantity.Caption = "Số lượng";
+            TotalQuantity.FieldName = "TotalQuantity";
+            TotalQuantity.MinWidth = 21;
+            TotalQuantity.Name = "TotalQuantity";
+            TotalQuantity.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalQuantity", "Số lượng ={0:0.##}") });
+            TotalQuantity.Visible = true;
+            TotalQuantity.VisibleIndex = 3;
+            TotalQuantity.Width = 81;
+            // 
+            // PriceProduct
+            // 
+            PriceProduct.Caption = "Thành tiền";
+            PriceProduct.DisplayFormat.FormatString = "c";
+            PriceProduct.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            PriceProduct.FieldName = "TotalPrice";
+            PriceProduct.MinWidth = 21;
+            PriceProduct.Name = "PriceProduct";
+            PriceProduct.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalPrice", "Tổng tiền={0:C}") });
+            PriceProduct.Visible = true;
+            PriceProduct.VisibleIndex = 4;
+            PriceProduct.Width = 81;
             // 
             // btnDelete
             // 
@@ -227,6 +208,16 @@
             repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete) });
             repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // btnXoa
+            // 
+            btnXoa.AutoHeight = false;
+            editorButtonImageOptions1.Image = (Image)resources.GetObject("editorButtonImageOptions1.Image");
+            btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
+            btnXoa.Name = "btnXoa";
+            btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            btnXoa.ButtonClick += btnXoa_ButtonClick;
+            btnXoa.Click += btnXoa_Click;
             // 
             // closeUcOrder
             // 
@@ -344,7 +335,7 @@
             // 
             // IsSelected
             // 
-            IsSelected.Caption = "IsSelected";
+            IsSelected.Caption = "Mua";
             IsSelected.ColumnEdit = checkOrder;
             IsSelected.FieldName = "IsSelected";
             IsSelected.LayoutViewField = layoutViewField_IsSelected;
@@ -392,6 +383,8 @@
             Price.AppearanceCell.Options.UseFont = true;
             Price.AppearanceCell.Options.UseForeColor = true;
             Price.Caption = "Price";
+            Price.DisplayFormat.FormatString = "c";
+            Price.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             Price.FieldName = "Price";
             Price.LayoutViewField = layoutViewField_Price;
             Price.MinWidth = 21;
@@ -404,7 +397,7 @@
             layoutViewField_Price.EditorPreferredWidth = 117;
             layoutViewField_Price.Location = new Point(0, 48);
             layoutViewField_Price.Name = "layoutViewField_Price";
-            layoutViewField_Price.Size = new Size(197, 24);
+            layoutViewField_Price.Size = new Size(197, 20);
             layoutViewField_Price.TextSize = new Size(71, 13);
             // 
             // Quantity
@@ -438,7 +431,7 @@
             // layoutViewField_Quantity
             // 
             layoutViewField_Quantity.EditorPreferredWidth = 117;
-            layoutViewField_Quantity.Location = new Point(0, 72);
+            layoutViewField_Quantity.Location = new Point(0, 68);
             layoutViewField_Quantity.Name = "layoutViewField_Quantity";
             layoutViewField_Quantity.Size = new Size(197, 24);
             layoutViewField_Quantity.TextSize = new Size(71, 13);
@@ -465,7 +458,7 @@
             // layoutViewField_Image
             // 
             layoutViewField_Image.EditorPreferredWidth = 117;
-            layoutViewField_Image.Location = new Point(0, 96);
+            layoutViewField_Image.Location = new Point(0, 92);
             layoutViewField_Image.Name = "layoutViewField_Image";
             layoutViewField_Image.Size = new Size(197, 110);
             layoutViewField_Image.StartNewLine = true;
@@ -541,6 +534,12 @@
             SubBtnDelete.Size = new Size(105, 24);
             SubBtnDelete.Text = "Xóa đơn hàng";
             // 
+            // notifyIcon
+            // 
+            notifyIcon.Icon = (Icon)resources.GetObject("notifyIcon.Icon");
+            notifyIcon.Text = "Thông báo";
+            notifyIcon.Visible = true;
+            // 
             // ucOrder
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -553,9 +552,9 @@
             ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridDataUser).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnXoa).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnDelete).EndInit();
             ((System.ComponentModel.ISupportInitialize)repositoryItemButtonEdit1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnXoa).EndInit();
             ((System.ComponentModel.ISupportInitialize)groupControl1).EndInit();
             groupControl1.ResumeLayout(false);
             groupControl1.PerformLayout();
@@ -631,8 +630,8 @@
         private DevExpress.XtraEditors.LookUpEdit ludRestaurant;
         private DevExpress.XtraGrid.Columns.GridColumn RestaurantName;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn Xoa;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn ProductPrice;
+        private NotifyIcon notifyIcon;
     }
 }

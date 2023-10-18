@@ -1,6 +1,7 @@
 ﻿using API.DTO;
 using Client.Entities;
 using Client.Model;
+using DevExpress.XtraBars.ToastNotifications;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Base;
@@ -306,35 +307,7 @@ namespace Client.UserControls
             }
         }
 
-        public void UserSendOrder()
-        {
-            var orderDetail = ConvertToListOrderDetail(userOrderList, OrderId, userId);
 
-            var resource = "OrderDetail/CreateList";
-            UserSendOrderDelete();
-
-            var response = _apiClient.SendListToApi<OrderDetail>(resource, orderDetail);
-
-            if (response != null)
-            {
-                if (response.Code == HttpStatusCode.OK)
-                {
-                    MessageBox.Show($"Thêm thành công:");
-                    //GetUserProduct();
-                }
-                else
-                {
-                    //Đăng nhập thất bại
-                    string errorMessage = response.Message;
-                    MessageBox.Show($"Thêm thất bại: {errorMessage}");
-                }
-            }
-            else
-            {
-                //Kết nối đến server thất bại hoặc lỗi khác
-                MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối và thử lại.");
-            }
-        }
 
 
         private void dtOrderDate_EditValueChanged(object sender, EventArgs e)
@@ -357,8 +330,8 @@ namespace Client.UserControls
                 OrderId = orderId,
                 ProductId = userInfo.ProductId,
                 UserId = userId,
-                Count = userInfo.TotalQuantity,
                 Price = userInfo.TotalPrice,
+                Count = userInfo.TotalQuantity,
                 RestaurantId = selectedRestaurantId
             };
         }
@@ -381,23 +354,53 @@ namespace Client.UserControls
                 MessageBoxIcon.Question);
             if (dg == DialogResult.Yes)
             {
-                UserSendOrder();
+                var orderDetail = ConvertToListOrderDetail(userOrderList, OrderId, userId);
 
-                var existingUcListOrder = frmMain.Instance?.GetUserControl("ucListOrder") as ucListOrder;
+                if (orderDetail.Count != 0)
+                {
+                    var resource = "OrderDetail/CreateList";
+                    UserSendOrderDelete();
 
-                if (existingUcListOrder != null)
+                    var response = _apiClient.SendListToApi<OrderDetail>(resource, orderDetail);
+
+                    if (response != null)
+                    {
+                        if (response.Code == HttpStatusCode.OK)
+                        {
+                            notifyIcon.ShowBalloonTip(1000, "Thông báo", "Đặt cơm thành công", ToolTipIcon.None);
+                            var existingUcListOrder = frmMain.Instance?.GetUserControl("ucListOrder") as ucListOrder;
+
+                            if (existingUcListOrder != null)
+                            {
+
+                                existingUcListOrder.GetData();
+                                frmMain.Instance.AddUserControl(new ucProduct(), "ucListOrder");
+
+                            }
+                        }
+                        else
+                        {
+
+                            string errorMessage = response.Message;
+                            MessageBox.Show($"Thêm thất bại: {errorMessage}");
+                        }
+                    }
+                    else
+                    {
+                        //Kết nối đến server thất bại hoặc lỗi khác
+                        MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối và thử lại.");
+                    }
+                }
+                else
                 {
 
-                    existingUcListOrder.GetData();
-                    frmMain.Instance.AddUserControl(new ucProduct(), "ucListOrder");
 
+
+                    MessageBox.Show("Bạn chưa chọn sản phẩm nào");
+                    return;
                 }
 
-                //if (frmMain.Instance != null)
-                //{
 
-                //    frmMain.Instance.AddUserControl(new ucListOrder(), "ucListOrder");
-                //}
             }
         }
 
@@ -422,6 +425,7 @@ namespace Client.UserControls
                     {
                         ProductId = product.Id,
                         ProductName = product.ProductName,
+                        ProductPrice = product.Price,
                         TotalQuantity = product.Quantity,
                         TotalPrice = (decimal)product.Price * product.Quantity
                     };
