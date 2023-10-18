@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucListRestaurants));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -72,6 +73,7 @@
             label2 = new Label();
             cboRestaurant = new DevExpress.XtraEditors.ComboBoxEdit();
             label1 = new Label();
+            toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(components);
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
             groupControl1.SuspendLayout();
@@ -87,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)ckOpenTime.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cboFavoriteLevel.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)toastNotificationsManager1).BeginInit();
             SuspendLayout();
             // 
             // openFileDialog
@@ -412,6 +415,10 @@
             label1.TabIndex = 0;
             label1.Text = "Nhà hàng";
             // 
+            // toastNotificationsManager1
+            // 
+            toastNotificationsManager1.ApplicationId = "69984411-3097-4cd3-abd8-0815051f5db2";
+            // 
             // ucListRestaurants
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -438,6 +445,7 @@
             ((System.ComponentModel.ISupportInitialize)ckOpenTime.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)cboFavoriteLevel.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)cboRestaurant.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)toastNotificationsManager1).EndInit();
             ResumeLayout(false);
         }
 
@@ -484,5 +492,6 @@
         private ToolStripButton SubBtnSelect;
         private ToolStripSeparator toolStripSeparator6;
         private ToolStripButton SubBtnClear;
+        private DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager toastNotificationsManager1;
     }
 }

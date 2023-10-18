@@ -48,6 +48,7 @@ namespace Client.UserControls
                 userInfoDTOs = userOrder;
                 orders = restaurants;
                 gridData.DataSource = orders;
+                gridData.RefreshDataSource();
             }
             catch (Exception ex)
             {
@@ -145,6 +146,7 @@ namespace Client.UserControls
 
         private void gridView1_MasterRowGetChildList(object sender, MasterRowGetChildListEventArgs e)
         {
+
             GridView view = sender as GridView;
             Order order = view.GetRow(e.RowHandle) as Order;
             if (order != null)
@@ -248,6 +250,11 @@ namespace Client.UserControls
             {
                 SessionData.addAllRestaurant(item);
             }
+        }
+
+        private void SubbtnSend_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

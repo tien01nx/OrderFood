@@ -34,7 +34,7 @@ namespace API.Entities
         public DbSet<CategoryDto> CategoriesDto { get; set; }
 
         public DbSet<ProductDto> ProductsDto { get; set; }
-       
+
 
 
         // Sử dụng PROC
@@ -53,8 +53,11 @@ namespace API.Entities
             userId = string.IsNullOrEmpty(userId) ? null : userId;
             restaurants = string.IsNullOrEmpty(restaurants) ? null : restaurants;
             productName = string.IsNullOrEmpty(productName) ? null : productName;
+
             return UserCartDetails.FromSqlRaw("EXEC sp_GetUserOrderDetails @p0, @p1, @p2, @p3, @p4, @p5", startDate, endDate, userName, userId, restaurants, productName).ToList();
         }
+
+
 
 
 

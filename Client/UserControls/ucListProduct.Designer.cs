@@ -119,6 +119,7 @@
             gridView1.OptionsSelection.MultiSelect = true;
             gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             gridView1.OptionsView.RowAutoHeight = true;
+            gridView1.OptionsView.ShowAutoFilterRow = true;
             // 
             // Id
             // 

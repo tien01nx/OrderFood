@@ -49,8 +49,8 @@ namespace Client.Entities
             }
             catch (Exception ex)
             {
-                return new ApiResponse<List<T>>(System.Net.HttpStatusCode.BadRequest, "Lỗi kết nối với server"+ex.Message, null);
-                
+                return new ApiResponse<List<T>>(System.Net.HttpStatusCode.BadRequest, "Lỗi kết nối với server" + ex.Message, null);
+
             }
 
         }
@@ -96,7 +96,7 @@ namespace Client.Entities
         public ApiResponse<T> SendDeteleRequest<T>(string resource)
         {
             var request = new RestRequest(resource, Method.Delete);
-          
+
 
             var response = _client.Execute(request);
             if (response.IsSuccessful)

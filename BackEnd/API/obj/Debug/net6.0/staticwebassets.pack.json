@@ -317,6 +317,30 @@
       "PackagePath": "staticwebassets\\images\\restaurants\\restaurant-RessFWcvaHus4\\59291599-b618-4d4e-8830-a0208b1536b2.jpg"
     },
     {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\user-1\\0dc5675b-4cd3-4240-8009-b9be497b8048.jpg",
+      "PackagePath": "staticwebassets\\images\\user-1\\0dc5675b-4cd3-4240-8009-b9be497b8048.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\user-1\\4a3e56e6-9ec4-4a76-a2fa-b15618e9f908.jpg",
+      "PackagePath": "staticwebassets\\images\\user-1\\4a3e56e6-9ec4-4a76-a2fa-b15618e9f908.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\user-1\\87d003f3-1210-4061-874f-f8fae2fe0600.jpg",
+      "PackagePath": "staticwebassets\\images\\user-1\\87d003f3-1210-4061-874f-f8fae2fe0600.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\images\\user-2\\762319fe-56ae-4177-944b-94732bb19859.jpg",
+      "PackagePath": "staticwebassets\\images\\user-2\\762319fe-56ae-4177-944b-94732bb19859.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\users\\user-1\\fb924338-8ec4-412e-a03f-d72a41d9bf5b.jpg",
+      "PackagePath": "staticwebassets\\users\\user-1\\fb924338-8ec4-412e-a03f-d72a41d9bf5b.jpg"
+    },
+    {
+      "Id": "D:\\ThucTap\\OrderFood\\BackEnd\\API\\wwwroot\\users\\user-2\\ac80789d-b3e1-42d3-9e9d-ca4531a22a4a.jpg",
+      "PackagePath": "staticwebassets\\users\\user-2\\ac80789d-b3e1-42d3-9e9d-ca4531a22a4a.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

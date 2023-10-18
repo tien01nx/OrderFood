@@ -1,13 +1,4 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Client.Model;
 
 namespace Client.UserControls
 {
@@ -34,9 +25,26 @@ namespace Client.UserControls
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        // get giữ liệu lên giao diện frm
+        public void getUserFrm(User user)
         {
+            txtAddress.Text = user.Address;
+            txtFullName.Text = user.FullName;
+            txtEmail.Text = user.Email;
+            mdApartmentNumber.Text = user.ApartmentNumber;
+            txtUserName.Text = user.UserName;
+            txtPhoneNumber.Text = user.PhoneNumber;
+            id.Text = user.Id.ToString();
+            if (user.Gender == "Nam")
+            {
+                ckNam.Checked = true;
+            }
+            else
+            {
+                ckNu.Checked = true;
+            }
 
         }
+
     }
 }

@@ -1,13 +1,8 @@
-﻿using DataAccess.Model;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using static System.Net.Mime.MediaTypeNames;
-using DataAccess.Utilis;
+﻿using DataAccess.Utilis;
 
 namespace API.DTO
 {
-    public class ProductDto 
+    public class ProductDto
     {
         public string Id { get; set; }
         public string ProductName { get; set; }

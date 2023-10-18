@@ -14,13 +14,7 @@ namespace Client
             Instance = this;
 
         }
-        public event EventHandler CompletedWork;
 
-        // Hàm gọi để thông báo khi bạn đã hoàn thành công việc
-        protected virtual void OnCompletedWork()
-        {
-            CompletedWork?.Invoke(this, EventArgs.Empty);
-        }
 
         public PanelControl PnlParent
         {
@@ -124,6 +118,24 @@ namespace Client
         {
             AddUserControl(new ucListUser(), "ucListUser");
 
+        }
+
+        private void SignOut_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.ClearData();
+            login.Show();
+            this.Hide();
+        }
+
+        private void SettingOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Order_Click(object sender, EventArgs e)
+        {
+            AddUserControl(new ucOrder(), "ucOrder");
         }
     }
 

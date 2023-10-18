@@ -12,7 +12,7 @@
         public int TotalQuantity { get; set; }
         public decimal TotalPrice { get; set; }
 
-        public string RestaurantName { get; set; }
+        //public string RestaurantName { get; set; }
         public string RestaurantId { get; set; }
 
 

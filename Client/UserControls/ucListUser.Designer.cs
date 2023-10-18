@@ -38,7 +38,8 @@
             FullName = new DevExpress.XtraGrid.Columns.GridColumn();
             Gender = new DevExpress.XtraGrid.Columns.GridColumn();
             Birthday = new DevExpress.XtraGrid.Columns.GridColumn();
-            Avatar = new DevExpress.XtraGrid.Columns.GridColumn();
+            Image = new DevExpress.XtraGrid.Columns.GridColumn();
+            repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             Address = new DevExpress.XtraGrid.Columns.GridColumn();
             ApartmentNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             LockoutEnd = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,14 +68,15 @@
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)ckUnlock.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridlayout).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)repositoryItemPictureEdit1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridListUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Data).BeginInit();
             Data.SuspendLayout();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl2).BeginInit();
             groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dateBirthday.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dateBirthday.Properties.CalendarTimeProperties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dateBirthday.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtSearch.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
             groupControl1.SuspendLayout();
@@ -89,6 +91,7 @@
             ckUnlock.Properties.Caption = "Khóa";
             ckUnlock.Size = new Size(75, 20);
             ckUnlock.TabIndex = 5;
+            ckUnlock.Visible = false;
             // 
             // label2
             // 
@@ -102,10 +105,12 @@
             // 
             // gridlayout
             // 
-            gridlayout.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { Id, UserName, PhoneNumber, FullName, Gender, Birthday, Avatar, Address, ApartmentNumber, LockoutEnd });
+            gridlayout.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { Id, UserName, PhoneNumber, FullName, Gender, Birthday, Image, Address, ApartmentNumber, LockoutEnd });
             gridlayout.GridControl = gridListUser;
             gridlayout.Name = "gridlayout";
             gridlayout.OptionsEditForm.PopupEditFormWidth = 686;
+            gridlayout.OptionsSelection.MultiSelect = true;
+            gridlayout.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             gridlayout.OptionsView.RowAutoHeight = true;
             // 
             // Id
@@ -154,13 +159,19 @@
             Birthday.Visible = true;
             Birthday.VisibleIndex = 5;
             // 
-            // Avatar
+            // Image
             // 
-            Avatar.Caption = "Avatar";
-            Avatar.FieldName = "Avatar";
-            Avatar.Name = "Avatar";
-            Avatar.Visible = true;
-            Avatar.VisibleIndex = 6;
+            Image.Caption = "Avatar";
+            Image.ColumnEdit = repositoryItemPictureEdit1;
+            Image.FieldName = "Image";
+            Image.Name = "Image";
+            Image.Visible = true;
+            Image.VisibleIndex = 6;
+            // 
+            // repositoryItemPictureEdit1
+            // 
+            repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
+            repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             // 
             // Address
             // 
@@ -183,8 +194,6 @@
             LockoutEnd.Caption = "Trạng thái";
             LockoutEnd.FieldName = "LockoutEnd";
             LockoutEnd.Name = "LockoutEnd";
-            LockoutEnd.Visible = true;
-            LockoutEnd.VisibleIndex = 0;
             // 
             // gridListUser
             // 
@@ -192,6 +201,7 @@
             gridListUser.Location = new Point(2, 23);
             gridListUser.MainView = gridlayout;
             gridListUser.Name = "gridListUser";
+            gridListUser.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { repositoryItemPictureEdit1 });
             gridListUser.Size = new Size(680, 510);
             gridListUser.TabIndex = 0;
             gridListUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridlayout });
@@ -261,6 +271,7 @@
             SubBtnEdit.Name = "SubBtnEdit";
             SubBtnEdit.Size = new Size(50, 24);
             SubBtnEdit.Text = "Sửa";
+            SubBtnEdit.Click += SubBtnEdit_Click;
             // 
             // toolStripSeparator3
             // 
@@ -313,6 +324,7 @@
             SubBtnSelect.Name = "SubBtnSelect";
             SubBtnSelect.Size = new Size(60, 24);
             SubBtnSelect.Text = "Chọn";
+            SubBtnSelect.Click += SubBtnSelect_Click;
             // 
             // toolStripSeparator6
             // 
@@ -384,6 +396,7 @@
             Size = new Size(1001, 587);
             ((System.ComponentModel.ISupportInitialize)ckUnlock.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridlayout).EndInit();
+            ((System.ComponentModel.ISupportInitialize)repositoryItemPictureEdit1).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridListUser).EndInit();
             ((System.ComponentModel.ISupportInitialize)Data).EndInit();
             Data.ResumeLayout(false);
@@ -438,5 +451,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn LockoutEnd;
         private DevExpress.XtraEditors.TextEdit txtSearch;
         private DevExpress.XtraEditors.DateEdit dateBirthday;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn Image;
     }
 }

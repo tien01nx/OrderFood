@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using API.DTO;
 using API.Entities;
 using AutoMapper;
@@ -13,7 +7,6 @@ using DataAccess.Utilis;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Repository.IRepository;
 
 namespace API.Controllers
 {
@@ -32,7 +25,7 @@ namespace API.Controllers
             _tokenRepository = tokenRepository;
             _userManager = userManager;
             _mapper = mapper;
-             
+
         }
 
 
@@ -67,7 +60,7 @@ namespace API.Controllers
         public async Task<ApiResponse<Login>> Login(LoginDto loginDto)
         {
             var user = await _userManager.Users
-                  
+
                       .SingleOrDefaultAsync(x => x.UserName == loginDto.UserName);
 
             if (user == null) return new ApiResponse<Login>(System.Net.HttpStatusCode.Unauthorized, "Invalid username", null);

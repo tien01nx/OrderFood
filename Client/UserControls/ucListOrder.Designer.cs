@@ -54,8 +54,11 @@
             label1 = new Label();
             toolStrip1 = new ToolStrip();
             SubBtnOrder = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
             SubBtnSearch = new ToolStripButton();
             closeUcListOrder = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            SubbtnSend = new ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)gridView4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridData).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
@@ -87,6 +90,7 @@
             gridView4.Name = "gridView4";
             gridView4.OptionsBehavior.Editable = false;
             gridView4.OptionsFind.AlwaysVisible = true;
+            gridView4.OptionsView.ShowFooter = true;
             gridView4.OptionsView.ShowGroupPanel = false;
             gridView4.RowHeight = 20;
             gridView4.CustomDrawRowIndicator += gridView4_CustomDrawRowIndicator;
@@ -117,6 +121,7 @@
             TotalQuantity.FieldName = "TotalQuantity";
             TotalQuantity.MinWidth = 21;
             TotalQuantity.Name = "TotalQuantity";
+            TotalQuantity.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalQuantity", "SUM={0:0.##}") });
             TotalQuantity.Visible = true;
             TotalQuantity.VisibleIndex = 2;
             TotalQuantity.Width = 81;
@@ -127,6 +132,7 @@
             TotalPrice.FieldName = "TotalPrice";
             TotalPrice.MinWidth = 21;
             TotalPrice.Name = "TotalPrice";
+            TotalPrice.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalPrice", "SUM={0:0.##}") });
             TotalPrice.Visible = true;
             TotalPrice.VisibleIndex = 3;
             TotalPrice.Width = 81;
@@ -156,6 +162,10 @@
             gridView1.Name = "gridView1";
             gridView1.OptionsBehavior.Editable = false;
             gridView1.OptionsFind.AlwaysVisible = true;
+            gridView1.OptionsPrint.PrintSelectedRowsOnly = true;
+            gridView1.OptionsSelection.MultiSelect = true;
+            gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            gridView1.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.True;
             gridView1.OptionsView.ShowGroupPanel = false;
             gridView1.RowHeight = 23;
             gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(RestaurantName, DevExpress.Data.ColumnSortOrder.Ascending) });
@@ -173,7 +183,7 @@
             RestaurantName.MinWidth = 21;
             RestaurantName.Name = "RestaurantName";
             RestaurantName.Visible = true;
-            RestaurantName.VisibleIndex = 0;
+            RestaurantName.VisibleIndex = 1;
             RestaurantName.Width = 81;
             // 
             // gridView2
@@ -325,7 +335,7 @@
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { SubBtnOrder, SubBtnSearch, closeUcListOrder });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { SubBtnOrder, toolStripSeparator1, SubBtnSearch, closeUcListOrder, toolStripSeparator2, SubbtnSend });
             toolStrip1.Location = new Point(2, 23);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(997, 27);
@@ -340,6 +350,11 @@
             SubBtnOrder.Size = new Size(81, 24);
             SubBtnOrder.Text = "Đặt Hàng";
             SubBtnOrder.Click += SubBtnOrder_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 27);
             // 
             // SubBtnSearch
             // 
@@ -360,6 +375,20 @@
             closeUcListOrder.Size = new Size(24, 24);
             closeUcListOrder.Text = "Đơn hàng của tôi";
             closeUcListOrder.Click += closeUcListOrder_Click;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 27);
+            // 
+            // SubbtnSend
+            // 
+            SubbtnSend.Image = (Image)resources.GetObject("SubbtnSend.Image");
+            SubbtnSend.ImageTransparentColor = Color.Magenta;
+            SubbtnSend.Name = "SubbtnSend";
+            SubbtnSend.Size = new Size(73, 24);
+            SubbtnSend.Text = "Gửi đơn";
+            SubbtnSend.Click += SubbtnSend_Click;
             // 
             // ucListOrder
             // 
@@ -424,5 +453,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn TotalQuantity;
         private DevExpress.XtraGrid.Columns.GridColumn TotalPrice;
         private DevExpress.XtraGrid.Columns.GridColumn RestaurantName;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripButton SubbtnSend;
     }
 }

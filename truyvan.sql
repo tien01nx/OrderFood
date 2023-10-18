@@ -116,7 +116,7 @@ AS
 BEGIN
     SELECT 
         U.UserName AS UserName,
-		ISNULL(Restaurants.RestaurantName, 'N/A') AS 'RestaurantName',
+		
         ISNULL(P.ProductName, '0') AS ProductName,
 		SUM(ISNULL(OD.Count, 0)) AS 'TotalQuantity',
         SUM(ISNULL(OD.Price, 0)) AS 'TotalPrice',
@@ -153,7 +153,7 @@ BEGIN
         ISNULL(OD.Id, '0'),
         ISNULL(P.ProductName, '0'),
 		ISNULL(Orders.Id, '0'),
-		ISNULL(Restaurants.RestaurantName, 'N/A'),
+		
         ISNULL(P.Id, '0'),
 		ISNULL(Restaurants.Id, '0');
 END
@@ -162,14 +162,15 @@ END
 
 
 EXEC sp_GetUserOrderDetails 
-@StartDate = '2023-10-09',
+@StartDate = '2023-10-10',
 @EndDate = null,
 @UserName = null,
-@IdUser =2,
+@IdUser =null,
 @Restaurants = null,
 @ProductName = null
 
 
+EXEC sp_GetUserOrderDetails '2023-10-18'
 
 
 Go

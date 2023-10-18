@@ -5,7 +5,6 @@ using DataAccess.Utilis;
 
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using NLog;
 using NLog.Web;
 
 // Early init of NLog to allow startup and exception logging, before host is built

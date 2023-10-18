@@ -173,14 +173,13 @@ namespace Client.Entities
         }
 
 
+        private static User user;
+        public static User User
 
-
-
-
-
-
-
-
+        {
+            get { return user; }
+            set { user = value; }
+        }
 
 
     }

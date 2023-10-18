@@ -1,14 +1,4 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Timer = System.Windows.Forms.Timer;
+﻿using Timer = System.Windows.Forms.Timer;
 
 namespace Client
 {
@@ -53,10 +43,30 @@ namespace Client
 
             if (!mainFormShown)
             {
-                // Hiển thị form khác (ví dụ: frmMain)
-                frmMain mainForm = new frmMain();
-                mainFormShown = true;
-                mainForm.ShowDialog();
+                string username = Properties.Settings.Default.UserName;
+                string password = Properties.Settings.Default.Password;
+                // kiểm tra người dùng đã đăng nhập chưa lấy dữ liệu từ Settings.settings nếu đã đăng nhập thì cho vào frmMain 
+                // còn không cho sang frmLogin
+                if (username != string.Empty && password != string.Empty)
+                {
+                    // đăng nhập để lấy token mới
+                    frmLogin frmLogin = new frmLogin();
+                    var login = frmLogin.GetData();
+                    frmLogin.signIn(login);
+                    mainFormShown = true;
+
+                }
+                else
+                {
+                    frmLogin loginForm = new frmLogin();
+                    mainFormShown = true;
+                    loginForm.ShowDialog();
+
+                }
+
+                //frmMain mainForm = new frmMain();
+                //mainFormShown = true;
+                //mainForm.ShowDialog();
             }
         }
     }

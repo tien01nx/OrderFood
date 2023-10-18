@@ -22,7 +22,7 @@ namespace Client.UserControls
         private string dateString;
         private List<Product> productList = new List<Product>();
 
-        private int userId = 2;
+        private int userId = Properties.Settings.Default.ID;
 
 
         public ucOrder()
@@ -227,8 +227,8 @@ namespace Client.UserControls
             string startDate = date.ToString("yyyy/MM/dd");
             string endDate = null;
             string userName = null;
-            int userId = Properties.Settings.Default.ID;
-            
+
+
             //selectedRestaurantId = string.IsNullOrEmpty(selectedRestaurantId) ? "" : selectedRestaurantId;
             string restaurants = null;
             string productName = null;
@@ -281,21 +281,22 @@ namespace Client.UserControls
 
         public void UserSendOrderDelete()
         {
-            var orderDetail = ConvertToListOrderDetail(userOrderList, OrderId, userId);
+            //var orderDetail = ConvertToListOrderDetail(userOrderList, OrderId, userId);
 
-            var resource = "OrderDetail";
+            var resource = $"OrderDetail/{userId}";
 
-            var response = _apiClient.SendDeteleRequest<OrderDetail>(resource + "/2");
+            var response = _apiClient.SendDeteleRequest<OrderDetail>(resource);
 
             if (response != null)
             {
                 if (response.Code == HttpStatusCode.OK)
                 {
+
                 }
                 else
                 {
-                    string errorMessage = response.Message;
-                    MessageBox.Show($"Thêm thất bại: {errorMessage}");
+                    //string errorMessage = response.Message;
+                    //MessageBox.Show($"Thêm thất bại: {errorMessage}");
                 }
             }
             else
@@ -381,10 +382,22 @@ namespace Client.UserControls
             if (dg == DialogResult.Yes)
             {
                 UserSendOrder();
-                if (frmMain.Instance != null)
+
+                var existingUcListOrder = frmMain.Instance?.GetUserControl("ucListOrder") as ucListOrder;
+
+                if (existingUcListOrder != null)
                 {
-                    frmMain.Instance.AddUserControl(new ucListOrder(), "ucListOrder");
+
+                    existingUcListOrder.GetData();
+                    frmMain.Instance.AddUserControl(new ucProduct(), "ucListOrder");
+
                 }
+
+                //if (frmMain.Instance != null)
+                //{
+
+                //    frmMain.Instance.AddUserControl(new ucListOrder(), "ucListOrder");
+                //}
             }
         }
 

@@ -71,20 +71,21 @@ namespace API.Controllers
 
         // lấy danh sách product
         [HttpGet("GetListProduct")]
-       public async Task<ApiResponse<List<ProductDto>>> GetListProduct(string restaurantName,string categoryName,string productName)
+        public async Task<ApiResponse<List<ProductDto>>> GetListProduct(string restaurantName, string categoryName, string productName)
         {
-            try {
+            try
+            {
 
                 List<ProductDto> products = _context.GetProducts(restaurantName, categoryName, productName);
 
                 return new ApiResponse<List<ProductDto>>(System.Net.HttpStatusCode.OK, "Lấy dữ dữ liệu", products);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 //_logger.LogError(ex.Message);
                 return new ApiResponse<List<ProductDto>>(HttpStatusCode.BadRequest, ex.Message, null);
             }
-            
+
         }
 
 

@@ -324,11 +324,6 @@ namespace API.Controllers
         {
             try
             {
-                if (id <= 0)
-                {
-                    return new ApiResponse<T>(HttpStatusCode.BadRequest, "Id không hợp lệ", null);
-                }
-
                 var existingEntity = await _context.Set<T>().FindAsync(id);
 
                 if (existingEntity == null)
@@ -345,15 +340,10 @@ namespace API.Controllers
                     {
                         return new ApiResponse<T>(HttpStatusCode.BadRequest, "BankName đã tồn tại", null);
                     }
-
                     existingBank.ImageUrl = bankEntity.ImageUrl;
-
-
                 }
 
                 _context.Entry(existingEntity).CurrentValues.SetValues(entity);
-
-
                 await _context.SaveChangesAsync();
                 return new ApiResponse<T>(HttpStatusCode.OK, "Cập nhật thành công", entity);
             }
@@ -366,7 +356,7 @@ namespace API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<ApiResponse<T>>> Delete(string id)
+        public async Task<ActionResult<ApiResponse<T>>> Delete(int id)
         {
             try
             {
@@ -378,9 +368,9 @@ namespace API.Controllers
                 if (typeof(T) == typeof(OrderDetail))
                 {
                     var orderDetailsToDelete = _context.Set<OrderDetail>()
-                        .Where(od => od.UserId.Equals(id) && od.CreateDate.Date == DateTime.Now.Date)
+                        .Where(od => od.UserId == id && od.CreateDate.Date == DateTime.Now.Date)
                         .ToList();
-                    if (orderDetailsToDelete.Count < 0)
+                    if (orderDetailsToDelete.Count == 0)
                     {
                         return new ApiResponse<T>(HttpStatusCode.NotFound, "Không tìm thấy đối tượng", null);
                     }

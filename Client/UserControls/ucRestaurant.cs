@@ -1,21 +1,9 @@
 ﻿using API.Entities;
 using Client.Entities;
 using Client.Model;
-using DataAccess.Model;
-using DevExpress.Utils.DirectXPaint;
-using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Client.UserControls
 {
@@ -122,18 +110,18 @@ namespace Client.UserControls
                                 if (uploadImageResponse != null && uploadImageResponse.Code == HttpStatusCode.OK)
                                 {
                                     Clear();
-                                   
+
                                     MessageBox.Show("Tạo nhà hàng thành công");
-                                   
-                                        // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
-                                        var existingUcCategory = frmMain.Instance?.GetUserControl("ucListRestaurants") as ucListRestaurants;
-                                        if (existingUcCategory != null)
-                                        {
-                                            existingUcCategory.LoadData();
+
+                                    // Cập nhật ucProduct nếu nó vẫn còn tồn tại trong frmMain
+                                    var existingUcCategory = frmMain.Instance?.GetUserControl("ucListRestaurants") as ucListRestaurants;
+                                    if (existingUcCategory != null)
+                                    {
+                                        existingUcCategory.LoadData();
                                         frmMain.Instance.AddUserControl(new ucListRestaurants(false), "ucListRestaurants");
 
                                     }
-                                    
+
                                 }
                                 else
                                 {
@@ -160,7 +148,13 @@ namespace Client.UserControls
 
         private void SubBtnClose_Click(object sender, EventArgs e)
         {
+            var existingUcCategory = frmMain.Instance?.GetUserControl("ucListRestaurants") as ucListRestaurants;
+            if (existingUcCategory != null)
+            {
+                existingUcCategory.LoadData();
+                frmMain.Instance.AddUserControl(new ucListRestaurants(false), "ucListRestaurants");
 
+            }
         }
 
 
@@ -190,7 +184,7 @@ namespace Client.UserControls
 
             };
             // Kiểm tra biến _isUpdate và xác định xem cần tạo ID mới hay không
-            if ( restaurant.Id == null)
+            if (restaurant.Id == null)
             {
                 restaurant.GenerateRandomId();
             }
