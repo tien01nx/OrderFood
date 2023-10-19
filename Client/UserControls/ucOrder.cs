@@ -16,7 +16,7 @@ namespace Client.UserControls
     {
         private readonly ApiClient _apiClient;
 
-        private List<UserInfoDTO> userOrderList;
+        private List<UserInfoDTO> userOrderList = new List<UserInfoDTO>();
 
         private string OrderId;
         private string selectedRestaurantId;
@@ -24,6 +24,7 @@ namespace Client.UserControls
         private List<Product> productList = new List<Product>();
 
         private int userId = Properties.Settings.Default.ID;
+        private string restaurantName;
 
 
         public ucOrder()
@@ -89,6 +90,8 @@ namespace Client.UserControls
             {
                 OrderId = order[0].Id;
                 selectedRestaurantId = order[0].Restaurant.Id;
+                restaurantName = order[0].Restaurant.RestaurantName;
+                ludRestaurant.Text = restaurantName;
                 GetOrderByUserAll();
                 ShowProduct(datetime);
                 gridDataProduct.RefreshDataSource();
@@ -127,6 +130,7 @@ namespace Client.UserControls
 
                 foreach (var product in products)
                 {
+                    if (userOrderList == null) return;
                     var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId.Equals(product.Id));
                     if (existingUserProduct != null)
                     {
@@ -246,11 +250,12 @@ namespace Client.UserControls
                 userOrderList = userOrder;
                 if (userId != null)
                 {
+
                     //khi userOrder có 1 giá trị thì mới kiểm tra
-                    if (userOrder.Count == 1)
-                    {
-                        userOrderList.RemoveAll(u => u.ProductId.Equals("0"));
-                    }
+                    //if (userOrder.Count == 1)
+                    //{
+                    //    userOrderList.RemoveAll(u => u.ProductId.Equals("0"));
+                    //}
 
                     // tìm kiếm kiểm tra  phần tử nào có productId =0 xóa khỏi userOrderList
                     gridDataUser.DataSource = userOrder;
@@ -332,7 +337,8 @@ namespace Client.UserControls
                 UserId = userId,
                 Price = userInfo.TotalPrice,
                 Count = userInfo.TotalQuantity,
-                RestaurantId = selectedRestaurantId
+                RestaurantId = selectedRestaurantId,
+
             };
         }
 
@@ -412,7 +418,7 @@ namespace Client.UserControls
             // lấy ra dữ liệu của dòng đang được chọn
             var product = layoutView.GetFocusedRow() as Product;
 
-
+            if (userOrderList == null) return;
             var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
 
 
@@ -427,7 +433,8 @@ namespace Client.UserControls
                         ProductName = product.ProductName,
                         ProductPrice = product.Price,
                         TotalQuantity = product.Quantity,
-                        TotalPrice = (decimal)product.Price * product.Quantity
+                        TotalPrice = (decimal)product.Price * product.Quantity,
+                        RestaurantName = restaurantName,
                     };
                     userOrderList.Add(user);
                 }

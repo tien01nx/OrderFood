@@ -327,7 +327,6 @@
             layoutView.Columns.AddRange(new DevExpress.XtraGrid.Columns.LayoutViewColumn[] { IsSelected, ProductName, Price, Quantity, Images });
             layoutView.GridControl = gridDataProduct;
             layoutView.Name = "layoutView";
-            layoutView.OptionsFind.AlwaysVisible = true;
             layoutView.OptionsView.ShowHeaderPanel = false;
             layoutView.OptionsView.ViewMode = DevExpress.XtraGrid.Views.Layout.LayoutViewMode.MultiRow;
             layoutView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] { new DevExpress.XtraGrid.Columns.GridColumnSortInfo(Quantity, DevExpress.Data.ColumnSortOrder.Ascending) });
