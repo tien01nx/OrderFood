@@ -40,9 +40,9 @@ namespace API.Entities
         // Sử dụng PROC
 
         //// Lấy danh sách sản phẩm theo ngày hiện tại
-        public List<Product> GetProductsByOrderDate(string date)
+        public List<Product> GetProductsByOrderDate(string date,string restaurantName )
         {
-            return Products.FromSqlRaw("EXEC sp_GetProductsByOrderDate {0}", date).ToList();
+            return Products.FromSqlRaw("EXEC sp_GetProductsByOrderDate {0}, {1} ", date, restaurantName).ToList();
         }
 
         public List<UserInfoDTO> GetUserCartDetails(string startDate, string endDate, string userName, string userId, string restaurants, string productName)

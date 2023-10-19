@@ -273,21 +273,12 @@ namespace API.Controllers
                             _context.Set<Order>().Add(order);
                             await _context.SaveChangesAsync();
                         }
+                        if (orderDetail.Count == 0)
+                        {
+                            _context.Set<OrderDetail>().RemoveRange(orderDetail);
+                        }
 
-                        //var order = _context.Set<Order>()
-                        //   .FirstOrDefault(x => x.CreateDate == DateTime.Now.Date && x.RestaurantId == orderDetail.RestaurantId);
 
-                        var orderDetailExsts = _context.Set<OrderDetail>().Find(orderDetail.Id);
-
-                        // cập nhật orderDetail đã có trong bảng OrderDetail
-                        //if (orderDetailExsts != null)
-                        //{
-                        //    orderDetailExsts.Count += orderDetail.Count;
-                        //    orderDetailExsts.Price += orderDetail.Price;
-                        //    _context.Set<OrderDetail>().Update(orderDetailExsts);
-                        //    await _context.SaveChangesAsync();
-                        //    continue;
-                        //}
 
                         if (lastNumber == 0)
                         {

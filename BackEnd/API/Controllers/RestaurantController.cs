@@ -38,7 +38,7 @@ namespace API.Controllers
                 {
                     var orders = await _context.Set<Order>()
                         .Where(u => u.CreateDate.Date == selectedDate.Date)
-                        .Include(x => x.Restaurant)
+                        .Include(x => x.Restaurant).OrderByDescending(o=>o.Restaurant.FavoriteLevel)
                         .ToListAsync();
 
                     if (orders != null)

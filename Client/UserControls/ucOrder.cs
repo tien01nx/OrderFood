@@ -19,13 +19,10 @@ namespace Client.UserControls
         private List<UserInfoDTO> userOrderList = new List<UserInfoDTO>();
 
         private string OrderId;
-        private string selectedRestaurantId;
-        private string dateString;
+
         private List<Product> productList = new List<Product>();
-
         private int userId = Properties.Settings.Default.ID;
-        private string restaurantName;
-
+        //private string restaurantName;
 
         public ucOrder()
         {
@@ -37,91 +34,108 @@ namespace Client.UserControls
         private void ucOrder_Load(object sender, EventArgs e)
         {
             dtOrderDate.DateTime = DateTime.Now;
-            btnXoa.Click += btnXoa_Click;
-            btnXoa.ButtonClick += btnXoa_ButtonClick;
-        }
 
-        private void btnXoa_Click(object? sender, EventArgs e)
-        {
-            MessageBox.Show("Xóa thành công");
-        }
-
-        private void btnXoa_ButtonClick(object sender, ButtonPressedEventArgs e)
-        {
-            MessageBox.Show("Xóa thành công");
-        }
-
-        // lấy ra thông tin các cửa hàng
-
-        private void GetRestaurant()
-        {
-            try
-            {
-                var restaurants = _apiClient.GetData<Restaurant>("Restaurant/Getall").Data;
-
-                // Gán dữ liệu cho LookUpEdit
-                ludRestaurant.Properties.DataSource = restaurants;
-                ludRestaurant.Properties.DisplayMember = "RestaurantName";
-                ludRestaurant.Properties.ValueMember = "Id";
-
-                // Thiết lập chế độ hiển thị
-                //lookUpEdit.Properties.SearchMode = SearchMode.AutoComplete;
-
-
-                ludRestaurant.Properties.BestFitMode = BestFitMode.BestFitResizePopup;
-                ludRestaurant.Properties.SearchMode = SearchMode.AutoFilter;
-                ludRestaurant.Properties.ImmediatePopup = true;
-                ludRestaurant.Properties.ShowHeader = false;
-                ludRestaurant.Properties.TextEditStyle = TextEditStyles.Standard;
-                ludRestaurant.Properties.AutoSearchColumnIndex = 0;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
         }
 
 
         // lây ra order của ngày hiện tại khi chayj sẽ lấy ngày hiện tại
         public void OrderCreate()
         {
-            DateTime date = dtOrderDate.DateTime;
-            string datetime = date.ToString("yyyy/MM/dd");
-            var order = _apiClient.GetData<Order>($"Restaurant/GetAllRestaurant?date={datetime}").Data;
-            if (order.Count > 0)
+
+            var order = _apiClient.GetData<Order>($"Restaurant/GetAllRestaurant?date={OrderDate}").Data;
+            // thực hiện đổ dữ liệu ra combobox theo ngày hiên tại
+            if (order.Count != 0)
             {
-                OrderId = order[0].Id;
-                selectedRestaurantId = order[0].Restaurant.Id;
-                restaurantName = order[0].Restaurant.RestaurantName;
-                ludRestaurant.Text = restaurantName;
-                GetOrderByUserAll();
-                ShowProduct(datetime);
+                // Trích xuất danh sách nhà hàng từ order
+                var restaurants = order.Select(o => o.Restaurant).Distinct().ToList();
+                
+                // Chuyển đổi danh sách nhà hàng thành danh sách RestaurantVM 
+                List<RestaurantVM> restaurantVMs = restaurants.Select(r => new RestaurantVM(r)).ToList();
+                //SessionData.SetListRestaurants(restaurantVMs);
+                cboRestaurants.DataSource = restaurantVMs;
+                cboRestaurants.DisplayMember = "RestaurantName";
+                cboRestaurants.ValueMember = "Id";
+                // hiện sản phẩm theo nhà hàng
+                ShowProduct(OrderDate, restaurantName);
+
                 gridDataProduct.RefreshDataSource();
+
             }
             else
             {
-                gridDataProduct.DataSource = null;
-                gridDataProduct.RefreshDataSource();
-                gridDataUser.DataSource = null;
-                gridDataUser.RefreshDataSource();
+                var restaurants = _apiClient.GetData<Restaurant>("Restaurant/Getall").Data;
+                cboRestaurants.DataSource = restaurants;
+                cboRestaurants.DisplayMember = "RestaurantName";
+                cboRestaurants.ValueMember = "Id";
+
             }
 
-            GetRestaurant();
+
+        }
+        private void cboRestaurants_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cboRestaurants.SelectedValue != null)
+            {
+                ShowProduct(OrderDate, restaurantName);
+            }
+
         }
 
-        public void ShowProduct(string date)
+        // lấy dữ liêu người dùng chọn trên combobox
+        public string restaurantId
         {
-            var products = _apiClient.GetData<Product>($"Order/GetProductsByOrderDate?date={date}").Data;
+            get
+            {
+                if (cboRestaurants.SelectedValue != null)
+                {
+                    return cboRestaurants.SelectedValue.ToString();
+                }
+                return null;
+            }
+        }
+
+        // lấy displayname combobox
+        public string restaurantName
+        {
+            get
+            {
+                if (cboRestaurants.SelectedValue != null)
+                {
+                    return cboRestaurants.Text;
+                }
+                return null;
+            }
+        }
+
+
+        // lấy dữ liệu người dùng chon ngày
+        public string OrderDate
+        {
+            get
+            {
+                DateTime date = dtOrderDate.DateTime;
+                string datetime = date.ToString("yyyy/MM/dd");
+                return datetime;
+            }
+        }
+
+
+        // hiện thị sản phẩm theo ngày hiện tại và nhà hàng được chọn
+        public void ShowProduct(string date, string restaurantName)
+        {
+            var products = _apiClient.GetData<Product>($"Order/GetProductsByOrderDate?date={date}&restautanName={restaurantName}").Data;
+            // kiểm tra chưa có  thì hiện tất cả của product đó lên theo restaurantId
+            if (products.Count == 0)
+            {
+                GetProduct();
+            }
             SortProducts(products);
             gridDataProduct.DataSource = products;
             gridDataProduct.RefreshDataSource();
-
-
-            // foreach (var product in products)
-            // {
-            //     MessageBox.Show($"Product ID: {product.Id}");
-            // }
+            GetOrderByUserAll();
         }
+
+
         // sắp xếp product theo người dùng đã mua và chưa mua
         private void SortProducts(List<Product> products)
         {
@@ -158,32 +172,6 @@ namespace Client.UserControls
 
         }
 
-        // hiện thị thông tin sản phẩm product sang layoutview và cập nhật lại thông tin sản phẩm
-        private void ProcessProduct(Product product)
-        {
-            if (userOrderList != null)
-            {
-                var userOrder = userOrderList.FirstOrDefault(u => u.ProductId.Equals(product.Id));
-                product.Quantity = userOrder?.TotalQuantity ?? 1;
-                product.IsSelected = userOrder != null;
-            }
-            else
-            {
-                product.Quantity = 1;
-            }
-
-            product.Image = LoadProductImage(product.Images);
-
-            int index = productList.FindIndex(p => p.Id == product.Id);
-            if (index >= 0)
-            {
-                productList[index] = product;
-            }
-            else
-            {
-                productList.Insert(0, product);
-            }
-        }
 
         private Image LoadProductImage(string imagePath)
         {
@@ -211,7 +199,7 @@ namespace Client.UserControls
         // lấy thông tin sản phẩm theo cửa hàng được chọn
         public void GetProduct()
         {
-            var products = _apiClient.GetData<Product>($"Product/Restaurant/{selectedRestaurantId}")?.Data;
+            var products = _apiClient.GetData<Product>($"Product/Restaurant/{restaurantId}")?.Data;
 
             if (products != null && products.Any())
             {
@@ -232,20 +220,13 @@ namespace Client.UserControls
         {
             DateTime date = dtOrderDate.DateTime;
             string startDate = date.ToString("yyyy/MM/dd");
-            string endDate = null;
-            string userName = null;
-
-
-            //selectedRestaurantId = string.IsNullOrEmpty(selectedRestaurantId) ? "" : selectedRestaurantId;
-            string restaurants = null;
-            string productName = null;
 
 
             try
             {
                 var userOrder = _apiClient
                     .GetData<UserInfoDTO>(
-                        $"Order/UserAllOrders?startDate={startDate}&endDate={endDate}&UserName={userName}&userId={userId}&restaurants={selectedRestaurantId}&productName={productName}")
+                        $"Order/UserAllOrders?startDate={startDate}&userId={userId}")
                     .Data;
 
                 Console.WriteLine(JsonConvert.SerializeObject(userOrder));
@@ -254,21 +235,15 @@ namespace Client.UserControls
                 {
 
                     //khi userOrder có 1 giá trị thì mới kiểm tra
-                    //if (userOrder.Count == 1)
-                    //{
-                    //    userOrderList.RemoveAll(u => u.ProductId.Equals("0"));
-                    //}
+                    if (userOrder.Count == 1)
+                    {
+                        userOrderList.RemoveAll(u => u.ProductId.Equals("0"));
+                    }
 
                     // tìm kiếm kiểm tra  phần tử nào có productId =0 xóa khỏi userOrderList
                     gridDataUser.DataSource = userOrder;
-                    GridView view = gridDataUser.MainView as GridView;
-                    if (view != null)
-                    {
-                        // Ẩn các cột  không muốn hiển thị`
-                        //view.Columns["OrderDetailID"].Visible = false;
+                    gridDataUser.RefreshDataSource();
 
-                        //view.Columns["ProductId"].Visible = false;
-                    }
                 }
 
             }
@@ -319,6 +294,12 @@ namespace Client.UserControls
 
         private void dtOrderDate_EditValueChanged(object sender, EventArgs e)
         {
+            gridDataProduct.DataSource = null;
+            gridDataProduct.RefreshDataSource();
+            gridDataUser.DataSource = null;
+            gridDataUser.RefreshDataSource();
+            cboRestaurants.DataSource = null;
+            cboRestaurants.Refresh();
             OrderCreate();
         }
 
@@ -339,7 +320,7 @@ namespace Client.UserControls
                 UserId = userId,
                 Price = userInfo.TotalPrice,
                 Count = userInfo.TotalQuantity,
-                RestaurantId = selectedRestaurantId,
+                RestaurantId = restaurantId,
 
             };
         }
@@ -367,7 +348,7 @@ namespace Client.UserControls
                 if (orderDetail.Count != 0)
                 {
                     var resource = "OrderDetail/CreateList";
-                    UserSendOrderDelete();
+                    //UserSendOrderDelete();
 
                     var response = _apiClient.SendListToApi<OrderDetail>(resource, orderDetail);
 
@@ -401,9 +382,6 @@ namespace Client.UserControls
                 }
                 else
                 {
-
-
-
                     MessageBox.Show("Bạn chưa chọn sản phẩm nào");
                     return;
                 }
@@ -413,6 +391,48 @@ namespace Client.UserControls
         }
 
 
+        //private void checkOrder_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    var checkbox = sender as CheckEdit;
+
+        //    // lấy ra dữ liệu của dòng đang được chọn
+        //    var product = layoutView.GetFocusedRow() as Product;
+
+        //    if (userOrderList == null) return;
+        //    var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
+
+
+        //    if (checkbox != null && product != null)
+        //    {
+        //        product.IsSelected = checkbox.Checked;
+        //        if (checkbox.Checked)
+        //        {
+        //            UserInfoDTO user = new UserInfoDTO()
+        //            {
+        //                ProductId = product.Id,
+        //                ProductName = product.ProductName,
+        //                ProductPrice = product.Price,
+        //                TotalQuantity = product.Quantity,
+        //                TotalPrice = (decimal)product.Price * product.Quantity,
+        //                RestaurantName = restaurantName,
+        //            };
+        //            userOrderList.Add(user);
+        //        }
+        //        else
+        //        {
+        //            if (existingUserProduct != null)
+        //            {
+        //                existingUserProduct.TotalQuantity = 0;
+        //                existingUserProduct.TotalPrice = 0;
+        //            }
+        //            //userOrderList.Remove(existingUserProduct);
+
+
+        //        }
+        //    }
+
+        //    UpdateGridData();
+        //}
         private void checkOrder_CheckedChanged(object sender, EventArgs e)
         {
             var checkbox = sender as CheckEdit;
@@ -423,26 +443,40 @@ namespace Client.UserControls
             if (userOrderList == null) return;
             var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId == product.Id);
 
-
             if (checkbox != null && product != null)
             {
                 product.IsSelected = checkbox.Checked;
                 if (checkbox.Checked)
                 {
-                    UserInfoDTO user = new UserInfoDTO()
+                    // Nếu sản phẩm chưa tồn tại trong danh sách, thì thêm vào
+                    if (existingUserProduct == null)
                     {
-                        ProductId = product.Id,
-                        ProductName = product.ProductName,
-                        ProductPrice = product.Price,
-                        TotalQuantity = product.Quantity,
-                        TotalPrice = (decimal)product.Price * product.Quantity,
-                        RestaurantName = restaurantName,
-                    };
-                    userOrderList.Add(user);
+                        UserInfoDTO user = new UserInfoDTO()
+                        {
+                            ProductId = product.Id,
+                            ProductName = product.ProductName,
+                            ProductPrice = product.Price,
+                            TotalQuantity = product.Quantity,
+                            TotalPrice = (decimal)product.Price * product.Quantity,
+                            RestaurantName = restaurantName,
+                        };
+                        userOrderList.Add(user);
+                    }
+                    else
+                    {
+                        // Nếu sản phẩm đã tồn tại, thì cập nhật số lượng và tổng giá
+                        existingUserProduct.TotalQuantity = product.Quantity;
+                        existingUserProduct.TotalPrice = (decimal)product.Price * product.Quantity;
+                    }
                 }
                 else
                 {
-                    userOrderList.Remove(existingUserProduct);
+                    // Nếu người dùng hủy chọn sản phẩm
+                    if (existingUserProduct != null)
+                    {
+                        existingUserProduct.TotalQuantity = 0;
+                        existingUserProduct.TotalPrice = 0;
+                    }
                 }
             }
 
@@ -450,11 +484,8 @@ namespace Client.UserControls
         }
 
 
-        private void ludRestaurant_EditValueChanged(object sender, EventArgs e)
-        {
-            selectedRestaurantId = ludRestaurant.EditValue.ToString();
-            GetProduct();
-        }
+
+
 
         private void spdtPrice_EditValueChanged(object sender, EventArgs e)
         {
@@ -474,8 +505,7 @@ namespace Client.UserControls
                         var existingUserProduct = userOrderList.FirstOrDefault(p => p.ProductId.Equals(product.Id));
                         if (existingUserProduct != null)
                         {
-                            //product.Quantity = quantity;
-                            //product.Price = quantity * product.Price;
+
                             existingUserProduct.TotalQuantity = quantity;
                             existingUserProduct.TotalPrice = (decimal)product.Price * quantity;
 
@@ -488,13 +518,7 @@ namespace Client.UserControls
 
         private void gridView2_ShowingEditor(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            ColumnView view = (ColumnView)sender;
 
-            if (view.FocusedColumn.FieldName == "Xoa" && view.ActiveEditor is ButtonEdit)
-            {
-                ButtonEdit edit = (ButtonEdit)view.ActiveEditor;
-                edit.ButtonClick += btnXoa_ButtonClick;
-            }
         }
 
         private void gridDataProduct_Click(object sender, EventArgs e)
@@ -502,6 +526,12 @@ namespace Client.UserControls
 
         }
 
+        private void SubBtnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+ 
 
 
 

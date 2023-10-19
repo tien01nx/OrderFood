@@ -52,8 +52,6 @@
             groupControl2 = new DevExpress.XtraEditors.GroupControl();
             groupControl4 = new DevExpress.XtraEditors.GroupControl();
             groupControl6 = new DevExpress.XtraEditors.GroupControl();
-            ludRestaurant = new DevExpress.XtraEditors.LookUpEdit();
-            lblRestaurant = new DevExpress.XtraEditors.LabelControl();
             gridDataProduct = new DevExpress.XtraGrid.GridControl();
             layoutView = new DevExpress.XtraGrid.Views.Layout.LayoutView();
             IsSelected = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
@@ -71,6 +69,8 @@
             layoutViewField_Image = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
             groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            cboRestaurants = new ComboBox();
+            lblRestaurant = new DevExpress.XtraEditors.LabelControl();
             dtOrderDate = new DevExpress.XtraEditors.DateEdit();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             groupControl3 = new DevExpress.XtraEditors.GroupControl();
@@ -91,7 +91,6 @@
             groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl6).BeginInit();
             groupControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ludRestaurant.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridDataProduct).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)checkOrder).BeginInit();
@@ -136,7 +135,6 @@
             gridView2.GridControl = gridDataUser;
             gridView2.Name = "gridView2";
             gridView2.OptionsBehavior.Editable = false;
-            gridView2.OptionsFind.AlwaysVisible = true;
             gridView2.OptionsView.ShowFooter = true;
             gridView2.OptionsView.ShowGroupPanel = false;
             gridView2.OptionsView.ShowIndicator = false;
@@ -216,8 +214,6 @@
             btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
             btnXoa.Name = "btnXoa";
             btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            btnXoa.ButtonClick += btnXoa_ButtonClick;
-            btnXoa.Click += btnXoa_Click;
             // 
             // closeUcOrder
             // 
@@ -283,28 +279,6 @@
             groupControl6.Size = new Size(989, 239);
             groupControl6.TabIndex = 1;
             groupControl6.Text = "DANH SÁCH CÁC MÓN ĂN";
-            // 
-            // ludRestaurant
-            // 
-            ludRestaurant.Location = new Point(515, 3);
-            ludRestaurant.Margin = new Padding(3, 2, 3, 2);
-            ludRestaurant.Name = "ludRestaurant";
-            ludRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            ludRestaurant.Properties.NullText = "Chọn nhà hàng";
-            ludRestaurant.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            ludRestaurant.Size = new Size(175, 20);
-            ludRestaurant.TabIndex = 3;
-            ludRestaurant.EditValueChanged += ludRestaurant_EditValueChanged;
-            // 
-            // lblRestaurant
-            // 
-            lblRestaurant.Appearance.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblRestaurant.Appearance.Options.UseFont = true;
-            lblRestaurant.Location = new Point(442, 7);
-            lblRestaurant.Name = "lblRestaurant";
-            lblRestaurant.Size = new Size(52, 13);
-            lblRestaurant.TabIndex = 2;
-            lblRestaurant.Text = "Nhà hàng";
             // 
             // gridDataProduct
             // 
@@ -472,8 +446,8 @@
             // 
             // groupControl5
             // 
+            groupControl5.Controls.Add(cboRestaurants);
             groupControl5.Controls.Add(lblRestaurant);
-            groupControl5.Controls.Add(ludRestaurant);
             groupControl5.Controls.Add(dtOrderDate);
             groupControl5.Controls.Add(labelControl1);
             groupControl5.Dock = DockStyle.Top;
@@ -483,6 +457,25 @@
             groupControl5.Size = new Size(989, 30);
             groupControl5.TabIndex = 0;
             groupControl5.Text = "groupControl5";
+            // 
+            // cboRestaurants
+            // 
+            cboRestaurants.FormattingEnabled = true;
+            cboRestaurants.Location = new Point(514, 2);
+            cboRestaurants.Name = "cboRestaurants";
+            cboRestaurants.Size = new Size(121, 21);
+            cboRestaurants.TabIndex = 4;
+            cboRestaurants.SelectedValueChanged += cboRestaurants_SelectedValueChanged;
+            // 
+            // lblRestaurant
+            // 
+            lblRestaurant.Appearance.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblRestaurant.Appearance.Options.UseFont = true;
+            lblRestaurant.Location = new Point(442, 7);
+            lblRestaurant.Name = "lblRestaurant";
+            lblRestaurant.Size = new Size(52, 13);
+            lblRestaurant.TabIndex = 2;
+            lblRestaurant.Text = "Nhà hàng";
             // 
             // dtOrderDate
             // 
@@ -532,6 +525,7 @@
             SubBtnDelete.Name = "SubBtnDelete";
             SubBtnDelete.Size = new Size(105, 24);
             SubBtnDelete.Text = "Xóa đơn hàng";
+            SubBtnDelete.Click += SubBtnDelete_Click;
             // 
             // notifyIcon
             // 
@@ -563,7 +557,6 @@
             groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)groupControl6).EndInit();
             groupControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)ludRestaurant.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridDataProduct).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutView).EndInit();
             ((System.ComponentModel.ISupportInitialize)checkOrder).EndInit();
@@ -625,11 +618,11 @@
         private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
         private DevExpress.XtraGrid.Columns.GridColumn Editbutton;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private DevExpress.XtraEditors.LookUpEdit ludRestaurant;
         private DevExpress.XtraGrid.Columns.GridColumn RestaurantName;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
         private DevExpress.XtraGrid.Columns.GridColumn ProductPrice;
         private NotifyIcon notifyIcon;
+        private ComboBox cboRestaurants;
     }
 }

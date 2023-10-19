@@ -58,10 +58,12 @@ namespace API.Controllers
         // dữ liệu lấy ra thu được OrderDetailId, 
 
         [HttpGet("GetProductsByOrderDate")]
-        public async Task<ApiResponse<List<Product>>> UserOrders(string date)
+        public async Task<ApiResponse<List<Product>>> UserOrders(string date, string restautanName)
         {
 
-            var products = _context.GetProductsByOrderDate(date).ToList();
+
+
+            var products = _context.GetProductsByOrderDate(date, restautanName).ToList();
 
             return new ApiResponse<List<Product>>(System.Net.HttpStatusCode.OK, "", products);
 

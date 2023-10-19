@@ -7,6 +7,16 @@ namespace Client.Entities
 {
     public static class SessionData
     {
+
+        public static List<RestaurantVM> RestaurantVMs { get; set; }
+
+        public static void SetListRestaurants(List<RestaurantVM> restaurantVMs)
+        {
+            RestaurantVMs = restaurantVMs;
+        }
+
+
+
         private static RestaurantVM _currentRestaurant;
         private static List<RestaurantVM> _restaurantList = new List<RestaurantVM>();
 
