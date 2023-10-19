@@ -136,12 +136,20 @@ namespace Client.UserControls
 
         private void gridView1_MasterRowEmpty(object sender, MasterRowEmptyEventArgs e)
         {
-            GridView view = sender as GridView;
-            Order order = view.GetRow(e.RowHandle) as Order;
-            if (order != null)
+            try
             {
-                e.IsEmpty = !userInfoDTOs.Any(x => x.RestaurantId == order.Restaurant.Id);
+                GridView view = sender as GridView;
+                Order order = view.GetRow(e.RowHandle) as Order;
+                if (order != null)
+                {
+                    e.IsEmpty = !userInfoDTOs.Any(x => x.RestaurantId == order.Restaurant.Id);
+                }
             }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }   
+            
         }
 
         private void gridView1_MasterRowGetChildList(object sender, MasterRowGetChildListEventArgs e)

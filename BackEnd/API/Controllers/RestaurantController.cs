@@ -23,6 +23,7 @@ namespace API.Controllers
             _imageHelper = new ImageHelper(_webHostEnvironment);
         }
 
+
         // lấy ra tất cả các nhà hàng theo ngày hiện tại trong order cân truyền id ngày
 
 
@@ -30,7 +31,7 @@ namespace API.Controllers
         public async Task<ApiResponse<List<Order>>> GetRestaurant(string date)
         {
             try
-            {
+           {
                 DateTime selectedDate;
 
                 if (DateTime.TryParseExact(date, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out selectedDate))

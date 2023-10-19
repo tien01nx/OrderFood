@@ -276,8 +276,6 @@
             // 
             // groupControl6
             // 
-            groupControl6.Controls.Add(ludRestaurant);
-            groupControl6.Controls.Add(lblRestaurant);
             groupControl6.Controls.Add(gridDataProduct);
             groupControl6.Dock = DockStyle.Fill;
             groupControl6.Location = new Point(2, 53);
@@ -288,7 +286,7 @@
             // 
             // ludRestaurant
             // 
-            ludRestaurant.Location = new Point(566, 34);
+            ludRestaurant.Location = new Point(515, 3);
             ludRestaurant.Margin = new Padding(3, 2, 3, 2);
             ludRestaurant.Name = "ludRestaurant";
             ludRestaurant.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
@@ -302,7 +300,7 @@
             // 
             lblRestaurant.Appearance.Font = new Font("Tahoma", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblRestaurant.Appearance.Options.UseFont = true;
-            lblRestaurant.Location = new Point(492, 37);
+            lblRestaurant.Location = new Point(442, 7);
             lblRestaurant.Name = "lblRestaurant";
             lblRestaurant.Size = new Size(52, 13);
             lblRestaurant.TabIndex = 2;
@@ -474,6 +472,8 @@
             // 
             // groupControl5
             // 
+            groupControl5.Controls.Add(lblRestaurant);
+            groupControl5.Controls.Add(ludRestaurant);
             groupControl5.Controls.Add(dtOrderDate);
             groupControl5.Controls.Add(labelControl1);
             groupControl5.Dock = DockStyle.Top;
@@ -563,7 +563,6 @@
             groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)groupControl6).EndInit();
             groupControl6.ResumeLayout(false);
-            groupControl6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ludRestaurant.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridDataProduct).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutView).EndInit();

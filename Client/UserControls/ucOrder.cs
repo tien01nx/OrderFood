@@ -65,8 +65,10 @@ namespace Client.UserControls
                 ludRestaurant.Properties.ValueMember = "Id";
 
                 // Thiết lập chế độ hiển thị
-                ludRestaurant.Properties.BestFitMode = BestFitMode.BestFitResizePopup;
                 //lookUpEdit.Properties.SearchMode = SearchMode.AutoComplete;
+
+
+                ludRestaurant.Properties.BestFitMode = BestFitMode.BestFitResizePopup;
                 ludRestaurant.Properties.SearchMode = SearchMode.AutoFilter;
                 ludRestaurant.Properties.ImmediatePopup = true;
                 ludRestaurant.Properties.ShowHeader = false;

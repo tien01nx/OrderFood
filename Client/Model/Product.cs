@@ -12,14 +12,15 @@
         public decimal Price { get; set; }
         public string CategoryId { get; set; }
         public string RestaurantId { get; set; }
+        public int Quantity { get; set; }
+
+
 
 
         public Image Image { get; set; }
 
         public bool IsSelected { get; set; }
-        public int Quantity { get; set; }
-
-
+      
         public string OrderId { get; set; }
 
 
