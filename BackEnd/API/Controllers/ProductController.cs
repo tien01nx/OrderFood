@@ -5,6 +5,8 @@ using DataAccess.Model;
 using Microsoft.AspNetCore.Mvc;
 using Repository.IRepository;
 using System.Net;
+using System.Reflection;
+using System.Text;
 
 namespace API.Controllers
 {
@@ -88,6 +90,65 @@ namespace API.Controllers
 
         }
 
+        [HttpGet("FileExecel")]
+        public IActionResult ExportToCSV()
+        {
+            var builder = new StringBuilder();
+            builder.AppendLine("Id,RestaurantID,CategoryID,ProductName,Description,Price,Images,CreateBy,UpdateBy,CreateDate,UpdateDate");
+            foreach (var product in _unitOfWork.Product.GetAll())
+            {
+                builder.AppendLine($"{product.Id},{product.RestaurantId},{product.CategoryId},\"{product.ProductName}\",\"{product.Description}\",{product.Price},{product.Images},{product.CreateBy},{product.UpdateBy},{product.CreateDate},{product.UpdateDate}");
+            }
+            return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "Product.csv");
+
+        }
+
+        // xuất  dữ liệu User ra file excel
+
+
+
+        public IActionResult ExportToCSV<T>(IEnumerable<T> data, string filename)
+        {
+            var builder = new StringBuilder();
+
+            // Lọc ra thuộc tính không được đánh dấu bằng ExcludeFromCSV
+            var properties = typeof(T).GetProperties()
+                .Where(p => p.GetCustomAttribute<ExcludeFromCSVAttribute>() == null
+                        && !p.PropertyType.Namespace.StartsWith("System.Collections")
+                        && p.PropertyType.Name != "ICollection`1");
+
+            // Tạo tên cột
+            var header = string.Join(',', properties.Select(p => $"\"{p.Name}\""));
+            builder.AppendLine(header);
+
+            
+            foreach (var item in data)
+            {
+                var values = properties.Select(p =>
+                {
+                    var value = p.GetValue(item);
+                    return $"\"{value?.ToString().Replace("\"", "\"\"")}\"";
+                });
+                builder.AppendLine(string.Join(',', values));
+            }
+
+            return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", filename);
+        }
+
+        
+        [HttpGet("ExportProducts")]
+        public IActionResult GetProductsCSV()
+        {
+            var data = _unitOfWork.Product.GetAll().ToList();
+            return ExportToCSV(data, "Product.csv");
+        }
+
+        [HttpGet("ExportUsers")]
+        public IActionResult GetUsersVSC()
+        {
+            var data = _unitOfWork.User.GetAll().ToList();
+            return ExportToCSV(data, "User.csv");
+        }   
 
     }
 }

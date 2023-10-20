@@ -273,6 +273,7 @@
             Image.Caption = "Hình ảnh";
             Image.FieldName = "Image";
             Image.Name = "Image";
+            Image.OptionsFilter.AllowFilter = false;
             Image.Visible = true;
             Image.VisibleIndex = 3;
             // 

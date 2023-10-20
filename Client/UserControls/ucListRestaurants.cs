@@ -19,7 +19,7 @@ namespace Client.UserControls
         {
             InitializeComponent();
             _apiClient = new ApiClient();
-            btnXoa.Click += btnXoa_Click;
+
 
 
         }
@@ -27,7 +27,7 @@ namespace Client.UserControls
 
 
         private void ucListRestaurants_Load(object sender, EventArgs e) { LoadData(); }
-        private void btnXoa_Click(object? sender, EventArgs e) { MessageBox.Show("Xóa thành công"); }
+
 
         public void LoadData()
         {

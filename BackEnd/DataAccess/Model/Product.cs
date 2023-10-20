@@ -1,8 +1,8 @@
 ﻿
+using DataAccess.Utilis;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
 namespace DataAccess.Model
 {
     public class Product : BaseModel
@@ -39,6 +39,8 @@ namespace DataAccess.Model
 
         [ForeignKey("CategoryId")]
         [ValidateNever]
+        [ExcludeFromCSV]
+
         public Category Category { get; set; }
 
 
@@ -49,7 +51,11 @@ namespace DataAccess.Model
         public string RestaurantId { get; set; }
         [ForeignKey("RestaurantId")]
         [ValidateNever]
+        [ExcludeFromCSV]
         public Restaurant Restaurant { get; set; }
+
+        
+
 
 
         // các biến tạo thêm để lấy dự liệu từ sql

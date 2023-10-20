@@ -24,7 +24,7 @@ namespace DataAccess.Model
         [ValidateNever]
         public Product? Product { get; set; }
 
-        [Range(1, 100, ErrorMessage = "số lượng trong khoảng từ 1 đến 100.")]
+        //[Range(1, 100, ErrorMessage = "số lượng trong khoảng từ 1 đến 100.")]
         public int? Count { get; set; }
 
         public decimal? Price { get; set; }

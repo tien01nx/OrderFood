@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "IronXL.Excel": {
+              "target": "Package",
+              "version": "[2023.10.8, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.22, )"
@@ -76,6 +80,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.22, )"
+            },
+            "MiniExcel": {
+              "target": "Package",
+              "version": "[1.31.2, )"
             },
             "NLog": {
               "target": "Package",

@@ -219,24 +219,6 @@ namespace API.Controllers
             }
         }
 
-
-
-        //[HttpPost("CreateList")]
-        //public async Task<ActionResult<ApiResponse<List<T>>>> Create(List<T> entities)
-        //{
-        //    try
-        //    {
-        //        _context.Set<T>().AddRange(entities);
-        //        await _context.SaveChangesAsync();
-        //        return new ApiResponse<List<T>>(HttpStatusCode.Created, "Tạo thành công", entities);
-        //    }
-        //    catch (DbUpdateException ex)
-        //    {
-        //        _logger.LogError(ex, "Error occurred in Create method.");
-        //        return new ApiResponse<List<T>>(HttpStatusCode.BadRequest, "Lỗi khi tạo" + ex, null);
-        //    }
-        //}
-
         [HttpPost("CreateList")]
         public async Task<ActionResult<ApiResponse<List<T>>>> CreateList(List<T> entities)
         {
@@ -275,30 +257,46 @@ namespace API.Controllers
                         }
                         if (orderDetail.Count == 0)
                         {
-                            _context.Set<OrderDetail>().RemoveRange(orderDetail);
-                        }
-
-
-
-                        if (lastNumber == 0)
-                        {
-                            var lastId = GenerateId<OrderDetail>("ODER");
-                            lastNumber = int.Parse(new string(lastId.Where(char.IsDigit).ToArray()));
+                            //_context.Set<OrderDetail>().RemoveRange(orderDetail);
+                            
                         }
                         else
                         {
-                            lastNumber++;
+                            if (lastNumber == 0)
+                            {
+                                var lastId = GenerateId<OrderDetail>("ODER");
+                                lastNumber = int.Parse(new string(lastId.Where(char.IsDigit).ToArray()));
+                            }
+                            else
+                            {
+                                lastNumber++;
+                            }
+                            if (orderDetail.Id.Equals("0"))
+                            {
+                                orderDetail.Id = "ODER" + lastNumber.ToString("D2");
+                                orderDetail.OrderId = order.Id;
+
+                                _context.Set<OrderDetail>().Add(orderDetail);
+                            }
+                            else
+                            {
+                                var existingOrderDetail = _context.Set<OrderDetail>().Find(orderDetail.Id);
+                                if (existingOrderDetail != null)
+                                {
+                                    _context.Entry(existingOrderDetail).CurrentValues.SetValues(orderDetail);
+                                }
+                            }
+                            
                         }
-                        orderDetail.Id = "ODER" + lastNumber.ToString("D2");
-                        orderDetail.OrderId = order.Id;
-
-                        _context.Set<OrderDetail>().Add(orderDetail);
-
+                        await _context.SaveChangesAsync();
                     }
+                    return new ApiResponse<List<T>>(HttpStatusCode.OK, "Tạo thành công", entities);
+
                 }
 
 
                 _context.Set<T>().AddRange(entities);
+
                 await _context.SaveChangesAsync();
 
                 return new ApiResponse<List<T>>(HttpStatusCode.OK, "Tạo thành công", entities);
@@ -430,7 +428,7 @@ namespace API.Controllers
 
 
 
-        private string GenerateId<T>(string prefix) where T : class
+        public string GenerateId<T>(string prefix) where T : class
         {
             var lastId = _context.Set<T>().OrderByDescending(e => EF.Property<string>(e, "Id"))
                           .Where(t => EF.Property<string>(t, "Id").StartsWith(prefix.ToUpper()))
